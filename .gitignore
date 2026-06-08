@@ -1,0 +1,14 @@
+# OS
+.DS_Store
+
+# logs / runtime
+*.log
+*.pid
+
+# v2 is its own git repo (the app); it references arlo/ + gear/ externally,
+# so it is NOT tracked by this central data repo.
+v2/
+
+# editor
+.vscode/
+.idea/

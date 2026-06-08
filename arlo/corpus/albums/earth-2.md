@@ -1,0 +1,91 @@
+# Earth 2: Special Low Frequency Version (1993)
+
+**Artist:** Earth
+**Year:** 1993
+**Producer(s):** Earth and Stuart Hallerman
+**Studio(s):** Avast! Recording Company, Seattle (Wallingford, 1325 N 46th St.)
+**Scope:** album
+**Source:** Deep-research synthesis (2026-05) — verify before treating as authoritative
+**Aesthetic-stack relevance:** drone metal foundational text, long-form composition, amplifier-as-instrument
+**Tags:** `earth`, `dylan-carlson`, `earth-2`, `drone-metal`, `sub-pop`, `1993`, `avast-studios`
+
+---
+
+## Why This Record Matters to the ARLO Stack
+
+*Earth 2: Special Low Frequency Version*, released 5 February 1993 on Sub Pop, is the founding document of drone metal as a recognized form. Three tracks — "Seven Angels," "Teeth of Lions Rule the Divine," and "Like Gold and Faceted" — fill a 73-minute compact disc with detuned, distorted guitar held at extreme tempos, almost no drums, and structures built from repetition rather than progression ([Wikipedia — Earth 2](https://en.wikipedia.org/wiki/Earth_2_(album))). For ARLO, this record is the load-bearing case study for "amplifier and tuning as the entire compositional surface" — the inverse of every studio-as-instrument record in the corpus. Where Hannett built *Unknown Pleasures* out of spatial treatment of small sounds, Dylan Carlson and Dave Harwell built *Earth 2* by pointing two basses-into-guitar-amplifiers at tape and letting the room and the saturation do the rest. It is also the direct ancestor of Sunn O))) — Greg Anderson and Stephen O'Malley founded their band partly as a tribute to Earth and to the Sunn amplifiers Carlson was using, and have said publicly that the name was chosen as a play on Earth's ([Wikipedia — Sunn O)))](https://en.wikipedia.org/wiki/Sunn_O))). The lineage from this 1993 record runs through Sunn O))), Boris, Khanate, Burning Witch, and most of what was later marketed as "post-metal" or "drone."
+
+## The Band, the Name, and the Olympia Context
+
+Earth was founded in Olympia, Washington in 1989 by Dylan Carlson with Slim Moon (later founder of Kill Rock Stars) and Greg Babior. Carlson took the name from Black Sabbath's pre-Sabbath band moniker — the band that recorded as Earth before settling on the name that gave heavy metal its first archetype ([Wikipedia — Earth (American band)](https://en.wikipedia.org/wiki/Earth_(American_band)); [Wikipedia — Dylan Carlson](https://en.wikipedia.org/wiki/Dylan_Carlson_(musician))). By the time *Earth 2* was tracked in August 1992, the lineup had reduced to a duo — Carlson on guitar and Dave Harwell on bass — with Joe Burns adding percussion to one track. There was no drummer and, per Carlson, no desire to use a drum machine; the absence of a kit is structural, not incidental. Olympia in 1989-92 was the right scene for this kind of refusal: K Records was already operating, Kill Rock Stars was forming, and the city's indie ecosystem rewarded conceptual extremism. Earth's earliest contemporaries were Nirvana, the Melvins, Beat Happening, and the Riot Grrrl bands — the band sat at an oblique angle to grunge from the start, sharing geography but very little aesthetic vocabulary.
+
+## Sub Pop and the Signing Context
+
+Sub Pop signed Earth on the strength of the *Extra-Capsular Extraction* EP (released June 1991), making them one of the few non-grunge acts the label was nurturing during the post-Nevermind boom. *Extra-Capsular Extraction* — a three-track EP that included Kurt Cobain singing lead on "Divine and Bright" — landed Earth on the same roster as Nirvana, Mudhoney, and Soundgarden. *Earth 2* was the band's full-length debut and was issued at a moment when Sub Pop had become a financially serious label off the back of the grunge wave, but was also using that leverage to release records that had nothing to do with grunge ([Wikipedia — Earth 2](https://en.wikipedia.org/wiki/Earth_2_(album)); [Wikipedia — Dylan Carlson](https://en.wikipedia.org/wiki/Dylan_Carlson_(musician))). For ARLO, this is a clean example of a major indie using boom-period cashflow to back genuinely uncommercial work — the same pattern as Matador with Pavement's *Wowee Zowee* or Touch and Go's broader catalog.
+
+## Studio and Engineer: Stuart Hallerman at Avast!
+
+Recording took place in August 1992 at Avast! Recording Company, the studio Stuart Hallerman had opened in 1990 in an old mechanics garage at 1325 N 46th Street in Seattle's Wallingford neighborhood ([Wikipedia — Avast! Recording Company](https://en.wikipedia.org/wiki/Avast!_Recording_Company); [Tape Op — Stuart Hallerman](https://tapeop.com/interviews/18/stuart-hallerman)). Hallerman's background was load-bearing for this session. He had moved from Chicago to Olympia in 1980 to attend Evergreen State College's recording program, then worked as Soundgarden's live sound engineer and tour manager from 1987, including assisting on *Louder Than Love* (1989). When he opened Avast!, the studio's centerpiece was an Ampex MM1200 2-inch 16-track tape machine he had purchased from Roger Fisher of Heart. By the time Earth arrived in August 1992, the studio had already tracked records by Soundgarden, Screaming Trees, Bikini Kill, and 7 Year Bitch ([Wikipedia — Avast! Recording Company](https://en.wikipedia.org/wiki/Avast!_Recording_Company)). Hallerman's instinct — formed on the road translating Kim Thayil's request for a guitar sound "like Godzilla knocking over buildings" into actual tape — was exactly the right one for what Earth needed.
+
+The production credit is shared: "Earth and Stuart Hallerman." For ARLO this matters because the album is not engineered in any conventional sense — there is very little mixing in the traditional move-the-faders-around manner. Hallerman's role was closer to amplifier microphone placement, signal chain integrity, and tape management than to spatial design. The 16-track tape format also constrained things; Carlson has noted that to achieve the album's extreme track lengths the band had to "splice it or fade it in and fade up" because no single reel could capture a 27- or 30-minute take in one pass ([Wikipedia — Earth 2](https://en.wikipedia.org/wiki/Earth_2_(album))).
+
+## The Gear: Sunn Amplifiers and the Amplifier-as-Instrument Logic
+
+The most-asked question about *Earth 2* is what equipment produced its sound, and the answer is less exotic than the record might suggest. Carlson played heavily detuned guitar through Sunn amplifiers — the Pacific Northwest brand whose logo (the word "sunn" beside a sun with rays curving off to the right) would later be borrowed by Greg Anderson and Stephen O'Malley for their tribute project Sunn O))) ([Wikipedia — Sunn O)))](https://en.wikipedia.org/wiki/Sunn_O))). Carlson has been candid in later interviews that his 1992-era Sunn rig was solid-state, not tube: he has said he never owned a tube Sunn and stopped using the brand around 1993-94. His tunings on *Earth 2* have been described in interviews as drop-a-half-step ("Hendrix tuning," in Carlson's framing) rather than the radically detuned baritone configurations that listeners often assume — the perceived heaviness comes from massive Sunn gain, distortion pedal stacking (a Pro Co Rat is part of the canonical Earth 2 signal chain per later Carlson signature pedals), and the deliberate refusal to rest the signal in conventional song structures ([Stranger Than Paradise — Earth 2 Rat pedal](https://www.strangerthanparadiserecords.com/dylan-carlson-rat.html); [Red Bull Music Academy — Dylan Carlson lecture](https://www.redbullmusicacademy.com/lectures/dylan-carlson-lecture/)).
+
+The compositional move is to let the amplifier's natural behavior — sag, sustain, harmonic blooming, intermodulation between two heavily-saturated signals — become the song. Carlson has framed his approach as a question he had as a teenager: "I would hear riffs from bands that I liked and I'd want them to keep playing that riff. What would it be like if they stayed on that instead of moving on to the next part?" ([Wikipedia — Earth 2](https://en.wikipedia.org/wiki/Earth_2_(album)); [Echoes and Dust — interview with Dylan Carlson](https://echoesanddust.com/2019/04/soundwaves-to-landscapes-an-interview-with-dylan-carlson-of-earth/)). The album operationalizes that question. The "riff" becomes the entire track because the band never leaves it. For ARLO this is the foundational text for "amplifier behavior as compositional surface" — the same logic that runs through Sleep's *Dopesmoker*, Sunn O)))'s *Black One*, Boris's *Absolutego*, and the broader doom-drone catalog.
+
+## The Three Tracks: Structural Notes
+
+**"Seven Angels" (15:35)** opens the album with the most riff-legible material on the record. The track is built from a heavily-distorted guitar figure that establishes a tonal center within the first thirty seconds and then refuses to leave it for fifteen minutes. The bass is doubled with the guitar at a slightly different attack envelope, which produces the album's signature wide low-mid smear. There are no drums; the rhythmic information is carried entirely by the cyclical re-attack of the riff and the slow phasing between guitar and bass.
+
+**"Teeth of Lions Rule the Divine" (27:05)** is the album's centerpiece and its most extreme test of the band's premise. The track sustains a single tonal area for nearly half an hour, with the riff slowing further and the saturation thickening. The title — borrowed from a William Blake line — would later be taken as the name of a one-off drone-metal supergroup (Stephen O'Malley, Greg Anderson, Justin Broadrick, and others) issuing *Rampton* in 2002, a direct genealogical citation of Earth 2's status as canon ([Wikipedia — Earth 2](https://en.wikipedia.org/wiki/Earth_2_(album))).
+
+**"Like Gold and Faceted" (30:21)** is the album's longest track and the only one to include percussion — Joe Burns is credited for percussion on this piece alone ([Wikipedia — Earth 2](https://en.wikipedia.org/wiki/Earth_2_(album))). The percussion is sparse and bell-like rather than kit-based; it functions as occasional articulation rather than meter. The track also pushes furthest toward pure feedback texture, with extended passages where the riff has decomposed into a sustained harmonic field.
+
+## The CD-Length Concept
+
+Carlson has been explicit that the album's three-track, seventy-three-minute shape was a deliberate response to the compact disc as a format. The advent of the CD allowed roughly 74 minutes of continuous audio — enough, in Carlson's framing, to "fill up an entire CD with one song in three parts" ([Wikipedia — Earth 2](https://en.wikipedia.org/wiki/Earth_2_(album))). For ARLO this is a clean case study in *format-as-prompt*: the artifact's physical capacity is treated as a compositional brief, not a packaging constraint. The same pattern recurs in My Bloody Valentine's *Loveless*, where the CD's 49 minutes shaped track count and sequencing, and forward to streaming-era records (Bad Bunny, Drake) where playlist arithmetic shapes length. *Earth 2* is the early-CD-era version of the move: the medium is the structural premise.
+
+## Influences: Slayer, King Crimson, and La Monte Young
+
+Carlson has cited a deliberately heterodox set of influences for *Earth 2*: Slayer (for the wall-of-distortion sonic palette and the willingness to sit in low-frequency density), King Crimson (for long-form composition and willingness to leave conventional song structures), and La Monte Young (for the minimalist principle that sustained tones can be the entire composition) ([Wikipedia — Earth 2](https://en.wikipedia.org/wiki/Earth_2_(album)); [Red Bull Music Academy — Dylan Carlson lecture](https://www.redbullmusicacademy.com/lectures/dylan-carlson-lecture/)). Black Sabbath and the Melvins are also acknowledged background, and Terry Riley sits next to La Monte Young in the minimalist column. The combination is unusual: it places a metal record in direct conversation with American minimalism in a way that very few records before 1993 had attempted. The closest precedent is probably Glenn Branca's symphonies for massed electric guitars, which Carlson has not specifically cited but which sit upstream in the same tradition.
+
+## Reception, the Kurt Cobain Connection, and Carlson's Own Retrospective View
+
+*Earth 2* received minimal mainstream attention on release — it was a 73-minute mostly-instrumental drone record on a label whose main commercial business was grunge — but it became influential through word-of-mouth and through the direct lineage to Sunn O))) and the subsequent drone metal scene. AllMusic later credited it with virtually creating the drone and ambient metal subgenres ([Wikipedia — Earth 2](https://en.wikipedia.org/wiki/Earth_2_(album))).
+
+The Kurt Cobain connection is verified and matters for the record's reception history but should be framed carefully. Carlson and Cobain were close personal friends; Cobain sang lead on "Divine and Bright" on the *Extra-Capsular Extraction* EP. After two prior gun confiscations made it difficult for Cobain to purchase a firearm himself, Cobain asked Carlson to buy a shotgun for him; Carlson did so on 30 March 1994, six days before Cobain used that shotgun to take his own life ([Wikipedia — Dylan Carlson](https://en.wikipedia.org/wiki/Dylan_Carlson_(musician))). This is documented across multiple sources and is not apocryphal. It also post-dates the *Earth 2* recording and release by roughly fourteen and thirteen months respectively, and is therefore part of the record's *afterlife* — not its making. The connection is verified; the framing should locate it correctly in the timeline.
+
+Carlson's own retrospective view of the record is unusually self-critical. In a 2018 interview he said, "To me, a lot of people talk about how huge this record sounds. I think this record sounds very claustrophobic. Knowing what I know now, I would've definitely recorded it differently, but then it would be a different album" ([Wikipedia — Earth 2](https://en.wikipedia.org/wiki/Earth_2_(album))). His specific regret has been the studio decision not to record at full live volume — a choice that probably made the sessions tractable for Hallerman and the studio but, in Carlson's view, undersold the band's actual room presence. For ARLO this is a useful counter-example to the standard "iconic record, perfect document" narrative: the artist's own assessment is that the album is a partial document of a more extreme live act, and the historical importance of the record exists despite (or because of) that compression.
+
+## Legacy and ARLO Retrieval Use
+
+*Earth 2*'s downstream impact is most legible through Sunn O))). Greg Anderson and Stephen O'Malley formed Sunn O))) in 1998 as an explicit Earth tribute project, taking the name from the Sunn amplifier brand Carlson had been using and choosing it partly as a wordplay on Earth ([Wikipedia — Sunn O)))](https://en.wikipedia.org/wiki/Sunn_O))). The Sunn O))) catalog — *ØØ Void*, *Black One*, *Monoliths and Dimensions* — is structurally a continuation of the *Earth 2* premise with additional theatrical and compositional vocabulary added on top. Boris in Japan, Khanate, Burning Witch, and the broader Southern Lord and Hydra Head rosters all sit downstream of this 1993 record.
+
+For ARLO retrieval, *Earth 2* is the reference text when the user is reasoning about: **drone as primary compositional form in a rock context** (cross-ref Sleep's *Dopesmoker*, Sunn O)))'s catalog, La Monte Young as upstream classical reference); **amplifier behavior as the song** (the inverse of the studio-as-instrument records — here the amplifier *is* the studio); **format-as-prompt** (CD length shaping a three-track album, cross-ref *Loveless*, *The Wall*'s vinyl-side structure); **Sub Pop beyond grunge** (Earth as the label's non-grunge anchor in 1992-93, alongside their later signings); and **drone metal genealogy** (Earth → Sunn O))) → the entire 2000s drone metal scene). The album also sits in productive contrast to *Unknown Pleasures* in the corpus: Hannett built a record out of treating small sounds; Carlson built one out of refusing to treat large ones.
+
+---
+
+## Cited Retrieval Topics
+
+- Drone metal foundational album — three tracks, 73 minutes, almost no drums, single tonal centers held across each piece.
+- Sunn solid-state amplifiers as compositional surface — Carlson's 1992 rig, the brand that gave Sunn O))) their name.
+- Avast! Recording Company and Stuart Hallerman — Wallingford garage studio, Ampex MM1200 16-track, Soundgarden engineer lineage.
+- CD-length as compositional brief — 74-minute capacity as a deliberate prompt to fill the disc with one continuous work in three parts.
+- Slayer + King Crimson + La Monte Young as cited influences — metal saturation crossed with prog long-form and American minimalism.
+- Earth → Sunn O))) genealogy — Greg Anderson and Stephen O'Malley's tribute project, name borrowed from Sunn amps, aesthetic borrowed from this record.
+- Dylan Carlson and Kurt Cobain friendship — verified, including the shotgun purchase on 30 March 1994, post-dating *Earth 2* by more than a year.
+- Carlson's self-critical retrospective — the "claustrophobic" framing, the regret about not recording at live volume.
+
+## Sources
+
+- [Earth 2 (album) — Wikipedia](https://en.wikipedia.org/wiki/Earth_2_(album))
+- [Earth (American band) — Wikipedia](https://en.wikipedia.org/wiki/Earth_(American_band))
+- [Dylan Carlson (musician) — Wikipedia](https://en.wikipedia.org/wiki/Dylan_Carlson_(musician))
+- [Sunn O))) — Wikipedia](https://en.wikipedia.org/wiki/Sunn_O)))
+- [Avast! Recording Company — Wikipedia](https://en.wikipedia.org/wiki/Avast!_Recording_Company)
+- [Tape Op — Stuart Hallerman interview](https://tapeop.com/interviews/18/stuart-hallerman)
+- [Echoes and Dust — Soundwaves to Landscapes: An Interview with Dylan Carlson of Earth](https://echoesanddust.com/2019/04/soundwaves-to-landscapes-an-interview-with-dylan-carlson-of-earth/)
+- [Red Bull Music Academy — Dylan Carlson lecture](https://www.redbullmusicacademy.com/lectures/dylan-carlson-lecture/)
+- [Stranger Than Paradise Records — Dylan Carlson Earth 2 Rat pedal](https://www.strangerthanparadiserecords.com/dylan-carlson-rat.html)

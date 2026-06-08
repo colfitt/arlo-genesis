@@ -1,0 +1,14 @@
+https://youtube.com/watch?v=IUZY1cZo7po
+Old Blood Noise Endeavors · 3 Mono Dark Stars Vs. Stereo Dark Star · 2025-04-22
+
+Official OBNE video that reverse-engineers what the single Stereo Dark Star does by recreating each of its sounds with three chained original (mono) Dark Stars. The clearest demonstration that the V3 collapses delay + pitch + crush into one simultaneous voice, plus stereo Spread behavior.
+
+Let's build some sounds on the new Dark Star, then see if we can match them with three of the old Dark Stars.
+
+SOUND 1 — On the new (Stereo) Dark Star: add a little bit of Multiply to emulate delay-mode soupiness. Then go an octave up with the two pitches, and add just a little Crush for that lo-fi quality. To match this with the three old mono Dark Stars: the first is set in delay mode for the soupiness; the second is in pitch mode with both pitches up one octave (so one Dark Star in delay mode feeds another in pitch mode); the third old Dark Star adds the bit-crushing for the lo-fi character. It takes three pedals to get close to what the one Stereo unit does at once.
+
+SOUND 2 — Go farther: take the first pitch and go down an octave instead of up. Introduce the Lag control (essentially a pre-delay) to give space between your playing and the reverberated sound — a new feature on the new Dark Star. Add a high-pass filter to clear it up, so you keep the character of the octave-down pitch but not so much of the weight. Matching it on the mono units: start with delay mode again, bring in pitch (octave up and down this time); the last mono Dark Star uses a digital Boss delay (full wet, one repeat, time increased) to emulate the Lag, since Lag isn't on the old pedal, plus a high-pass from a float filter to emulate the Filter knob. You can also use the Spread knob to move those pitches around in the stereo field.
+
+SOUND 3 — Try something else: instead of octave-down, do a slight detune (pull the octave-down only slightly). Then introduce the regeneration/feedback feature on the new Dark Star (the Multiply control) — now the pitches start doing the shimmer effect. The octave-up gives the shimmer; the detuned one gives a chorusy but "dropping" feeling. Use the low-pass side of the filter this time to chill it out — you can hear the pitches really regenerating but getting tamed by the filter. To match with the mono units the demonstrator had to send a Dark Star back into itself via a matrix mixer to do the regeneration, because self-feedback (Multiply) is not a feature on the old Dark Star. Again, Spread is used to move the pitches around in the stereo field.
+
+Takeaway: the Stereo Dark Star's single voice equals roughly THREE chained mono Dark Stars (delay + pitch + crush), and adds Lag (pre-delay), Multiply (internal regeneration/self-feedback), and Spread (stereo field movement) that the mono units never had.

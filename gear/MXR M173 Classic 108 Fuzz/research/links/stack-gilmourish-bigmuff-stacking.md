@@ -1,0 +1,10 @@
+https://www.gilmourish.com/?page_id=3389
+gilmourish.com · Bjorn Riis (gilmourish) · Big Muff buyer's gear guide
+
+BIG MUFF STACKING + PLACEMENT (applies to the Hizumitas, the Muff in the 108 -> Hizumitas pair)
+- MUFF PLACEMENT: "place the Big Muff FIRST or right after wah wahs and compression. This will allow the Big Muff to dominate, if you choose to stack it with an overdrive or EQ for boost." -> conventional Muff order = Muff early, drive/EQ after. The rig INVERTS this (108 fuzz before the Hizumitas) — known/unconventional, and works because the 108 is a pre-stage feeding the Muff rather than a co-equal dirt.
+- MUFFS ARE BUFFER-TOLERANT (unlike a Fuzz Face): "less sensitive to buffered pedals than vintage fuzz circuits," though they "sound better when there's at least one true bypass pedal on each side." -> This is the basis of the dossier's order-swap fix: a MUFF can sit behind buffers happily, and a Muff's LOW output impedance drives a Fuzz Face cleanly. So Hizumitas -> 108 puts the buffer-tolerant pedal first AND gives the 108 a proper low-Z source. Strong A/B candidate.
+- OVERDRIVE/EQ AFTER THE MUFF (Gilmour's move): use a drive/EQ AFTER the Muff "to add a bit of character," compensating the Muff's "lack of mid range and compression... an overdrive after the Muff to add a bit of character" — functions as EQ enhancement, not a gain boost. -> in the rig, the Brothers AM after the 108->Hizumitas stage is exactly this role (reclaim mids/character, not pile gain).
+- SUSTAIN DEPENDS ON DOWNSTREAM COMPRESSION: Gilmour's "violin-like sustain" comes from mid-focused amp + tube/speaker compression. -> in a modeled/printed rig, the equivalent is compression/saturation downstream (VG-800 amp model, tape stages, the wall) — the 108->Hizumitas raw wall gets its singing sustain from what follows, not from the fuzz alone.
+
+RIG TAKEAWAY: Muffs are buffer-tolerant and have low output Z -> the Hizumitas can both live behind buffers AND cleanly drive the 108 if swapped in front of it (the dossier order-swap). Put shaping EQ/drive (Brothers AM) AFTER the Muff to add mids/character, Gilmour-style.
