@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "arlo-spike",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["v2/spike/server.js"],
+      "port": 4317
+    }
+  ]
+}
