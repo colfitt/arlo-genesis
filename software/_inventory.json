@@ -1,0 +1,4620 @@
+{
+  "scanned_at": "2026-06-10T20:45:49",
+  "locations": {
+    "au_system": {
+      "path": "/Library/Audio/Plug-Ins/Components",
+      "exists": true,
+      "count": 332
+    },
+    "au_user": {
+      "path": "/Users/cfitt/Library/Audio/Plug-Ins/Components",
+      "exists": true,
+      "count": 3
+    },
+    "vst3_system": {
+      "path": "/Library/Audio/Plug-Ins/VST3",
+      "exists": true,
+      "count": 110
+    },
+    "vst3_user": {
+      "path": "/Users/cfitt/Library/Audio/Plug-Ins/VST3",
+      "exists": true,
+      "count": 1
+    },
+    "vst_system": {
+      "path": "/Library/Audio/Plug-Ins/VST",
+      "exists": true,
+      "count": 82
+    },
+    "vst_user": {
+      "path": "/Users/cfitt/Library/Audio/Plug-Ins/VST",
+      "exists": true,
+      "count": 0
+    },
+    "applications": {
+      "path": "/Applications",
+      "exists": true,
+      "count": 59
+    },
+    "ni_apps": {
+      "path": "/Applications/Native Instruments",
+      "exists": true,
+      "count": 8
+    },
+    "arturia_apps": {
+      "path": "/Applications/Arturia",
+      "exists": true,
+      "count": 46
+    },
+    "soundtoys_apps": {
+      "path": "/Applications/Soundtoys",
+      "exists": true,
+      "count": 3
+    }
+  },
+  "libraries": [
+    {
+      "path": "/Volumes/PlaySomeGodDamnMusic/Sample Libraries/Native Instruments",
+      "brand": "Native Instruments",
+      "drive": "PlaySomeGodDamnMusic",
+      "mounted": false,
+      "items": []
+    },
+    {
+      "path": "/Volumes/PlaySomeGodDamnMusic/Sample Libraries/Reverb Machine",
+      "brand": "Reverb Machine",
+      "drive": "PlaySomeGodDamnMusic",
+      "mounted": false,
+      "items": []
+    },
+    {
+      "path": "/Volumes/PlaySomeGodDamnMusic/Sample Libraries/Spitfire",
+      "brand": "Spitfire",
+      "drive": "PlaySomeGodDamnMusic",
+      "mounted": false,
+      "items": []
+    }
+  ],
+  "by_brand": {
+    "Arturia": [
+      {
+        "name": "Acid V.component",
+        "stem": "Acid V",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Acid V.component"
+      },
+      {
+        "name": "Analog Lab V.component",
+        "stem": "Analog Lab V",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Analog Lab V.component"
+      },
+      {
+        "name": "ARP 2600 V3.component",
+        "stem": "ARP 2600 V3",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/ARP 2600 V3.component"
+      },
+      {
+        "name": "Augmented BRASS.component",
+        "stem": "Augmented BRASS",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Augmented BRASS.component"
+      },
+      {
+        "name": "Augmented GRAND PIANO.component",
+        "stem": "Augmented GRAND PIANO",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Augmented GRAND PIANO.component"
+      },
+      {
+        "name": "Augmented MALLETS.component",
+        "stem": "Augmented MALLETS",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Augmented MALLETS.component"
+      },
+      {
+        "name": "Augmented STRINGS.component",
+        "stem": "Augmented STRINGS",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Augmented STRINGS.component"
+      },
+      {
+        "name": "Augmented VOICES.component",
+        "stem": "Augmented VOICES",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Augmented VOICES.component"
+      },
+      {
+        "name": "Augmented WOODWINDS.component",
+        "stem": "Augmented WOODWINDS",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Augmented WOODWINDS.component"
+      },
+      {
+        "name": "Augmented YANGTZE.component",
+        "stem": "Augmented YANGTZE",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Augmented YANGTZE.component"
+      },
+      {
+        "name": "B-3 V2.component",
+        "stem": "B-3 V2",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/B-3 V2.component"
+      },
+      {
+        "name": "Buchla Easel V.component",
+        "stem": "Buchla Easel V",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Buchla Easel V.component"
+      },
+      {
+        "name": "Clavinet V.component",
+        "stem": "Clavinet V",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Clavinet V.component"
+      },
+      {
+        "name": "CMI V.component",
+        "stem": "CMI V",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/CMI V.component"
+      },
+      {
+        "name": "CP-70 V.component",
+        "stem": "CP-70 V",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/CP-70 V.component"
+      },
+      {
+        "name": "CS-80 V4.component",
+        "stem": "CS-80 V4",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/CS-80 V4.component"
+      },
+      {
+        "name": "CZ V.component",
+        "stem": "CZ V",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/CZ V.component"
+      },
+      {
+        "name": "DX7 V.component",
+        "stem": "DX7 V",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/DX7 V.component"
+      },
+      {
+        "name": "Emulator II V.component",
+        "stem": "Emulator II V",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Emulator II V.component"
+      },
+      {
+        "name": "Farfisa V.component",
+        "stem": "Farfisa V",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Farfisa V.component"
+      },
+      {
+        "name": "Jun-6 V.component",
+        "stem": "Jun-6 V",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Jun-6 V.component"
+      },
+      {
+        "name": "Jup-8 V4.component",
+        "stem": "Jup-8 V4",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Jup-8 V4.component"
+      },
+      {
+        "name": "Jup-8000 V.component",
+        "stem": "Jup-8000 V",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Jup-8000 V.component"
+      },
+      {
+        "name": "KORG MS-20 V.component",
+        "stem": "KORG MS-20 V",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/KORG MS-20 V.component"
+      },
+      {
+        "name": "Matrix-12 V2.component",
+        "stem": "Matrix-12 V2",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Matrix-12 V2.component"
+      },
+      {
+        "name": "Mellotron V.component",
+        "stem": "Mellotron V",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Mellotron V.component"
+      },
+      {
+        "name": "Mini V4.component",
+        "stem": "Mini V4",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Mini V4.component"
+      },
+      {
+        "name": "MiniBrute V.component",
+        "stem": "MiniBrute V",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/MiniBrute V.component"
+      },
+      {
+        "name": "MiniFreak V.component",
+        "stem": "MiniFreak V",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/MiniFreak V.component"
+      },
+      {
+        "name": "Modular V3.component",
+        "stem": "Modular V3",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Modular V3.component"
+      },
+      {
+        "name": "OP-Xa V.component",
+        "stem": "OP-Xa V",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/OP-Xa V.component"
+      },
+      {
+        "name": "Piano V3.component",
+        "stem": "Piano V3",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Piano V3.component"
+      },
+      {
+        "name": "Prophet-5 V.component",
+        "stem": "Prophet-5 V",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Prophet-5 V.component"
+      },
+      {
+        "name": "Prophet-VS V.component",
+        "stem": "Prophet-VS V",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Prophet-VS V.component"
+      },
+      {
+        "name": "Pure LoFi.component",
+        "stem": "Pure LoFi",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Pure LoFi.component"
+      },
+      {
+        "name": "SEM V3.component",
+        "stem": "SEM V3",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/SEM V3.component"
+      },
+      {
+        "name": "Solina V2.component",
+        "stem": "Solina V2",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Solina V2.component"
+      },
+      {
+        "name": "SQ80 V.component",
+        "stem": "SQ80 V",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/SQ80 V.component"
+      },
+      {
+        "name": "Stage-73 V2.component",
+        "stem": "Stage-73 V2",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Stage-73 V2.component"
+      },
+      {
+        "name": "Synclavier V.component",
+        "stem": "Synclavier V",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Synclavier V.component"
+      },
+      {
+        "name": "Synthi V.component",
+        "stem": "Synthi V",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Synthi V.component"
+      },
+      {
+        "name": "Synthx V.component",
+        "stem": "Synthx V",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Synthx V.component"
+      },
+      {
+        "name": "Vocoder V.component",
+        "stem": "Vocoder V",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Vocoder V.component"
+      },
+      {
+        "name": "VOX Continental V2.component",
+        "stem": "VOX Continental V2",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/VOX Continental V2.component"
+      },
+      {
+        "name": "Wurli V3.component",
+        "stem": "Wurli V3",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Wurli V3.component"
+      },
+      {
+        "name": "Acid V.vst3",
+        "stem": "Acid V",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Acid V.vst3"
+      },
+      {
+        "name": "Analog Lab V.vst3",
+        "stem": "Analog Lab V",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Analog Lab V.vst3"
+      },
+      {
+        "name": "ARP 2600 V3.vst3",
+        "stem": "ARP 2600 V3",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/ARP 2600 V3.vst3"
+      },
+      {
+        "name": "Augmented BRASS.vst3",
+        "stem": "Augmented BRASS",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Augmented BRASS.vst3"
+      },
+      {
+        "name": "Augmented GRAND PIANO.vst3",
+        "stem": "Augmented GRAND PIANO",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Augmented GRAND PIANO.vst3"
+      },
+      {
+        "name": "Augmented MALLETS.vst3",
+        "stem": "Augmented MALLETS",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Augmented MALLETS.vst3"
+      },
+      {
+        "name": "Augmented STRINGS.vst3",
+        "stem": "Augmented STRINGS",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Augmented STRINGS.vst3"
+      },
+      {
+        "name": "Augmented VOICES.vst3",
+        "stem": "Augmented VOICES",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Augmented VOICES.vst3"
+      },
+      {
+        "name": "Augmented WOODWINDS.vst3",
+        "stem": "Augmented WOODWINDS",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Augmented WOODWINDS.vst3"
+      },
+      {
+        "name": "Augmented YANGTZE.vst3",
+        "stem": "Augmented YANGTZE",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Augmented YANGTZE.vst3"
+      },
+      {
+        "name": "B-3 V2.vst3",
+        "stem": "B-3 V2",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/B-3 V2.vst3"
+      },
+      {
+        "name": "Buchla Easel V.vst3",
+        "stem": "Buchla Easel V",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Buchla Easel V.vst3"
+      },
+      {
+        "name": "Clavinet V.vst3",
+        "stem": "Clavinet V",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Clavinet V.vst3"
+      },
+      {
+        "name": "CMI V.vst3",
+        "stem": "CMI V",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/CMI V.vst3"
+      },
+      {
+        "name": "CP-70 V.vst3",
+        "stem": "CP-70 V",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/CP-70 V.vst3"
+      },
+      {
+        "name": "CS-80 V4.vst3",
+        "stem": "CS-80 V4",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/CS-80 V4.vst3"
+      },
+      {
+        "name": "CZ V.vst3",
+        "stem": "CZ V",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/CZ V.vst3"
+      },
+      {
+        "name": "DX7 V.vst3",
+        "stem": "DX7 V",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/DX7 V.vst3"
+      },
+      {
+        "name": "Emulator II V.vst3",
+        "stem": "Emulator II V",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Emulator II V.vst3"
+      },
+      {
+        "name": "Farfisa V.vst3",
+        "stem": "Farfisa V",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Farfisa V.vst3"
+      },
+      {
+        "name": "Jun-6 V.vst3",
+        "stem": "Jun-6 V",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Jun-6 V.vst3"
+      },
+      {
+        "name": "Jup-8 V4.vst3",
+        "stem": "Jup-8 V4",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Jup-8 V4.vst3"
+      },
+      {
+        "name": "Jup-8000 V.vst3",
+        "stem": "Jup-8000 V",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Jup-8000 V.vst3"
+      },
+      {
+        "name": "KORG MS-20 V.vst3",
+        "stem": "KORG MS-20 V",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/KORG MS-20 V.vst3"
+      },
+      {
+        "name": "Matrix-12 V2.vst3",
+        "stem": "Matrix-12 V2",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Matrix-12 V2.vst3"
+      },
+      {
+        "name": "Mellotron V.vst3",
+        "stem": "Mellotron V",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Mellotron V.vst3"
+      },
+      {
+        "name": "Mini V4.vst3",
+        "stem": "Mini V4",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Mini V4.vst3"
+      },
+      {
+        "name": "MiniBrute V.vst3",
+        "stem": "MiniBrute V",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/MiniBrute V.vst3"
+      },
+      {
+        "name": "MiniFreak V.vst3",
+        "stem": "MiniFreak V",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/MiniFreak V.vst3"
+      },
+      {
+        "name": "Modular V3.vst3",
+        "stem": "Modular V3",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Modular V3.vst3"
+      },
+      {
+        "name": "OP-Xa V.vst3",
+        "stem": "OP-Xa V",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/OP-Xa V.vst3"
+      },
+      {
+        "name": "Piano V3.vst3",
+        "stem": "Piano V3",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Piano V3.vst3"
+      },
+      {
+        "name": "Prophet-5 V.vst3",
+        "stem": "Prophet-5 V",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Prophet-5 V.vst3"
+      },
+      {
+        "name": "Prophet-VS V.vst3",
+        "stem": "Prophet-VS V",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Prophet-VS V.vst3"
+      },
+      {
+        "name": "Pure LoFi.vst3",
+        "stem": "Pure LoFi",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Pure LoFi.vst3"
+      },
+      {
+        "name": "SEM V3.vst3",
+        "stem": "SEM V3",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/SEM V3.vst3"
+      },
+      {
+        "name": "Solina V2.vst3",
+        "stem": "Solina V2",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Solina V2.vst3"
+      },
+      {
+        "name": "SQ80 V.vst3",
+        "stem": "SQ80 V",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/SQ80 V.vst3"
+      },
+      {
+        "name": "Stage-73 V2.vst3",
+        "stem": "Stage-73 V2",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Stage-73 V2.vst3"
+      },
+      {
+        "name": "Synclavier V.vst3",
+        "stem": "Synclavier V",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Synclavier V.vst3"
+      },
+      {
+        "name": "Synthi V.vst3",
+        "stem": "Synthi V",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Synthi V.vst3"
+      },
+      {
+        "name": "Synthx V.vst3",
+        "stem": "Synthx V",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Synthx V.vst3"
+      },
+      {
+        "name": "Vocoder V.vst3",
+        "stem": "Vocoder V",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Vocoder V.vst3"
+      },
+      {
+        "name": "VOX Continental V2.vst3",
+        "stem": "VOX Continental V2",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/VOX Continental V2.vst3"
+      },
+      {
+        "name": "Wurli V3.vst3",
+        "stem": "Wurli V3",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Wurli V3.vst3"
+      },
+      {
+        "name": "Acid V.vst",
+        "stem": "Acid V",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/Acid V.vst"
+      },
+      {
+        "name": "Analog Lab V.vst",
+        "stem": "Analog Lab V",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/Analog Lab V.vst"
+      },
+      {
+        "name": "ARP 2600 V3.vst",
+        "stem": "ARP 2600 V3",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/ARP 2600 V3.vst"
+      },
+      {
+        "name": "Augmented BRASS.vst",
+        "stem": "Augmented BRASS",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/Augmented BRASS.vst"
+      },
+      {
+        "name": "Augmented GRAND PIANO.vst",
+        "stem": "Augmented GRAND PIANO",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/Augmented GRAND PIANO.vst"
+      },
+      {
+        "name": "Augmented MALLETS.vst",
+        "stem": "Augmented MALLETS",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/Augmented MALLETS.vst"
+      },
+      {
+        "name": "Augmented STRINGS.vst",
+        "stem": "Augmented STRINGS",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/Augmented STRINGS.vst"
+      },
+      {
+        "name": "Augmented VOICES.vst",
+        "stem": "Augmented VOICES",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/Augmented VOICES.vst"
+      },
+      {
+        "name": "Augmented WOODWINDS.vst",
+        "stem": "Augmented WOODWINDS",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/Augmented WOODWINDS.vst"
+      },
+      {
+        "name": "Augmented YANGTZE.vst",
+        "stem": "Augmented YANGTZE",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/Augmented YANGTZE.vst"
+      },
+      {
+        "name": "B-3 V2.vst",
+        "stem": "B-3 V2",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/B-3 V2.vst"
+      },
+      {
+        "name": "Buchla Easel V.vst",
+        "stem": "Buchla Easel V",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/Buchla Easel V.vst"
+      },
+      {
+        "name": "Clavinet V.vst",
+        "stem": "Clavinet V",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/Clavinet V.vst"
+      },
+      {
+        "name": "CMI V.vst",
+        "stem": "CMI V",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/CMI V.vst"
+      },
+      {
+        "name": "CP-70 V.vst",
+        "stem": "CP-70 V",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/CP-70 V.vst"
+      },
+      {
+        "name": "CS-80 V4.vst",
+        "stem": "CS-80 V4",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/CS-80 V4.vst"
+      },
+      {
+        "name": "CZ V.vst",
+        "stem": "CZ V",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/CZ V.vst"
+      },
+      {
+        "name": "DX7 V.vst",
+        "stem": "DX7 V",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/DX7 V.vst"
+      },
+      {
+        "name": "Emulator II V.vst",
+        "stem": "Emulator II V",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/Emulator II V.vst"
+      },
+      {
+        "name": "Farfisa V.vst",
+        "stem": "Farfisa V",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/Farfisa V.vst"
+      },
+      {
+        "name": "Jun-6 V.vst",
+        "stem": "Jun-6 V",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/Jun-6 V.vst"
+      },
+      {
+        "name": "Jup-8 V4.vst",
+        "stem": "Jup-8 V4",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/Jup-8 V4.vst"
+      },
+      {
+        "name": "Jup-8000 V.vst",
+        "stem": "Jup-8000 V",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/Jup-8000 V.vst"
+      },
+      {
+        "name": "KORG MS-20 V.vst",
+        "stem": "KORG MS-20 V",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/KORG MS-20 V.vst"
+      },
+      {
+        "name": "Matrix-12 V2.vst",
+        "stem": "Matrix-12 V2",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/Matrix-12 V2.vst"
+      },
+      {
+        "name": "Mellotron V.vst",
+        "stem": "Mellotron V",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/Mellotron V.vst"
+      },
+      {
+        "name": "Mini V4.vst",
+        "stem": "Mini V4",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/Mini V4.vst"
+      },
+      {
+        "name": "MiniBrute V.vst",
+        "stem": "MiniBrute V",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/MiniBrute V.vst"
+      },
+      {
+        "name": "MiniFreak V.vst",
+        "stem": "MiniFreak V",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/MiniFreak V.vst"
+      },
+      {
+        "name": "Modular V3.vst",
+        "stem": "Modular V3",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/Modular V3.vst"
+      },
+      {
+        "name": "OP-Xa V.vst",
+        "stem": "OP-Xa V",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/OP-Xa V.vst"
+      },
+      {
+        "name": "Piano V3.vst",
+        "stem": "Piano V3",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/Piano V3.vst"
+      },
+      {
+        "name": "Prophet-5 V.vst",
+        "stem": "Prophet-5 V",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/Prophet-5 V.vst"
+      },
+      {
+        "name": "Prophet-VS V.vst",
+        "stem": "Prophet-VS V",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/Prophet-VS V.vst"
+      },
+      {
+        "name": "Pure LoFi.vst",
+        "stem": "Pure LoFi",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/Pure LoFi.vst"
+      },
+      {
+        "name": "SEM V3.vst",
+        "stem": "SEM V3",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/SEM V3.vst"
+      },
+      {
+        "name": "Solina V2.vst",
+        "stem": "Solina V2",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/Solina V2.vst"
+      },
+      {
+        "name": "SQ80 V.vst",
+        "stem": "SQ80 V",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/SQ80 V.vst"
+      },
+      {
+        "name": "Stage-73 V2.vst",
+        "stem": "Stage-73 V2",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/Stage-73 V2.vst"
+      },
+      {
+        "name": "Synclavier V.vst",
+        "stem": "Synclavier V",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/Synclavier V.vst"
+      },
+      {
+        "name": "Synthi V.vst",
+        "stem": "Synthi V",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/Synthi V.vst"
+      },
+      {
+        "name": "Synthx V.vst",
+        "stem": "Synthx V",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/Synthx V.vst"
+      },
+      {
+        "name": "Vocoder V.vst",
+        "stem": "Vocoder V",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/Vocoder V.vst"
+      },
+      {
+        "name": "VOX Continental V2.vst",
+        "stem": "VOX Continental V2",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/VOX Continental V2.vst"
+      },
+      {
+        "name": "Wurli V3.vst",
+        "stem": "Wurli V3",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/Wurli V3.vst"
+      },
+      {
+        "name": "Acid V.app",
+        "stem": "Acid V",
+        "type": "app",
+        "location": "arturia_apps",
+        "path": "/Applications/Arturia/Acid V.app"
+      },
+      {
+        "name": "Analog Lab V.app",
+        "stem": "Analog Lab V",
+        "type": "app",
+        "location": "arturia_apps",
+        "path": "/Applications/Arturia/Analog Lab V.app"
+      },
+      {
+        "name": "ARP 2600 V3.app",
+        "stem": "ARP 2600 V3",
+        "type": "app",
+        "location": "arturia_apps",
+        "path": "/Applications/Arturia/ARP 2600 V3.app"
+      },
+      {
+        "name": "Arturia Software Center.app",
+        "stem": "Arturia Software Center",
+        "type": "app",
+        "location": "arturia_apps",
+        "path": "/Applications/Arturia/Arturia Software Center.app"
+      },
+      {
+        "name": "Augmented BRASS.app",
+        "stem": "Augmented BRASS",
+        "type": "app",
+        "location": "arturia_apps",
+        "path": "/Applications/Arturia/Augmented BRASS.app"
+      },
+      {
+        "name": "Augmented GRAND PIANO.app",
+        "stem": "Augmented GRAND PIANO",
+        "type": "app",
+        "location": "arturia_apps",
+        "path": "/Applications/Arturia/Augmented GRAND PIANO.app"
+      },
+      {
+        "name": "Augmented MALLETS.app",
+        "stem": "Augmented MALLETS",
+        "type": "app",
+        "location": "arturia_apps",
+        "path": "/Applications/Arturia/Augmented MALLETS.app"
+      },
+      {
+        "name": "Augmented STRINGS.app",
+        "stem": "Augmented STRINGS",
+        "type": "app",
+        "location": "arturia_apps",
+        "path": "/Applications/Arturia/Augmented STRINGS.app"
+      },
+      {
+        "name": "Augmented VOICES.app",
+        "stem": "Augmented VOICES",
+        "type": "app",
+        "location": "arturia_apps",
+        "path": "/Applications/Arturia/Augmented VOICES.app"
+      },
+      {
+        "name": "Augmented WOODWINDS.app",
+        "stem": "Augmented WOODWINDS",
+        "type": "app",
+        "location": "arturia_apps",
+        "path": "/Applications/Arturia/Augmented WOODWINDS.app"
+      },
+      {
+        "name": "Augmented YANGTZE.app",
+        "stem": "Augmented YANGTZE",
+        "type": "app",
+        "location": "arturia_apps",
+        "path": "/Applications/Arturia/Augmented YANGTZE.app"
+      },
+      {
+        "name": "B-3 V2.app",
+        "stem": "B-3 V2",
+        "type": "app",
+        "location": "arturia_apps",
+        "path": "/Applications/Arturia/B-3 V2.app"
+      },
+      {
+        "name": "Buchla Easel V.app",
+        "stem": "Buchla Easel V",
+        "type": "app",
+        "location": "arturia_apps",
+        "path": "/Applications/Arturia/Buchla Easel V.app"
+      },
+      {
+        "name": "Clavinet V.app",
+        "stem": "Clavinet V",
+        "type": "app",
+        "location": "arturia_apps",
+        "path": "/Applications/Arturia/Clavinet V.app"
+      },
+      {
+        "name": "CMI V.app",
+        "stem": "CMI V",
+        "type": "app",
+        "location": "arturia_apps",
+        "path": "/Applications/Arturia/CMI V.app"
+      },
+      {
+        "name": "CP-70 V.app",
+        "stem": "CP-70 V",
+        "type": "app",
+        "location": "arturia_apps",
+        "path": "/Applications/Arturia/CP-70 V.app"
+      },
+      {
+        "name": "CS-80 V4.app",
+        "stem": "CS-80 V4",
+        "type": "app",
+        "location": "arturia_apps",
+        "path": "/Applications/Arturia/CS-80 V4.app"
+      },
+      {
+        "name": "CZ V.app",
+        "stem": "CZ V",
+        "type": "app",
+        "location": "arturia_apps",
+        "path": "/Applications/Arturia/CZ V.app"
+      },
+      {
+        "name": "DX7 V.app",
+        "stem": "DX7 V",
+        "type": "app",
+        "location": "arturia_apps",
+        "path": "/Applications/Arturia/DX7 V.app"
+      },
+      {
+        "name": "Emulator II V.app",
+        "stem": "Emulator II V",
+        "type": "app",
+        "location": "arturia_apps",
+        "path": "/Applications/Arturia/Emulator II V.app"
+      },
+      {
+        "name": "Farfisa V.app",
+        "stem": "Farfisa V",
+        "type": "app",
+        "location": "arturia_apps",
+        "path": "/Applications/Arturia/Farfisa V.app"
+      },
+      {
+        "name": "Jun-6 V.app",
+        "stem": "Jun-6 V",
+        "type": "app",
+        "location": "arturia_apps",
+        "path": "/Applications/Arturia/Jun-6 V.app"
+      },
+      {
+        "name": "Jup-8 V4.app",
+        "stem": "Jup-8 V4",
+        "type": "app",
+        "location": "arturia_apps",
+        "path": "/Applications/Arturia/Jup-8 V4.app"
+      },
+      {
+        "name": "Jup-8000 V.app",
+        "stem": "Jup-8000 V",
+        "type": "app",
+        "location": "arturia_apps",
+        "path": "/Applications/Arturia/Jup-8000 V.app"
+      },
+      {
+        "name": "KORG MS-20 V.app",
+        "stem": "KORG MS-20 V",
+        "type": "app",
+        "location": "arturia_apps",
+        "path": "/Applications/Arturia/KORG MS-20 V.app"
+      },
+      {
+        "name": "Matrix-12 V2.app",
+        "stem": "Matrix-12 V2",
+        "type": "app",
+        "location": "arturia_apps",
+        "path": "/Applications/Arturia/Matrix-12 V2.app"
+      },
+      {
+        "name": "Mellotron V.app",
+        "stem": "Mellotron V",
+        "type": "app",
+        "location": "arturia_apps",
+        "path": "/Applications/Arturia/Mellotron V.app"
+      },
+      {
+        "name": "Mini V4.app",
+        "stem": "Mini V4",
+        "type": "app",
+        "location": "arturia_apps",
+        "path": "/Applications/Arturia/Mini V4.app"
+      },
+      {
+        "name": "MiniBrute V.app",
+        "stem": "MiniBrute V",
+        "type": "app",
+        "location": "arturia_apps",
+        "path": "/Applications/Arturia/MiniBrute V.app"
+      },
+      {
+        "name": "MiniFreak V.app",
+        "stem": "MiniFreak V",
+        "type": "app",
+        "location": "arturia_apps",
+        "path": "/Applications/Arturia/MiniFreak V.app"
+      },
+      {
+        "name": "Modular V3.app",
+        "stem": "Modular V3",
+        "type": "app",
+        "location": "arturia_apps",
+        "path": "/Applications/Arturia/Modular V3.app"
+      },
+      {
+        "name": "OP-Xa V.app",
+        "stem": "OP-Xa V",
+        "type": "app",
+        "location": "arturia_apps",
+        "path": "/Applications/Arturia/OP-Xa V.app"
+      },
+      {
+        "name": "Piano V3.app",
+        "stem": "Piano V3",
+        "type": "app",
+        "location": "arturia_apps",
+        "path": "/Applications/Arturia/Piano V3.app"
+      },
+      {
+        "name": "Prophet-5 V.app",
+        "stem": "Prophet-5 V",
+        "type": "app",
+        "location": "arturia_apps",
+        "path": "/Applications/Arturia/Prophet-5 V.app"
+      },
+      {
+        "name": "Prophet-VS V.app",
+        "stem": "Prophet-VS V",
+        "type": "app",
+        "location": "arturia_apps",
+        "path": "/Applications/Arturia/Prophet-VS V.app"
+      },
+      {
+        "name": "Pure LoFi.app",
+        "stem": "Pure LoFi",
+        "type": "app",
+        "location": "arturia_apps",
+        "path": "/Applications/Arturia/Pure LoFi.app"
+      },
+      {
+        "name": "SEM V3.app",
+        "stem": "SEM V3",
+        "type": "app",
+        "location": "arturia_apps",
+        "path": "/Applications/Arturia/SEM V3.app"
+      },
+      {
+        "name": "Solina V2.app",
+        "stem": "Solina V2",
+        "type": "app",
+        "location": "arturia_apps",
+        "path": "/Applications/Arturia/Solina V2.app"
+      },
+      {
+        "name": "SQ80 V.app",
+        "stem": "SQ80 V",
+        "type": "app",
+        "location": "arturia_apps",
+        "path": "/Applications/Arturia/SQ80 V.app"
+      },
+      {
+        "name": "Stage-73 V2.app",
+        "stem": "Stage-73 V2",
+        "type": "app",
+        "location": "arturia_apps",
+        "path": "/Applications/Arturia/Stage-73 V2.app"
+      },
+      {
+        "name": "Synclavier V.app",
+        "stem": "Synclavier V",
+        "type": "app",
+        "location": "arturia_apps",
+        "path": "/Applications/Arturia/Synclavier V.app"
+      },
+      {
+        "name": "Synthi V.app",
+        "stem": "Synthi V",
+        "type": "app",
+        "location": "arturia_apps",
+        "path": "/Applications/Arturia/Synthi V.app"
+      },
+      {
+        "name": "Synthx V.app",
+        "stem": "Synthx V",
+        "type": "app",
+        "location": "arturia_apps",
+        "path": "/Applications/Arturia/Synthx V.app"
+      },
+      {
+        "name": "Vocoder V.app",
+        "stem": "Vocoder V",
+        "type": "app",
+        "location": "arturia_apps",
+        "path": "/Applications/Arturia/Vocoder V.app"
+      },
+      {
+        "name": "VOX Continental V2.app",
+        "stem": "VOX Continental V2",
+        "type": "app",
+        "location": "arturia_apps",
+        "path": "/Applications/Arturia/VOX Continental V2.app"
+      },
+      {
+        "name": "Wurli V3.app",
+        "stem": "Wurli V3",
+        "type": "app",
+        "location": "arturia_apps",
+        "path": "/Applications/Arturia/Wurli V3.app"
+      }
+    ],
+    "XLN Audio": [
+      {
+        "name": "Addictive Drums 2.component",
+        "stem": "Addictive Drums 2",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Addictive Drums 2.component"
+      },
+      {
+        "name": "DS-10 Drum Shaper.component",
+        "stem": "DS-10 Drum Shaper",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/DS-10 Drum Shaper.component"
+      },
+      {
+        "name": "RC-20 Retro Color.component",
+        "stem": "RC-20 Retro Color",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/RC-20 Retro Color.component"
+      },
+      {
+        "name": "Addictive Drums 2.vst3",
+        "stem": "Addictive Drums 2",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Addictive Drums 2.vst3"
+      },
+      {
+        "name": "DS-10 Drum Shaper.vst3",
+        "stem": "DS-10 Drum Shaper",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/DS-10 Drum Shaper.vst3"
+      },
+      {
+        "name": "RC-20 Retro Color.vst3",
+        "stem": "RC-20 Retro Color",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/RC-20 Retro Color.vst3"
+      },
+      {
+        "name": "Addictive Drums 2.vst",
+        "stem": "Addictive Drums 2",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/Addictive Drums 2.vst"
+      },
+      {
+        "name": "DS-10 Drum Shaper.vst",
+        "stem": "DS-10 Drum Shaper",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/DS-10 Drum Shaper.vst"
+      },
+      {
+        "name": "RC-20 Retro Color.vst",
+        "stem": "RC-20 Retro Color",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/RC-20 Retro Color.vst"
+      },
+      {
+        "name": "XLN Online Installer.app",
+        "stem": "XLN Online Installer",
+        "type": "app",
+        "location": "applications",
+        "path": "/Applications/XLN Online Installer.app"
+      }
+    ],
+    "Neural DSP": [
+      {
+        "name": "Archetype John Mayer X.component",
+        "stem": "Archetype John Mayer X",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Archetype John Mayer X.component"
+      },
+      {
+        "name": "Archetype Nolly X.component",
+        "stem": "Archetype Nolly X",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Archetype Nolly X.component"
+      },
+      {
+        "name": "Parallax X.component",
+        "stem": "Parallax X",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Parallax X.component"
+      },
+      {
+        "name": "Archetype John Mayer X.vst3",
+        "stem": "Archetype John Mayer X",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Archetype John Mayer X.vst3"
+      },
+      {
+        "name": "Archetype Nolly X.vst3",
+        "stem": "Archetype Nolly X",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Archetype Nolly X.vst3"
+      },
+      {
+        "name": "Parallax X.vst3",
+        "stem": "Parallax X",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Parallax X.vst3"
+      },
+      {
+        "name": "Archetype John Mayer X.vst",
+        "stem": "Archetype John Mayer X",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/Archetype John Mayer X.vst"
+      },
+      {
+        "name": "Archetype Nolly X.vst",
+        "stem": "Archetype Nolly X",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/Archetype Nolly X.vst"
+      },
+      {
+        "name": "Parallax X.vst",
+        "stem": "Parallax X",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/Parallax X.vst"
+      }
+    ],
+    "Antares": [
+      {
+        "name": "Auto-Key.component",
+        "stem": "Auto-Key",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Auto-Key.component"
+      },
+      {
+        "name": "Auto-Tune Access.component",
+        "stem": "Auto-Tune Access",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Auto-Tune Access.component"
+      },
+      {
+        "name": "Auto-Tune Artist.component",
+        "stem": "Auto-Tune Artist",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Auto-Tune Artist.component"
+      },
+      {
+        "name": "Auto-Tune EFX+.component",
+        "stem": "Auto-Tune EFX+",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Auto-Tune EFX+.component"
+      },
+      {
+        "name": "Auto-Tune Pro.component",
+        "stem": "Auto-Tune Pro",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Auto-Tune Pro.component"
+      },
+      {
+        "name": "Auto-Tune Slice.component",
+        "stem": "Auto-Tune Slice",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Auto-Tune Slice.component"
+      },
+      {
+        "name": "Auto-Tune SoundSoap.component",
+        "stem": "Auto-Tune SoundSoap",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Auto-Tune SoundSoap.component"
+      },
+      {
+        "name": "Auto-Tune Vocal Compressor.component",
+        "stem": "Auto-Tune Vocal Compressor",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Auto-Tune Vocal Compressor.component"
+      },
+      {
+        "name": "Auto-Tune Vocal EQ.component",
+        "stem": "Auto-Tune Vocal EQ",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Auto-Tune Vocal EQ.component"
+      },
+      {
+        "name": "Auto-Tune Vocodist.component",
+        "stem": "Auto-Tune Vocodist",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Auto-Tune Vocodist.component"
+      },
+      {
+        "name": "AVOX ARTICULATOR.component",
+        "stem": "AVOX ARTICULATOR",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/AVOX ARTICULATOR.component"
+      },
+      {
+        "name": "AVOX ASPIRE.component",
+        "stem": "AVOX ASPIRE",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/AVOX ASPIRE.component"
+      },
+      {
+        "name": "AVOX CHOIR.component",
+        "stem": "AVOX CHOIR",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/AVOX CHOIR.component"
+      },
+      {
+        "name": "AVOX DUO.component",
+        "stem": "AVOX DUO",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/AVOX DUO.component"
+      },
+      {
+        "name": "AVOX MUTATOR.component",
+        "stem": "AVOX MUTATOR",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/AVOX MUTATOR.component"
+      },
+      {
+        "name": "AVOX PUNCH.component",
+        "stem": "AVOX PUNCH",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/AVOX PUNCH.component"
+      },
+      {
+        "name": "AVOX THROAT.component",
+        "stem": "AVOX THROAT",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/AVOX THROAT.component"
+      },
+      {
+        "name": "AVOX WARM.component",
+        "stem": "AVOX WARM",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/AVOX WARM.component"
+      },
+      {
+        "name": "Harmony Engine 4x.component",
+        "stem": "Harmony Engine 4x",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Harmony Engine 4x.component"
+      },
+      {
+        "name": "Mic Mod.component",
+        "stem": "Mic Mod",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Mic Mod.component"
+      },
+      {
+        "name": "Vocal De-Esser.component",
+        "stem": "Vocal De-Esser",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Vocal De-Esser.component"
+      },
+      {
+        "name": "Vocal Reverb.component",
+        "stem": "Vocal Reverb",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Vocal Reverb.component"
+      },
+      {
+        "name": "Auto-Key.vst3",
+        "stem": "Auto-Key",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Auto-Key.vst3"
+      },
+      {
+        "name": "Auto-Tune Access.vst3",
+        "stem": "Auto-Tune Access",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Auto-Tune Access.vst3"
+      },
+      {
+        "name": "Auto-Tune Artist.vst3",
+        "stem": "Auto-Tune Artist",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Auto-Tune Artist.vst3"
+      },
+      {
+        "name": "Auto-Tune EFX+.vst3",
+        "stem": "Auto-Tune EFX+",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Auto-Tune EFX+.vst3"
+      },
+      {
+        "name": "Auto-Tune Pro.vst3",
+        "stem": "Auto-Tune Pro",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Auto-Tune Pro.vst3"
+      },
+      {
+        "name": "Auto-Tune Slice.vst3",
+        "stem": "Auto-Tune Slice",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Auto-Tune Slice.vst3"
+      },
+      {
+        "name": "Auto-Tune SoundSoap.vst3",
+        "stem": "Auto-Tune SoundSoap",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Auto-Tune SoundSoap.vst3"
+      },
+      {
+        "name": "Auto-Tune Vocal Compressor.vst3",
+        "stem": "Auto-Tune Vocal Compressor",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Auto-Tune Vocal Compressor.vst3"
+      },
+      {
+        "name": "Auto-Tune Vocal EQ.vst3",
+        "stem": "Auto-Tune Vocal EQ",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Auto-Tune Vocal EQ.vst3"
+      },
+      {
+        "name": "Auto-Tune Vocodist.vst3",
+        "stem": "Auto-Tune Vocodist",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Auto-Tune Vocodist.vst3"
+      },
+      {
+        "name": "AVOX ARTICULATOR.vst3",
+        "stem": "AVOX ARTICULATOR",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/AVOX ARTICULATOR.vst3"
+      },
+      {
+        "name": "AVOX ASPIRE.vst3",
+        "stem": "AVOX ASPIRE",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/AVOX ASPIRE.vst3"
+      },
+      {
+        "name": "AVOX CHOIR.vst3",
+        "stem": "AVOX CHOIR",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/AVOX CHOIR.vst3"
+      },
+      {
+        "name": "AVOX DUO.vst3",
+        "stem": "AVOX DUO",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/AVOX DUO.vst3"
+      },
+      {
+        "name": "AVOX MUTATOR.vst3",
+        "stem": "AVOX MUTATOR",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/AVOX MUTATOR.vst3"
+      },
+      {
+        "name": "AVOX PUNCH.vst3",
+        "stem": "AVOX PUNCH",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/AVOX PUNCH.vst3"
+      },
+      {
+        "name": "AVOX THROAT.vst3",
+        "stem": "AVOX THROAT",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/AVOX THROAT.vst3"
+      },
+      {
+        "name": "AVOX WARM.vst3",
+        "stem": "AVOX WARM",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/AVOX WARM.vst3"
+      },
+      {
+        "name": "Harmony Engine 4x.vst3",
+        "stem": "Harmony Engine 4x",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Harmony Engine 4x.vst3"
+      },
+      {
+        "name": "Mic Mod.vst3",
+        "stem": "Mic Mod",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Mic Mod.vst3"
+      },
+      {
+        "name": "Vocal De-Esser.vst3",
+        "stem": "Vocal De-Esser",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Vocal De-Esser.vst3"
+      },
+      {
+        "name": "Vocal Reverb.vst3",
+        "stem": "Vocal Reverb",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Vocal Reverb.vst3"
+      },
+      {
+        "name": "Auto-Tune Central.app",
+        "stem": "Auto-Tune Central",
+        "type": "app",
+        "location": "applications",
+        "path": "/Applications/Auto-Tune Central.app"
+      },
+      {
+        "name": "Vocal Prep.app",
+        "stem": "Vocal Prep",
+        "type": "app",
+        "location": "applications",
+        "path": "/Applications/Vocal Prep.app"
+      }
+    ],
+    "Spitfire": [
+      {
+        "name": "BBC Symphony Orchestra.component",
+        "stem": "BBC Symphony Orchestra",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/BBC Symphony Orchestra.component"
+      },
+      {
+        "name": "Fractured Strings.component",
+        "stem": "Fractured Strings",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Fractured Strings.component"
+      },
+      {
+        "name": "LABS.component",
+        "stem": "LABS",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/LABS.component"
+      },
+      {
+        "name": "Olafur Arnalds - Cells.component",
+        "stem": "Olafur Arnalds - Cells",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Olafur Arnalds - Cells.component"
+      },
+      {
+        "name": "Originals - Rare Flutes.component",
+        "stem": "Originals - Rare Flutes",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Originals - Rare Flutes.component"
+      },
+      {
+        "name": "Resonate.component",
+        "stem": "Resonate",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Resonate.component"
+      },
+      {
+        "name": "BBC Symphony Orchestra.vst3",
+        "stem": "BBC Symphony Orchestra",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/BBC Symphony Orchestra.vst3"
+      },
+      {
+        "name": "Fractured Strings.vst3",
+        "stem": "Fractured Strings",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Fractured Strings.vst3"
+      },
+      {
+        "name": "LABS.vst3",
+        "stem": "LABS",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/LABS.vst3"
+      },
+      {
+        "name": "Olafur Arnalds - Cells.vst3",
+        "stem": "Olafur Arnalds - Cells",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Olafur Arnalds - Cells.vst3"
+      },
+      {
+        "name": "Originals - Rare Flutes.vst3",
+        "stem": "Originals - Rare Flutes",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Originals - Rare Flutes.vst3"
+      },
+      {
+        "name": "Resonate.vst3",
+        "stem": "Resonate",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Resonate.vst3"
+      },
+      {
+        "name": "BBC Symphony Orchestra.vst",
+        "stem": "BBC Symphony Orchestra",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/BBC Symphony Orchestra.vst"
+      },
+      {
+        "name": "Fractured Strings.vst",
+        "stem": "Fractured Strings",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/Fractured Strings.vst"
+      },
+      {
+        "name": "LABS.vst",
+        "stem": "LABS",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/LABS.vst"
+      },
+      {
+        "name": "Olafur Arnalds - Cells.vst",
+        "stem": "Olafur Arnalds - Cells",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/Olafur Arnalds - Cells.vst"
+      },
+      {
+        "name": "Originals - Rare Flutes.vst",
+        "stem": "Originals - Rare Flutes",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/Originals - Rare Flutes.vst"
+      },
+      {
+        "name": "Resonate.vst",
+        "stem": "Resonate",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/Resonate.vst"
+      },
+      {
+        "name": "LABS.app",
+        "stem": "LABS",
+        "type": "app",
+        "location": "applications",
+        "path": "/Applications/LABS.app"
+      },
+      {
+        "name": "Spitfire Audio.app",
+        "stem": "Spitfire Audio",
+        "type": "app",
+        "location": "applications",
+        "path": "/Applications/Spitfire Audio.app"
+      }
+    ],
+    "Native Instruments": [
+      {
+        "name": "Bite.component",
+        "stem": "Bite",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Bite.component"
+      },
+      {
+        "name": "Guitar Rig 7.component",
+        "stem": "Guitar Rig 7",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Guitar Rig 7.component"
+      },
+      {
+        "name": "Komplete Kontrol.component",
+        "stem": "Komplete Kontrol",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Komplete Kontrol.component"
+      },
+      {
+        "name": "Kontakt 8.component",
+        "stem": "Kontakt 8",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Kontakt 8.component"
+      },
+      {
+        "name": "Massive X.component",
+        "stem": "Massive X",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Massive X.component"
+      },
+      {
+        "name": "Reaktor 6.component",
+        "stem": "Reaktor 6",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Reaktor 6.component"
+      },
+      {
+        "name": "Bite.vst3",
+        "stem": "Bite",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Bite.vst3"
+      },
+      {
+        "name": "Guitar Rig 7.vst3",
+        "stem": "Guitar Rig 7",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Guitar Rig 7.vst3"
+      },
+      {
+        "name": "Komplete Kontrol.vst3",
+        "stem": "Komplete Kontrol",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Komplete Kontrol.vst3"
+      },
+      {
+        "name": "Kontakt 8.vst3",
+        "stem": "Kontakt 8",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Kontakt 8.vst3"
+      },
+      {
+        "name": "Massive X.vst3",
+        "stem": "Massive X",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Massive X.vst3"
+      },
+      {
+        "name": "Reaktor 6.vst3",
+        "stem": "Reaktor 6",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Reaktor 6.vst3"
+      },
+      {
+        "name": "Bite.vst",
+        "stem": "Bite",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/Bite.vst"
+      },
+      {
+        "name": "Massive X.vst",
+        "stem": "Massive X",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/Massive X.vst"
+      },
+      {
+        "name": "Reaktor 6 FX.vst",
+        "stem": "Reaktor 6 FX",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/Reaktor 6 FX.vst"
+      },
+      {
+        "name": "Reaktor 6.vst",
+        "stem": "Reaktor 6",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/Reaktor 6.vst"
+      },
+      {
+        "name": "Native Access.app",
+        "stem": "Native Access",
+        "type": "app",
+        "location": "applications",
+        "path": "/Applications/Native Access.app"
+      },
+      {
+        "name": "Bite",
+        "stem": "Bite",
+        "type": "dir",
+        "location": "ni_apps",
+        "path": "/Applications/Native Instruments/Bite"
+      },
+      {
+        "name": "Controller Editor",
+        "stem": "Controller Editor",
+        "type": "dir",
+        "location": "ni_apps",
+        "path": "/Applications/Native Instruments/Controller Editor"
+      },
+      {
+        "name": "Guitar Rig 7",
+        "stem": "Guitar Rig 7",
+        "type": "dir",
+        "location": "ni_apps",
+        "path": "/Applications/Native Instruments/Guitar Rig 7"
+      },
+      {
+        "name": "Komplete Kontrol",
+        "stem": "Komplete Kontrol",
+        "type": "dir",
+        "location": "ni_apps",
+        "path": "/Applications/Native Instruments/Komplete Kontrol"
+      },
+      {
+        "name": "Kontakt 8",
+        "stem": "Kontakt 8",
+        "type": "dir",
+        "location": "ni_apps",
+        "path": "/Applications/Native Instruments/Kontakt 8"
+      },
+      {
+        "name": "Massive X",
+        "stem": "Massive X",
+        "type": "dir",
+        "location": "ni_apps",
+        "path": "/Applications/Native Instruments/Massive X"
+      },
+      {
+        "name": "NTKDaemon",
+        "stem": "NTKDaemon",
+        "type": "dir",
+        "location": "ni_apps",
+        "path": "/Applications/Native Instruments/NTKDaemon"
+      },
+      {
+        "name": "Reaktor 6",
+        "stem": "Reaktor 6",
+        "type": "dir",
+        "location": "ni_apps",
+        "path": "/Applications/Native Instruments/Reaktor 6"
+      }
+    ],
+    "Universal Audio": [
+      {
+        "name": "Console Recall.component",
+        "stem": "Console Recall",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Console Recall.component"
+      },
+      {
+        "name": "UAD 4K Buss Compressor.component",
+        "stem": "UAD 4K Buss Compressor",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD 4K Buss Compressor.component"
+      },
+      {
+        "name": "UAD 4K Channel Strip.component",
+        "stem": "UAD 4K Channel Strip",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD 4K Channel Strip.component"
+      },
+      {
+        "name": "UAD A-Type Multiband Enhancer.component",
+        "stem": "UAD A-Type Multiband Enhancer",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD A-Type Multiband Enhancer.component"
+      },
+      {
+        "name": "UAD ADA Flanger.component",
+        "stem": "UAD ADA Flanger",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD ADA Flanger.component"
+      },
+      {
+        "name": "UAD ADA STD-1 Stereo Tapped Delay.component",
+        "stem": "UAD ADA STD-1 Stereo Tapped Delay",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD ADA STD-1 Stereo Tapped Delay.component"
+      },
+      {
+        "name": "UAD AKG BX 20.component",
+        "stem": "UAD AKG BX 20",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD AKG BX 20.component"
+      },
+      {
+        "name": "UAD Ampeg B15N.component",
+        "stem": "UAD Ampeg B15N",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Ampeg B15N.component"
+      },
+      {
+        "name": "UAD Ampeg SVT3Pro.component",
+        "stem": "UAD Ampeg SVT3Pro",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Ampeg SVT3Pro.component"
+      },
+      {
+        "name": "UAD Ampeg SVTVR Classic.component",
+        "stem": "UAD Ampeg SVTVR Classic",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Ampeg SVTVR Classic.component"
+      },
+      {
+        "name": "UAD Ampeg SVTVR.component",
+        "stem": "UAD Ampeg SVTVR",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Ampeg SVTVR.component"
+      },
+      {
+        "name": "UAD Ampex ATR-102.component",
+        "stem": "UAD Ampex ATR-102",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Ampex ATR-102.component"
+      },
+      {
+        "name": "UAD AMS DMX 15-80 S.component",
+        "stem": "UAD AMS DMX 15-80 S",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD AMS DMX 15-80 S.component"
+      },
+      {
+        "name": "UAD AMS Neve DFC Channel Strip.component",
+        "stem": "UAD AMS Neve DFC Channel Strip",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD AMS Neve DFC Channel Strip.component"
+      },
+      {
+        "name": "UAD AMS RMX16 Expanded.component",
+        "stem": "UAD AMS RMX16 Expanded",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD AMS RMX16 Expanded.component"
+      },
+      {
+        "name": "UAD AMS RMX16.component",
+        "stem": "UAD AMS RMX16",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD AMS RMX16.component"
+      },
+      {
+        "name": "UAD Antares Auto-Tune Realtime.component",
+        "stem": "UAD Antares Auto-Tune Realtime",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Antares Auto-Tune Realtime.component"
+      },
+      {
+        "name": "UAD API 2500.component",
+        "stem": "UAD API 2500",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD API 2500.component"
+      },
+      {
+        "name": "UAD API 550A.component",
+        "stem": "UAD API 550A",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD API 550A.component"
+      },
+      {
+        "name": "UAD API 560.component",
+        "stem": "UAD API 560",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD API 560.component"
+      },
+      {
+        "name": "UAD API Preamp.component",
+        "stem": "UAD API Preamp",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD API Preamp.component"
+      },
+      {
+        "name": "UAD API Vision Channel Strip Legacy.component",
+        "stem": "UAD API Vision Channel Strip Legacy",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD API Vision Channel Strip Legacy.component"
+      },
+      {
+        "name": "UAD API Vision Channel Strip.component",
+        "stem": "UAD API Vision Channel Strip",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD API Vision Channel Strip.component"
+      },
+      {
+        "name": "UAD Auto-Tune Realtime Access.component",
+        "stem": "UAD Auto-Tune Realtime Access",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Auto-Tune Realtime Access.component"
+      },
+      {
+        "name": "UAD Auto-Tune Realtime Advanced.component",
+        "stem": "UAD Auto-Tune Realtime Advanced",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Auto-Tune Realtime Advanced.component"
+      },
+      {
+        "name": "UAD Auto-Tune Realtime X.component",
+        "stem": "UAD Auto-Tune Realtime X",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Auto-Tune Realtime X.component"
+      },
+      {
+        "name": "UAD Avalon VT-737sp.component",
+        "stem": "UAD Avalon VT-737sp",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Avalon VT-737sp.component"
+      },
+      {
+        "name": "UAD Bermuda Triangle.component",
+        "stem": "UAD Bermuda Triangle",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Bermuda Triangle.component"
+      },
+      {
+        "name": "UAD Brigade Chorus.component",
+        "stem": "UAD Brigade Chorus",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Brigade Chorus.component"
+      },
+      {
+        "name": "UAD bx_digital V2 Mono.component",
+        "stem": "UAD bx_digital V2 Mono",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD bx_digital V2 Mono.component"
+      },
+      {
+        "name": "UAD bx_digital V2.component",
+        "stem": "UAD bx_digital V2",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD bx_digital V2.component"
+      },
+      {
+        "name": "UAD bx_digital V3 mix.component",
+        "stem": "UAD bx_digital V3 mix",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD bx_digital V3 mix.component"
+      },
+      {
+        "name": "UAD bx_digital V3.component",
+        "stem": "UAD bx_digital V3",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD bx_digital V3.component"
+      },
+      {
+        "name": "UAD bx_masterdesk Classic.component",
+        "stem": "UAD bx_masterdesk Classic",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD bx_masterdesk Classic.component"
+      },
+      {
+        "name": "UAD bx_masterdesk.component",
+        "stem": "UAD bx_masterdesk",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD bx_masterdesk.component"
+      },
+      {
+        "name": "UAD bx_refinement.component",
+        "stem": "UAD bx_refinement",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD bx_refinement.component"
+      },
+      {
+        "name": "UAD bx_saturator V2.component",
+        "stem": "UAD bx_saturator V2",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD bx_saturator V2.component"
+      },
+      {
+        "name": "UAD bx_subsynth.component",
+        "stem": "UAD bx_subsynth",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD bx_subsynth.component"
+      },
+      {
+        "name": "UAD bx_tuner.component",
+        "stem": "UAD bx_tuner",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD bx_tuner.component"
+      },
+      {
+        "name": "UAD C-Suite C-Axe.component",
+        "stem": "UAD C-Suite C-Axe",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD C-Suite C-Axe.component"
+      },
+      {
+        "name": "UAD C-Suite C-Max.component",
+        "stem": "UAD C-Suite C-Max",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD C-Suite C-Max.component"
+      },
+      {
+        "name": "UAD C-Suite C-Vox.component",
+        "stem": "UAD C-Suite C-Vox",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD C-Suite C-Vox.component"
+      },
+      {
+        "name": "UAD Cambridge.component",
+        "stem": "UAD Cambridge",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Cambridge.component"
+      },
+      {
+        "name": "UAD Capitol Chambers.component",
+        "stem": "UAD Capitol Chambers",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Capitol Chambers.component"
+      },
+      {
+        "name": "UAD Century Tube Channel Strip.component",
+        "stem": "UAD Century Tube Channel Strip",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Century Tube Channel Strip.component"
+      },
+      {
+        "name": "UAD Chandler GAV19T.component",
+        "stem": "UAD Chandler GAV19T",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Chandler GAV19T.component"
+      },
+      {
+        "name": "UAD Chandler Limited Curve Bender.component",
+        "stem": "UAD Chandler Limited Curve Bender",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Chandler Limited Curve Bender.component"
+      },
+      {
+        "name": "UAD Chandler Limited Zener Limiter.component",
+        "stem": "UAD Chandler Limited Zener Limiter",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Chandler Limited Zener Limiter.component"
+      },
+      {
+        "name": "UAD Cooper Time Cube.component",
+        "stem": "UAD Cooper Time Cube",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Cooper Time Cube.component"
+      },
+      {
+        "name": "UAD CS-1.component",
+        "stem": "UAD CS-1",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD CS-1.component"
+      },
+      {
+        "name": "UAD Dangerous BAX EQ Master.component",
+        "stem": "UAD Dangerous BAX EQ Master",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Dangerous BAX EQ Master.component"
+      },
+      {
+        "name": "UAD Dangerous BAX EQ Mix.component",
+        "stem": "UAD Dangerous BAX EQ Mix",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Dangerous BAX EQ Mix.component"
+      },
+      {
+        "name": "UAD dbx 160.component",
+        "stem": "UAD dbx 160",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD dbx 160.component"
+      },
+      {
+        "name": "UAD Diezel Herbert.component",
+        "stem": "UAD Diezel Herbert",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Diezel Herbert.component"
+      },
+      {
+        "name": "UAD Diezel VH4.component",
+        "stem": "UAD Diezel VH4",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Diezel VH4.component"
+      },
+      {
+        "name": "UAD DreamVerb.component",
+        "stem": "UAD DreamVerb",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD DreamVerb.component"
+      },
+      {
+        "name": "UAD Dytronics Cyclosonic Panner.component",
+        "stem": "UAD Dytronics Cyclosonic Panner",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Dytronics Cyclosonic Panner.component"
+      },
+      {
+        "name": "UAD Dytronics Tri-Stereo Chorus.component",
+        "stem": "UAD Dytronics Tri-Stereo Chorus",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Dytronics Tri-Stereo Chorus.component"
+      },
+      {
+        "name": "UAD Eden WT800.component",
+        "stem": "UAD Eden WT800",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Eden WT800.component"
+      },
+      {
+        "name": "UAD elysia alpha master.component",
+        "stem": "UAD elysia alpha master",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD elysia alpha master.component"
+      },
+      {
+        "name": "UAD elysia alpha mix.component",
+        "stem": "UAD elysia alpha mix",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD elysia alpha mix.component"
+      },
+      {
+        "name": "UAD elysia mpressor.component",
+        "stem": "UAD elysia mpressor",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD elysia mpressor.component"
+      },
+      {
+        "name": "UAD Empirical Labs Distressor.component",
+        "stem": "UAD Empirical Labs Distressor",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Empirical Labs Distressor.component"
+      },
+      {
+        "name": "UAD Empirical Labs FATSO Jr.component",
+        "stem": "UAD Empirical Labs FATSO Jr",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Empirical Labs FATSO Jr.component"
+      },
+      {
+        "name": "UAD Empirical Labs FATSO Sr.component",
+        "stem": "UAD Empirical Labs FATSO Sr",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Empirical Labs FATSO Sr.component"
+      },
+      {
+        "name": "UAD EMT 140.component",
+        "stem": "UAD EMT 140",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD EMT 140.component"
+      },
+      {
+        "name": "UAD EMT 250.component",
+        "stem": "UAD EMT 250",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD EMT 250.component"
+      },
+      {
+        "name": "UAD ENGL E646 VS.component",
+        "stem": "UAD ENGL E646 VS",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD ENGL E646 VS.component"
+      },
+      {
+        "name": "UAD ENGL E765 RT.component",
+        "stem": "UAD ENGL E765 RT",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD ENGL E765 RT.component"
+      },
+      {
+        "name": "UAD ENGL Savage 120.component",
+        "stem": "UAD ENGL Savage 120",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD ENGL Savage 120.component"
+      },
+      {
+        "name": "UAD EP-34 Tape Echo.component",
+        "stem": "UAD EP-34 Tape Echo",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD EP-34 Tape Echo.component"
+      },
+      {
+        "name": "UAD Eventide H910 Harmonizer.component",
+        "stem": "UAD Eventide H910 Harmonizer",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Eventide H910 Harmonizer.component"
+      },
+      {
+        "name": "UAD Fairchild 660.component",
+        "stem": "UAD Fairchild 660",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Fairchild 660.component"
+      },
+      {
+        "name": "UAD Fairchild 670 Legacy.component",
+        "stem": "UAD Fairchild 670 Legacy",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Fairchild 670 Legacy.component"
+      },
+      {
+        "name": "UAD Fairchild 670.component",
+        "stem": "UAD Fairchild 670",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Fairchild 670.component"
+      },
+      {
+        "name": "UAD Fender 55 Tweed Deluxe.component",
+        "stem": "UAD Fender 55 Tweed Deluxe",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Fender 55 Tweed Deluxe.component"
+      },
+      {
+        "name": "UAD Friedman BE100.component",
+        "stem": "UAD Friedman BE100",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Friedman BE100.component"
+      },
+      {
+        "name": "UAD Friedman Buxom Betty.component",
+        "stem": "UAD Friedman Buxom Betty",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Friedman Buxom Betty.component"
+      },
+      {
+        "name": "UAD Friedman DS40.component",
+        "stem": "UAD Friedman DS40",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Friedman DS40.component"
+      },
+      {
+        "name": "UAD Fuchs Overdrive Supreme 50.component",
+        "stem": "UAD Fuchs Overdrive Supreme 50",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Fuchs Overdrive Supreme 50.component"
+      },
+      {
+        "name": "UAD Fuchs Train II.component",
+        "stem": "UAD Fuchs Train II",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Fuchs Train II.component"
+      },
+      {
+        "name": "UAD Galaxy Tape Echo.component",
+        "stem": "UAD Galaxy Tape Echo",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Galaxy Tape Echo.component"
+      },
+      {
+        "name": "UAD Gallien Krueger 800RB.component",
+        "stem": "UAD Gallien Krueger 800RB",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Gallien Krueger 800RB.component"
+      },
+      {
+        "name": "UAD Harrison 32C SE.component",
+        "stem": "UAD Harrison 32C SE",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Harrison 32C SE.component"
+      },
+      {
+        "name": "UAD Harrison 32C.component",
+        "stem": "UAD Harrison 32C",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Harrison 32C.component"
+      },
+      {
+        "name": "UAD Helios Type 69 Legacy.component",
+        "stem": "UAD Helios Type 69 Legacy",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Helios Type 69 Legacy.component"
+      },
+      {
+        "name": "UAD Helios Type 69.component",
+        "stem": "UAD Helios Type 69",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Helios Type 69.component"
+      },
+      {
+        "name": "UAD Hemisphere Mic Collection.component",
+        "stem": "UAD Hemisphere Mic Collection",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Hemisphere Mic Collection.component"
+      },
+      {
+        "name": "UAD Hitsville EQ Mastering.component",
+        "stem": "UAD Hitsville EQ Mastering",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Hitsville EQ Mastering.component"
+      },
+      {
+        "name": "UAD Hitsville EQ.component",
+        "stem": "UAD Hitsville EQ",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Hitsville EQ.component"
+      },
+      {
+        "name": "UAD Hitsville Reverb Chambers.component",
+        "stem": "UAD Hitsville Reverb Chambers",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Hitsville Reverb Chambers.component"
+      },
+      {
+        "name": "UAD Ibanez Tube Screamer TS808.component",
+        "stem": "UAD Ibanez Tube Screamer TS808",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Ibanez Tube Screamer TS808.component"
+      },
+      {
+        "name": "UAD Korg SDD-3000.component",
+        "stem": "UAD Korg SDD-3000",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Korg SDD-3000.component"
+      },
+      {
+        "name": "UAD LA-6176 Channel Strip.component",
+        "stem": "UAD LA-6176 Channel Strip",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD LA-6176 Channel Strip.component"
+      },
+      {
+        "name": "UAD Lexicon 224.component",
+        "stem": "UAD Lexicon 224",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Lexicon 224.component"
+      },
+      {
+        "name": "UAD Lexicon 480L.component",
+        "stem": "UAD Lexicon 480L",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Lexicon 480L.component"
+      },
+      {
+        "name": "UAD Little Labs IBP.component",
+        "stem": "UAD Little Labs IBP",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Little Labs IBP.component"
+      },
+      {
+        "name": "UAD Little Labs VOG.component",
+        "stem": "UAD Little Labs VOG",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Little Labs VOG.component"
+      },
+      {
+        "name": "UAD Maag EQ4 MS.component",
+        "stem": "UAD Maag EQ4 MS",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Maag EQ4 MS.component"
+      },
+      {
+        "name": "UAD Maag EQ4.component",
+        "stem": "UAD Maag EQ4",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Maag EQ4.component"
+      },
+      {
+        "name": "UAD Manley Massive Passive MST.component",
+        "stem": "UAD Manley Massive Passive MST",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Manley Massive Passive MST.component"
+      },
+      {
+        "name": "UAD Manley Massive Passive.component",
+        "stem": "UAD Manley Massive Passive",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Manley Massive Passive.component"
+      },
+      {
+        "name": "UAD Manley Reference Mic Preamp.component",
+        "stem": "UAD Manley Reference Mic Preamp",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Manley Reference Mic Preamp.component"
+      },
+      {
+        "name": "UAD Manley Variable Mu.component",
+        "stem": "UAD Manley Variable Mu",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Manley Variable Mu.component"
+      },
+      {
+        "name": "UAD Manley VOXBOX.component",
+        "stem": "UAD Manley VOXBOX",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Manley VOXBOX.component"
+      },
+      {
+        "name": "UAD Marshall Bluesbreaker 1962.component",
+        "stem": "UAD Marshall Bluesbreaker 1962",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Marshall Bluesbreaker 1962.component"
+      },
+      {
+        "name": "UAD Marshall JMP 2203.component",
+        "stem": "UAD Marshall JMP 2203",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Marshall JMP 2203.component"
+      },
+      {
+        "name": "UAD Marshall Plexi Classic.component",
+        "stem": "UAD Marshall Plexi Classic",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Marshall Plexi Classic.component"
+      },
+      {
+        "name": "UAD Marshall Plexi Super Lead 1959.component",
+        "stem": "UAD Marshall Plexi Super Lead 1959",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Marshall Plexi Super Lead 1959.component"
+      },
+      {
+        "name": "UAD Marshall Silver Jubilee 2555.component",
+        "stem": "UAD Marshall Silver Jubilee 2555",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Marshall Silver Jubilee 2555.component"
+      },
+      {
+        "name": "UAD MDWEQ5-3B.component",
+        "stem": "UAD MDWEQ5-3B",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD MDWEQ5-3B.component"
+      },
+      {
+        "name": "UAD MDWEQ5-5B.component",
+        "stem": "UAD MDWEQ5-5B",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD MDWEQ5-5B.component"
+      },
+      {
+        "name": "UAD Millennia NSEQ-2.component",
+        "stem": "UAD Millennia NSEQ-2",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Millennia NSEQ-2.component"
+      },
+      {
+        "name": "UAD Moog Multimode Filter SE.component",
+        "stem": "UAD Moog Multimode Filter SE",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Moog Multimode Filter SE.component"
+      },
+      {
+        "name": "UAD Moog Multimode Filter XL.component",
+        "stem": "UAD Moog Multimode Filter XL",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Moog Multimode Filter XL.component"
+      },
+      {
+        "name": "UAD Moog Multimode Filter.component",
+        "stem": "UAD Moog Multimode Filter",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Moog Multimode Filter.component"
+      },
+      {
+        "name": "UAD MXR Flanger-Doubler.component",
+        "stem": "UAD MXR Flanger-Doubler",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD MXR Flanger-Doubler.component"
+      },
+      {
+        "name": "UAD Neve 1073 Legacy.component",
+        "stem": "UAD Neve 1073 Legacy",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Neve 1073 Legacy.component"
+      },
+      {
+        "name": "UAD Neve 1073.component",
+        "stem": "UAD Neve 1073",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Neve 1073.component"
+      },
+      {
+        "name": "UAD Neve 1073SE Legacy.component",
+        "stem": "UAD Neve 1073SE Legacy",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Neve 1073SE Legacy.component"
+      },
+      {
+        "name": "UAD Neve 1081.component",
+        "stem": "UAD Neve 1081",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Neve 1081.component"
+      },
+      {
+        "name": "UAD Neve 1081SE.component",
+        "stem": "UAD Neve 1081SE",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Neve 1081SE.component"
+      },
+      {
+        "name": "UAD Neve 1084.component",
+        "stem": "UAD Neve 1084",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Neve 1084.component"
+      },
+      {
+        "name": "UAD Neve 2254 E Dual.component",
+        "stem": "UAD Neve 2254 E Dual",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Neve 2254 E Dual.component"
+      },
+      {
+        "name": "UAD Neve 2254 E.component",
+        "stem": "UAD Neve 2254 E",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Neve 2254 E.component"
+      },
+      {
+        "name": "UAD Neve 31102.component",
+        "stem": "UAD Neve 31102",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Neve 31102.component"
+      },
+      {
+        "name": "UAD Neve 31102SE.component",
+        "stem": "UAD Neve 31102SE",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Neve 31102SE.component"
+      },
+      {
+        "name": "UAD Neve 33609 C.component",
+        "stem": "UAD Neve 33609 C",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Neve 33609 C.component"
+      },
+      {
+        "name": "UAD Neve 33609SE.component",
+        "stem": "UAD Neve 33609SE",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Neve 33609SE.component"
+      },
+      {
+        "name": "UAD Neve 88RS Legacy.component",
+        "stem": "UAD Neve 88RS Legacy",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Neve 88RS Legacy.component"
+      },
+      {
+        "name": "UAD Neve 88RS.component",
+        "stem": "UAD Neve 88RS",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Neve 88RS.component"
+      },
+      {
+        "name": "UAD Neve Preamp.component",
+        "stem": "UAD Neve Preamp",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Neve Preamp.component"
+      },
+      {
+        "name": "UAD Ocean Way Mic Collection 180.component",
+        "stem": "UAD Ocean Way Mic Collection 180",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Ocean Way Mic Collection 180.component"
+      },
+      {
+        "name": "UAD Ocean Way Mic Collection.component",
+        "stem": "UAD Ocean Way Mic Collection",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Ocean Way Mic Collection.component"
+      },
+      {
+        "name": "UAD Ocean Way Studios.component",
+        "stem": "UAD Ocean Way Studios",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Ocean Way Studios.component"
+      },
+      {
+        "name": "UAD OTO Biscuit 8-bit Effects.component",
+        "stem": "UAD OTO Biscuit 8-bit Effects",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD OTO Biscuit 8-bit Effects.component"
+      },
+      {
+        "name": "UAD Oxford Dynamic EQ.component",
+        "stem": "UAD Oxford Dynamic EQ",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Oxford Dynamic EQ.component"
+      },
+      {
+        "name": "UAD Oxford Envolution.component",
+        "stem": "UAD Oxford Envolution",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Oxford Envolution.component"
+      },
+      {
+        "name": "UAD Oxford EQ.component",
+        "stem": "UAD Oxford EQ",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Oxford EQ.component"
+      },
+      {
+        "name": "UAD Oxford Inflator.component",
+        "stem": "UAD Oxford Inflator",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Oxford Inflator.component"
+      },
+      {
+        "name": "UAD Oxford Limiter.component",
+        "stem": "UAD Oxford Limiter",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Oxford Limiter.component"
+      },
+      {
+        "name": "UAD Oxford SuprEsser DS.component",
+        "stem": "UAD Oxford SuprEsser DS",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Oxford SuprEsser DS.component"
+      },
+      {
+        "name": "UAD Oxide Tape.component",
+        "stem": "UAD Oxide Tape",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Oxide Tape.component"
+      },
+      {
+        "name": "UAD Precision Buss Compressor.component",
+        "stem": "UAD Precision Buss Compressor",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Precision Buss Compressor.component"
+      },
+      {
+        "name": "UAD Precision Channel Strip.component",
+        "stem": "UAD Precision Channel Strip",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Precision Channel Strip.component"
+      },
+      {
+        "name": "UAD Precision De-Esser.component",
+        "stem": "UAD Precision De-Esser",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Precision De-Esser.component"
+      },
+      {
+        "name": "UAD Precision Delay Mod L.component",
+        "stem": "UAD Precision Delay Mod L",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Precision Delay Mod L.component"
+      },
+      {
+        "name": "UAD Precision Delay Mod.component",
+        "stem": "UAD Precision Delay Mod",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Precision Delay Mod.component"
+      },
+      {
+        "name": "UAD Precision Enhancer Hz.component",
+        "stem": "UAD Precision Enhancer Hz",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Precision Enhancer Hz.component"
+      },
+      {
+        "name": "UAD Precision Enhancer kHz.component",
+        "stem": "UAD Precision Enhancer kHz",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Precision Enhancer kHz.component"
+      },
+      {
+        "name": "UAD Precision Equalizer.component",
+        "stem": "UAD Precision Equalizer",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Precision Equalizer.component"
+      },
+      {
+        "name": "UAD Precision K-Stereo.component",
+        "stem": "UAD Precision K-Stereo",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Precision K-Stereo.component"
+      },
+      {
+        "name": "UAD Precision Limiter.component",
+        "stem": "UAD Precision Limiter",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Precision Limiter.component"
+      },
+      {
+        "name": "UAD Precision Maximizer.component",
+        "stem": "UAD Precision Maximizer",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Precision Maximizer.component"
+      },
+      {
+        "name": "UAD Precision Multiband.component",
+        "stem": "UAD Precision Multiband",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Precision Multiband.component"
+      },
+      {
+        "name": "UAD Precision Reflection Engine.component",
+        "stem": "UAD Precision Reflection Engine",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Precision Reflection Engine.component"
+      },
+      {
+        "name": "UAD Pultec EQP-1A Legacy.component",
+        "stem": "UAD Pultec EQP-1A Legacy",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Pultec EQP-1A Legacy.component"
+      },
+      {
+        "name": "UAD Pultec EQP-1A.component",
+        "stem": "UAD Pultec EQP-1A",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Pultec EQP-1A.component"
+      },
+      {
+        "name": "UAD Pultec HLF-3C.component",
+        "stem": "UAD Pultec HLF-3C",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Pultec HLF-3C.component"
+      },
+      {
+        "name": "UAD Pultec MEQ-5.component",
+        "stem": "UAD Pultec MEQ-5",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Pultec MEQ-5.component"
+      },
+      {
+        "name": "UAD Pultec-Pro Legacy.component",
+        "stem": "UAD Pultec-Pro Legacy",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Pultec-Pro Legacy.component"
+      },
+      {
+        "name": "UAD Pure Plate.component",
+        "stem": "UAD Pure Plate",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Pure Plate.component"
+      },
+      {
+        "name": "UAD Putnam Mic Collection 180.component",
+        "stem": "UAD Putnam Mic Collection 180",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Putnam Mic Collection 180.component"
+      },
+      {
+        "name": "UAD Putnam Mic Collection.component",
+        "stem": "UAD Putnam Mic Collection",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Putnam Mic Collection.component"
+      },
+      {
+        "name": "UAD Raw.component",
+        "stem": "UAD Raw",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Raw.component"
+      },
+      {
+        "name": "UAD RealVerb-Pro.component",
+        "stem": "UAD RealVerb-Pro",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD RealVerb-Pro.component"
+      },
+      {
+        "name": "UAD Roland CE-1.component",
+        "stem": "UAD Roland CE-1",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Roland CE-1.component"
+      },
+      {
+        "name": "UAD Roland Dimension D.component",
+        "stem": "UAD Roland Dimension D",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Roland Dimension D.component"
+      },
+      {
+        "name": "UAD Roland RE-201.component",
+        "stem": "UAD Roland RE-201",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Roland RE-201.component"
+      },
+      {
+        "name": "UAD Shadow Hills Class A Mastering Comp.component",
+        "stem": "UAD Shadow Hills Class A Mastering Comp",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Shadow Hills Class A Mastering Comp.component"
+      },
+      {
+        "name": "UAD Shadow Hills Mastering Compressor.component",
+        "stem": "UAD Shadow Hills Mastering Compressor",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Shadow Hills Mastering Compressor.component"
+      },
+      {
+        "name": "UAD Softube Amp Room Half-Stack.component",
+        "stem": "UAD Softube Amp Room Half-Stack",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Softube Amp Room Half-Stack.component"
+      },
+      {
+        "name": "UAD Softube Bass Amp Room 8x10.component",
+        "stem": "UAD Softube Bass Amp Room 8x10",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Softube Bass Amp Room 8x10.component"
+      },
+      {
+        "name": "UAD Softube Bass Amp Room.component",
+        "stem": "UAD Softube Bass Amp Room",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Softube Bass Amp Room.component"
+      },
+      {
+        "name": "UAD Softube Metal Amp Room.component",
+        "stem": "UAD Softube Metal Amp Room",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Softube Metal Amp Room.component"
+      },
+      {
+        "name": "UAD Softube Vintage Amp Room.component",
+        "stem": "UAD Softube Vintage Amp Room",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Softube Vintage Amp Room.component"
+      },
+      {
+        "name": "UAD Softube Vocoder.component",
+        "stem": "UAD Softube Vocoder",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Softube Vocoder.component"
+      },
+      {
+        "name": "UAD Sound Machine Wood Works.component",
+        "stem": "UAD Sound Machine Wood Works",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Sound Machine Wood Works.component"
+      },
+      {
+        "name": "UAD Sphere Mic Collection 180.component",
+        "stem": "UAD Sphere Mic Collection 180",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Sphere Mic Collection 180.component"
+      },
+      {
+        "name": "UAD Sphere Mic Collection.component",
+        "stem": "UAD Sphere Mic Collection",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Sphere Mic Collection.component"
+      },
+      {
+        "name": "UAD SPL Transient Designer.component",
+        "stem": "UAD SPL Transient Designer",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD SPL Transient Designer.component"
+      },
+      {
+        "name": "UAD SPL TwinTube.component",
+        "stem": "UAD SPL TwinTube",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD SPL TwinTube.component"
+      },
+      {
+        "name": "UAD SPL Vitalizer MK2-T.component",
+        "stem": "UAD SPL Vitalizer MK2-T",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD SPL Vitalizer MK2-T.component"
+      },
+      {
+        "name": "UAD SSL E Channel Strip Legacy.component",
+        "stem": "UAD SSL E Channel Strip Legacy",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD SSL E Channel Strip Legacy.component"
+      },
+      {
+        "name": "UAD SSL E Channel Strip.component",
+        "stem": "UAD SSL E Channel Strip",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD SSL E Channel Strip.component"
+      },
+      {
+        "name": "UAD SSL G Bus Compressor Legacy.component",
+        "stem": "UAD SSL G Bus Compressor Legacy",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD SSL G Bus Compressor Legacy.component"
+      },
+      {
+        "name": "UAD SSL G Bus Compressor.component",
+        "stem": "UAD SSL G Bus Compressor",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD SSL G Bus Compressor.component"
+      },
+      {
+        "name": "UAD Studer A800.component",
+        "stem": "UAD Studer A800",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Studer A800.component"
+      },
+      {
+        "name": "UAD Studio D Chorus.component",
+        "stem": "UAD Studio D Chorus",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Studio D Chorus.component"
+      },
+      {
+        "name": "UAD Suhr PT100.component",
+        "stem": "UAD Suhr PT100",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Suhr PT100.component"
+      },
+      {
+        "name": "UAD Suhr SE100.component",
+        "stem": "UAD Suhr SE100",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Suhr SE100.component"
+      },
+      {
+        "name": "UAD Summit Audio TLA-100A.component",
+        "stem": "UAD Summit Audio TLA-100A",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Summit Audio TLA-100A.component"
+      },
+      {
+        "name": "UAD Teletronix LA-2.component",
+        "stem": "UAD Teletronix LA-2",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Teletronix LA-2.component"
+      },
+      {
+        "name": "UAD Teletronix LA-2A Gray.component",
+        "stem": "UAD Teletronix LA-2A Gray",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Teletronix LA-2A Gray.component"
+      },
+      {
+        "name": "UAD Teletronix LA-2A Legacy.component",
+        "stem": "UAD Teletronix LA-2A Legacy",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Teletronix LA-2A Legacy.component"
+      },
+      {
+        "name": "UAD Teletronix LA-2A Silver.component",
+        "stem": "UAD Teletronix LA-2A Silver",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Teletronix LA-2A Silver.component"
+      },
+      {
+        "name": "UAD Teletronix LA-3A.component",
+        "stem": "UAD Teletronix LA-3A",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Teletronix LA-3A.component"
+      },
+      {
+        "name": "UAD Thermionic Culture Vulture.component",
+        "stem": "UAD Thermionic Culture Vulture",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Thermionic Culture Vulture.component"
+      },
+      {
+        "name": "UAD Tonelux Tilt Live.component",
+        "stem": "UAD Tonelux Tilt Live",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Tonelux Tilt Live.component"
+      },
+      {
+        "name": "UAD Tonelux Tilt.component",
+        "stem": "UAD Tonelux Tilt",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Tonelux Tilt.component"
+      },
+      {
+        "name": "UAD Trident A-Range.component",
+        "stem": "UAD Trident A-Range",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Trident A-Range.component"
+      },
+      {
+        "name": "UAD TS Overdrive.component",
+        "stem": "UAD TS Overdrive",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD TS Overdrive.component"
+      },
+      {
+        "name": "UAD Tube-Tech CL 1B mk II.component",
+        "stem": "UAD Tube-Tech CL 1B mk II",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Tube-Tech CL 1B mk II.component"
+      },
+      {
+        "name": "UAD Tube-Tech CL 1B.component",
+        "stem": "UAD Tube-Tech CL 1B",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Tube-Tech CL 1B.component"
+      },
+      {
+        "name": "UAD Tube-Tech ME 1B.component",
+        "stem": "UAD Tube-Tech ME 1B",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Tube-Tech ME 1B.component"
+      },
+      {
+        "name": "UAD Tube-Tech PE 1C.component",
+        "stem": "UAD Tube-Tech PE 1C",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Tube-Tech PE 1C.component"
+      },
+      {
+        "name": "UAD UA 1176 Rev A.component",
+        "stem": "UAD UA 1176 Rev A",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD UA 1176 Rev A.component"
+      },
+      {
+        "name": "UAD UA 1176AE.component",
+        "stem": "UAD UA 1176AE",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD UA 1176AE.component"
+      },
+      {
+        "name": "UAD UA 1176LN Legacy.component",
+        "stem": "UAD UA 1176LN Legacy",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD UA 1176LN Legacy.component"
+      },
+      {
+        "name": "UAD UA 1176LN Rev E.component",
+        "stem": "UAD UA 1176LN Rev E",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD UA 1176LN Rev E.component"
+      },
+      {
+        "name": "UAD UA 1176SE Legacy.component",
+        "stem": "UAD UA 1176SE Legacy",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD UA 1176SE Legacy.component"
+      },
+      {
+        "name": "UAD UA 175-B.component",
+        "stem": "UAD UA 175-B",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD UA 175-B.component"
+      },
+      {
+        "name": "UAD UA 176.component",
+        "stem": "UAD UA 176",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD UA 176.component"
+      },
+      {
+        "name": "UAD UA 610-A.component",
+        "stem": "UAD UA 610-A",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD UA 610-A.component"
+      },
+      {
+        "name": "UAD UA 610-B.component",
+        "stem": "UAD UA 610-B",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD UA 610-B.component"
+      },
+      {
+        "name": "UAD V76 Preamp.component",
+        "stem": "UAD V76 Preamp",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD V76 Preamp.component"
+      },
+      {
+        "name": "UAD Valley People Dyna-mite.component",
+        "stem": "UAD Valley People Dyna-mite",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Valley People Dyna-mite.component"
+      },
+      {
+        "name": "UAD Vertigo VSC-2.component",
+        "stem": "UAD Vertigo VSC-2",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Vertigo VSC-2.component"
+      },
+      {
+        "name": "UAD Vertigo VSM-3.component",
+        "stem": "UAD Vertigo VSM-3",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/UAD Vertigo VSM-3.component"
+      },
+      {
+        "name": "uaudio_verve_essentials.component",
+        "stem": "uaudio_verve_essentials",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/uaudio_verve_essentials.component"
+      },
+      {
+        "name": "uaudio_verve_essentials.vst3",
+        "stem": "uaudio_verve_essentials",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/uaudio_verve_essentials.vst3"
+      },
+      {
+        "name": "UA Connect.app",
+        "stem": "UA Connect",
+        "type": "app",
+        "location": "applications",
+        "path": "/Applications/UA Connect.app"
+      }
+    ],
+    "Soundtoys": [
+      {
+        "name": "Decapitator.component",
+        "stem": "Decapitator",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Decapitator.component"
+      },
+      {
+        "name": "EchoBoy.component",
+        "stem": "EchoBoy",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/EchoBoy.component"
+      },
+      {
+        "name": "EchoBoyJr.component",
+        "stem": "EchoBoyJr",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/EchoBoyJr.component"
+      },
+      {
+        "name": "EchoBoy ReadMe.rtf",
+        "stem": "EchoBoy ReadMe",
+        "type": "rtf",
+        "location": "soundtoys_apps",
+        "path": "/Applications/Soundtoys/EchoBoy ReadMe.rtf"
+      },
+      {
+        "name": "Soundtoys License Agreement.rtf",
+        "stem": "Soundtoys License Agreement",
+        "type": "rtf",
+        "location": "soundtoys_apps",
+        "path": "/Applications/Soundtoys/Soundtoys License Agreement.rtf"
+      },
+      {
+        "name": "Utilities",
+        "stem": "Utilities",
+        "type": "dir",
+        "location": "soundtoys_apps",
+        "path": "/Applications/Soundtoys/Utilities"
+      }
+    ],
+    "Goodhertz": [
+      {
+        "name": "Ghz CanOpener Studio 3.component",
+        "stem": "Ghz CanOpener Studio 3",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Ghz CanOpener Studio 3.component"
+      },
+      {
+        "name": "Ghz DC19 3.component",
+        "stem": "Ghz DC19 3",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Ghz DC19 3.component"
+      },
+      {
+        "name": "Ghz Faraday Limiter 3.component",
+        "stem": "Ghz Faraday Limiter 3",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Ghz Faraday Limiter 3.component"
+      },
+      {
+        "name": "Ghz Good Dither 3.component",
+        "stem": "Ghz Good Dither 3",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Ghz Good Dither 3.component"
+      },
+      {
+        "name": "Ghz Lohi 3.component",
+        "stem": "Ghz Lohi 3",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Ghz Lohi 3.component"
+      },
+      {
+        "name": "Ghz Lossy 3.component",
+        "stem": "Ghz Lossy 3",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Ghz Lossy 3.component"
+      },
+      {
+        "name": "Ghz Loudness 3.component",
+        "stem": "Ghz Loudness 3",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Ghz Loudness 3.component"
+      },
+      {
+        "name": "Ghz Megaverb 3.component",
+        "stem": "Ghz Megaverb 3",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Ghz Megaverb 3.component"
+      },
+      {
+        "name": "Ghz Midside 3.component",
+        "stem": "Ghz Midside 3",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Ghz Midside 3.component"
+      },
+      {
+        "name": "Ghz Midside Matrix 3.component",
+        "stem": "Ghz Midside Matrix 3",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Ghz Midside Matrix 3.component"
+      },
+      {
+        "name": "Ghz Panpot 3.component",
+        "stem": "Ghz Panpot 3",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Ghz Panpot 3.component"
+      },
+      {
+        "name": "Ghz Tiltshift 3.component",
+        "stem": "Ghz Tiltshift 3",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Ghz Tiltshift 3.component"
+      },
+      {
+        "name": "Ghz Tone Control 3.component",
+        "stem": "Ghz Tone Control 3",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Ghz Tone Control 3.component"
+      },
+      {
+        "name": "Ghz Trem Control 3.component",
+        "stem": "Ghz Trem Control 3",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Ghz Trem Control 3.component"
+      },
+      {
+        "name": "Ghz Tupe 3.component",
+        "stem": "Ghz Tupe 3",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Ghz Tupe 3.component"
+      },
+      {
+        "name": "Ghz VCME 3.component",
+        "stem": "Ghz VCME 3",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Ghz VCME 3.component"
+      },
+      {
+        "name": "Ghz VCME Soft Clip 3.component",
+        "stem": "Ghz VCME Soft Clip 3",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Ghz VCME Soft Clip 3.component"
+      },
+      {
+        "name": "Ghz Vulf Compressor 3.component",
+        "stem": "Ghz Vulf Compressor 3",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Ghz Vulf Compressor 3.component"
+      },
+      {
+        "name": "Ghz Wow Control 3.component",
+        "stem": "Ghz Wow Control 3",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Ghz Wow Control 3.component"
+      },
+      {
+        "name": "Ghz CanOpener Studio 3.vst3",
+        "stem": "Ghz CanOpener Studio 3",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Ghz CanOpener Studio 3.vst3"
+      },
+      {
+        "name": "Ghz DC19 3.vst3",
+        "stem": "Ghz DC19 3",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Ghz DC19 3.vst3"
+      },
+      {
+        "name": "Ghz Faraday Limiter 3.vst3",
+        "stem": "Ghz Faraday Limiter 3",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Ghz Faraday Limiter 3.vst3"
+      },
+      {
+        "name": "Ghz Good Dither 3.vst3",
+        "stem": "Ghz Good Dither 3",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Ghz Good Dither 3.vst3"
+      },
+      {
+        "name": "Ghz Lohi 3.vst3",
+        "stem": "Ghz Lohi 3",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Ghz Lohi 3.vst3"
+      },
+      {
+        "name": "Ghz Lossy 3.vst3",
+        "stem": "Ghz Lossy 3",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Ghz Lossy 3.vst3"
+      },
+      {
+        "name": "Ghz Loudness 3.vst3",
+        "stem": "Ghz Loudness 3",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Ghz Loudness 3.vst3"
+      },
+      {
+        "name": "Ghz Megaverb 3.vst3",
+        "stem": "Ghz Megaverb 3",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Ghz Megaverb 3.vst3"
+      },
+      {
+        "name": "Ghz Midside 3.vst3",
+        "stem": "Ghz Midside 3",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Ghz Midside 3.vst3"
+      },
+      {
+        "name": "Ghz Midside Matrix 3.vst3",
+        "stem": "Ghz Midside Matrix 3",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Ghz Midside Matrix 3.vst3"
+      },
+      {
+        "name": "Ghz Panpot 3.vst3",
+        "stem": "Ghz Panpot 3",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Ghz Panpot 3.vst3"
+      },
+      {
+        "name": "Ghz Tiltshift 3.vst3",
+        "stem": "Ghz Tiltshift 3",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Ghz Tiltshift 3.vst3"
+      },
+      {
+        "name": "Ghz Tone Control 3.vst3",
+        "stem": "Ghz Tone Control 3",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Ghz Tone Control 3.vst3"
+      },
+      {
+        "name": "Ghz Trem Control 3.vst3",
+        "stem": "Ghz Trem Control 3",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Ghz Trem Control 3.vst3"
+      },
+      {
+        "name": "Ghz Tupe 3.vst3",
+        "stem": "Ghz Tupe 3",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Ghz Tupe 3.vst3"
+      },
+      {
+        "name": "Ghz VCME 3.vst3",
+        "stem": "Ghz VCME 3",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Ghz VCME 3.vst3"
+      },
+      {
+        "name": "Ghz VCME Soft Clip 3.vst3",
+        "stem": "Ghz VCME Soft Clip 3",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Ghz VCME Soft Clip 3.vst3"
+      },
+      {
+        "name": "Ghz Vulf Compressor 3.vst3",
+        "stem": "Ghz Vulf Compressor 3",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Ghz Vulf Compressor 3.vst3"
+      },
+      {
+        "name": "Ghz Wow Control 3.vst3",
+        "stem": "Ghz Wow Control 3",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Ghz Wow Control 3.vst3"
+      },
+      {
+        "name": "Ghz CanOpener Studio 3.vst",
+        "stem": "Ghz CanOpener Studio 3",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/Ghz CanOpener Studio 3.vst"
+      },
+      {
+        "name": "Ghz DC19 3.vst",
+        "stem": "Ghz DC19 3",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/Ghz DC19 3.vst"
+      },
+      {
+        "name": "Ghz Faraday Limiter 3.vst",
+        "stem": "Ghz Faraday Limiter 3",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/Ghz Faraday Limiter 3.vst"
+      },
+      {
+        "name": "Ghz Good Dither 3.vst",
+        "stem": "Ghz Good Dither 3",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/Ghz Good Dither 3.vst"
+      },
+      {
+        "name": "Ghz Lohi 3.vst",
+        "stem": "Ghz Lohi 3",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/Ghz Lohi 3.vst"
+      },
+      {
+        "name": "Ghz Lossy 3.vst",
+        "stem": "Ghz Lossy 3",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/Ghz Lossy 3.vst"
+      },
+      {
+        "name": "Ghz Loudness 3.vst",
+        "stem": "Ghz Loudness 3",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/Ghz Loudness 3.vst"
+      },
+      {
+        "name": "Ghz Megaverb 3.vst",
+        "stem": "Ghz Megaverb 3",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/Ghz Megaverb 3.vst"
+      },
+      {
+        "name": "Ghz Midside 3.vst",
+        "stem": "Ghz Midside 3",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/Ghz Midside 3.vst"
+      },
+      {
+        "name": "Ghz Midside Matrix 3.vst",
+        "stem": "Ghz Midside Matrix 3",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/Ghz Midside Matrix 3.vst"
+      },
+      {
+        "name": "Ghz Panpot 3.vst",
+        "stem": "Ghz Panpot 3",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/Ghz Panpot 3.vst"
+      },
+      {
+        "name": "Ghz Tiltshift 3.vst",
+        "stem": "Ghz Tiltshift 3",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/Ghz Tiltshift 3.vst"
+      },
+      {
+        "name": "Ghz Tone Control 3.vst",
+        "stem": "Ghz Tone Control 3",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/Ghz Tone Control 3.vst"
+      },
+      {
+        "name": "Ghz Trem Control 3.vst",
+        "stem": "Ghz Trem Control 3",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/Ghz Trem Control 3.vst"
+      },
+      {
+        "name": "Ghz Tupe 3.vst",
+        "stem": "Ghz Tupe 3",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/Ghz Tupe 3.vst"
+      },
+      {
+        "name": "Ghz VCME 3.vst",
+        "stem": "Ghz VCME 3",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/Ghz VCME 3.vst"
+      },
+      {
+        "name": "Ghz VCME Soft Clip 3.vst",
+        "stem": "Ghz VCME Soft Clip 3",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/Ghz VCME Soft Clip 3.vst"
+      },
+      {
+        "name": "Ghz Vulf Compressor 3.vst",
+        "stem": "Ghz Vulf Compressor 3",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/Ghz Vulf Compressor 3.vst"
+      },
+      {
+        "name": "Ghz Wow Control 3.vst",
+        "stem": "Ghz Wow Control 3",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/Ghz Wow Control 3.vst"
+      }
+    ],
+    "iZotope": [
+      {
+        "name": "iZOzone11AUHook.component",
+        "stem": "iZOzone11AUHook",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/iZOzone11AUHook.component"
+      },
+      {
+        "name": "Ozone 11.vst3",
+        "stem": "Ozone 11",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Ozone 11.vst3"
+      }
+    ],
+    "Nudist Audio": [
+      {
+        "name": "Nudistort.component",
+        "stem": "Nudistort",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/Nudistort.component"
+      },
+      {
+        "name": "Nudistort.vst3",
+        "stem": "Nudistort",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/Nudistort.vst3"
+      }
+    ],
+    "Aberrant DSP": [
+      {
+        "name": "SketchCassette II.component",
+        "stem": "SketchCassette II",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/SketchCassette II.component"
+      },
+      {
+        "name": "SketchCassette II.vst3",
+        "stem": "SketchCassette II",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/SketchCassette II.vst3"
+      }
+    ],
+    "Valhalla": [
+      {
+        "name": "ValhallaRoomAU64.component",
+        "stem": "ValhallaRoomAU64",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/ValhallaRoomAU64.component"
+      },
+      {
+        "name": "ValhallaVintageVerbAU64.component",
+        "stem": "ValhallaVintageVerbAU64",
+        "type": "component",
+        "location": "au_system",
+        "path": "/Library/Audio/Plug-Ins/Components/ValhallaVintageVerbAU64.component"
+      },
+      {
+        "name": "ValhallaRoom.vst3",
+        "stem": "ValhallaRoom",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/ValhallaRoom.vst3"
+      },
+      {
+        "name": "ValhallaVintageVerb.vst3",
+        "stem": "ValhallaVintageVerb",
+        "type": "vst3",
+        "location": "vst3_system",
+        "path": "/Library/Audio/Plug-Ins/VST3/ValhallaVintageVerb.vst3"
+      },
+      {
+        "name": "ValhallaRoom_x64.vst",
+        "stem": "ValhallaRoom_x64",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/ValhallaRoom_x64.vst"
+      },
+      {
+        "name": "ValhallaVintageVerb_x64.vst",
+        "stem": "ValhallaVintageVerb_x64",
+        "type": "vst",
+        "location": "vst_system",
+        "path": "/Library/Audio/Plug-Ins/VST/ValhallaVintageVerb_x64.vst"
+      }
+    ],
+    "Ableton": [
+      {
+        "name": "Ableton Live 12 Lite.app",
+        "stem": "Ableton Live 12 Lite",
+        "type": "app",
+        "location": "applications",
+        "path": "/Applications/Ableton Live 12 Lite.app"
+      }
+    ],
+    "Apple": [
+      {
+        "name": "GarageBand.app",
+        "stem": "GarageBand",
+        "type": "app",
+        "location": "applications",
+        "path": "/Applications/GarageBand.app"
+      },
+      {
+        "name": "iMovie.app",
+        "stem": "iMovie",
+        "type": "app",
+        "location": "applications",
+        "path": "/Applications/iMovie.app"
+      },
+      {
+        "name": "Keynote.app",
+        "stem": "Keynote",
+        "type": "app",
+        "location": "applications",
+        "path": "/Applications/Keynote.app"
+      },
+      {
+        "name": "Logic Pro.app",
+        "stem": "Logic Pro",
+        "type": "app",
+        "location": "applications",
+        "path": "/Applications/Logic Pro.app"
+      },
+      {
+        "name": "Numbers.app",
+        "stem": "Numbers",
+        "type": "app",
+        "location": "applications",
+        "path": "/Applications/Numbers.app"
+      },
+      {
+        "name": "Pages.app",
+        "stem": "Pages",
+        "type": "app",
+        "location": "applications",
+        "path": "/Applications/Pages.app"
+      },
+      {
+        "name": "Safari.app",
+        "stem": "Safari",
+        "type": "app",
+        "location": "applications",
+        "path": "/Applications/Safari.app"
+      },
+      {
+        "name": "Xcode.app",
+        "stem": "Xcode",
+        "type": "app",
+        "location": "applications",
+        "path": "/Applications/Xcode.app"
+      }
+    ]
+  },
+  "uncategorized": [
+    {
+      "name": "Bowline.component",
+      "stem": "Bowline",
+      "type": "component",
+      "location": "au_user",
+      "path": "/Users/cfitt/Library/Audio/Plug-Ins/Components/Bowline.component"
+    },
+    {
+      "name": "MkGoodEnough.component",
+      "stem": "MkGoodEnough",
+      "type": "component",
+      "location": "au_user",
+      "path": "/Users/cfitt/Library/Audio/Plug-Ins/Components/MkGoodEnough.component"
+    },
+    {
+      "name": "PolyMK.component",
+      "stem": "PolyMK",
+      "type": "component",
+      "location": "au_user",
+      "path": "/Users/cfitt/Library/Audio/Plug-Ins/Components/PolyMK.component"
+    },
+    {
+      "name": "PolyMK.vst3",
+      "stem": "PolyMK",
+      "type": "vst3",
+      "location": "vst3_user",
+      "path": "/Users/cfitt/Library/Audio/Plug-Ins/VST3/PolyMK.vst3"
+    },
+    {
+      "name": "1Password.app",
+      "stem": "1Password",
+      "type": "app",
+      "location": "applications",
+      "path": "/Applications/1Password.app"
+    },
+    {
+      "name": "Blender.app",
+      "stem": "Blender",
+      "type": "app",
+      "location": "applications",
+      "path": "/Applications/Blender.app"
+    },
+    {
+      "name": "ChatGPT.app",
+      "stem": "ChatGPT",
+      "type": "app",
+      "location": "applications",
+      "path": "/Applications/ChatGPT.app"
+    },
+    {
+      "name": "Claude.app",
+      "stem": "Claude",
+      "type": "app",
+      "location": "applications",
+      "path": "/Applications/Claude.app"
+    },
+    {
+      "name": "CodexBar.app",
+      "stem": "CodexBar",
+      "type": "app",
+      "location": "applications",
+      "path": "/Applications/CodexBar.app"
+    },
+    {
+      "name": "Cursor.app",
+      "stem": "Cursor",
+      "type": "app",
+      "location": "applications",
+      "path": "/Applications/Cursor.app"
+    },
+    {
+      "name": "Discord.app",
+      "stem": "Discord",
+      "type": "app",
+      "location": "applications",
+      "path": "/Applications/Discord.app"
+    },
+    {
+      "name": "Dynamic Wallpaper.app",
+      "stem": "Dynamic Wallpaper",
+      "type": "app",
+      "location": "applications",
+      "path": "/Applications/Dynamic Wallpaper.app"
+    },
+    {
+      "name": "Equinox.app",
+      "stem": "Equinox",
+      "type": "app",
+      "location": "applications",
+      "path": "/Applications/Equinox.app"
+    },
+    {
+      "name": "Figma.app",
+      "stem": "Figma",
+      "type": "app",
+      "location": "applications",
+      "path": "/Applications/Figma.app"
+    },
+    {
+      "name": "Fireface USB Settings.app",
+      "stem": "Fireface USB Settings",
+      "type": "app",
+      "location": "applications",
+      "path": "/Applications/Fireface USB Settings.app"
+    },
+    {
+      "name": "Firefox Nightly.app",
+      "stem": "Firefox Nightly",
+      "type": "app",
+      "location": "applications",
+      "path": "/Applications/Firefox Nightly.app"
+    },
+    {
+      "name": "Firefox.app",
+      "stem": "Firefox",
+      "type": "app",
+      "location": "applications",
+      "path": "/Applications/Firefox.app"
+    },
+    {
+      "name": "Google Chrome Canary.app",
+      "stem": "Google Chrome Canary",
+      "type": "app",
+      "location": "applications",
+      "path": "/Applications/Google Chrome Canary.app"
+    },
+    {
+      "name": "Google Chrome Dev.app",
+      "stem": "Google Chrome Dev",
+      "type": "app",
+      "location": "applications",
+      "path": "/Applications/Google Chrome Dev.app"
+    },
+    {
+      "name": "Google Chrome.app",
+      "stem": "Google Chrome",
+      "type": "app",
+      "location": "applications",
+      "path": "/Applications/Google Chrome.app"
+    },
+    {
+      "name": "iLok License Manager.app",
+      "stem": "iLok License Manager",
+      "type": "app",
+      "location": "applications",
+      "path": "/Applications/iLok License Manager.app"
+    },
+    {
+      "name": "iTerm.app",
+      "stem": "iTerm",
+      "type": "app",
+      "location": "applications",
+      "path": "/Applications/iTerm.app"
+    },
+    {
+      "name": "Jump Desktop.app",
+      "stem": "Jump Desktop",
+      "type": "app",
+      "location": "applications",
+      "path": "/Applications/Jump Desktop.app"
+    },
+    {
+      "name": "Lose It!.app",
+      "stem": "Lose It!",
+      "type": "app",
+      "location": "applications",
+      "path": "/Applications/Lose It!.app"
+    },
+    {
+      "name": "MarkEdit.app",
+      "stem": "MarkEdit",
+      "type": "app",
+      "location": "applications",
+      "path": "/Applications/MarkEdit.app"
+    },
+    {
+      "name": "Microsoft Defender Shim.app",
+      "stem": "Microsoft Defender Shim",
+      "type": "app",
+      "location": "applications",
+      "path": "/Applications/Microsoft Defender Shim.app"
+    },
+    {
+      "name": "Microsoft Excel.app",
+      "stem": "Microsoft Excel",
+      "type": "app",
+      "location": "applications",
+      "path": "/Applications/Microsoft Excel.app"
+    },
+    {
+      "name": "Microsoft OneNote.app",
+      "stem": "Microsoft OneNote",
+      "type": "app",
+      "location": "applications",
+      "path": "/Applications/Microsoft OneNote.app"
+    },
+    {
+      "name": "Microsoft Outlook.app",
+      "stem": "Microsoft Outlook",
+      "type": "app",
+      "location": "applications",
+      "path": "/Applications/Microsoft Outlook.app"
+    },
+    {
+      "name": "Microsoft PowerPoint.app",
+      "stem": "Microsoft PowerPoint",
+      "type": "app",
+      "location": "applications",
+      "path": "/Applications/Microsoft PowerPoint.app"
+    },
+    {
+      "name": "Microsoft Word.app",
+      "stem": "Microsoft Word",
+      "type": "app",
+      "location": "applications",
+      "path": "/Applications/Microsoft Word.app"
+    },
+    {
+      "name": "OBS.app",
+      "stem": "OBS",
+      "type": "app",
+      "location": "applications",
+      "path": "/Applications/OBS.app"
+    },
+    {
+      "name": "Obsidian.app",
+      "stem": "Obsidian",
+      "type": "app",
+      "location": "applications",
+      "path": "/Applications/Obsidian.app"
+    },
+    {
+      "name": "OneDrive.app",
+      "stem": "OneDrive",
+      "type": "app",
+      "location": "applications",
+      "path": "/Applications/OneDrive.app"
+    },
+    {
+      "name": "Paprika Recipe Manager 3.app",
+      "stem": "Paprika Recipe Manager 3",
+      "type": "app",
+      "location": "applications",
+      "path": "/Applications/Paprika Recipe Manager 3.app"
+    },
+    {
+      "name": "pluginval.app",
+      "stem": "pluginval",
+      "type": "app",
+      "location": "applications",
+      "path": "/Applications/pluginval.app"
+    },
+    {
+      "name": "Rectangle.app",
+      "stem": "Rectangle",
+      "type": "app",
+      "location": "applications",
+      "path": "/Applications/Rectangle.app"
+    },
+    {
+      "name": "Scroll Reverser.app",
+      "stem": "Scroll Reverser",
+      "type": "app",
+      "location": "applications",
+      "path": "/Applications/Scroll Reverser.app"
+    },
+    {
+      "name": "Spotify.app",
+      "stem": "Spotify",
+      "type": "app",
+      "location": "applications",
+      "path": "/Applications/Spotify.app"
+    },
+    {
+      "name": "TickTick.app",
+      "stem": "TickTick",
+      "type": "app",
+      "location": "applications",
+      "path": "/Applications/TickTick.app"
+    },
+    {
+      "name": "Totalmix.app",
+      "stem": "Totalmix",
+      "type": "app",
+      "location": "applications",
+      "path": "/Applications/Totalmix.app"
+    },
+    {
+      "name": "Transfer.app",
+      "stem": "Transfer",
+      "type": "app",
+      "location": "applications",
+      "path": "/Applications/Transfer.app"
+    },
+    {
+      "name": "Visual Studio Code.app",
+      "stem": "Visual Studio Code",
+      "type": "app",
+      "location": "applications",
+      "path": "/Applications/Visual Studio Code.app"
+    },
+    {
+      "name": "VLC.app",
+      "stem": "VLC",
+      "type": "app",
+      "location": "applications",
+      "path": "/Applications/VLC.app"
+    },
+    {
+      "name": "Wispr Flow.app",
+      "stem": "Wispr Flow",
+      "type": "app",
+      "location": "applications",
+      "path": "/Applications/Wispr Flow.app"
+    },
+    {
+      "name": "zoom.us.app",
+      "stem": "zoom.us",
+      "type": "app",
+      "location": "applications",
+      "path": "/Applications/zoom.us.app"
+    },
+    {
+      "name": "ZoomLauncher.app",
+      "stem": "ZoomLauncher",
+      "type": "app",
+      "location": "applications",
+      "path": "/Applications/ZoomLauncher.app"
+    }
+  ]
+}

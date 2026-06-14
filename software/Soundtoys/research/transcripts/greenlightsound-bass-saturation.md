@@ -1,0 +1,20 @@
+https://www.youtube.com/watch?v=cGioIiTx8QM
+Green Light Sound (Joe) · Soundtoys EchoBoy Bass Trick | Saturate and Distort Your Bass With EchoBoy · 2020-01-06
+
+hey everyone its Joe from greenlight sound calm and today's episode we've got a look at a new use for echoboy echoboy on bass and you might be wondering why would I want to use it delay plug-in on bass echo boy is a fantastic delay plug-in but also has some really cool extra features that make it really useful to use on other sources without any delay used at all so the first thing you want to to set this up is to make sure you're not getting any
+
+delay out of echo boy so I put a long time I reduced the echo time to 0.0 milliseconds there is no delay going on at all no feedback I've got the mix up full wet I'm not messing with any controls here for tap tempo or the groove or feel or any that stuff in some single echo which default setting over here what I want to do is drive the saturation up a little bit almost at 12 o'clock almost they have way up I cranked the input
+
+a little bit to add a couple DB of input actually about 6 DB of input gain and I can adjust with the output there I'm for the style selector here I want to go with cheap tape and when you first open that go boy the style edit isn't open you want to open that up and you want to mess with this EQ a bit and you can copy the settings down that I have here but this works really well on bass basically driving gain into the
+
+saturation then the last set of controls you really want to look at is the saturation the decay saturation is brought down to minus 8.4 or so DB and the output saturation is 20 DB between 20 and 24 DB basically cranked all the way Dyne that out all the way up and here it's set on tape when you choose cheap tape as the style this is the saturation type that you have down here so first thing I wanna do is play the recording of the bass part
+
+without echoboy at all it's bypassed [Music] decent bass recording but in the context of a mix it might get lost and it might be nice to add some saturation to it so I engage the plug-in now here it is [Music] a lot thicker a lot nastier now if I don't like that amount of saturation I can easily bring back this output saturation and dial it into what I want [Music] without [Music] if you think it gets too dark when you crank that output saturation you could
+
+always adjust the gain controls here in the 3-band EQ if I want the high and mid-range to cut through a little bit more I can easily adjust this game [Music] and I can actually go through all these different saturation types and get different sounds out of that [Music] that one's nice dirt just a little bit edginess there [Music] you really crush it with the fuzz [Music] and backgrounds at the beginning so you can see how you can get a lot of great sounds out of that
+
+let's try a little different bass part now here's this bass part without [Music] and with you want some more that mid-range bite you can easily out of them with the EQ here it also kind of the saturation takes away some of the really heavy transients from that bass part and one more we'll try it on let's try this bass part no echo boy and with echo boy saturation [Music] let's try some different styles here to studio tape master tape so you can see just by changing
+
+the style or custom customizing the style down here in the in this file edit menu you can create some really cool saturation effects based upon actual analog geared I mean that's what this stuff is if you look in the echo boys emulations here it's all different actual delay units or tape echos and just driving the saturation of those units creates some really cool effects for bass so just another trick to use with that go boy that has nothing to do with the delay features though it
+
+is a great delay unit it can be used for some other really interesting effects especially on bass here if you have any questions or comments let me know in the comment section down below don't forget to subscribe if you haven't done so already and I'll see in the next one

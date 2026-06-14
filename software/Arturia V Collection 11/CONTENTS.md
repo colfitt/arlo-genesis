@@ -1,0 +1,192 @@
+# Arturia V Collection 11 — Contents
+
+Auto-generated from `scripts/scan_plugins.py`. Re-run the scan after install/uninstall.
+
+## APP (46)
+- `ARP 2600 V3.app`
+- `Acid V.app`
+- `Analog Lab V.app`
+- `Arturia Software Center.app`
+- `Augmented BRASS.app`
+- `Augmented GRAND PIANO.app`
+- `Augmented MALLETS.app`
+- `Augmented STRINGS.app`
+- `Augmented VOICES.app`
+- `Augmented WOODWINDS.app`
+- `Augmented YANGTZE.app`
+- `B-3 V2.app`
+- `Buchla Easel V.app`
+- `CMI V.app`
+- `CP-70 V.app`
+- `CS-80 V4.app`
+- `CZ V.app`
+- `Clavinet V.app`
+- `DX7 V.app`
+- `Emulator II V.app`
+- `Farfisa V.app`
+- `Jun-6 V.app`
+- `Jup-8 V4.app`
+- `Jup-8000 V.app`
+- `KORG MS-20 V.app`
+- `Matrix-12 V2.app`
+- `Mellotron V.app`
+- `Mini V4.app`
+- `MiniBrute V.app`
+- `MiniFreak V.app`
+- `Modular V3.app`
+- `OP-Xa V.app`
+- `Piano V3.app`
+- `Prophet-5 V.app`
+- `Prophet-VS V.app`
+- `Pure LoFi.app`
+- `SEM V3.app`
+- `SQ80 V.app`
+- `Solina V2.app`
+- `Stage-73 V2.app`
+- `Synclavier V.app`
+- `Synthi V.app`
+- `Synthx V.app`
+- `VOX Continental V2.app`
+- `Vocoder V.app`
+- `Wurli V3.app`
+
+## COMPONENT (45)
+- `ARP 2600 V3.component`
+- `Acid V.component`
+- `Analog Lab V.component`
+- `Augmented BRASS.component`
+- `Augmented GRAND PIANO.component`
+- `Augmented MALLETS.component`
+- `Augmented STRINGS.component`
+- `Augmented VOICES.component`
+- `Augmented WOODWINDS.component`
+- `Augmented YANGTZE.component`
+- `B-3 V2.component`
+- `Buchla Easel V.component`
+- `CMI V.component`
+- `CP-70 V.component`
+- `CS-80 V4.component`
+- `CZ V.component`
+- `Clavinet V.component`
+- `DX7 V.component`
+- `Emulator II V.component`
+- `Farfisa V.component`
+- `Jun-6 V.component`
+- `Jup-8 V4.component`
+- `Jup-8000 V.component`
+- `KORG MS-20 V.component`
+- `Matrix-12 V2.component`
+- `Mellotron V.component`
+- `Mini V4.component`
+- `MiniBrute V.component`
+- `MiniFreak V.component`
+- `Modular V3.component`
+- `OP-Xa V.component`
+- `Piano V3.component`
+- `Prophet-5 V.component`
+- `Prophet-VS V.component`
+- `Pure LoFi.component`
+- `SEM V3.component`
+- `SQ80 V.component`
+- `Solina V2.component`
+- `Stage-73 V2.component`
+- `Synclavier V.component`
+- `Synthi V.component`
+- `Synthx V.component`
+- `VOX Continental V2.component`
+- `Vocoder V.component`
+- `Wurli V3.component`
+
+## VST (45)
+- `ARP 2600 V3.vst`
+- `Acid V.vst`
+- `Analog Lab V.vst`
+- `Augmented BRASS.vst`
+- `Augmented GRAND PIANO.vst`
+- `Augmented MALLETS.vst`
+- `Augmented STRINGS.vst`
+- `Augmented VOICES.vst`
+- `Augmented WOODWINDS.vst`
+- `Augmented YANGTZE.vst`
+- `B-3 V2.vst`
+- `Buchla Easel V.vst`
+- `CMI V.vst`
+- `CP-70 V.vst`
+- `CS-80 V4.vst`
+- `CZ V.vst`
+- `Clavinet V.vst`
+- `DX7 V.vst`
+- `Emulator II V.vst`
+- `Farfisa V.vst`
+- `Jun-6 V.vst`
+- `Jup-8 V4.vst`
+- `Jup-8000 V.vst`
+- `KORG MS-20 V.vst`
+- `Matrix-12 V2.vst`
+- `Mellotron V.vst`
+- `Mini V4.vst`
+- `MiniBrute V.vst`
+- `MiniFreak V.vst`
+- `Modular V3.vst`
+- `OP-Xa V.vst`
+- `Piano V3.vst`
+- `Prophet-5 V.vst`
+- `Prophet-VS V.vst`
+- `Pure LoFi.vst`
+- `SEM V3.vst`
+- `SQ80 V.vst`
+- `Solina V2.vst`
+- `Stage-73 V2.vst`
+- `Synclavier V.vst`
+- `Synthi V.vst`
+- `Synthx V.vst`
+- `VOX Continental V2.vst`
+- `Vocoder V.vst`
+- `Wurli V3.vst`
+
+## VST3 (45)
+- `ARP 2600 V3.vst3`
+- `Acid V.vst3`
+- `Analog Lab V.vst3`
+- `Augmented BRASS.vst3`
+- `Augmented GRAND PIANO.vst3`
+- `Augmented MALLETS.vst3`
+- `Augmented STRINGS.vst3`
+- `Augmented VOICES.vst3`
+- `Augmented WOODWINDS.vst3`
+- `Augmented YANGTZE.vst3`
+- `B-3 V2.vst3`
+- `Buchla Easel V.vst3`
+- `CMI V.vst3`
+- `CP-70 V.vst3`
+- `CS-80 V4.vst3`
+- `CZ V.vst3`
+- `Clavinet V.vst3`
+- `DX7 V.vst3`
+- `Emulator II V.vst3`
+- `Farfisa V.vst3`
+- `Jun-6 V.vst3`
+- `Jup-8 V4.vst3`
+- `Jup-8000 V.vst3`
+- `KORG MS-20 V.vst3`
+- `Matrix-12 V2.vst3`
+- `Mellotron V.vst3`
+- `Mini V4.vst3`
+- `MiniBrute V.vst3`
+- `MiniFreak V.vst3`
+- `Modular V3.vst3`
+- `OP-Xa V.vst3`
+- `Piano V3.vst3`
+- `Prophet-5 V.vst3`
+- `Prophet-VS V.vst3`
+- `Pure LoFi.vst3`
+- `SEM V3.vst3`
+- `SQ80 V.vst3`
+- `Solina V2.vst3`
+- `Stage-73 V2.vst3`
+- `Synclavier V.vst3`
+- `Synthi V.vst3`
+- `Synthx V.vst3`
+- `VOX Continental V2.vst3`
+- `Vocoder V.vst3`
+- `Wurli V3.vst3`
