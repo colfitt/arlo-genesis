@@ -3,7 +3,7 @@ type: patch
 title: Chorus-Like Shimmer
 device: Boss BF-3
 date: 2026-06-14
-description: Low-RES, shallow, faster setting that reads as a thin chorus/shimmer rather than a jet — gentle thickening on a cleaner banjo/baritone or a clean-ish bed before the wall builds. Ref: Alex Messano "5 Cool Ways."
+description: "Low-RES, shallow, faster setting that reads as a thin chorus/shimmer rather than a jet — gentle thickening on a cleaner banjo/baritone or a clean-ish bed before the wall builds. Ref: Alex Messano \"5 Cool Ways.\""
 tags: [flanger, chorus, shimmer, subtle, clean, factory]
 controls:
   - { name: "MODE", type: switch, value: "Standard", options: ["Standard", "Ultra", "Gate/Pan", "Momentary"] }

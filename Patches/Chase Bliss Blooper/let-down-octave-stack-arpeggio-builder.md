@@ -1,6 +1,6 @@
 ---
 type: patch
-title: "Let Down" Octave-Stack Arpeggio Builder
+title: "\"Let Down\" Octave-Stack Arpeggio Builder"
 device: Chase Bliss Blooper
 date: 2026-06-14
 description: The literal "Let Down" move — build Jonny's octave-doubled, three-layer arpeggio stack from one recorded line via Pitcher (Radiohead, OK Computer).

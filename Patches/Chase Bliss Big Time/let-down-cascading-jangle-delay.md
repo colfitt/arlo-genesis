@@ -1,6 +1,6 @@
 ---
 type: patch
-title: "Let Down" Cascading Jangle-Delay
+title: "\"Let Down\" Cascading Jangle-Delay"
 device: Chase Bliss Big Time
 date: 2026-06-14
 description: Track-B emulation of Radiohead's "Let Down" (OK Computer) — one banjo/guitar arpeggio line becomes a shimmering multi-tap cascade faking the doubled-octave, 5/4-vs-4/4 Steve Reich Spector wall.

@@ -1,6 +1,6 @@
 ---
 type: patch
-title: "7 Wonders" — neutral all-noon Bloom benchmark
+title: "\"7 Wonders\" — neutral all-noon Bloom benchmark"
 device: Strymon Big Sky
 date: 2026-06-14
 description: A balanced/neutral Bloom to tweak from — swell rises and grows after the note, sitting just behind the dry; the official TWP "7 Wonders" with every knob stated in text (Ethan Tufts).

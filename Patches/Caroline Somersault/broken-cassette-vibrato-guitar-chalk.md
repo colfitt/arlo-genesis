@@ -3,7 +3,7 @@ type: patch
 title: Broken Cassette Vibrato (Guitar Chalk)
 device: Caroline Somersault
 date: 2026-06-14
-description: Worn-tape-deck warble — square + Dark + high DEPTH map onto the rig's cassette-degrade goal. QC-flagged community grid, audition-only. (Ref: Guitar Chalk — Somersault settings #2.)
+description: "Worn-tape-deck warble — square + Dark + high DEPTH map onto the rig's cassette-degrade goal. QC-flagged community grid, audition-only. (Ref: Guitar Chalk — Somersault settings #2.)"
 tags: [vibrato, lo-fi, cassette, worn-tape, square, community, QC-flagged, signature]
 controls:
   - { name: "MIX", type: knob, value: "~3:00 (near-wet, 8/10)" }

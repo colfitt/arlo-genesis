@@ -3,7 +3,7 @@ type: patch
 title: Brittle Jangle Front-End (bright clean console)
 device: JHS Colour Box V2
 date: 2026-06-14
-description: Modest Mouse bright/brittle clean jangle front-end — clean Neve color + bright EQ tilt as the rig's closest emulation of bright single-coils into a loud-clean Fender; the pedals do the dirt. Designed-to-emulate. (Ref: Modest Mouse, Brock bright single-coil-into-clean-Twin jangle.)
+description: "Modest Mouse bright/brittle clean jangle front-end — clean Neve color + bright EQ tilt as the rig's closest emulation of bright single-coils into a loud-clean Fender; the pedals do the dirt. Designed-to-emulate. (Ref: Modest Mouse, Brock bright single-coil-into-clean-Twin jangle.)"
 tags: [jangle, clean, bright, front-end, modest-mouse, taste-profile, designed, signature]
 controls:
   - { name: "HI/LO", type: switch, value: "LO (on the verge of breakup — clean jangle)", options: ["HI", "LO"] }

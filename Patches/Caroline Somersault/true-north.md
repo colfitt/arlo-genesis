@@ -3,7 +3,7 @@ type: patch
 title: True North
 device: Caroline Somersault
 date: 2026-06-14
-description: Everything-at-noon home base — a smooth 80s-leaning lo-fi chorus with slight time-lag fullness, the start point every demo agrees on. (Ref: Caroline factory default "perfect chorus".)
+description: "Everything-at-noon home base — a smooth 80s-leaning lo-fi chorus with slight time-lag fullness, the start point every demo agrees on. (Ref: Caroline factory default \"perfect chorus\".)"
 tags: [chorus, 80s, lo-fi, starting-point, factory]
 controls:
   - { name: "MIX", type: knob, value: "12:00" }

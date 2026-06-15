@@ -3,7 +3,7 @@ type: patch
 title: Classic Chorus (AndyDemos method)
 device: Caroline Somersault
 date: 2026-06-14
-description: The reference chorus recipe carrying the counterintuitive OFFSET lesson — OFFSET fully CCW is the tight end. (Ref: AndyDemos — Caroline Somersault demo.)
+description: "The reference chorus recipe carrying the counterintuitive OFFSET lesson — OFFSET fully CCW is the tight end. (Ref: AndyDemos — Caroline Somersault demo.)"
 tags: [chorus, reference, offset-lesson, artist, AndyDemos]
 controls:
   - { name: "MIX", type: knob, value: "~11:00 (dry+wet blend)" }

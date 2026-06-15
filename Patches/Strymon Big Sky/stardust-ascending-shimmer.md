@@ -1,6 +1,6 @@
 ---
 type: patch
-title: "Stardust" — ascending shimmer (REGEN, freeze)
+title: "\"Stardust\" — ascending shimmer (REGEN, freeze)"
 device: Strymon Big Sky
 date: 2026-06-14
 description: Ascending pitched cathedral wall / banjo-as-lead bed you can freeze — the factory "Stardust" Shimmer preset with OCT-5th and +OCT voices in REGEN mode (builds the shimmer after the attack).

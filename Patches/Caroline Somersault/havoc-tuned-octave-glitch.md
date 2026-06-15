@@ -3,7 +3,7 @@ type: patch
 title: HAVOC Tuned-Octave Glitch
 device: Caroline Somersault
 date: 2026-06-14
-description: Phrase-end fill gesture for guitar/VG-800 synth — square + DEPTH/OFFSET land an in-tune octave-down artifact, with HAVOC held for the instant ray-gun/rotary slam. DOUG-designed; clock values inferred. (Ref: AndyDemos noted the octave artifact, knobs unspecified.)
+description: "Phrase-end fill gesture for guitar/VG-800 synth — square + DEPTH/OFFSET land an in-tune octave-down artifact, with HAVOC held for the instant ray-gun/rotary slam. DOUG-designed; clock values inferred. (Ref: AndyDemos noted the octave artifact, knobs unspecified.)"
 tags: [glitch, octave, square, phrase-end, havoc, dark, designed, signature]
 controls:
   - { name: "MIX", type: knob, value: "~3:00 (mostly wet)" }

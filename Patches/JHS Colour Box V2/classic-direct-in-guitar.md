@@ -3,7 +3,7 @@ type: patch
 title: Classic Direct-In Guitar (parallel DI + mic'd amp)
 device: JHS Colour Box V2
 date: 2026-06-14
-description: Recreate documented direct-into-Neve guitar records — present "direct" character blended with a mic'd amp's weight via parallel outs. (Ref: Beatles "Revolution," Nirvana "Territorial Pissings," ZZ Top "Fool for Your Stockings," Pink Floyd "Another Brick Pt.2," Byrds "Mr. Tambourine Man" — documented direct-in TECHNIQUE, not verified pedal owners.)
+description: "Recreate documented direct-into-Neve guitar records — present \"direct\" character blended with a mic'd amp's weight via parallel outs. (Ref: Beatles \"Revolution,\" Nirvana \"Territorial Pissings,\" ZZ Top \"Fool for Your Stockings,\" Pink Floyd \"Another Brick Pt.2,\" Byrds \"Mr. Tambourine Man\" — documented direct-in TECHNIQUE, not verified pedal owners.)"
 tags: [guitar, direct-in, parallel-di, neve, technique, factory]
 controls:
   - { name: "HI/LO", type: switch, value: "LO (verge of breakup) or HI (Revolution raunch)", options: ["HI", "LO"] }

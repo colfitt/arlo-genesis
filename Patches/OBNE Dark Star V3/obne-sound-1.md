@@ -3,7 +3,7 @@ type: patch
 title: OBNE SOUND 1 — lo-fi octave-up soup
 device: OBNE Dark Star V3
 date: 2026-06-14
-description: OBNE's own demonstrated V3 build — a soupy, lo-fi, octave-up wash (like chaining 3 mono Dark Stars: delay + pitch-up + crush).
+description: "OBNE's own demonstrated V3 build — a soupy, lo-fi, octave-up wash (like chaining 3 mono Dark Stars: delay + pitch-up + crush)."
 tags: [lo-fi, octave-up, wash, factory, signature, obne-official]
 controls:
   - { name: "Multiply", type: knob, value: "a little (emulates delay-mode soupiness)" }

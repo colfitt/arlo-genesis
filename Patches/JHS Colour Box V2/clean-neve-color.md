@@ -3,7 +3,7 @@ type: patch
 title: Clean Neve Color
 device: JHS Colour Box V2
 date: 2026-06-14
-description: The always-on home-base voice the whole fuzz wall is built through — Neve direct-in console color that makes a DI'd source sound recorded, not plugged-in. (Ref: Neve 1073 direct-in; Mac DeMarco V1 / Black Pumas Eric Burton V2 verified users.)
+description: "The always-on home-base voice the whole fuzz wall is built through — Neve direct-in console color that makes a DI'd source sound recorded, not plugged-in. (Ref: Neve 1073 direct-in; Mac DeMarco V1 / Black Pumas Eric Burton V2 verified users.)"
 tags: [always-on, clean, console-color, neve, baseline, factory, artist]
 controls:
   - { name: "HI/LO", type: switch, value: "LO", options: ["HI", "LO"] }

@@ -1,5 +1,5 @@
 ---
-type: signal-chain
+type: chain
 title: Washed-Out Ambient Guitar
 date: 2026-06-08
 vibe: ethereal, lo-fi, drifting, cinematic

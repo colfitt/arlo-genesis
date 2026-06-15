@@ -3,7 +3,7 @@ type: patch
 title: Worn Cassette Under the Wall
 device: Caroline Somersault
 date: 2026-06-14
-description: The "recorded-wrong" home turf — a mostly-wet seasick chorus, darkened, into the Deco's tape saturation so pitch instability and tape grit compound. DOUG-designed. (Ref: taste lens — Car Seat Headrest / Modest Mouse cassette degrade; Radiohead tape flutter.)
+description: "The \"recorded-wrong\" home turf — a mostly-wet seasick chorus, darkened, into the Deco's tape saturation so pitch instability and tape grit compound. DOUG-designed. (Ref: taste lens — Car Seat Headrest / Modest Mouse cassette degrade; Radiohead tape flutter.)"
 tags: [chorus, lo-fi, art-rock, cassette, tape-flutter, two-lfo, designed, signature]
 controls:
   - { name: "MIX", type: knob, value: "~1:00 (mostly-wet blend)" }

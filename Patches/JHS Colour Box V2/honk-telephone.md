@@ -3,7 +3,7 @@ type: patch
 title: Honk / Telephone (mid-stacked radio voice)
 device: JHS Colour Box V2
 date: 2026-06-14
-description: Deliberate "recorded-wrong" telephone/radio voice — set all three EQ SHIFTs to a midrange frequency and boost all three bands as far as possible for a snarly, honking, almost comical mid-forward tone. (Ref: Modest Mouse brittle-jangle / Car Seat Headrest demo-crunch territory.)
+description: "Deliberate \"recorded-wrong\" telephone/radio voice — set all three EQ SHIFTs to a midrange frequency and boost all three bands as far as possible for a snarly, honking, almost comical mid-forward tone. (Ref: Modest Mouse brittle-jangle / Car Seat Headrest demo-crunch territory.)"
 tags: [honk, telephone, mid-stack, lo-fi, art-rock, community, signature]
 controls:
   - { name: "HI/LO", type: switch, value: "LO (clean honk) or HI (screaming honk into fuzz)", options: ["HI", "LO"] }

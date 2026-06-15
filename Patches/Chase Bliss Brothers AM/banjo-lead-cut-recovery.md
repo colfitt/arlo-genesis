@@ -9,7 +9,7 @@ dips:
   PRES LINK 1: on (optional — TONE 1 sweeps tone+presence together for a more dramatic, open control)
 hidden:
   Input-Impedance trim: back CCW (buffers upstream)
-  Treble/Presence trim: "adjusted in conjunction with the top tone knob makes a big difference" for banjo cut
+  Treble/Presence trim: "\"adjusted in conjunction with the top tone knob makes a big difference\" for banjo cut"
 controls:
   - { name: "TREBLE BOOSTER", type: switch, value: "DOWN (classic Rangemaster, upper-mid emphasis)", options: ["UP (bright)", "MIDDLE (off)", "DOWN (Rangemaster)"] }
   - { name: "CHANNEL 1 MODE", type: switch, value: "OVERDRIVE (or BOOST for cleaner)", options: ["BOOST", "OVERDRIVE", "DISTORTION"] }

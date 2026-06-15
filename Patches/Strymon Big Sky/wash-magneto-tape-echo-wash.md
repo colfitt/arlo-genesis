@@ -1,6 +1,6 @@
 ---
 type: patch
-title: "WASH" — Magneto tape-echo wash (full community patch)
+title: "\"WASH\" — Magneto tape-echo wash (full community patch)"
 device: Strymon Big Sky
 date: 2026-06-14
 description: A washed-out mix of delay and reverb — the documented community version of the Magneto-drone recipe, with every knob stated; dark Tone + rolled Low End tame baritone/VG-800 long-tail buildup (thegearpage).

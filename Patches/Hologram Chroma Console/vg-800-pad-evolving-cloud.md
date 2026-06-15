@@ -7,7 +7,7 @@ description: Turn degraded modeled VG-800 pad/COSM patches into deep evolving am
 tags: [pad, ambient, cloud, evolving, vg-800, designed, signature]
 hidden:
   DRIFT (Movement and/or Diffusion): up (drives the evolving clouds)
-  Calibration: "Very High" headroom (VG-800 runs near line level)
+  Calibration: "\"Very High\" headroom (VG-800 runs near line level)"
 controls:
   - { name: "Diffusion effect", type: switch, value: "COLLAGE", options: ["COLLAGE", "SPACE", "REVERSE", "REELS", "CASCADE"] }
   - { name: "Diffusion AMOUNT", type: knob, value: "to taste" }

@@ -3,7 +3,7 @@ type: patch
 title: Stereo Rotary / Leslie Spin
 device: Boss BF-3
 date: 2026-06-14
-description: The "real" Gate/Pan — with both outputs patched stereo, the mode alternately pans L/R for a lush rotary/Leslie swirl instead of a mono chop; a wide rotating wash on the final stereo wall. Requires OUTPUT A + OUTPUT B. Ref: Alex Messano "5 Cool Ways."
+description: "The \"real\" Gate/Pan — with both outputs patched stereo, the mode alternately pans L/R for a lush rotary/Leslie swirl instead of a mono chop; a wide rotating wash on the final stereo wall. Requires OUTPUT A + OUTPUT B. Ref: Alex Messano \"5 Cool Ways.\""
 tags: [flanger, rotary, leslie, stereo, swirl, pan, wash, factory]
 controls:
   - { name: "MODE", type: switch, value: "Gate/Pan", options: ["Standard", "Ultra", "Gate/Pan", "Momentary"] }

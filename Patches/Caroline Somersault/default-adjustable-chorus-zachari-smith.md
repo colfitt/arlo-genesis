@@ -3,7 +3,7 @@ type: patch
 title: Default Adjustable Chorus (Zachari Smith)
 device: Caroline Somersault
 date: 2026-06-14
-description: A noon-start chorus with Zachari Smith's documented Dark-toggle workflow — flip TONE Dark when the chorus must sit under a vocal or wall. (Ref: Zachari Smith — "Spotlight: Caroline Somersault".)
+description: "A noon-start chorus with Zachari Smith's documented Dark-toggle workflow — flip TONE Dark when the chorus must sit under a vocal or wall. (Ref: Zachari Smith — \"Spotlight: Caroline Somersault\".)"
 tags: [chorus, supportive, dark-toggle, artist, ZachariSmith]
 controls:
   - { name: "MIX", type: knob, value: "12:00" }

@@ -1,6 +1,6 @@
 ---
 type: patch
-title: "Glacier" — long-decay transition wash (Outrun the Sunlight)
+title: "\"Glacier\" — long-decay transition wash (Outrun the Sunlight)"
 device: Strymon Big Sky
 date: 2026-06-14
 description: A long ambient wash that carries between sections — the End-board transition function; pairs with Freeze for an infinite hold under a section change (Outrun the Sunlight / Austin Peters, "Pace of Glaciers"). PARTIAL — only Decay 20s and heavy mix are text-verified.

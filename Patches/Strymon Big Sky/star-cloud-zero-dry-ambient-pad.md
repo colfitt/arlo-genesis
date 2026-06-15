@@ -1,6 +1,6 @@
 ---
 type: patch
-title: "Star Cloud" — zero-dry ambient pad
+title: "\"Star Cloud\" — zero-dry ambient pad"
 device: Strymon Big Sky
 date: 2026-06-14
 description: Ethereal wall of sound — the official TWP "Star Cloud" played zero-dry to turn guitar/banjo/VG-800 into an organic ambient pad; MOD at 2:00 is max depth at the slowest speed (Matt Piper).

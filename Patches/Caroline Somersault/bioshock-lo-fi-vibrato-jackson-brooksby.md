@@ -3,7 +3,7 @@ type: patch
 title: Bioshock Lo-Fi Vibrato (Jackson Brooksby)
 device: Caroline Somersault
 date: 2026-06-14
-description: Degraded sustained vibrato — at 100% wet with Dark hi-cut it yields the darkest "underwater vinyl wobbly" lo-fi voice, reminiscent of Bioshock soundtracks. (Ref: Jackson Brooksby — "Lo-Fi Vibrato to 80s Chorus in One!".)
+description: "Degraded sustained vibrato — at 100% wet with Dark hi-cut it yields the darkest \"underwater vinyl wobbly\" lo-fi voice, reminiscent of Bioshock soundtracks. (Ref: Jackson Brooksby — \"Lo-Fi Vibrato to 80s Chorus in One!\".)"
 tags: [vibrato, lo-fi, art-rock, dark, underwater, artist, JacksonBrooksby, signature]
 controls:
   - { name: "MIX", type: knob, value: "full-CW (5:00, 100% wet)" }

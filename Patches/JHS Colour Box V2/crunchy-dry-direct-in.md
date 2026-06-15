@@ -3,7 +3,7 @@ type: patch
 title: Crunchy-Dry Direct-In (quiet source, boosted)
 device: JHS Colour Box V2
 date: 2026-06-14
-description: CSH crunchy-dry mid-forward direct-in crunch — the Colour Box IS "boost a quiet source until it clips" in one box, the mechanic Toledo got from recording quiet + boosting in the mix. Designed-to-emulate; no artist used this pedal. (Ref: Car Seat Headrest, Tele → Boss DS-2 → Supro.)
+description: "CSH crunchy-dry mid-forward direct-in crunch — the Colour Box IS \"boost a quiet source until it clips\" in one box, the mechanic Toledo got from recording quiet + boosting in the mix. Designed-to-emulate; no artist used this pedal. (Ref: Car Seat Headrest, Tele → Boss DS-2 → Supro.)"
 tags: [lo-fi, crunch, direct-in, car-seat-headrest, taste-profile, designed, signature]
 controls:
   - { name: "HI/LO", type: switch, value: "HI", options: ["HI", "LO"] }

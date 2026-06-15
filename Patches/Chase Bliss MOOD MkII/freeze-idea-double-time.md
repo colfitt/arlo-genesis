@@ -1,6 +1,6 @@
 ---
 type: patch
-title: Freeze Idea: Double Time
+title: "Freeze Idea: Double Time"
 device: Chase Bliss MOOD MkII
 date: 2026-06-14
 description: Two independent loop layers — capture a micro-loop first, then play into the Delay and freeze it into a secondary micro-loop. Combine with SYNC to lock the delay to the loop length.

@@ -3,7 +3,7 @@ type: patch
 title: Synth-Bass Destroyer (self-gating crush)
 device: JHS Colour Box V2
 date: 2026-06-14
-description: Almost noise-gate / bit-crusher self-gating breakup on VG-800 baritone-as-bass or synth bass for electronic / post-punk weight — the self-gating quality IS the recorded-wrong sound. CRITICAL: run a noise gate BEFORE the Colour Box.
+description: "Almost noise-gate / bit-crusher self-gating breakup on VG-800 baritone-as-bass or synth bass for electronic / post-punk weight — the self-gating quality IS the recorded-wrong sound. CRITICAL: run a noise gate BEFORE the Colour Box."
 tags: [synth-bass, bit-crusher, self-gating, electronic, post-punk, lo-fi, community, signature]
 controls:
   - { name: "HI/LO", type: switch, value: "HI", options: ["HI", "LO"] }

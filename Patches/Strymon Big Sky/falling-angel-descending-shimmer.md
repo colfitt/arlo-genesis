@@ -1,6 +1,6 @@
 ---
 type: patch
-title: "Falling Angel" — descending shimmer (REGEN)
+title: "\"Falling Angel\" — descending shimmer (REGEN)"
 device: Strymon Big Sky
 date: 2026-06-14
 description: Long super-spacey reverb that slowly falls in pitch (inverse of the ascending cathedral) — the official TWP "Falling Angel" Shimmer in REGEN with voices shifted down ~10 cents so pitch drops further each regen cycle.

@@ -1,6 +1,6 @@
 ---
 type: patch
-title: "Late Bloomer" — delayed-onset bloom
+title: "\"Late Bloomer\" — delayed-onset bloom"
 device: Strymon Big Sky
 date: 2026-06-14
 description: Lush trail that hangs out just behind the notes without overpowering the dry — the official TWP "Late Bloomer" Bloom with high pre-delay and long length so wet arrives late (Ethan Tufts).

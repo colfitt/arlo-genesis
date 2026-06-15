@@ -1,6 +1,6 @@
 ---
 type: patch
-title: "Detune Verb" — ±10-cent detuned shimmer (the manual's trick)
+title: "\"Detune Verb\" — ±10-cent detuned shimmer (the manual's trick)"
 device: Strymon Big Sky
 date: 2026-06-14
 description: Beautifully detuned reverb — lush thickening and on-aesthetic warble; the manual's ±10-cent Shimmer detune trick baked into a factory slot (-10 CEN / +10 CEN in INPUT, Decay 4.96 S, INFINITE).

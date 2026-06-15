@@ -3,7 +3,7 @@ type: patch
 title: Vibrato / Leslie (AndyDemos method)
 device: Caroline Somersault
 date: 2026-06-14
-description: The clean documented vibrato — full-wet MIX makes it vibrato while keeping OFFSET CCW removes the laggy/disorienting feel. (Ref: AndyDemos — Caroline Somersault demo.)
+description: "The clean documented vibrato — full-wet MIX makes it vibrato while keeping OFFSET CCW removes the laggy/disorienting feel. (Ref: AndyDemos — Caroline Somersault demo.)"
 tags: [vibrato, leslie, clean, artist, AndyDemos]
 controls:
   - { name: "MIX", type: knob, value: "full-CW (5:00, 100% wet)" }

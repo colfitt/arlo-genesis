@@ -3,7 +3,7 @@ type: patch
 title: statiq — somber lo-fi lead / harmonic filler
 device: TE OP-1 Field
 date: 2026-06-14
-description: A distant, degraded lead — or harmonic-filler wall layer; a banjo-as-lead tone substitute when you want a synth carrying the line. Author: "Somber, Distant, Lo-Fi."
+description: "A distant, degraded lead — or harmonic-filler wall layer; a banjo-as-lead tone substitute when you want a synth carrying the line. Author: \"Somber, Distant, Lo-Fi.\""
 tags: [lead, lo-fi, degraded, harmonic-filler, digital, community, signature]
 controls:
   - { name: "Engine", type: switch, value: "Digital", options: ["Dr Wave","Cluster","Phase","Digital","Voltage","FM","String","Face","iter","Synth Sampler","Sampler"] }

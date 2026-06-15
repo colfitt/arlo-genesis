@@ -3,7 +3,7 @@ type: patch
 title: Broken Console Preamp Fuzz
 device: JHS Colour Box V2
 date: 2026-06-14
-description: Pure "recorded-wrong" console-fuzz — splatty, gated, self-compressing solid-state-into-transformer ugliness, with the EQ flat so the preamp distortion is the whole sound. (Ref: Beatles "Revolution" / Nirvana "Territorial Pissings" direct-in.)
+description: "Pure \"recorded-wrong\" console-fuzz — splatty, gated, self-compressing solid-state-into-transformer ugliness, with the EQ flat so the preamp distortion is the whole sound. (Ref: Beatles \"Revolution\" / Nirvana \"Territorial Pissings\" direct-in.)"
 tags: [fuzz, broken-console, doom, shoegaze, lo-fi, factory, artist, signature]
 controls:
   - { name: "HI/LO", type: switch, value: "HI", options: ["HI", "LO"] }

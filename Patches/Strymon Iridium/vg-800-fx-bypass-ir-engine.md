@@ -7,7 +7,7 @@ description: Cab the VG-800's raw INST model with Strymon's premium IRs instead 
 tags: [integration, convolution, amp-bypass, vg-800, designed, signature]
 hidden:
   Output Mode (global power-up): Amp Bypass (ON LED GREEN — amp model OFF, CAB + ROOM only; set via HOLD-ON at power-up + DRIVE)
-  VG-800 — FX BYPASS: [▲]+[CTL 1] (hear only the raw INST model, no Boss cab)
+  VG-800 — FX BYPASS: "[▲]+[CTL 1] (hear only the raw INST model, no Boss cab)"
   VG-800 — OUTPUT SELECT: LINE/PHONES
 controls:
   - { name: "Cab", type: switch, value: "a clean balanced slot (factory or a York/Celestion custom IR)", options: ["a", "b", "c"] }

@@ -3,7 +3,7 @@ type: patch
 title: Banjo Seasick Lead Bed
 device: Caroline Somersault
 date: 2026-06-14
-description: A lead voice over a drone for banjo via GK-5 → VG-800 — triangle + Dark hi-cut is essential to tame the bright banjo attack, with a wet-leaning blend for a seasick waver that still reads as a lead. DOUG-designed. (Ref: taste lens — Sufjan / Bon Iver banjo beds.)
+description: "A lead voice over a drone for banjo via GK-5 → VG-800 — triangle + Dark hi-cut is essential to tame the bright banjo attack, with a wet-leaning blend for a seasick waver that still reads as a lead. DOUG-designed. (Ref: taste lens — Sufjan / Bon Iver banjo beds.)"
 tags: [vibrato, chorus, indie-folk, banjo, lead, dark, designed, signature]
 controls:
   - { name: "MIX", type: knob, value: "~2:00 (wet-leaning blend — keeps some pluck reference)" }

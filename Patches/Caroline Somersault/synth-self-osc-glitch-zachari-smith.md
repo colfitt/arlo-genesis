@@ -3,7 +3,7 @@ type: patch
 title: Synth Self-Osc Glitch (Zachari Smith)
 device: Caroline Somersault
 date: 2026-06-14
-description: Pure noon + square = near-self-oscillating synth glitch — the one-knob-move path to chaos. (Ref: Zachari Smith — "Spotlight: Caroline Somersault".)
+description: "Pure noon + square = near-self-oscillating synth glitch — the one-knob-move path to chaos. (Ref: Zachari Smith — \"Spotlight: Caroline Somersault\".)"
 tags: [glitch, synth, square, self-oscillation, electronic, artist, ZachariSmith, signature]
 controls:
   - { name: "MIX", type: knob, value: "12:00" }

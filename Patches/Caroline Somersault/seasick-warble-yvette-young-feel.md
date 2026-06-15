@@ -3,7 +3,7 @@ type: patch
 title: Seasick Warble (Yvette Young feel)
 device: Caroline Somersault
 date: 2026-06-14
-description: Woozy doom/post-punk texture using OFFSET as the seasick knob — sweep it for a subtle warble or "on a boat about to throw up." (Ref: Yvette Young (Covet) — CME Somersault demo; store-demo placement, not a signature endorsement.)
+description: "Woozy doom/post-punk texture using OFFSET as the seasick knob — sweep it for a subtle warble or \"on a boat about to throw up.\" (Ref: Yvette Young (Covet) — CME Somersault demo; store-demo placement, not a signature endorsement.)"
 tags: [vibrato, seasick, doom, post-punk, offset-sweep, artist, YvetteYoung, signature]
 controls:
   - { name: "MIX", type: knob, value: "full-CW (5:00, 100% wet)" }

@@ -3,7 +3,7 @@ type: patch
 title: Gate Slicer (Mono Chop)
 device: Boss BF-3
 date: 2026-06-14
-description: In the mono slot, Gate/Pan becomes a hard-cutoff volume slicer / extreme tremolo with swirl — a chopping rhythmic gate (32 on/off cycles per flanger rise-and-fall), tap-syncable to land the chop on the beat. Ref: Alex Messano "5 Cool Ways."
+description: "In the mono slot, Gate/Pan becomes a hard-cutoff volume slicer / extreme tremolo with swirl — a chopping rhythmic gate (32 on/off cycles per flanger rise-and-fall), tap-syncable to land the chop on the beat. Ref: Alex Messano \"5 Cool Ways.\""
 tags: [flanger, gate, slicer, tremolo, rhythmic, electronic, post-punk, factory, signature]
 controls:
   - { name: "MODE", type: switch, value: "Gate/Pan (~9:00)", options: ["Standard", "Ultra", "Gate/Pan", "Momentary"] }

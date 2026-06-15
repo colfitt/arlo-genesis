@@ -1,6 +1,6 @@
 ---
 type: patch
-title: "Ful Stop" Space-Echo Arpeggio Bed
+title: "\"Ful Stop\" Space-Echo Arpeggio Bed"
 device: Chase Bliss Big Time
 date: 2026-06-14
 description: Track-B emulation of Radiohead's "Ful Stop" (A Moon Shaped Pool) — Big Time covers the Boss RE-20 Space Echo role (short, dark, dotted tape echo) under the synth wash arpeggios.

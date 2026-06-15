@@ -1,6 +1,6 @@
 ---
 type: patch
-title: "For Days" — max-decay Cloud (instant drone)
+title: "\"For Days\" — max-decay Cloud (instant drone)"
 device: Strymon Big Sky
 date: 2026-06-14
 description: Instant drone — the factory "For Days" Cloud preset at the pedal's maximum 50.0s decay, freeze-capable; the standout factory slot for the rig.

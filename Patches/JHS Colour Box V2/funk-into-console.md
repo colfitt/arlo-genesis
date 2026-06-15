@@ -3,7 +3,7 @@ type: patch
 title: Funk-Into-Console (clean scoop)
 device: JHS Colour Box V2
 date: 2026-06-14
-description: Late-'70s/'80s funk-guitar-straight-into-the-console clean color, plus thin Telecaster bridge thickening — two flavors in one (PLAP's thicken-the-thin-Tele and a flagged-low-confidence Guitar Chalk scoop). (Ref: Chic / Grace Jones, Steven Lipson guitar-straight-into-console technique.)
+description: "Late-'70s/'80s funk-guitar-straight-into-the-console clean color, plus thin Telecaster bridge thickening — two flavors in one (PLAP's thicken-the-thin-Tele and a flagged-low-confidence Guitar Chalk scoop). (Ref: Chic / Grace Jones, Steven Lipson guitar-straight-into-console technique.)"
 tags: [guitar, funk, clean, console-color, scoop, community, technique]
 controls:
   - { name: "HI/LO", type: switch, value: "LO (on verge of breakup)", options: ["HI", "LO"] }

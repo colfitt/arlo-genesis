@@ -3,7 +3,7 @@ type: patch
 title: Fake Leslie (faux-rotary)
 device: Caroline Somersault
 date: 2026-06-14
-description: Faux-rotary for guitar and VG-800 organ pads — square + slow base SPEED + high DEPTH + mostly-wet MIX, with HAVOC stabbed for the speed-up "spin." (Ref: Caroline factory faux-Leslie row.)
+description: "Faux-rotary for guitar and VG-800 organ pads — square + slow base SPEED + high DEPTH + mostly-wet MIX, with HAVOC stabbed for the speed-up \"spin.\" (Ref: Caroline factory faux-Leslie row.)"
 tags: [rotary, leslie, organ, havoc, square, factory]
 controls:
   - { name: "MIX", type: knob, value: "~1:30 (mostly wet)" }

@@ -1,6 +1,6 @@
 ---
 type: patch
-title: "Ever After" — orchestral shimmer (controlled)
+title: "\"Ever After\" — orchestral shimmer (controlled)"
 device: Strymon Big Sky
 date: 2026-06-14
 description: Resplendent orchestral ambience on a synth/VG-800 pad — the official TWP "Ever After" Shimmer with +2 OCT and -1 OCT voices in INPUT mode (stops the shifts self-regenerating, keeps it controlled); demoed on an Oberheim Matrix-6 pad.

@@ -3,7 +3,7 @@ type: patch
 title: EVH Momentary Bursts
 device: Boss BF-3
 date: 2026-06-14
-description: Flange that exists ONLY while you hold the footswitch — Van-Halen-style on-demand bursts for a single phrase, note, or last chord; no double-tap, no tap-tempo in this mode. Ref: Van Halen "Unchained" technique (MXR Flanger, not BF-3).
+description: "Flange that exists ONLY while you hold the footswitch — Van-Halen-style on-demand bursts for a single phrase, note, or last chord; no double-tap, no tap-tempo in this mode. Ref: Van Halen \"Unchained\" technique (MXR Flanger, not BF-3)."
 tags: [flanger, momentary, on-demand, burst, technique, factory]
 controls:
   - { name: "MODE", type: switch, value: "Momentary", options: ["Standard", "Ultra", "Gate/Pan", "Momentary"] }

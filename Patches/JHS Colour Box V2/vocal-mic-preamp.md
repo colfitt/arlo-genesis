@@ -3,7 +3,7 @@ type: patch
 title: Vocal / Mic Preamp (Neve channel strip)
 device: JHS Colour Box V2
 date: 2026-06-14
-description: Track vocals / room mics / amp mics through the Colour Box as a Neve-flavored channel strip into the Apollo — PRE-VOL low for a clean breathy take, nudge HI for a degraded/lo-fi vocal. (Ref: Tape Op M160 ribbon vocal, Gene Clark "No Other" character.)
+description: "Track vocals / room mics / amp mics through the Colour Box as a Neve-flavored channel strip into the Apollo — PRE-VOL low for a clean breathy take, nudge HI for a degraded/lo-fi vocal. (Ref: Tape Op M160 ribbon vocal, Gene Clark \"No Other\" character.)"
 tags: [vocal, mic-preamp, channel-strip, indie-folk, lo-fi, factory, artist]
 controls:
   - { name: "HI/LO", type: switch, value: "LO (clean) or HI (overdriven vocal)", options: ["HI", "LO"] }

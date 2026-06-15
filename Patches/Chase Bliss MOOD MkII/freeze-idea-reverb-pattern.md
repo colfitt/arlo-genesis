@@ -1,6 +1,6 @@
 ---
 type: patch
-title: Freeze Idea: Reverb Pattern
+title: "Freeze Idea: Reverb Pattern"
 device: Chase Bliss MOOD MkII
 date: 2026-06-14
 description: A percussive, rhythmic frozen-reverb wall built from multi-tap clusters — freeze with MODIFY low so taps stay distinct, then smudge MODIFY up (one-way) to blur the pattern.

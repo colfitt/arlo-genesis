@@ -3,7 +3,7 @@ type: patch
 title: Drum-Bus / Stereo-Loop Crush
 device: JHS Colour Box V2
 date: 2026-06-14
-description: Print an MPC / Digitakt drum bus or a stereo loop THROUGH the Colour Box for crushed, console-saturated "recorded-wrong" drums — used as a DAW hardware insert. (Lo-fi cluster home turf: blown-out drums, demo-crunch.)
+description: "Print an MPC / Digitakt drum bus or a stereo loop THROUGH the Colour Box for crushed, console-saturated \"recorded-wrong\" drums — used as a DAW hardware insert. (Lo-fi cluster home turf: blown-out drums, demo-crunch.)"
 tags: [drums, drum-bus, stereo-loop, crush, console-saturation, lo-fi, hardware-insert, designed, signature]
 controls:
   - { name: "HI/LO", type: switch, value: "HI (crush) / LO (gentle glue)", options: ["HI", "LO"] }

@@ -1,6 +1,6 @@
 ---
 type: patch
-title: "Bloombient" — electronic-ocean wash
+title: "\"Bloombient\" — electronic-ocean wash"
 device: Strymon Big Sky
 date: 2026-06-14
 description: A wash of noise like a wave in an electronic ocean — single-note rings swept into a wall; the official TWP "Bloombient" Bloom with the signature EXP→Tone resonant-filter sweep (Matt Piper).

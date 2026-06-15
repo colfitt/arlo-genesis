@@ -3,7 +3,7 @@ type: patch
 title: Pretend It's the 1980s
 device: Caroline Somersault
 date: 2026-06-14
-description: The under-quiet-passages classic chorus — low/tight OFFSET keeps it tasteful for guitar and VG-800 modeled cleans. (Ref: Caroline factory '80s chorus' row.)
+description: "The under-quiet-passages classic chorus — low/tight OFFSET keeps it tasteful for guitar and VG-800 modeled cleans. (Ref: Caroline factory '80s chorus' row.)"
 tags: [chorus, 80s, clean, tasteful, factory]
 controls:
   - { name: "MIX", type: knob, value: "~12:00" }

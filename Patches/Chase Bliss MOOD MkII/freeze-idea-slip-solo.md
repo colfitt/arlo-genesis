@@ -1,6 +1,6 @@
 ---
 type: patch
-title: Freeze Idea: Slip Solo
+title: "Freeze Idea: Slip Solo"
 device: Chase Bliss MOOD MkII
 date: 2026-06-14
 description: A frozen-Slip glitch-synth — freeze Slip into a "glitchy synth" and manipulate MODIFY in semitone steps to generate bizarre chromatic melodies and arcade-style SFX, playing under it.

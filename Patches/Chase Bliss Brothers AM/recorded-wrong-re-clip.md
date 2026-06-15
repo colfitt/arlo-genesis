@@ -3,7 +3,7 @@ type: patch
 title: Recorded-Wrong Re-Clip
 device: Chase Bliss Brothers AM
 date: 2026-06-14
-description: Lean INTO the rig's "recorded-wrong" aesthetic — re-clip the already-modeled, already-saturated VG-800 + Muff signal with hard-clipping DISTORTION + HI GAIN so the heavily-colored compression becomes the feature: a squished, gated, mis-biased wall feeding the granular/tape stages.
+description: "Lean INTO the rig's \"recorded-wrong\" aesthetic — re-clip the already-modeled, already-saturated VG-800 + Muff signal with hard-clipping DISTORTION + HI GAIN so the heavily-colored compression becomes the feature: a squished, gated, mis-biased wall feeding the granular/tape stages."
 tags: [distortion, recorded-wrong, degraded, brittle-wall, doom, post-punk, designed, signature]
 dips:
   HI GAIN 1: on

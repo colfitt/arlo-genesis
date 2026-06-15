@@ -3,7 +3,7 @@ type: patch
 title: Personal Data Sold Online (glitch malfunction)
 device: Caroline Somersault
 date: 2026-06-14
-description: Square-wave glitch malfunction for phrase-end punctuation — note the LOW DEPTH; the glitch comes from square + OFFSET/MIX interaction, not cranked depth. (Ref: Caroline factory "malfunctioning machine" row.)
+description: "Square-wave glitch malfunction for phrase-end punctuation — note the LOW DEPTH; the glitch comes from square + OFFSET/MIX interaction, not cranked depth. (Ref: Caroline factory \"malfunctioning machine\" row.)"
 tags: [glitch, lo-fi, square, phrase-end, radiohead-lean, factory, signature]
 controls:
   - { name: "MIX", type: knob, value: "~1:30 (mostly wet)" }

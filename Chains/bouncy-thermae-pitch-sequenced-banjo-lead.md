@@ -1,6 +1,6 @@
 ---
 type: chain
-title: "Bouncy Thermae" Pitch-Sequenced Banjo Lead (clock-locked)
+title: "\"Bouncy Thermae\" Pitch-Sequenced Banjo Lead (clock-locked)"
 date: 2026-06-14
 artists: [Radiohead]
 instrument: banjo

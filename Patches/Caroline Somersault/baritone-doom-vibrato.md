@@ -3,7 +3,7 @@ type: patch
 title: Baritone Doom-Vibrato
 device: Caroline Somersault
 date: 2026-06-14
-description: Post-punk drone-wall — a woozy Leslie-ish wobble under sustained baritone that loses the dry anchor on purpose and seesaws slowly. DOUG-designed. (Ref: taste lens — Swans crushing sustained drones; doom/baritone weight.)
+description: "Post-punk drone-wall — a woozy Leslie-ish wobble under sustained baritone that loses the dry anchor on purpose and seesaws slowly. DOUG-designed. (Ref: taste lens — Swans crushing sustained drones; doom/baritone weight.)"
 tags: [vibrato, doom, post-punk, baritone, drone, dark, designed, signature]
 controls:
   - { name: "MIX", type: knob, value: "full-CW (5:00, 100% wet)" }

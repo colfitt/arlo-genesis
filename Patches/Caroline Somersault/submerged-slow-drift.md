@@ -3,7 +3,7 @@ type: patch
 title: Submerged Slow Drift
 device: Caroline Somersault
 date: 2026-06-14
-description: Shoegaze/dreampop bed — the closest published "underwater dream" recipe, a slow/deep/dark blend kept as a chorus so chords don't seesaw. QC-flagged community source. (Ref: Guitar Chalk — Somersault settings #5.)
+description: "Shoegaze/dreampop bed — the closest published \"underwater dream\" recipe, a slow/deep/dark blend kept as a chorus so chords don't seesaw. QC-flagged community source. (Ref: Guitar Chalk — Somersault settings #5.)"
 tags: [chorus, shoegaze, dreampop, underwater, dark, community, QC-flagged, signature]
 controls:
   - { name: "MIX", type: knob, value: "~1:00 (blend, 6/10)" }

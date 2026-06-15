@@ -3,7 +3,7 @@ type: patch
 title: Broken-Console Screamed Crush (character)
 device: JHS Colour Box V2
 date: 2026-06-14
-description: CSH blown-out screamed-into-cheap-mic vocal CHARACTER on a string source — genuine broken-console fuzz (splatty, gated, self-compressing) = the overloaded cheap-mic clip. Designed-to-emulate + EXPLICIT APPROXIMATION (Toledo's was a screamed vocal; this is the same character on banjo/baritone/VG-800). (Ref: Car Seat Headrest, overloaded-laptop-mic blown-out vocal.)
+description: "CSH blown-out screamed-into-cheap-mic vocal CHARACTER on a string source — genuine broken-console fuzz (splatty, gated, self-compressing) = the overloaded cheap-mic clip. Designed-to-emulate + EXPLICIT APPROXIMATION (Toledo's was a screamed vocal; this is the same character on banjo/baritone/VG-800). (Ref: Car Seat Headrest, overloaded-laptop-mic blown-out vocal.)"
 tags: [lo-fi, fuzz, broken-console, car-seat-headrest, taste-profile, designed, signature]
 controls:
   - { name: "HI/LO", type: switch, value: "HI", options: ["HI", "LO"] }

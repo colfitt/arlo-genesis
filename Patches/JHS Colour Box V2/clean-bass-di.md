@@ -3,7 +3,7 @@ type: patch
 title: Clean Bass DI (transparent color)
 device: JHS Colour Box V2
 date: 2026-06-14
-description: Always-on warm-color DI for the Fender Pro Jazz bass straight to the Apollo x8 — no separate DI box; the point is saturation/warmth, not distortion. (Ref: Tape Op mid-'70s rock bass DI; Black Pumas Brendan Bond V2 bass board.)
+description: "Always-on warm-color DI for the Fender Pro Jazz bass straight to the Apollo x8 — no separate DI box; the point is saturation/warmth, not distortion. (Ref: Tape Op mid-'70s rock bass DI; Black Pumas Brendan Bond V2 bass board.)"
 tags: [bass, di, clean, warm-color, xlr-out, community, artist]
 controls:
   - { name: "HI/LO", type: switch, value: "LO", options: ["HI", "LO"] }
