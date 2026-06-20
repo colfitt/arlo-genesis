@@ -124,14 +124,17 @@ the suggestion index, or the v2 app without you saying so. That separation is th
 
 ```
 research/
-  playbook.md   ← you are here. the pattern + primer (rarely changes)
-  queue.md      ← the bloop queue: ranked targets + open questions from past bloops
-  log.md        ← one line per bloop: date · target · where it wrote
-  bloops/       ← one dated digest per bloop, PRE-triage (your staging area)
+  playbook.md         ← you are here. the pattern + primer (rarely changes)
+  queue.md            ← the bloop queue: ranked targets + open questions from past bloops
+  log.md              ← one line per bloop: date · target · where it wrote
+  build-inventory.sh  ← regenerates the deterministic corpus inventory for the gap-scan
+  bloops/             ← one dated digest per bloop, PRE-triage (your staging area)
     2026-06-19-<slug>.md
+  _promotions/        ← findings staged for later append into v2's chunks.jsonl
 .claude/
-  workflows/bloop-dive.js   ← the Workflow that runs one bloop (read it to learn sub-agents)
-  commands/bloop.md         ← the /bloop steering command
+  workflows/bloop-dive.js     ← the Workflow that runs one bloop (read it to learn sub-agents)
+  workflows/bloop-gapscan.js  ← the Workflow that sweeps the corpus + seeds the queue
+  commands/bloop.md           ← the /bloop steering command (the loop driver)
 ```
 
 Your existing `gear/<Device>/research/` and `software/<Plugin>/research/` folders stay the
@@ -218,5 +221,30 @@ All three read and write the same files. You are never locked in.
 
 ---
 
-*Pattern status: v1. Build order — (1) `bloop-dive.js` + seed `queue.md` via gap-scan, run
-one bloop live; (2) wrap in `/bloop` + finalize this playbook; (3) later, `/schedule` drips.*
+## 10. Lessons from the first runs (Big Time, 2026-06-19)
+
+Two Big Time bloops + their promotions taught the engine three things — all about
+**sub-agents being confidently wrong**, all caught by the human gate / `git diff`:
+
+1. **Sub-agents reason from `git log`, not just file content — and an uncommitted worktree
+   fools them.** A layer-2 agent declared a chain "never fixed" because `git log` showed no
+   commit — but the fix was sitting uncommitted in the working tree. → **Commit between
+   bloops** so later passes see a consistent history.
+2. **Sub-agents will act on a flawed instruction if you let them.** One was told to fix a
+   "broken path" that didn't exist in its file; it verified and declined instead of
+   fabricating a change. → Brief agents to **verify before editing**, and always review the
+   **`git diff`** — the diff is the gate, not the agent's report.
+3. **Don't trust counts in the brief.** An agent told to stage "15 chunks" found the digest
+   held 14, counted them, and staged 14. → Let agents re-derive facts; treat orchestrator
+   numbers as hints.
+
+And the payoff the philosophy promised: **the loop reinforced the truth.** Layer 2 corrected
+and *upgraded* layer 1's own outputs (reworded an over-confident Env-polarity claim; promoted
+a patch from "provisional" to "manual-confirmed"). A single pass can be wrong; the blooper,
+run again, sharpens it.
+
+---
+
+*Pattern status: v1 — built and validated. Steps (1) `bloop-dive.js` + gap-scan-seeded
+`queue.md` and (2) the `/bloop` command are DONE; the engine was proven on two Big Time
+bloops (the loop self-corrected layer 1). Remaining: (3) optional `/schedule` overnight drips.*
