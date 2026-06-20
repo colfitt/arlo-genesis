@@ -13,7 +13,8 @@
 ## Completed / in progress
 
 - [x] **Chase Bliss Big Time — layer 1** (2026-06-19) · creative/lineage dive → promoted 3 corrections + 4 new patches (36→40) + GearProfile fill + 8 staged chunks. Digest: `bloops/2026-06-19-chase-bliss-big-time.md`.
-- [ ] **Chase Bliss Big Time — layer 2** (running) · owner recipes (Elektronauts/ModWiggler), Env-mode polarity, Oto BIM + early-'80s rackmount lineage as dialing guidance, Object Worship + PDS 20/20 catalog.
+- [x] **Chase Bliss Big Time — layer 2** (2026-06-19) · resolved Env mechanics, upgraded the resonator patch, scoped lineage→dialing, fixed 2 more TRS chains. Promoted 2 chain fixes + 2 patch refinements + 3 new link files + 3 link updates + 14 chunks. Digest: `bloops/2026-06-19-chase-bliss-big-time-l2.md`.
+- [ ] **Chase Bliss Big Time — layer 3** (seeds, deferred) · (a) transcribe the Object Worship "Goes BIG TIME" launch episode (audio-only) to confirm/refute the BIM benchmark in Snyder's own words; (b) confirm Env pitch direction on hardware (DEPTH above/below TIME); (c) re-sweep owner recipes once units are widely in hand (late June+); (d) reconcile `big-time-env-divebomb-lead.md` "continuous TIME-clock follower" framing vs the manual's transient-triggered description.
 
 ## Bloop-worthy (do these)
 
@@ -120,7 +121,7 @@
 
 ## Chores (NOT bloops — flag/data hygiene)
 
-- **[ ] Big-Time MIDI-connector sweep** — the layer-1 bloop found chains wrongly stating CB MIDI = ¼" TRS for the Big Time (it's 5-pin DIN, default ch 2). grep confirmed **3 more candidates** to verify + fix: `Chains/clean-big-time-mood-dry-lead-over-soaked-loop.md`, `Chains/onward-big-time-glitch-event-into-space.md`, `Chains/big-time-mood-frozen-bed-live-glitch.md`. (The new `loop-disintegration-drone.md` patch already states DIN correctly.) (flagged by the promotion agent)
+- **[x] Big-Time MIDI-connector sweep** (done 2026-06-19) — all genuine instances fixed: `two-clock` (L1), `frozen-bed` + `onward-glitch` (L2). `clean-big-time-mood-dry-lead` was a **false positive** — its "TRS" refers to MOOD's MISO audio jacks, not Big Time MIDI. Corpus now clean of the error.
 - **[ ] Strymon Deco V2** — `ccChart:0` is a **false negative**; a complete CC 0-100 table + 300-preset scheme already exists in `links/strymon-deco-v2-manual-revd-secondary-midi.md`. Flip the flag / normalize filename. No research.
 - **[ ] Corpus-wide ccChart false-negative sweep** — Deco V2 proves the heuristic mislabels. Re-scan for other devices whose chart exists but flag says 0.
 - **[ ] Batch GearProfile fill** — nearly every GearProfile has unfilled "Why I have it" / "Signature uses" placeholders while the content sits in DeepResearch. A single batch pass clears this corpus-wide (Digitakt 2 + Octatrack MkII stubs are the worst — fold into ranks 3-4).
