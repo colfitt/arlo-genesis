@@ -17,6 +17,9 @@ Each `.jsonl` line is a single chunk object with fields:
 
 ## Contents
 
-- `2026-06-19-big-time-index-chunks.jsonl` — 14 gear-fact chunks for **Chase Bliss Big Time**,
+- `2026-06-19-big-time-index-chunks.jsonl` — 15 gear-fact chunks for **Chase Bliss Big Time**,
   extracted from the bloop digest `research/bloops/2026-06-19-chase-bliss-big-time.md`
+  ("Candidate index chunks" section).
+- `2026-06-19-big-time-l2-index-chunks.jsonl` — 14 gear-fact chunks for **Chase Bliss Big Time**,
+  extracted from the layer-2 digest `research/bloops/2026-06-19-chase-bliss-big-time-l2.md`
   ("Candidate index chunks" section).

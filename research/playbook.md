@@ -6,8 +6,9 @@
 > somewhere that never muddies your hands.
 
 This is the written-down pattern. It is also the spec for the tooling in
-`.claude/workflows/bloop-dive.js` and `.claude/commands/bloop.md`, and a primer on
-**workflows and sub-agents** so the pattern is repeatable by you, not just by me.
+`.claude/workflows/bloop-dive.js`, `.claude/workflows/bloop-gapscan.js`, and
+`.claude/commands/bloop.md`, and a primer on **workflows and sub-agents** so the
+pattern is repeatable by you, not just by me.
 
 ---
 
