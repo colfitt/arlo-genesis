@@ -27,4 +27,6 @@ related: []
 - [MOOD+MKII_Manual_Pedal_Chase+Bliss.pdf](manuals/MOOD+MKII_Manual_Pedal_Chase+Bliss.pdf)
 
 ## Notes
-*(quirks, firmware, mods, MIDI channel, etc.)*
+- MIDI channel = 2 (default; relearn by holding both footswitches at power-up).
+- MIDI is received over 1/4" TRS via the Chase Bliss MIDIBox (sold separately).
+- Canonical CC source (~50 CCs): [research/links/midi-official-cc-chart.md](research/links/midi-official-cc-chart.md)

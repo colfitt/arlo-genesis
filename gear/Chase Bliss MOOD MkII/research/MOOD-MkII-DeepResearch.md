@@ -89,7 +89,7 @@ Beyond these, the MkII (2023) is recent enough that most of its mythology is in 
 | Power | 9V DC, center-negative, **~270 mA** — high draw, needs a beefy isolated slot (manual p.4) |
 | I/O | Stereo in / stereo out (TRS or dual-mono); mono and mono→stereo via `MISO` |
 | Bypass | **Buffered bypass with trails**; true-bypass available by tapping both footswitches 3× (looper won't run in true-bypass, manual p.17) |
-| MIDI | Full — note, PC, CC, **clock sync**; requires a Chase Bliss MIDIbox to convert to the ⅛" TRS jack (manual pp.48–49) |
+| MIDI | Full — note, PC, CC, **clock sync**; requires a Chase Bliss MIDIbox to convert to the ⅛" TRS jack (manual pp.48–49). **The full official CC chart now lives at [`research/links/midi-official-cc-chart.md`](links/midi-official-cc-chart.md)** — this DeepResearch is no longer the sole MIDI authority; consult that link for the per-parameter CC numbers. |
 | CV / Expression | EXP/CV jack, 0–5V (any negative/over-voltage can damage it); controls any knob(s) or defaults to MIX (manual pp.48–49) |
 | External footswitch | The MIDI/EXT jack accepts a normally-open momentary footswitch to engage the Wet Channel (manual p.49) |
 | Presets | 2 (left/right toggle); dip settings save with presets |
