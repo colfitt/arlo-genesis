@@ -222,10 +222,11 @@ All three read and write the same files. You are never locked in.
 
 ---
 
-## 10. Lessons from the first runs (Big Time, 2026-06-19)
+## 10. Lessons from the first runs (Big Time + MOOD MkII)
 
-Two Big Time bloops + their promotions taught the engine three things — all about
-**sub-agents being confidently wrong**, all caught by the human gate / `git diff`:
+The first production bloops taught the engine four things — the first three about
+**sub-agents being confidently wrong**, the fourth about the staging boundary — all caught by
+the human gate / `git diff`:
 
 1. **Sub-agents reason from `git log`, not just file content — and an uncommitted worktree
    fools them.** A layer-2 agent declared a chain "never fixed" because `git log` showed no
@@ -238,6 +239,13 @@ Two Big Time bloops + their promotions taught the engine three things — all ab
 3. **Don't trust counts in the brief.** An agent told to stage "15 chunks" found the digest
    held 14, counted them, and staged 14. → Let agents re-derive facts; treat orchestrator
    numbers as hints.
+4. **A `focus` that says WHERE to write breaks the staging boundary** (MOOD MkII, 2026-06-20).
+   The focus said "capture the CC chart *into* `research/links/…`"; the lens agents have Write
+   tools and obeyed — writing the chart + a downloaded PDF straight into the corpus, bypassing
+   the gate. Worktree isolation caught it (uncommitted, reviewed via `git diff`). → `bloop-dive`
+   now carries a **staging guard** (research passes write nothing; synthesis writes only the
+   digest; the guard overrides any "capture into" wording), and `/bloop` composes `focus` as
+   WHAT-not-WHERE plus a post-dive `git status` staging check.
 
 And the payoff the philosophy promised: **the loop reinforced the truth.** Layer 2 corrected
 and *upgraded* layer 1's own outputs (reworded an over-confident Env-polarity claim; promoted
@@ -246,6 +254,7 @@ run again, sharpens it.
 
 ---
 
-*Pattern status: v1 — built and validated. Steps (1) `bloop-dive.js` + gap-scan-seeded
-`queue.md` and (2) the `/bloop` command are DONE; the engine was proven on two Big Time
-bloops (the loop self-corrected layer 1). Remaining: (3) optional `/schedule` overnight drips.*
+*Pattern status: v1 — built, validated, hardened. Steps (1) `bloop-dive.js` + gap-scan-seeded
+`queue.md` and (2) the `/bloop` command are DONE; proven on two Big Time bloops (loop
+self-corrected) and a MOOD MkII production bloop (which surfaced + drove the staging guard).
+Remaining: (3) optional `/schedule` overnight drips.*
