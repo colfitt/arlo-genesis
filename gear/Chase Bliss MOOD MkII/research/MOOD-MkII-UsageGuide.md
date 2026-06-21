@@ -63,8 +63,9 @@ Wet Channel, or record the Wet Channel into the looper. *(video-manual-pt1, vide
 
 ## 2. Signature recipes & settings
 
-**Presets are minimal & there's no official cookbook:** only **2 onboard slots** (recall via
-MIDI PC — see CB-stack §5); CB pitched it as an improvisation tool ("tiny knob differences are
+**Presets are minimal & there's no official cookbook:** **122 MIDI preset slots via Program Change;
+slots 1-2 = the two face preset-toggle positions** (recall via MIDI PC — see CB-stack §5); CB
+pitched it as an improvisation tool ("tiny knob differences are
 crucial"), so the community shares *techniques + approximate positions*, not exact patches.
 **Andy Othling authored the factory presets** (the Tim-&-Eric names "Nude Tayne," "Tittleman's
 Crest"…) — audio on the CB SoundCloud; copy by ear. *(recipe-sources, artists-and-techniques)*
