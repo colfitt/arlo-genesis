@@ -20,8 +20,8 @@ controls:
   - { name: "FEEDBACK", type: knob, value: "high ~70% (keep passes loud enough to keep carving)" }
   - { name: "WET", type: knob, value: "set carefully — wet-only means the loop is your entire output" }
   - { name: "SPREAD", type: switch, value: "widen", options: ["off", "widen", "ping-pong"] }
-  - { name: "LEFT footswitch", type: button, value: "record / play the loop (per-mode behavior in Loop)" }
-  - { name: "RIGHT footswitch", type: button, value: "overdub / delete the loop (per-mode behavior in Loop)" }
+  - { name: "LEFT footswitch", type: button, value: "RECORD/PLAY — tap to record, again to set endpoint, then tap to alternate overdub↔playback (records + overdubs; manual p.15/29)" }
+  - { name: "RIGHT footswitch", type: button, value: "TAP = STOP/reset (2nd tap resumes playback); HOLD = DELETE the loop — RIGHT never overdubs (manual p.15/29)" }
 ---
 
 # Frippertronics Carve Loop
@@ -35,7 +35,7 @@ A purpose-built Loop-mode sound-on-sound recipe: record a phrase on the LEFT foo
 3. Tap **LEFT to record** a phrase; tap **LEFT again to play**, then **overdub successive passes** on top.
 4. Let it ride: each Warm/Analog pass is darker and more degraded than the last, so the bed eats itself as you add to it.
 5. Play melody over the decaying bed — wet-only keeps your live signal clean against the crumble.
-6. To collapse, **delete the loop** (RIGHT footswitch in Loop mode) or **hold MODE ~2s to panic-reset** to a simple delay.
+6. To collapse, **delete the loop** (**HOLD** the RIGHT footswitch in Loop mode; a *tap* of RIGHT only stops/resets) or **hold MODE ~2s to panic-reset** to a simple delay.
 
 ## Notes
 - HONESTY: Loop mode runs **DIGITAL feedback behind the scenes** (manual p.29), so STATE/TEXTURE changes aren't heard until you re-overdub. The "slow destroy" comes from **VOICING Warm/Analog = sound-on-sound degrade**, NOT the Saturated analog limiter. VOICING is the destroy knob; STATE is mostly cosmetic until you overdub again.
