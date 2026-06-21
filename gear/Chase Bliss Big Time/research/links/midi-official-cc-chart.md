@@ -57,6 +57,8 @@ Presets: **127 slots**, recalled via **Program Change**; an empty slot loads a d
 | 106 | DELETE | ANY |
 | 107 | STOP | ANY |
 
+> **Mode-dependent shared CCs:** the footswitch CCs change role by MODE. **CC106 = HOLD (HOLD LEFT SWITCH) in delay modes, but DELETE in Loop mode.** Likewise **CC102** = BYPASS in delay / PLAY-STOP in Loop, and **CC103** = TAP/MOD ENGAGE in delay / REC-PLAY-DUB in Loop. Cite the role for the active mode, not the CC number alone.
+
 ## Other
 | CC | Parameter | Notes |
 |----|-----------|-------|
