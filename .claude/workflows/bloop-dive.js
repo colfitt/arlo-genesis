@@ -51,11 +51,15 @@ const category   = a.category || 'gear'
 const corpusPath = a.corpusPath || null
 const focus      = a.focus || ''
 const musicGoal  = a.musicGoal || ''
-const freshSignal = a.freshSignal === true
+const freshSignal = a.freshSignal === true || a.freshSignal === 'true'
 
 if (!target || !slug || !date) {
   throw new Error('bloop-dive requires args.target, args.slug, and args.date')
 }
+// Validate slug/date so digestPath can NEVER escape research/bloops/ (no '/', no '..').
+// This is the code-level enforcement of the "writes only to research/bloops/" invariant.
+if (!/^[a-z0-9][a-z0-9-]*$/.test(slug)) throw new Error('args.slug must be kebab-case [a-z0-9-]')
+if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) throw new Error('args.date must be YYYY-MM-DD')
 
 const digestPath = `research/bloops/${date}-${slug}.md`
 
@@ -73,10 +77,11 @@ const DEFAULT_LENSES = [
   { key: 'technical',  brief: technicalBrief },
   { key: 'comparison', brief: "How it compares to alternatives and where it earns its place in the user's rig and genres (ambient / lo-fi / post-rock / electronic)." },
 ]
-const lenses = a.lenses || DEFAULT_LENSES
-if (freshSignal) {
-  lenses.push({ key: 'fresh', brief: 'Use the last30days research tool to surface what is NEW in the last 30 days: firmware, techniques, deals, releases, notable discussion.' })
-}
+// Build a FRESH array — never mutate the caller's lenses or the shared DEFAULT_LENSES.
+const baseLenses = a.lenses || DEFAULT_LENSES
+const lenses = freshSignal
+  ? [...baseLenses, { key: 'fresh', brief: 'Use the last30days research tool to surface what is NEW in the last 30 days: firmware, techniques, deals, releases, notable discussion.' }]
+  : baseLenses.slice()
 
 // --- schemas: force sub-agents to return validated structured data ----------
 // TEACHING NOTE: passing `schema` to agent() makes the sub-agent call a

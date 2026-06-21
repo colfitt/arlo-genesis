@@ -12,7 +12,7 @@
 
 ## Completed / in progress
 
-- [x] **Chase Bliss Big Time — layer 1** (2026-06-19) · creative/lineage dive → promoted 3 corrections + 4 new patches (36→40) + GearProfile fill + 8 staged chunks. Digest: `bloops/2026-06-19-chase-bliss-big-time.md`.
+- [x] **Chase Bliss Big Time — layer 1** (2026-06-19) · creative/lineage dive → promoted 3 corrections + 4 new patches (36→40) + GearProfile fill + 15 staged chunks. Digest: `bloops/2026-06-19-chase-bliss-big-time.md`.
 - [x] **Chase Bliss Big Time — layer 2** (2026-06-19) · resolved Env mechanics, upgraded the resonator patch, scoped lineage→dialing, fixed 2 more TRS chains. Promoted 2 chain fixes + 2 patch refinements + 3 new link files + 3 link updates + 14 chunks. Digest: `bloops/2026-06-19-chase-bliss-big-time-l2.md`.
 - [ ] **Chase Bliss Big Time — layer 3** (seeds, deferred) · (a) transcribe the Object Worship "Goes BIG TIME" launch episode (audio-only) to confirm/refute the BIM benchmark in Snyder's own words; (b) confirm Env pitch direction on hardware (DEPTH above/below TIME); (c) re-sweep owner recipes once units are widely in hand (late June+); (d) reconcile `big-time-env-divebomb-lead.md` "continuous TIME-clock follower" framing vs the manual's transient-triggered description.
 

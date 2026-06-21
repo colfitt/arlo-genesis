@@ -69,18 +69,23 @@ const INVENTORY_SCHEMA = {
       type: 'array',
       items: {
         type: 'object', additionalProperties: false,
-        required: ['category', 'name', 'path', 'deepResearch', 'usageGuide', 'researchBytes', 'links', 'transcripts', 'midi', 'ccChart'],
+        // Keep in lockstep with the printf field list in research/build-inventory.sh.
+        required: ['category', 'name', 'path', 'deepResearch', 'usageGuide', 'researchMd', 'researchBytes', 'links', 'transcripts', 'gearProfile', 'midi', 'ccChart', 'manuals', 'presets'],
         properties: {
           category: { type: 'string' },
           name: { type: 'string' },
           path: { type: 'string' },
           deepResearch: { type: 'integer' },
           usageGuide: { type: 'integer' },
+          researchMd: { type: 'integer' },
           researchBytes: { type: 'integer' },
           links: { type: 'integer' },
           transcripts: { type: 'integer' },
+          gearProfile: { type: 'integer' },
           midi: { type: 'string' },
           ccChart: { type: 'integer' },
+          manuals: { type: 'integer' },
+          presets: { type: 'integer' },
         },
       },
     },
@@ -147,6 +152,10 @@ const inv = await agent(
 )
 const devices = (inv && inv.devices) || []
 log(`Loaded ${devices.length} device records.`)
+if (!devices.length) {
+  log('Inventory empty — did research/build-inventory.sh run? Returning an empty queue.')
+  return { generatedFor: date, targets: [], notes: 'Inventory was empty; nothing to rank. Run research/build-inventory.sh first.' }
+}
 
 // === PHASE 2 · ASSESS =======================================================
 // Partition into batches and judge each batch in its own clean context, in
