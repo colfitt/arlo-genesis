@@ -15,10 +15,12 @@
 - [x] **Chase Bliss Big Time — layer 1** (2026-06-19) · creative/lineage dive → promoted 3 corrections + 4 new patches (36→40) + GearProfile fill + 15 staged chunks. Digest: `bloops/2026-06-19-chase-bliss-big-time.md`.
 - [x] **Chase Bliss Big Time — layer 2** (2026-06-19) · resolved Env mechanics, upgraded the resonator patch, scoped lineage→dialing, fixed 2 more TRS chains. Promoted 2 chain fixes + 2 patch refinements + 3 new link files + 3 link updates + 14 chunks. Digest: `bloops/2026-06-19-chase-bliss-big-time-l2.md`.
 - [ ] **Chase Bliss Big Time — layer 3** (seeds, deferred) · (a) transcribe the Object Worship "Goes BIG TIME" launch episode (audio-only) to confirm/refute the BIM benchmark in Snyder's own words; (b) confirm Env pitch direction on hardware (DEPTH above/below TIME); (c) re-sweep owner recipes once units are widely in hand (late June+); (d) reconcile `big-time-env-divebomb-lead.md` "continuous TIME-clock follower" framing vs the manual's transient-triggered description.
+- [x] **Chase Bliss MOOD MkII — layer 1** (2026-06-20) · captured the full official MIDI CC chart (~50 CCs) from the dedicated MIDI manual (downloaded into `manuals/`) → `research/links/midi-official-cc-chart.md` in Onward format; updated GearProfile + UsageGuide + DeepResearch; 13 staged chunks. **Closes queue rank 1.** Digest: `bloops/2026-06-20-chase-bliss-mood-mkii.md`.
+- [ ] **Chase Bliss MOOD MkII — layer 2** (seeds) · (a) **hardware-verify** the CC102/103 wet-vs-micro-looper bypass split (manual silent, midi.guide contradicts) + the CC105/106 freeze/overdub channel pairing; (b) capture the slots-1&2 factory presets (Andy Othling, Tim-&-Eric names) by ear as audio recipes; (c) name the CC25 Ramping Waveform shapes; (d) audit other CB siblings for the midi.guide CC58/CC87-class transcription slips.
 
 ## Bloop-worthy (do these)
 
-### [ ] 1 · Chase Bliss MOOD MkII · `gear` · **high**
+### [x] 1 · Chase Bliss MOOD MkII · `gear` · **high** — ✅ DONE 2026-06-20 (see Completed above)
 - **Path:** `gear/Chase Bliss MOOD MkII`
 - **Why:** Flagship texture/looping anchor, MIDI-clock-slaved, but `midi:true` + no CC chart (every sibling — Onward/Clean/GenLoss — has one). ARLO can't drive it.
 - **Focus:** Capture the official CC chart (CC# → parameter) into `research/links/midi-official-cc-chart.md`, matching the Onward format. Source: bundled MOOD manual PDF + Chase Bliss midi.guide page.
