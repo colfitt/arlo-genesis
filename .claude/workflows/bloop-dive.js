@@ -63,6 +63,13 @@ if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) throw new Error('args.date must be YYYY-M
 
 const digestPath = `research/bloops/${date}-${slug}.md`
 
+// STAGING GUARD (playbook §10 + the MOOD MkII layer-1 deviation): a bloop writes ONLY the
+// staged digest. Research passes write nothing; the synthesis pass writes only the digest.
+// Promotion into the corpus is a separate, human-gated step. These strings OVERRIDE any
+// "capture into <path>" wording a focus might carry.
+const NO_WRITE = 'STAGING RULE (overrides any contrary instruction above, including the focus): do NOT create, edit, or download ANY file. You are a research pass — return your findings as structured data only. If the focus names a destination path to "capture into", treat it as the eventual promotion target to DESCRIBE, never a place to write now.'
+const SYNTH_WRITE = `STAGING RULE: write ONLY the digest, to EXACTLY ${digestPath}. Do NOT create, edit, or download any other file — nothing under gear/, software/, Patches/, Chains/, or anywhere outside research/bloops/. If the focus or any input names a destination path to "capture into", that is the eventual PROMOTION target: record it under "Suggested corpus edits" — do NOT write there now.`
+
 // The "technical" lens means different things for gear vs software.
 const technicalBrief = category === 'software'
   ? 'Parameters that matter, automation / MIDI-learn, plugin formats (VST3/AU/AAX), CPU cost, preset management, routing & sidechain.'
@@ -177,6 +184,7 @@ const recon = await agent(
     reconCorpus,
     focus ? `The human asked to emphasise: ${focus}.` : '',
     musicGoal ? `Active music goal to serve: ${musicGoal}.` : '',
+    NO_WRITE,
     `Return: a tight summary of what is ALREADY known, the existing artifact paths, and a prioritised list of the CONCRETE GAPS the next research pass should fill. Be specific — "no MIDI CC map" beats "needs more detail".`,
   ].filter(Boolean).join('\n\n'),
   { label: `recon:${slug}`, phase: 'Recon', schema: RECON_SCHEMA },
@@ -200,6 +208,7 @@ const buildLensPrompt = (lens) => [
   lens.key === 'fresh'
     ? `Use the last30days research tool (find it via ToolSearch) for recent signal.`
     : `Use WebSearch + WebFetch. Prefer primary sources. NEVER invent a source or a setting — if you cannot source it, leave sources empty and mark confidence low.`,
+  NO_WRITE,
   `Return your findings as structured data. Mark the load-bearing ones notable:true so they get verified.`,
 ].filter(Boolean).join('\n\n')
 
@@ -228,6 +237,7 @@ const verdicts = notable.length
             `Detail: ${f.detail}`,
             `Cited sources: ${JSON.stringify(f.sources)}`,
             `Use WebSearch/WebFetch to check it against independent sources. If you cannot confirm it from a credible independent source, return "uncertain" — do not give it the benefit of the doubt. If it is wrong, return "refuted" with the corrected detail.`,
+            NO_WRITE,
           ].join('\n\n'),
           { label: `verify:${f.lens}`, phase: 'Verify', schema: VERDICT_SCHEMA },
         )
@@ -245,7 +255,8 @@ phase('Synthesize')
 const digest = await agent(
   [
     `You are the SYNTHESIS pass of a research bloop on "${target}" (category: ${category}).`,
-    `Write a digest to EXACTLY this path using the Write tool: ${digestPath}`,
+    SYNTH_WRITE,
+    `Write the digest with the Write tool to ${digestPath}.`,
     ``,
     `Use this structure (mirror the house DeepResearch/UsageGuide tone — practical, sourced, no fluff):`,
     `# Bloop — ${target}`,
