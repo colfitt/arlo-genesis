@@ -36,6 +36,10 @@ Work out for the chosen target:
 - `category` (gear / software / technique), `corpusPath` (`gear/<X>` or `software/<X>`, or
   null if net-new), `slug` (kebab-case; append `-l2`/`-l3` when re-blooping the SAME target
   so digests don't overwrite), `focus` (1–3 sentences of emphasis from the user).
+- **`focus` says WHAT to research, never WHERE to write.** Do NOT tell the bloop to "capture
+  X *into* `research/links/…`" — that names a *promotion target*, and the dive will read it as
+  a place to write, breaking the staging boundary (it bit the MOOD MkII bloop). Say "capture
+  the official CC chart (CC# → parameter)"; file placement happens at promotion (steps 5–6).
 - **Lenses** — choose by intent:
   - *Spec / control gap* (e.g. capture a MIDI CC chart) → keep the default lenses
     (official / community / video / technical / comparison).
@@ -47,6 +51,10 @@ Invoke the **`bloop-dive`** workflow with
 It runs in the background — tell the user to watch `/workflows`. Wait for the completion ping.
 
 ## 4 · Report + propose promotions — GATE 2
+**First, a staging check:** run `git status --short`. The dive must have written ONLY under
+`research/bloops/`. If anything was created or modified outside it (corpus files, downloaded
+PDFs), flag it to the user — the bloop overstepped its boundary and that change needs explicit
+review before it's trusted (the `bloop-dive` staging guard should prevent this, but verify).
 The workflow returns a **compact summary + a digest path** (`research/bloops/<date>-<slug>.md`).
 Do NOT read the whole digest. From the summary, show the user: what it learned, verified vs
 flagged, the suggested corpus edits, candidate index chunks, and the follow-up questions.
