@@ -11,6 +11,11 @@ at position 04). Bass board: 108 Fuzz (maybe) → Oxford → Longsword → BF-3
 (bass input) → CE-2W → TimeLine → Big Sky → PORTA424 → Colour Box DI →
 Iridium (maybe) → Apollo in 2.
 
+## Start Here (table of contents)
+
+**start-here.html** — hub page linking every sheet.
+Artifact: https://claude.ai/code/artifact/ebd5c4d8-ee10-459d-ab7d-afc3de10ef55
+
 ## The three sheets
 
 1. **make-a-beat.html** — start a beat on the Digitakt 2 or the MPC Sample.
