@@ -1,6 +1,6 @@
 # Simple Sheets — the ADHD-friendly looping guides
 
-Three HTML sheets in plain English. Short steps. No theory.
+Four HTML sheets in plain English. Short steps. No theory.
 Open the `.html` files in a browser, or use the published artifact links below.
 
 **For a new Claude session:** this folder + this README is the context. The full
@@ -16,7 +16,7 @@ Iridium (maybe) → Apollo in 2.
 **start-here.html** — hub page linking every sheet.
 Artifact: https://claude.ai/code/artifact/ebd5c4d8-ee10-459d-ab7d-afc3de10ef55
 
-## The three sheets
+## The four sheets
 
 1. **make-a-beat.html** — start a beat on the Digitakt 2 or the MPC Sample.
    Artifact: https://claude.ai/code/artifact/ab8254ac-67c3-4e45-9d02-7de6eed3fe96
@@ -34,9 +34,33 @@ Artifact: https://claude.ai/code/artifact/ebd5c4d8-ee10-459d-ab7d-afc3de10ef55
    slot = record, click again = loop; new takes go to the next row; rows are
    song sections. Live is clock master; Digitakt follows over direct USB.
    Artifact: https://claude.ai/code/artifact/3ca34cb3-00a5-4463-b7ec-a4e8e1cdf51b
+4. **loop-on-the-ipad.html** — Loopy Pro on the iPad, wired as a third loop box.
+   Artifact: https://claude.ai/code/artifact/fd505702-8f74-47b4-a444-590ecc7693fb
 
 ## Mode rule
 
 - Quick session / true overdub / wandering the room → **OP-1 sheet**
 - Separate, editable, muteable loops → **Ableton sheet**
+- Hands-on colour looping with a screen → **iPad sheet**
 - Either way, drums start on the **Make a Beat** sheet.
+- The OP-1 and the iPad both return on **Apollo 7–8**. One per session.
+
+## iPad / Loopy Pro — the routing facts (don't re-derive these)
+
+The obvious plan (one USB-C cable, laptop ↔ iPad, iPad picks up Apollo inputs)
+is impossible. Verified, not assumed:
+
+- Apple's IDAM is **iPad → Mac only**. Nothing comes back over that cable.
+- IDAM is **stereo, locked to 44.1 kHz**.
+- iPadOS allows **one audio device at a time** — with IDAM active the iPad
+  cannot use a USB audio interface at all.
+- The box that solved this (iConnectivity AUDIO4c, dual USB-C host) is
+  **discontinued** with no equivalent replacement.
+
+What works: analog round-trip, the same topology as the OP-1.
+Console CUE 1 (sends from ins 1–6) → Apollo line outs 3/4 → a class-compliant
+USB-C interface hosted by the iPad (**MOTU M4** is the pick) → Loopy Pro.
+Return: M4 outs 1/2 → **Apollo ins 7–8** → monitors + one armed Ableton track.
+Tempo via **Ableton Link** over Wi-Fi. Cue sends from 7–8 stay **off forever**
+(feedback), same rule as the OP-1. iPad needs a powered USB-C hub with PD —
+it's the USB host now, so it powers the interface.
