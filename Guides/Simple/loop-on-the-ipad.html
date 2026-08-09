@@ -206,8 +206,9 @@ a{color:var(--mon-deep)}
   <p>You already solved this problem once. The Wall of Sound rig sends a Console cue mix
   out to the OP-1 and takes the OP-1 back in on Apollo 7&ndash;8. <b>The iPad goes in
   exactly the same slot.</b> Same cue, same return, same feedback rule.</p>
-  <p>The only new part: the iPad needs its own little audio interface, because it cannot
-  talk to the Apollo directly. The Apollo is Thunderbolt and needs UAD drivers. iPadOS has none.</p>
+  <p>The only new part: the iPad needs its own audio interface, because it cannot talk
+  to the Apollo directly. The Apollo is Thunderbolt and needs UAD drivers. iPadOS has
+  none. That job goes to the Babyface, which you already own.</p>
   <div class="box">
     <span class="bl">If you know the OP-1 sheet</span>
     You know this one. Cue mix out, loop box, back in on 7&ndash;8, Ableton tapes it.
@@ -215,16 +216,23 @@ a{color:var(--mon-deep)}
 </section>
 
 <section>
-  <div class="step-h"><span class="tag">Buy</span><h2>What you need</h2></div>
+  <div class="step-h"><span class="tag">Gear</span><h2>You already own all of this</h2></div>
   <div class="buy">
     <div class="row" style="--bc:var(--rec)"><span class="what">Interface</span>
-      <span><b>MOTU M4.</b> <span class="why">Class compliant over USB-C, no drivers, the converters are better than the price. Four outs means the iPad can send two stereo pairs later. Cheap alternative: Audient EVO 4.</span></span></div>
-    <div class="row" style="--bc:var(--amber)"><span class="what">Powered hub</span>
-      <span><b>USB-C with PD passthrough.</b> <span class="why">The iPad is the host now. It powers the interface and drains fast. The hub charges the iPad while it hosts.</span></span></div>
+      <span><b>RME Babyface Pro FS.</b> <span class="why">The only one of your interfaces that configures its own routing from the iPad, via the TotalMix FX app. Two headphone outs, so you can walk and still hear the loop.</span></span></div>
+    <div class="row" style="--bc:var(--amber)"><span class="what">Power</span>
+      <span><b>Its own PSU, or the powered hub.</b> <span class="why">An iPad supplies about 20&nbsp;mA. The Babyface wants 500. This is not optional and it is the first thing to check when nothing works.</span></span></div>
     <div class="row" style="--bc:var(--mon)"><span class="what">Cables</span>
-      <span><b>4&times; TS.</b> <span class="why">Two out of the Apollo into the interface, two out of the interface into the Apollo.</span></span></div>
+      <span><b>USB-B to USB-C, plus 4 balanced.</b> <span class="why">The Babyface is USB-B, not C. Two TRS from the Apollo into its line ins, two XLR-to-TRS from its main outs back to the Apollo.</span></span></div>
     <div class="row" style="--bc:var(--loop)"><span class="what">Wi-Fi</span>
       <span><b>Both on the same network.</b> <span class="why">Ableton Link is peer-to-peer. No internet needed, just the same network.</span></span></div>
+  </div>
+  <div class="box">
+    <span class="bl">Why not the Focusrite 18i8</span>
+    It is class compliant and it will pass audio. But 3rd gen Scarletts do their
+    routing in Focusrite Control, which is Mac and Windows only &mdash; there is no way
+    to change a routing decision from the iPad. The Babyface carries TotalMix in
+    hardware and has an iPad app for it. That is the whole difference.
   </div>
 </section>
 
@@ -236,7 +244,7 @@ a{color:var(--mon-deep)}
     <div class="chain">
       <span class="pchip">Console <b>CUE 1</b><span class="flag">sends from ins 1&ndash;6</span></span><span class="arr">&#8594;</span>
       <span class="pchip">Apollo line outs <b>3/4</b><span class="flag">2&times; TS</span></span><span class="arr">&#8594;</span>
-      <span class="pchip">MOTU M4 ins <b>1/2</b></span><span class="arr">&#8594;</span>
+      <span class="pchip">Babyface line ins <b>3/4</b><span class="flag">TRS jacks on the unit</span></span><span class="arr">&#8594;</span>
       <span class="pchip star">iPad &middot; Loopy Pro</span>
     </div>
   </div>
@@ -245,18 +253,30 @@ a{color:var(--mon-deep)}
     <div class="board-h"><span class="bname">Back &mdash; what the room hears</span></div>
     <div class="chain">
       <span class="pchip star">iPad &middot; Loopy Pro</span><span class="arr">&#8594;</span>
-      <span class="pchip">MOTU M4 outs <b>1/2</b><span class="flag">2&times; TS</span></span><span class="arr">&#8594;</span>
+      <span class="pchip">Babyface main outs<span class="flag">XLR breakout &rarr; TRS</span></span><span class="arr">&#8594;</span>
       <span class="pchip">Apollo ins <b>7&ndash;8</b><span class="flag">the loop-box slot</span></span><span class="arr">&#8594;</span>
       <span class="pchip">monitors + Ableton</span>
     </div>
   </div>
+
+  <div class="board" style="--bc:var(--amber)">
+    <div class="board-h"><span class="bname">Walk &mdash; what you hear on your head</span></div>
+    <div class="chain">
+      <span class="pchip star">iPad &middot; Loopy Pro</span><span class="arr">&#8594;</span>
+      <span class="pchip">Babyface phones<span class="flag">&frac14;&Prime; or 3.5 mm</span></span><span class="arr">&#8594;</span>
+      <span class="pchip">your ears, anywhere in the room</span>
+    </div>
+  </div>
+  <p class="small">Build that headphone feed in <b>TotalMix FX</b> on the iPad. It is a
+  separate mix from the main outs, so what you hear while wandering does not change
+  what the Apollo records.</p>
 
   <table class="simple">
     <tr><th>Setting</th><th>Value</th></tr>
     <tr><td class="k">Cue sends</td><td>Inputs <b>1&ndash;6 on</b>. This is what the iPad can loop.</td></tr>
     <tr><td class="k">Cue 7&ndash;8</td><td><b>Off. Forever.</b> That is the return coming back.</td></tr>
     <tr><td class="k">Cue out</td><td>Line outs 3/4 &mdash; Console &rarr; Settings &rarr; Hardware</td></tr>
-    <tr><td class="k">Sample rate</td><td><b>48 kHz</b> on the M4, the Apollo and Live</td></tr>
+    <tr><td class="k">Sample rate</td><td><b>48 kHz</b> on the Babyface, the Apollo and Live</td></tr>
     <tr><td class="k">Apollo 7&ndash;8</td><td>Shared slot. OP-1 <b>or</b> iPad <b>or</b> beats. One at a time.</td></tr>
   </table>
 </section>
@@ -290,14 +310,16 @@ a{color:var(--mon-deep)}
 <section>
   <div class="step-h"><span class="tag">Once</span><h2>Set it up one time</h2></div>
   <ol class="big">
-    <li><b>Hub into the iPad.</b> M4 into the hub. Power into the hub.
-      <span class="sub">The iPad should say it is charging.</span></li>
+    <li><b>Put the Babyface in Class Compliant mode.</b> Hold <kbd>Select</kbd> + <kbd>Recall</kbd> while powering it up. The meters run up to confirm.
+      <span class="sub">This is a manual toggle, not automatic. It is the step everyone misses. It stays set until you toggle it back.</span></li>
+    <li><b>Give it real power</b>, then USB-B to the iPad.
+      <span class="sub">Its own PSU, or your powered hub. An iPad alone supplies about 20 mA and the Babyface wants 500. Underpowered looks exactly like broken.</span></li>
     <li><b>Settings &rarr; Sample Rate &rarr; 48 kHz.</b>
-      <span class="sub">This normally re-clocks the M4 too. Some interfaces ignore the request &mdash; check the M4 agrees.</span></li>
+      <span class="sub">This normally re-clocks the Babyface too. Check its display agrees.</span></li>
     <li><b>Open the Mixer, tap add, choose Add Hardware Input.</b>
-      <span class="sub">If it says built-in mic, the hub is not powered.</span></li>
-    <li><b>Tap the mic icon</b> at the top of that channel strip &rarr; <b>Input Channels</b> &rarr; pick the M4's 1/2.
-      <span class="sub">Loopy records any interface channel, and different channels can feed different colours. You only need this one pair.</span></li>
+      <span class="sub">If it says built-in mic, the Babyface is not in Class Compliant mode or not powered.</span></li>
+    <li><b>Tap the mic icon</b> at the top of that channel strip &rarr; <b>Input Channels</b> &rarr; pick the Babyface's <b>3/4</b>.
+      <span class="sub">All 12 Babyface channels are visible to iPadOS. Loopy records any of them, and different channels can feed different colours. You only need this one pair to start.</span></li>
     <li><b>Same panel: turn monitoring off.</b> Leave <b>Monitor Through</b> alone.
       <span class="sub">You already hear everything through the Apollo. Monitoring in Loopy doubles it and smears the phase.</span></li>
     <li><b>Make four loop buttons on the canvas</b>, one colour each. Save it as your template.
@@ -305,8 +327,14 @@ a{color:var(--mon-deep)}
   </ol>
   <div class="box">
     <span class="bl">Turn this on: Auto-Mute Audio Sources</span>
-    In Settings. If the M4 gets unplugged mid-session, Loopy mutes the sources that
-    would otherwise howl. Cheap insurance in a rig with a live cue mix.
+    In Settings. If the Babyface gets unplugged mid-session, Loopy mutes the sources
+    that would otherwise howl. Cheap insurance in a rig with a live cue mix.
+  </div>
+  <div class="box stop">
+    <span class="bl">If you only get stereo out</span>
+    Known snag when Loopy Pro meets the Babyface. It is a configuration problem, not
+    a hardware limit &mdash; all 12 channels are there. Check <b>TotalMix FX</b> on the
+    iPad first, then Loopy's output routing. Do not go buying a second interface over it.
   </div>
 </section>
 
@@ -337,7 +365,7 @@ a{color:var(--mon-deep)}
 
 <section>
   <div class="step-h"><span class="tag">Cheap</span><h2>The no-new-gear version</h2></div>
-  <p>If you do not want to buy the M4, IDAM still gets iPad sound into Live over one
+  <p>If the Babyface is packed for a gig, IDAM still gets iPad sound into Live over one
   USB-C cable. Be clear about what you lose: <b>Loopy Pro can no longer hear the Apollo.</b>
   It records the iPad's own synths and the built-in mic. Nothing else.</p>
   <ol class="big">
@@ -348,7 +376,8 @@ a{color:var(--mon-deep)}
     <li><b>Track it in Live</b> off the aggregate's iPad channels.</li>
   </ol>
   <p class="small">Good for: playing iPad synths into a Live session.
-  <b>Useless for: looping your instruments.</b> That is the whole reason the M4 is on the list.</p>
+  <b>Useless for: looping your instruments.</b> That is the whole reason the Babyface
+  is in the chain.</p>
 </section>
 
 <section>
