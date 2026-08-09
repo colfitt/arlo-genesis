@@ -58,9 +58,29 @@ is impossible. Verified, not assumed:
   **discontinued** with no equivalent replacement.
 
 What works: analog round-trip, the same topology as the OP-1.
-Console CUE 1 (sends from ins 1–6) → Apollo line outs 3/4 → a class-compliant
-USB-C interface hosted by the iPad (**MOTU M4** is the pick) → Loopy Pro.
-Return: M4 outs 1/2 → **Apollo ins 7–8** → monitors + one armed Ableton track.
-Tempo via **Ableton Link** over Wi-Fi. Cue sends from 7–8 stay **off forever**
-(feedback), same rule as the OP-1. iPad needs a powered USB-C hub with PD —
-it's the USB host now, so it powers the interface.
+Console CUE 1 (sends from ins 1–6) → Apollo line outs 3/4 → the **RME Babyface
+Pro FS** hosted by the iPad → Loopy Pro. Return: Babyface main outs →
+**Apollo ins 7–8** → monitors + one armed Ableton track. Headphone feed for
+walking comes off the Babyface, built in TotalMix FX. Tempo via **Ableton Link**
+over Wi-Fi. Cue sends from 7–8 stay **off forever** (feedback), same rule as
+the OP-1.
+
+Interface choice is settled — don't re-litigate it. Owned interfaces are the
+Apollo x8 (Thunderbolt, UAD drivers, iPadOS can't host it), a Focusrite
+Scarlett 18i8 3rd gen, an M-Audio, and the Babyface Pro FS. **The Babyface
+wins on one point:** 3rd gen Scarletts do their routing in Focusrite Control,
+which is Mac/Windows only, so routing can't be changed from the iPad. The
+Babyface carries TotalMix in hardware and has an iPad app. Two Babyface
+gotchas: Class Compliant mode is a manual toggle (hold Select + Recall while
+powering up), and it needs real power — an iPad supplies ~20 mA, it wants 500.
+
+Also owned: a Behringer ADA8200. Treated as **overflow only**, not the primary
+path — the 8 analog Apollo inputs stay primary, so the 7–8 shared-slot warnings
+in the sheets remain true. Wire it Apollo ADAT OUT → ADA8200 ADAT IN (clock),
+ADA8200 ADAT OUT → Apollo ADAT IN (audio), ADA8200 sync switch to ADAT IN so
+the Apollo stays clock master.
+
+Ruled out: the **Eventide H90 cannot do USB audio.** Its USB-C is control and
+MIDI only — confirmed by Eventide staff, not inferred. The guitar board stays
+analog into Apollo ins 3–4, which is load-bearing anyway: it's what puts the
+board in the Console cue mix that feeds both the OP-1 and the iPad.
