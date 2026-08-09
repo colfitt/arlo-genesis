@@ -35,6 +35,10 @@ Artifact: https://claude.ai/code/artifact/ebd5c4d8-ee10-459d-ab7d-afc3de10ef55
    song sections. Live is clock master; Digitakt follows over direct USB.
    Artifact: https://claude.ai/code/artifact/3ca34cb3-00a5-4463-b7ec-a4e8e1cdf51b
 4. **loop-on-the-ipad.html** — Loopy Pro on the iPad, wired as a third loop box.
+   **CONFIRMED WORKING 2026-08-09**, exporting to Ableton. The flow: everything
+   through the Behringer ADA8200 where it can go (→ ADAT → Babyface, discrete
+   channels so Loopy can put each source on its own colour), Apollo cue mix into
+   Babyface analog ins 3/4, return on **Apollo ins 7–8**.
    Artifact: https://claude.ai/code/artifact/fd505702-8f74-47b4-a444-590ecc7693fb
 
 ## Mode rule
