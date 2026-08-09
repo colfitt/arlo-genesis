@@ -270,12 +270,21 @@ a{color:var(--mon-deep)}
     <tr><td class="k">Beat first</td><td>Live leads. Loopy Pro joins on the bar.</td></tr>
     <tr><td class="k">iPad first</td><td>Your first Loopy loop sets the tempo. Live follows.</td></tr>
   </table>
+  <table class="simple">
+    <tr><th>Setting</th><th>Where</th></tr>
+    <tr><td class="k">Ableton Link</td><td>Settings &rarr; <b>Synchronization</b> &rarr; Ableton Link</td></tr>
+    <tr><td class="k">Sync Start/Stop</td><td>On. Loopy starts and stops with Live.</td></tr>
+    <tr><td class="k">Offset</td><td>Same panel. Nudge it if the two feel apart.</td></tr>
+    <tr><td class="k">Act As Master</td><td><b>Leave off.</b> Only for when Loopy must lead and start instantly.</td></tr>
+  </table>
   <div class="box">
-    <span class="bl">If loops land late</span>
-    They will, slightly &mdash; the signal goes through four converters to get around the
-    loop. Loopy Pro has a <b>recording latency offset</b> in its audio settings. That is
-    what it is for. Nudge it until a clap lands on the grid.
+    <span class="bl">Link waits for the bar</span>
+    Normal Link is cooperative &mdash; nobody is master. Press play in Loopy and it waits
+    for the next cycle boundary before it starts. That pause is the feature, not a bug.
   </div>
+  <p class="small">The signal crosses four converters to get around this loop, so there is
+  real latency in the path. <b>Buffer Duration</b> in Settings trades latency against
+  crackle &mdash; go smaller until it crackles, then back off one step.</p>
 </section>
 
 <section>
@@ -283,26 +292,42 @@ a{color:var(--mon-deep)}
   <ol class="big">
     <li><b>Hub into the iPad.</b> M4 into the hub. Power into the hub.
       <span class="sub">The iPad should say it is charging.</span></li>
-    <li><b>Open Loopy Pro &rarr; Settings &rarr; Audio.</b> Confirm it sees the M4 and is running 48 kHz.
+    <li><b>Settings &rarr; Sample Rate &rarr; 48 kHz.</b>
+      <span class="sub">This normally re-clocks the M4 too. Some interfaces ignore the request &mdash; check the M4 agrees.</span></li>
+    <li><b>Open the Mixer, tap add, choose Add Hardware Input.</b>
       <span class="sub">If it says built-in mic, the hub is not powered.</span></li>
-    <li><b>Open the Mixer.</b> Each M4 input is its own channel strip. Set inputs 1/2 as the record source.
-      <span class="sub">Loopy can record any interface channel, and send different channels to different colours. You only need the one stereo pair.</span></li>
-    <li><b>Turn input monitoring off.</b>
+    <li><b>Tap the mic icon</b> at the top of that channel strip &rarr; <b>Input Channels</b> &rarr; pick the M4's 1/2.
+      <span class="sub">Loopy records any interface channel, and different channels can feed different colours. You only need this one pair.</span></li>
+    <li><b>Same panel: turn monitoring off.</b> Leave <b>Monitor Through</b> alone.
       <span class="sub">You already hear everything through the Apollo. Monitoring in Loopy doubles it and smears the phase.</span></li>
     <li><b>Make four loop buttons on the canvas</b>, one colour each. Save it as your template.
       <span class="sub">Four is enough. Add more when four runs out.</span></li>
   </ol>
+  <div class="box">
+    <span class="bl">Turn this on: Auto-Mute Audio Sources</span>
+    In Settings. If the M4 gets unplugged mid-session, Loopy mutes the sources that
+    would otherwise howl. Cheap insurance in a rig with a live cue mix.
+  </div>
 </section>
 
 <section>
   <div class="step-h"><span class="tag">Play</span><h2>Use it</h2></div>
   <ol class="big">
     <li><b>Start the beat.</b> Digitakt or MPC, off the Make a Beat sheet. Link locks.</li>
-    <li><b>Tap a button. Play. Tap again.</b> It loops on the bar.</li>
-    <li><b>Tap it again to overdub</b> on top of the same colour.</li>
-    <li><b>Bad take: undo.</b> Loopy undoes layers, not the whole loop.</li>
+    <li><b>Tap a clip. Play. Tap again.</b> Your first loop sets the tempo and the master cycle length. Everything after lines up to it.</li>
+    <li><b>Two-finger tap that clip to overdub.</b> Two-finger tap again to stop.
+      <span class="sub">That is the default gesture, not a second single tap. Changeable in Clip Settings if your hands disagree.</span></li>
+    <li><b>Bad layer: Peel it.</b> Peel removes the top overdub layer. The <b>Undo</b> tool is separate &mdash; it undoes your last action, whatever that was.</li>
     <li><b>Ableton tapes it.</b> One track, In <kbd>Ext 7/8</kbd>, Monitor Off, armed. One long clip of the whole performance.</li>
   </ol>
+  <div class="box">
+    <span class="bl">Two settings worth knowing</span>
+    <b>Retrospective Recording</b> (Clip Settings) &mdash; just play, and hit record
+    <i>after</i> you play the thing worth keeping. It grabs the audio that already
+    happened.<br>
+    <b>Auto Count Out off</b> = free looping. Records until you say stop instead of
+    to a fixed length. Better for open-ended sessions.
+  </div>
   <div class="box stop">
     <span class="bl">The one rule</span>
     Never turn on cue sends from <b>7&ndash;8</b>. The iPad hears the cue. If the cue hears
@@ -341,5 +366,6 @@ a{color:var(--mon-deep)}
 
 <footer class="colophon">Lives in the repo at <b>Guides/Simple/</b>. Routing verified against
 iPadOS limits, not assumed: IDAM is out-only, stereo, 44.1&nbsp;kHz, and blocks the
-audio interface while active.</footer>
+audio interface while active. Loopy Pro settings and gestures checked against the
+manual in the repo root.</footer>
 </div>
