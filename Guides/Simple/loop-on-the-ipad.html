@@ -181,10 +181,30 @@ a{color:var(--mon-deep)}
 <header class="masthead">
   <div class="eyebrow">Arlo Genesis &middot; Studio Sheets</div>
   <h1>Loop on the iPad<span class="rec-dot" aria-hidden="true"></span></h1>
-  <p class="dek">Loopy Pro as a fourth looper. <strong>One USB-C cable will not do it.</strong> Here is what does.</p>
+  <p class="dek">Loopy Pro as a fourth looper. <strong>Built, wired and exporting to Ableton.</strong> This is the working version.</p>
 </header>
 
 <section style="margin-top:0">
+  <div class="step-h"><span class="tag">Working</span><h2>The rig, in three moves</h2></div>
+  <p>Confirmed <b>9 August 2026</b>. Loops record on the iPad and land in Ableton.
+  Everything below this section is why it is wired this way and how to rebuild it.</p>
+  <ol class="big">
+    <li><b>Everything through the Behringer where it can go.</b>
+      <span class="sub">ADA8200 &rarr; ADAT &rarr; Babyface. Discrete channels, so Loopy can put each source on its own colour instead of looping one stereo mix.</span></li>
+    <li><b>Apollo out into the RME.</b>
+      <span class="sub">Console cue mix &rarr; Apollo line outs 3/4 &rarr; Babyface analog ins 3/4. This is how the pedalboards and mics reach the iPad.</span></li>
+    <li><b>Back out into Apollo ins 7&ndash;8.</b>
+      <span class="sub">Babyface main outs. Now it is in the monitors and one armed Ableton track tapes the whole performance.</span></li>
+  </ol>
+  <div class="box">
+    <span class="bl">Two feeds, one return</span>
+    The Babyface hears the rig twice &mdash; discretely over ADAT, and as a stereo cue
+    mix over analog. Loopy Pro picks whichever it needs per colour. Only one thing
+    comes back.
+  </div>
+</section>
+
+<section>
   <div class="step-h"><span class="tag">Stop</span><h2>The one-cable plan does not work</h2></div>
   <p>You asked for audio in and out of the iPad over USB-C from the laptop, picking up
   Apollo inputs. iPadOS will not do that. Three hard facts:</p>
@@ -239,8 +259,22 @@ a{color:var(--mon-deep)}
 <section>
   <div class="step-h"><span class="tag">Wire</span><h2>The two chains</h2></div>
 
+  <div class="board" style="--bc:var(--loop)">
+    <div class="board-h"><span class="bname">In, discrete &mdash; the good path</span></div>
+    <div class="chain">
+      <span class="pchip">sources</span><span class="arr">&#8594;</span>
+      <span class="pchip">ADA8200<span class="flag">8 analog in &middot; 48 kHz</span></span><span class="arr">&#8594;</span>
+      <span class="pchip">ADAT OUT &rarr; Babyface optical IN<span class="flag">clock returns on the second cable</span></span><span class="arr">&#8594;</span>
+      <span class="pchip star">Babyface ch <b>5&ndash;12</b></span>
+    </div>
+  </div>
+  <p class="small">Two optical cables. ADA8200 <b>ADAT OUT</b> &rarr; Babyface <b>optical IN</b>
+  carries audio; Babyface <b>optical OUT</b> &rarr; ADA8200 <b>ADAT IN</b> carries clock.
+  Behringer sync switch to <b>ADAT IN</b>, 48 kHz. The Babyface stays master, so you can
+  switch the Behringer off without dropping audio.</p>
+
   <div class="board" style="--bc:var(--mon)">
-    <div class="board-h"><span class="bname">Out &mdash; what the iPad hears</span></div>
+    <div class="board-h"><span class="bname">In, mixed &mdash; what the cue sends</span></div>
     <div class="chain">
       <span class="pchip">Console <b>CUE 1</b><span class="flag">sends from ins 1&ndash;6</span></span><span class="arr">&#8594;</span>
       <span class="pchip">Apollo line outs <b>3/4</b><span class="flag">2&times; TS</span></span><span class="arr">&#8594;</span>
@@ -312,8 +346,12 @@ a{color:var(--mon-deep)}
   <ol class="big">
     <li><b>Put the Babyface in Class Compliant mode.</b> Hold <kbd>Select</kbd> + <kbd>Recall</kbd> while powering it up. The meters run up to confirm.
       <span class="sub">This is a manual toggle, not automatic. It is the step everyone misses. It stays set until you toggle it back.</span></li>
-    <li><b>Give it real power</b>, then USB-B to the iPad.
-      <span class="sub">Its own PSU, or your powered hub. An iPad alone supplies about 20 mA and the Babyface wants 500. Underpowered looks exactly like broken.</span></li>
+    <li><b>Power through the hub, not the iPad.</b> Charger &rarr; hub's <b>PD port</b>; hub &rarr; iPad; Babyface on a downstream port.
+      <span class="sub">The Babyface draws 700 mA at 5 V. An iPad offers about 20. It will run off the battery and eat it. If the drain continues, the hub is not passing PD downstream. No DC brick? Spec is 9&ndash;14 V, at least 1 A, centre positive.</span></li>
+    <li><b>When iPadOS asks if it is headphones, say Other Device.</b>
+      <span class="sub">"Headphones" applies Headphone Safety volume limiting to your interface. Changeable later in Settings &rarr; Sounds &amp; Haptics.</span></li>
+    <li><b>Install TotalMix FX for iPad.</b> Free, and the only way to change Babyface routing without a laptop.
+      <span class="sub">No drivers exist or are needed &mdash; iPadOS is class compliant. But without this app the routing is whatever the Mac last set.</span></li>
     <li><b>Settings &rarr; Sample Rate &rarr; 48 kHz.</b>
       <span class="sub">This normally re-clocks the Babyface too. Check its display agrees.</span></li>
     <li><b>Open the Mixer, tap add, choose Add Hardware Input.</b>
