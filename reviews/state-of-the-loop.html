@@ -1,0 +1,584 @@
+<title>State of the Loop</title>
+<style>
+  :root {
+    --paper: #F4F4EF;
+    --ink: #1D201C;
+    --muted: #5C6258;
+    --faint: #8A9084;
+    --line: #D9DACE;
+    --panel: #ECECE4;
+    --panel-deep: #E3E3D9;
+    --loop: #146B3F;
+    --loop-soft: rgba(20,107,63,.10);
+    --amber: #A8690A;
+    --amber-soft: rgba(168,105,10,.10);
+    --tape: #B3402A;
+    --tape-soft: rgba(179,64,42,.09);
+    --fader-track: #C9CABD;
+    --fader-cap: #1D201C;
+    --code-bg: #E9E9DF;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #131512;
+      --ink: #E4E6DD;
+      --muted: #9BA194;
+      --faint: #6F7568;
+      --line: #2A2D27;
+      --panel: #1B1E1A;
+      --panel-deep: #212420;
+      --loop: #4CC97B;
+      --loop-soft: rgba(76,201,123,.12);
+      --amber: #D9A03E;
+      --amber-soft: rgba(217,160,62,.12);
+      --tape: #E4735C;
+      --tape-soft: rgba(228,115,92,.12);
+      --fader-track: #33372F;
+      --fader-cap: #E4E6DD;
+      --code-bg: #20231F;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #131512;
+    --ink: #E4E6DD;
+    --muted: #9BA194;
+    --faint: #6F7568;
+    --line: #2A2D27;
+    --panel: #1B1E1A;
+    --panel-deep: #212420;
+    --loop: #4CC97B;
+    --loop-soft: rgba(76,201,123,.12);
+    --amber: #D9A03E;
+    --amber-soft: rgba(217,160,62,.12);
+    --tape: #E4735C;
+    --tape-soft: rgba(228,115,92,.12);
+    --fader-track: #33372F;
+    --fader-cap: #E4E6DD;
+    --code-bg: #20231F;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: Charter, "Bitstream Charter", "Iowan Old Style", Georgia, serif;
+    font-size: 17px;
+    line-height: 1.6;
+    margin: 0;
+  }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 0 24px 96px; }
+
+  .display, h1, h2, h3 {
+    font-family: Futura, "Avenir Next", "Century Gothic", "Trebuchet MS", sans-serif;
+  }
+  .mono, code, td.val, .path {
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+  code {
+    background: var(--code-bg);
+    padding: .1em .35em;
+    border-radius: 3px;
+    font-size: .82em;
+  }
+  .path { font-size: .8em; color: var(--muted); word-break: break-all; }
+
+  /* ---------- masthead ---------- */
+  header.masthead {
+    padding: 56px 0 8px;
+    border-bottom: 3px solid var(--ink);
+  }
+  .eyebrow {
+    font-family: Futura, "Avenir Next", "Century Gothic", sans-serif;
+    font-size: 12px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 10px;
+  }
+  .eyebrow b { color: var(--loop); font-weight: 700; }
+  h1 {
+    font-size: clamp(40px, 7vw, 64px);
+    font-weight: 800;
+    letter-spacing: .01em;
+    text-transform: uppercase;
+    line-height: .95;
+    margin: 0 0 18px;
+    text-wrap: balance;
+  }
+  .lede {
+    font-size: 20px;
+    line-height: 1.55;
+    max-width: 62ch;
+    margin: 0 0 34px;
+  }
+  .lede em { color: var(--loop); font-style: normal; font-weight: 700; }
+
+  /* hero fader strip */
+  .heroPatch {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 22px 22px 16px;
+    margin: 0 0 40px;
+  }
+  .heroPatch .patchName {
+    display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: baseline;
+    margin-bottom: 18px;
+  }
+  .patchName .t { font-family: Futura,"Avenir Next","Century Gothic",sans-serif; font-weight: 700; font-size: 15px; letter-spacing:.06em; text-transform: uppercase; }
+  .patchName .d { color: var(--muted); font-size: 13px; }
+  .faders { display: flex; gap: 8px; justify-content: space-between; max-width: 560px; }
+  .fader { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 8px; min-width: 0; }
+  .track { position: relative; width: 6px; height: 110px; background: var(--fader-track); border-radius: 3px; }
+  .cap {
+    position: absolute; left: 50%; transform: translateX(-50%);
+    width: 26px; height: 12px; border-radius: 2px;
+    background: var(--fader-cap);
+  }
+  .fader .fl { font-family: Futura,"Avenir Next",sans-serif; font-size: 10px; letter-spacing: .1em; color: var(--muted); text-transform: uppercase; white-space: nowrap; }
+  .fader .fv { font-family: ui-monospace,"SF Mono",Menlo,monospace; font-size: 11px; color: var(--ink); }
+  .heroPatch .caption { margin-top: 16px; font-size: 14px; color: var(--muted); max-width: 66ch; }
+  .heroPatch .caption .path { font-size: .85em; }
+
+  /* ---------- stat band ---------- */
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 40px 0 8px;
+  }
+  .stat { background: var(--panel); padding: 16px 14px 13px; }
+  .stat .n { font-family: Futura,"Avenir Next",sans-serif; font-weight: 800; font-size: 30px; line-height: 1; font-variant-numeric: tabular-nums; }
+  .stat .l { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-top: 6px; font-family: Futura,"Avenir Next",sans-serif; }
+  .stat.hot .n { color: var(--loop); }
+  .statNote { font-size: 13px; color: var(--faint); margin: 8px 2px 0; }
+
+  /* ---------- sections ---------- */
+  section { margin-top: 72px; }
+  .secHead { border-bottom: 2px solid var(--ink); padding-bottom: 10px; margin-bottom: 26px; }
+  .secHead .no {
+    font-family: ui-monospace,"SF Mono",Menlo,monospace;
+    font-size: 12px; color: var(--loop); letter-spacing: .1em;
+  }
+  h2 {
+    font-size: clamp(26px, 4vw, 36px);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .015em;
+    margin: 4px 0 0;
+    line-height: 1.05;
+    text-wrap: balance;
+  }
+  .secHead .sub { color: var(--muted); font-size: 15px; margin-top: 8px; max-width: 68ch; }
+  h3 { font-size: 17px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; margin: 0 0 10px; }
+  p { max-width: 68ch; margin: 0 0 16px; }
+  section a { color: var(--loop); }
+
+  /* layer table */
+  table { border-collapse: collapse; width: 100%; font-size: 15px; }
+  .tableWrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 8px; }
+  th {
+    font-family: Futura,"Avenir Next",sans-serif; font-size: 11px; letter-spacing: .1em;
+    text-transform: uppercase; color: var(--muted); text-align: left;
+    padding: 10px 14px; background: var(--panel-deep); border-bottom: 1px solid var(--line);
+    white-space: nowrap;
+  }
+  td { padding: 11px 14px; border-bottom: 1px solid var(--line); vertical-align: top; background: var(--panel); }
+  tr:last-child td { border-bottom: none; }
+  td.val { white-space: nowrap; font-size: 13px; }
+  td .path { display: block; margin-top: 2px; }
+
+  /* verdict cards */
+  .cols2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+  .plist { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+  .plist li {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--loop);
+    border-radius: 6px;
+    padding: 12px 16px;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  .plist li b { font-family: Futura,"Avenir Next",sans-serif; font-size: 13px; letter-spacing:.05em; text-transform: uppercase; display:block; margin-bottom: 2px; }
+  .plist.gaps li { border-left-color: var(--tape); }
+  .plist li .sev {
+    float: right;
+    font-family: Futura,"Avenir Next",sans-serif; font-size: 10px; font-weight: 700;
+    letter-spacing: .12em; text-transform: uppercase;
+    padding: 2px 8px; border-radius: 999px; margin-left: 10px;
+  }
+  .sev.hi { background: var(--tape-soft); color: var(--tape); }
+  .sev.med { background: var(--amber-soft); color: var(--amber); }
+  .sev.low { background: var(--loop-soft); color: var(--muted); }
+
+  /* pipeline */
+  .pipeWrap { overflow-x: auto; padding-bottom: 8px; }
+  .pipe { display: flex; align-items: stretch; gap: 0; min-width: 780px; }
+  .stage {
+    flex: 1;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 14px 16px;
+    position: relative;
+  }
+  .stage + .stage { margin-left: 30px; }
+  .stage + .stage::before {
+    content: "";
+    position: absolute; left: -31px; top: 50%;
+    width: 30px; height: 2px; background: var(--faint);
+  }
+  .stage + .stage::after {
+    content: "";
+    position: absolute; left: -8px; top: 50%; transform: translateY(-50%);
+    border: 5px solid transparent; border-left-color: var(--faint);
+  }
+  .stage .sn { font-family: Futura,"Avenir Next",sans-serif; font-weight: 700; font-size: 13px; letter-spacing: .07em; text-transform: uppercase; display: flex; align-items: center; gap: 8px; }
+  .dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+  .dot.ok { background: var(--loop); }
+  .dot.mid { background: var(--amber); }
+  .dot.no { background: var(--tape); }
+  .stage .sd { font-size: 13px; color: var(--muted); margin-top: 6px; line-height: 1.45; }
+  .legend { display: flex; gap: 22px; margin-top: 14px; font-size: 13px; color: var(--muted); flex-wrap: wrap; }
+  .legend span { display: inline-flex; align-items: center; gap: 7px; }
+
+  .arms { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; margin-top: 26px; }
+  .arm { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; }
+  .arm .sn { font-family: Futura,"Avenir Next",sans-serif; font-weight: 700; font-size: 12px; letter-spacing:.07em; text-transform: uppercase; display:flex; align-items:center; gap:8px; }
+  .arm .sd { font-size: 13px; color: var(--muted); margin-top: 6px; line-height: 1.45; }
+
+  /* direction cards */
+  .dirs { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 18px; }
+  .dir {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 20px 20px 16px;
+    display: flex; flex-direction: column;
+  }
+  .dir .tag {
+    font-family: ui-monospace,"SF Mono",Menlo,monospace;
+    font-size: 12px; color: var(--loop); letter-spacing: .08em;
+  }
+  .dir h3 { margin: 6px 0 10px; font-size: 18px; }
+  .dir p { font-size: 15px; margin-bottom: 12px; }
+  .dir .kv { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 10px; margin-top: auto; display: grid; gap: 4px; }
+  .dir .kv b { color: var(--ink); font-weight: 700; }
+  .dir.star { border-color: var(--loop); border-width: 2px; }
+  .dir.star .tag::after { content: "  ← start here"; color: var(--muted); }
+
+  /* roadmap */
+  .road { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
+  .phase { border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: var(--panel); }
+  .phase .ph {
+    font-family: Futura,"Avenir Next",sans-serif; font-weight: 800; font-size: 14px;
+    letter-spacing: .1em; text-transform: uppercase;
+    padding: 12px 18px; background: var(--panel-deep); border-bottom: 1px solid var(--line);
+  }
+  .phase .ph small { display:block; font-weight: 400; letter-spacing:.05em; color: var(--muted); font-size: 11px; margin-top:2px;}
+  .phase ul { margin: 0; padding: 14px 18px 16px 34px; font-size: 15px; display: flex; flex-direction: column; gap: 8px; }
+  .phase li::marker { color: var(--loop); }
+
+  .callout {
+    border-left: 4px solid var(--amber);
+    background: var(--amber-soft);
+    border-radius: 0 8px 8px 0;
+    padding: 14px 18px;
+    font-size: 15px;
+    margin: 22px 0;
+    max-width: 72ch;
+  }
+  .callout b { font-family: Futura,"Avenir Next",sans-serif; text-transform: uppercase; font-size: 13px; letter-spacing:.06em; }
+
+  footer { margin-top: 88px; padding-top: 18px; border-top: 1px solid var(--line); font-size: 13px; color: var(--faint); }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<div class="wrap">
+
+<header class="masthead">
+  <p class="eyebrow"><b>arlo-genesis</b> · full corpus review · 2026-08-17</p>
+  <h1>State of<br>the Loop</h1>
+  <p class="lede">
+    You asked what happens if you say <em>“give me a Radiohead Ful&nbsp;Stop patch”</em> and the machine just goes and does it.
+    Here’s the thing: <em>this repo already answered that question once — by hand.</em>
+    The review below measures the distance between that artisanal answer and the automated one.
+  </p>
+
+  <div class="heroPatch">
+    <div class="patchName">
+      <span class="t">“Ful Stop” Space-Echo Arpeggio Bed</span>
+      <span class="d">Chase Bliss Big Time · designed 2026-06-14 · Short / Saturated / Warm / Sine</span>
+    </div>
+    <div class="faders" role="img" aria-label="Six fader positions from the Ful Stop patch">
+      <div class="fader"><div class="track"><div class="cap" style="bottom: 55%"></div></div><span class="fl">Time</span><span class="fv">·8th</span></div>
+      <div class="fader"><div class="track"><div class="cap" style="bottom: 40%"></div></div><span class="fl">Color</span><span class="fv">40%</span></div>
+      <div class="fader"><div class="track"><div class="cap" style="bottom: 25%"></div></div><span class="fl">Cluster</span><span class="fv">25%</span></div>
+      <div class="fader"><div class="track"><div class="cap" style="bottom: 45%"></div></div><span class="fl">Tilt EQ</span><span class="fv">&lt;noon</span></div>
+      <div class="fader"><div class="track"><div class="cap" style="bottom: 45%"></div></div><span class="fl">Feedback</span><span class="fv">45%</span></div>
+      <div class="fader"><div class="track"><div class="cap" style="bottom: 35%"></div></div><span class="fl">Wet</span><span class="fv">35%</span></div>
+    </div>
+    <p class="caption">
+      A grounded, cited, taste-aware patch — Big Time standing in for the RE-20 Space Echo, sources traced to the taste corpus and the manual.
+      It exists at <span class="path">Patches/Chase Bliss Big Time/ful-stop-space-echo-arpeggio-bed.md</span>.
+      The dream isn’t “can ARLO design this?” — it demonstrably can. The dream is: <b>design it on demand, push it to the hardware, and lay out the session.</b>
+    </p>
+  </div>
+</header>
+
+<!-- ================================================================ -->
+<section id="inventory">
+  <div class="secHead">
+    <span class="no">01</span>
+    <h2>What’s on the shelf</h2>
+    <p class="sub">This repo is not an app. It is a data moat with a research engine bolted to it — and as data moats go, it’s unusually disciplined.</p>
+  </div>
+
+  <div class="stats">
+    <div class="stat hot"><div class="n">1,069</div><div class="l">Patches · 36 devices</div></div>
+    <div class="stat hot"><div class="n">85</div><div class="l">Signal chains</div></div>
+    <div class="stat"><div class="n">41</div><div class="l">Gear profiles</div></div>
+    <div class="stat"><div class="n">18</div><div class="l">Software vendors</div></div>
+    <div class="stat"><div class="n">4,672</div><div class="l">Retrieval chunks</div></div>
+    <div class="stat"><div class="n">3,286</div><div class="l">Markdown files</div></div>
+  </div>
+  <p class="statNote">Plus 50 manuals (PDF), 13 working guides, 2 songs, and a validated multi-agent research engine (“blooping”).</p>
+
+  <div class="tableWrap" style="margin-top:22px">
+  <table>
+    <tr><th>Layer</th><th>What it is</th><th style="text-align:right">Size</th></tr>
+    <tr>
+      <td><b>gear/</b> + <b>software/</b></td>
+      <td>Per-device folders: YAML-frontmatter profile, manuals, deep research, forum/video transcripts. 41/41 and 18/18 profile coverage — zero missing. <code>_inventory.json</code> is a machine scan of every installed plugin on the Mac.</td>
+      <td class="val">1,770 files</td>
+    </tr>
+    <tr>
+      <td><b>Patches/</b></td>
+      <td>The crown jewel. Every one of 1,069 patches has structured frontmatter, a typed <code>controls:</code> block (4,669 knobs, 2,629 switches), and a <code>## Sources</code> section. 100% of <code>device:</code> refs resolve to a real gear folder. Provenance tags: 736 signature · 349 factory · 322 designed · 263 community.</td>
+      <td class="val">1,069 files</td>
+    </tr>
+    <tr>
+      <td><b>Chains/</b></td>
+      <td>Multi-pedal signal chains with per-stage rationale. 84/85 gear refs resolve (one names “EHX Interface” vs the folder “EHX Effects Interface”).</td>
+      <td class="val">85 files</td>
+    </tr>
+    <tr>
+      <td><b>arlo/</b></td>
+      <td>The craft brain: songwriting, structure, taste profile, artist/album production research, and a 63-file Ableton-specific corpus that already documents Live 12 Lite’s real limits. <code>chunks.jsonl</code> = 4,672 embed-ready chunks with provenance + citation targets.</td>
+      <td class="val">401 files</td>
+    </tr>
+    <tr>
+      <td><b>Guides/ + Songs/</b></td>
+      <td>Ground truth of the working rig: the board order, the bass board, the beat station, and the iPad/Loopy Pro rig <b>confirmed exporting to Ableton 2026-08-09</b> — including the documented dead-ends (IDAM is out-only, 44.1-locked).</td>
+      <td class="val">17 files</td>
+    </tr>
+    <tr>
+      <td><b>research/ + .claude/</b></td>
+      <td>The blooping engine: gap-scan → queue → dive (recon / 5-lens fan-out / adversarial verify / synthesize) → human-gated promotion. Hardened by real failures (staging guard, git-state discipline) and proven self-correcting across two Big Time layers.</td>
+      <td class="val">2 workflows</td>
+    </tr>
+  </table>
+  </div>
+</section>
+
+<!-- ================================================================ -->
+<section id="review">
+  <div class="secHead">
+    <span class="no">02</span>
+    <h2>The review</h2>
+    <p class="sub">Measured against your own v1 plan and against the dream, not against generic repo hygiene.</p>
+  </div>
+
+  <div class="cols2">
+    <div>
+      <h3 style="color:var(--loop)">What’s genuinely strong</h3>
+      <ul class="plist">
+        <li><b>Schema discipline at scale</b>1,069/1,069 patches carry frontmatter, typed controls, and sources. Referential integrity is near-perfect. Most hobby corpora rot; this one validates.</li>
+        <li><b>Provenance culture</b>Signature vs. factory vs. designed vs. community is tagged on every patch. Chunks carry citation targets. This is exactly what keeps a future ARLO from confidently making things up.</li>
+        <li><b>The blooping engine is real infrastructure</b>Not notes about agents — working workflows with staging guards, human gates, adversarial verification, and lessons learned written into the code. Layer 2 corrected layer 1. That loop is rarer than the data.</li>
+        <li><b>Rig truth, including failures</b>The guides record what was <i>confirmed working and when</i>, and preserve the paths that failed. That honesty is load-bearing for automation later.</li>
+        <li><b>The Ableton corpus already knows your ceiling</b>63 files including Lite-specific traps: 8 tracks, 2 sends, no Max for Live, which downloadable racks won’t load. The lane-builder direction can be planned against facts you already own.</li>
+      </ul>
+    </div>
+    <div>
+      <h3 style="color:var(--tape)">Where it’s cracked</h3>
+      <ul class="plist gaps">
+        <li><span class="sev hi">critical</span><b>The engine still doesn’t exist</b>Your own v1 plan’s Phase 1 — a root <code>CLAUDE.md</code> persona + 4 skills — was never shipped. There is no CLAUDE.md in this repo. All 3,286 files are currently a library with no librarian.</li>
+        <li><span class="sev hi">high</span><b>Half the control plane is unmapped</b>25 devices are <code>midi: true</code>; only 12 have CC charts. The missing 13 include all four rig brains — VG-800, Octatrack, Digitakt 2, 61SL MkIII — plus Big Sky, TimeLine’s siblings, OP-1 Field. CC charts are the API docs for the dream; the queue already ranks them.</li>
+        <li><span class="sev hi">high</span><b>Patches speak human, not machine</b>Only 43 of 1,069 patches mention a CC number. Values are written for hands: “~40%”, “slightly below noon”, “dotted-8th, clock-locked”. Nothing today can compile a patch into a MIDI message.</li>
+        <li><span class="sev med">medium</span><b>Rig drift: the new rig outran the corpus</b>The rig map and guides lean on the MC6 Pro (the floor brain sending scenes to nine pedals!), Loopy Pro, Yamaha S08, SM57s, the ADA8200 — none of which have gear/software folders. Loopy Pro is now a central looper with zero corpus presence.</li>
+        <li><span class="sev med">medium</span><b>The index is stale</b><code>chunks.jsonl</code> was last built 2026-06-15; patches changed after. Three promotion files sit staged in <code>research/_promotions/</code>, never appended. Drift is small (1,065 vs 1,069 patches indexed) but the habit matters once retrieval is live.</li>
+        <li><span class="sev low">low</span><b>Small hygiene</b>One chain gear-ref typo; 243&nbsp;MB of PDFs in git (fine for now, consider LFS if it doubles); v1 docs still point at old <code>/Users/cfitt/Dev/Pedalxly</code> paths.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================ -->
+<section id="dream">
+  <div class="secHead">
+    <span class="no">03</span>
+    <h2>The dream, decomposed</h2>
+    <p class="sub">“Think of a patch → Claude builds it across everything I own → lanes appear in Ableton.” That’s one sentence and five subsystems. Here is each one, with its honest status today.</p>
+  </div>
+
+  <div class="pipeWrap">
+    <div class="pipe">
+      <div class="stage">
+        <div class="sn"><span class="dot ok"></span>1 · Intent</div>
+        <div class="sd">“Radiohead Ful Stop, for synth.” Taste profile, artist sources, album corpus — the reference knowledge exists and is chunked.</div>
+      </div>
+      <div class="stage">
+        <div class="sn"><span class="dot mid"></span>2 · Retrieval</div>
+        <div class="sd">4,672 chunks with provenance… and no index, no MCP server, no search. Today it’s grep or nothing.</div>
+      </div>
+      <div class="stage">
+        <div class="sn"><span class="dot mid"></span>3 · Design</div>
+        <div class="sd">Proven by hand — 1,069 patches, 85 chains, the Ful&nbsp;Stop bed itself. Not yet reproducible on demand because stage 1’s engine (persona + skills) is unbuilt.</div>
+      </div>
+      <div class="stage">
+        <div class="sn"><span class="dot no"></span>4 · Compile</div>
+        <div class="sd">Knob-words → CC numbers → 0–127 values. Doesn’t exist. This is the missing middle of the whole dream.</div>
+      </div>
+      <div class="stage">
+        <div class="sn"><span class="dot no"></span>5 · Deliver</div>
+        <div class="sd">Four delivery arms, below. One is green today.</div>
+      </div>
+    </div>
+  </div>
+  <div class="legend">
+    <span><span class="dot ok"></span>exists &amp; works</span>
+    <span><span class="dot mid"></span>data exists, engine doesn’t</span>
+    <span><span class="dot no"></span>doesn’t exist yet</span>
+  </div>
+
+  <div class="arms">
+    <div class="arm">
+      <div class="sn"><span class="dot mid"></span>Hardware via MIDI</div>
+      <div class="sd">Chase Bliss pedals are fully CC-addressable — every knob has a CC, so a compiled patch can literally be <i>pushed</i> and the Big Time’s motorized faders will move. Blocked only by the compiler + the 13 missing CC charts.</div>
+    </div>
+    <div class="arm">
+      <div class="sn"><span class="dot no"></span>Ableton lanes</div>
+      <div class="sd">Create/name/color tracks, set tempo, build the Cold-wire-style session skeleton. Feasible via a remote script (AbletonOSC) or by generating <code>.als</code> files (gzipped XML). Must budget for Lite: 8 tracks, 2 sends, no M4L.</div>
+    </div>
+    <div class="arm">
+      <div class="sn"><span class="dot no"></span>VST presets</div>
+      <div class="sd">The hardest arm. Preset formats are per-vendor and mostly opaque. Realistic near-term: precise settings-sheets per plugin (you own the manuals + research); true preset files later, starting with open formats.</div>
+    </div>
+    <div class="arm">
+      <div class="sn"><span class="dot ok"></span>Manual patch sheets</div>
+      <div class="sd">Already works — the Guides prove the format (H90 step-by-steps, studio sheets). ARLO generating these on demand is purely a stage-1 problem.</div>
+    </div>
+  </div>
+
+  <div class="callout">
+    <b>The one-sentence diagnosis:</b> you have world-class <i>knowledge</i> and zero <i>actuation</i>. Every direction below is either “finally build the librarian” or “grow the corpus a hand.”
+  </div>
+</section>
+
+<!-- ================================================================ -->
+<section id="directions">
+  <div class="secHead">
+    <span class="no">04</span>
+    <h2>Directions you can go</h2>
+    <p class="sub">Six directions, deliberately composable. A → B → C → D is the straight line to the dream; E and F branch off it.</p>
+  </div>
+
+  <div class="dirs">
+    <div class="dir star">
+      <span class="tag">DIR A</span>
+      <h3>Ship the librarian</h3>
+      <p>Execute your own Phase 1: a root <code>CLAUDE.md</code> (persona, data map, own-only rule, citation rule) plus 4 skills — <code>gear-lookup</code>, <code>chain-design</code>, <code>software-pick</code>, <code>song-skeleton</code>. The acceptance test is already written in <code>v1/02</code>: ask for a washed-out ambient chain, get owned-gear-only with a real citation, no pasting.</p>
+      <div class="kv"><span><b>Effort:</b> 1–2 sessions</span><span><b>Unlocks:</b> literally everything else</span></div>
+    </div>
+
+    <div class="dir">
+      <span class="tag">DIR B</span>
+      <h3>Finish the control plane</h3>
+      <p>Bloop the 13 missing CC charts — the queue already ranks them, and the VG-800’s parameter guide PDF is <i>on disk</i> (extraction, not hunting). While you’re there, close the rig drift: MC6 Pro, Loopy Pro, S08, SM57 folders. The MC6 is your scene brain and has zero corpus presence.</p>
+      <div class="kv"><span><b>Effort:</b> ~8 bloops over a few weeks</span><span><b>Unlocks:</b> C and D at full rig width</span></div>
+    </div>
+
+    <div class="dir">
+      <span class="tag">DIR C</span>
+      <h3>The patch compiler</h3>
+      <p>Patch schema v2: each control gains optional <code>cc:</code> and a normalized <code>0–127</code> value alongside the human phrasing. A small script joins a patch against its device’s CC chart and emits a MIDI message list. Start with the Chase Bliss family — six pedals, charts captured, fully CC-addressable.</p>
+      <div class="kv"><span><b>Effort:</b> a weekend of sessions</span><span><b>Unlocks:</b> patches become executable objects</span></div>
+    </div>
+
+    <div class="dir">
+      <span class="tag">DIR D</span>
+      <h3>The hands — a MIDI bridge</h3>
+      <p>A tiny local MCP server on the Mac (<code>mido</code>/rtmidi): <code>send_patch(device, patch)</code> streams the compiled CCs out USB/DIN. First demo: say “give me Ful Stop” and watch the Big Time’s faders physically move. Second: <code>build_session(plan)</code> talks AbletonOSC to lay out lanes from a Songs/ plan.</p>
+      <div class="kv"><span><b>Effort:</b> small server + bench testing</span><span><b>Depends on:</b> C (and B for full width)</span></div>
+    </div>
+
+    <div class="dir">
+      <span class="tag">DIR E</span>
+      <h3>Ableton, two ways</h3>
+      <p>Path 1: AbletonOSC remote script — live control, no M4L needed, should sit inside Lite. Path 2: generate <code>.als</code> session templates directly from song plans (Cold-wire’s plan is already structured enough to compile: tempo 138, 9 sections, named lanes, per-track routing from the rig map). Decide here whether Lite’s 8-track cap is a constraint to design within or the reason to upgrade to Standard.</p>
+      <div class="kv"><span><b>Effort:</b> one spike each, then pick</span><span><b>Unlocks:</b> “it creates the lanes for the song”</span></div>
+    </div>
+
+    <div class="dir">
+      <span class="tag">DIR F</span>
+      <h3>Pocket ARLO</h3>
+      <p>The “bigger” part. Near-term and cheap: compile <code>chunks.jsonl</code> into a searchable patch-browser artifact — every patch, chain, and guide on your phone, today, no server. Mid-term: ARLO as a remote-reachable MCP so claude.ai on the iPad retrieves from the real corpus. Far: the iPad joins the control plane — network MIDI is native to iPadOS/macOS, and Loopy Pro has deep MIDI bindings.</p>
+      <div class="kv"><span><b>Effort:</b> browser artifact ≈ 1 session</span><span><b>Unlocks:</b> patches off the computer</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================ -->
+<section id="roadmap">
+  <div class="secHead">
+    <span class="no">05</span>
+    <h2>A shape for the plan</h2>
+    <p class="sub">You said planning comes next — this is the skeleton I’d bring to that conversation.</p>
+  </div>
+
+  <div class="road">
+    <div class="phase">
+      <div class="ph">Now<small>1–2 weeks · mostly sessions, no new tech</small></div>
+      <ul>
+        <li>Write <code>CLAUDE.md</code> + the 4 skills; pass the v1/02 acceptance test <b>(Dir A)</b></li>
+        <li>Housekeeping commit: append staged promotions, rebuild <code>chunks.jsonl</code>, fix the EHX chain ref</li>
+        <li>Stub gear folders for MC6 Pro, Loopy Pro, S08, SM57, ADA8200</li>
+        <li>Ship the patch-browser artifact for your phone <b>(Dir F, step 1)</b></li>
+      </ul>
+    </div>
+    <div class="phase">
+      <div class="ph">Next<small>this fall · the actuation layer</small></div>
+      <ul>
+        <li>Bloop the CC-chart gaps, brains first: VG-800 → Digitakt 2 → Octatrack → 61SL <b>(Dir B)</b></li>
+        <li>Patch schema v2 + compiler for the Chase Bliss six <b>(Dir C)</b></li>
+        <li>MIDI-bridge MCP; first fader-moving demo on the Big Time <b>(Dir D)</b></li>
+        <li>Spike both Ableton paths against Lite; make the Lite-vs-Standard call <b>(Dir E)</b></li>
+      </ul>
+    </div>
+    <div class="phase">
+      <div class="ph">The Dream<small>end-to-end</small></div>
+      <ul>
+        <li>“Ful Stop, for synth” → retrieval → new patch, cited → pushed to H90 + Big Time → lanes named and tempo set in Live → sheet on the iPad</li>
+        <li>VST arm: settings-sheets for every owned plugin; real preset files where formats allow</li>
+        <li>Overnight bloops keep the corpus growing while you sleep</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="callout" style="border-left-color: var(--loop); background: var(--loop-soft)">
+    <b>The one decision that gates the rest:</b> everything physical — pedals, Ableton, and anything the phone triggers — flows through a small always-on server on the studio Mac. Deciding that box exists (an MCP server wrapping MIDI + AbletonOSC + retrieval) is the architectural commitment; every direction above is a module that plugs into it.
+  </div>
+</section>
+
+<footer>
+  Reviewed from branch <span class="mono">claude/music-patch-ai-review-b20o05</span> · 3,286 markdown files, 1,069 patches, 85 chains, 4,672 chunks, 41 gear + 18 software profiles · arlo-genesis, 2026-08-17
+</footer>
+
+</div>
