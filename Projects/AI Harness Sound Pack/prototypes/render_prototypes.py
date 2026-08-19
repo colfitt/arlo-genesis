@@ -33,7 +33,7 @@ N = {
     "D4": 293.66, "Eb4": 311.13, "E4": 329.63, "F4": 349.23, "F#4": 369.99,
     "A4": 440.00, "B4": 493.88,
     "D5": 587.33, "E5": 659.25, "F#5": 739.99, "A5": 880.00, "B5": 987.77,
-    "D6": 1174.66, "F#6": 1479.98,
+    "D6": 1174.66, "E6": 1318.51, "F#6": 1479.98, "A6": 1760.00,
 }
 
 # timbre name -> list of (partial ratio, relative amp, decay scale)
@@ -56,6 +56,17 @@ def strike(dur=0.006, brightness=0.35, amp=0.045, seed=1):
     for i in range(n):
         y += brightness * (rng.uniform(-1, 1) - y)
         out.append(y * amp * (1.0 - i / n))
+    return out
+
+
+def pop(dur=0.14, brightness=0.5, amp=0.8, seed=7):
+    """A firework crackle: filtered noise burst with an exponential decay."""
+    rng = random.Random(seed)
+    n = int(dur * SR)
+    out, y = [], 0.0
+    for i in range(n):
+        y += brightness * (rng.uniform(-1, 1) - y)
+        out.append(y * amp * math.exp(-(i / SR) / (dur * 0.28)))
     return out
 
 
@@ -225,6 +236,51 @@ def s_deny():
     ], 0.48)
 
 
+# --- The milestone "da-ding" family -----------------------------------------
+# Same voice, and the syllable count scales with the size of the milestone:
+# ding < da-DING < da-DING-a-LING. space-complete is the one sad ding —
+# a single bell that droops a minor third as it decays.
+
+def s_published():
+    return mix([(0.0, tone(N["D6"], 0.38, "bell", tau=0.15))], 0.40)
+
+def s_signed_off():
+    return mix([
+        (0.00, tone(N["A5"], 0.14, "bell", tau=0.06, gain=0.6)),   # da
+        (0.10, tone(N["D6"], 0.46, "bell", tau=0.20)),             # DING
+    ], 0.60)
+
+def s_phase_advance():
+    return mix([
+        (0.00, tone(N["A5"], 0.12, "bell", tau=0.05, gain=0.55)),  # da
+        (0.09, tone(N["D6"], 0.30, "bell", tau=0.13)),             # DING
+        (0.23, tone(N["E6"], 0.12, "bell", tau=0.05, gain=0.5)),   # a
+        (0.32, tone(N["F#6"], 0.50, "bell", tau=0.22, gain=0.9)),  # LING
+        (0.32, tone(N["D5"], 0.45, "soft", tau=0.25, gain=0.30)),  # warm floor
+    ], 0.85)
+
+def s_space_complete():
+    return mix([
+        (0.0, tone(N["B4"], 0.62, "bell", tau=0.24,
+                   glide_from=N["D5"], glide_time=0.30)),
+    ], 0.66)
+
+def s_fireworks():
+    # Hero cue: launch riser, burst, crackle, pentatonic sparkle falling as embers
+    return mix([
+        (0.00, tone(N["D5"], 0.28, "soft", tau=0.10, gain=0.5,
+                    glide_from=N["D4"], glide_time=0.24)),          # launch
+        (0.26, pop(0.18, 0.50, 0.90, seed=7)),                      # burst
+        (0.30, tone(N["D6"], 0.42, "bell", tau=0.16, gain=0.80)),
+        (0.38, pop(0.12, 0.35, 0.50, seed=11)),
+        (0.42, tone(N["F#6"], 0.36, "bell", tau=0.13, gain=0.55)),
+        (0.50, pop(0.10, 0.60, 0.35, seed=13)),
+        (0.55, tone(N["A6"], 0.46, "bell", tau=0.18, gain=0.45)),
+        (0.63, pop(0.14, 0.30, 0.28, seed=17)),
+        (0.72, pop(0.09, 0.70, 0.18, seed=19)),
+    ], 1.15)
+
+
 CUES = [
     ("ping",        -3.0, s_ping,        "Generic notification. Single bright A5; neutral, glanceable."),
     ("mention",     -3.0, s_mention,     "You were named directly. Rising fifth D5>A5 - more insistent than ping."),
@@ -241,6 +297,11 @@ CUES = [
     ("disconnect",  -8.0, s_disconnect,  "Session ended. The same octave, coming down."),
     ("approve",     -4.0, s_approve,     "Permission granted / confirmed. Quick bright F#5>A5."),
     ("deny",        -7.0, s_deny,        "Permission declined / cancelled. Soft low falling third - a no, not a slap."),
+    ("published",     -4.0, s_published,      "Milestone: published. One short bright ding."),
+    ("signed-off",    -3.0, s_signed_off,     "Milestone: signed off. Happy da-DING."),
+    ("phase-advance", -3.0, s_phase_advance,  "Milestone: phase advancing. Joyful da-DING-a-LING, rising."),
+    ("space-complete",-5.0, s_space_complete, "Milestone: space complete. A single ding that droops a minor third - wistful closure."),
+    ("fireworks",     -3.0, s_fireworks,      "Hero cue for the rare big win. Launch, burst, crackle, pentatonic embers."),
 ]
 
 

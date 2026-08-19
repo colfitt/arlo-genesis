@@ -107,6 +107,41 @@
       "duration_s": 0.48,
       "peak_dbfs": -7.0,
       "description": "Permission declined / cancelled. Soft low falling third - a no, not a slap."
+    },
+    {
+      "id": "published",
+      "file": "published.wav",
+      "duration_s": 0.4,
+      "peak_dbfs": -4.0,
+      "description": "Milestone: published. One short bright ding."
+    },
+    {
+      "id": "signed-off",
+      "file": "signed-off.wav",
+      "duration_s": 0.6,
+      "peak_dbfs": -3.0,
+      "description": "Milestone: signed off. Happy da-DING."
+    },
+    {
+      "id": "phase-advance",
+      "file": "phase-advance.wav",
+      "duration_s": 0.85,
+      "peak_dbfs": -3.0,
+      "description": "Milestone: phase advancing. Joyful da-DING-a-LING, rising."
+    },
+    {
+      "id": "space-complete",
+      "file": "space-complete.wav",
+      "duration_s": 0.66,
+      "peak_dbfs": -5.0,
+      "description": "Milestone: space complete. A single ding that droops a minor third - wistful closure."
+    },
+    {
+      "id": "fireworks",
+      "file": "fireworks.wav",
+      "duration_s": 1.15,
+      "peak_dbfs": -3.0,
+      "description": "Hero cue for the rare big win. Launch, burst, crackle, pentatonic embers."
     }
   ]
 }

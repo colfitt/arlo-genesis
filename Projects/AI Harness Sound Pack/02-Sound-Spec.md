@@ -1,4 +1,4 @@
-# Sound Spec — the 15 cues
+# Sound Spec — the cues
 
 The whole pack is **one instrument speaking one language**. Every cue is built from the
 same struck-bell/kalimba voice, lives in D major pentatonic (with one deliberate
@@ -20,11 +20,12 @@ Three hard rules, straight from the research (see `01-Research-Notification-Soun
 
 1. **Attention is earned by pitch shape, not loudness.** The error sound is *quieter*
    than the ping. Nobody should ever be startled by a failure.
-2. **Under one second, always.** Longest cue (done-big) is 0.9 s; most are 0.4–0.6 s.
+2. **Under one second, always** — except the hero cue. Most cues are 0.4–0.6 s;
+   `fireworks` gets 1.15 s because it fires rarely (rarity buys duration).
 3. **The 100-times test.** Every cue must survive being heard 100 times in a row and
    layered over speech/music. Anything that develops an edge gets softened.
 
-## The 15 cues
+## The core 15
 
 | # | Cue | Meaning in the harness | Notes / shape | Length | Rel. peak |
 |---|---|---|---|---|---|
@@ -44,6 +45,24 @@ Three hard rules, straight from the research (see `01-Research-Notification-Soun
 | 14 | `approve` | Permission granted / confirm | **F#5 → A5** quick bright "mm-hm" | 0.42 s | −4 dB |
 | 15 | `deny` | Permission declined / cancel | **A4 → F4** soft low falling third — a no, not a slap | 0.48 s | −7 dB |
 
+## The milestone "da-ding" family + the hero cue
+
+Same voice, same key — and within this family, **magnitude = syllable count**: a
+listener who has only heard `published` will correctly rank `phase-advance` as a
+bigger deal on first listen. Full rationale and the game-audio lineage in
+`04-Game-Sound-Inspiration.md`.
+
+| # | Cue | Meaning in the harness | Notes / shape | Length | Rel. peak |
+|---|---|---|---|---|---|
+| 16 | `published` | Published | *ding* — single bright **D6** | 0.40 s | −4 dB |
+| 17 | `signed-off` | Signed off | *da-DING* — **A5** pickup into **D6** | 0.60 s | −3 dB |
+| 18 | `phase-advance` | Phase advancing | *da-DING-a-LING* — **A5 D6 E6 F#6** rising run over a warm D5 floor | 0.85 s | −3 dB |
+| 19 | `space-complete` | Space complete | *sad ding* — one **D5** bell drooping a minor third to **B4** as it decays | 0.66 s | −5 dB |
+| 20 | `fireworks` | Hero: the rare big win | Launch riser **D4 ⤴ D5**, noise burst, crackle, **D6 F#6 A6** embers | 1.15 s | −3 dB |
+
+`fireworks` is hero-tier: give it a cooldown in the harness (once a day is plenty) or
+it stops being special — the Final Fantasy fanfare rule.
+
 Paired cues are deliberate mirrors, so the ear learns them for free:
 
 - `connect` / `disconnect` — the same octave, up vs. down
@@ -56,7 +75,7 @@ Paired cues are deliberate mirrors, so the ear learns them for free:
 Peak normalization targets in the prototypes (production masters get a proper LUFS
 pass — see the production plan):
 
-- **Tier 1, interrupt (−3 to −4 dBFS peak):** ping, mention, question, done-big, done, approve
+- **Tier 1, interrupt (−3 to −5 dBFS peak):** ping, mention, question, done-big, done, approve, published, signed-off, phase-advance, space-complete, fireworks
 - **Tier 2, inform (−6 to −8 dBFS):** message-in, error, warning, start, connect, deny, disconnect
 - **Tier 3, ambient (−9 to −12 dBFS):** message-out, progress
 
@@ -80,6 +99,6 @@ pass — see the production plan):
 
 ## Prototypes
 
-`prototypes/render_prototypes.py` renders all 15 deterministically (pure Python
+`prototypes/render_prototypes.py` renders all 20 deterministically (pure Python
 stdlib, no dependencies) and writes `manifest.json` for the harness to consume.
 Audition them side by side before re-voicing anything in production.

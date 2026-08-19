@@ -1,17 +1,19 @@
 # AI Harness Sound Pack
 
-Fifteen short UI cues — pings, mentions, done, question, error, and friends — designed
-as one coherent sound family for the AI harness, plus the research and the production
-plan to record them properly on the rig this repo already documents.
+Twenty short UI cues — pings, mentions, done, question, error, the milestone
+"da-ding" family, and a fireworks hero cue — designed as coherent sound families for
+the AI harness, plus the research and the production plan to record them properly on
+the rig this repo already documents.
 
 ## What's here
 
 | File | What it is |
 |---|---|
 | `01-Research-Notification-Sound-Design.md` | How Slack, Apple, Google, and Microsoft design notification sounds — the findings this pack is built on |
-| `02-Sound-Spec.md` | The 15 cues: semantic grammar, pitch, timing, loudness tiers, delivery targets |
+| `02-Sound-Spec.md` | The 20 cues: semantic grammar, pitch, timing, loudness tiers, delivery targets |
 | `03-Production-Plan.md` | The personalized plan to produce release-quality versions on the existing rig (Logic + Apollo x8 + Komplete/Arturia + iZotope) |
-| `prototypes/` | 15 audible WAV prototypes + `render_prototypes.py` (pure Python, no deps) + `manifest.json` |
+| `04-Game-Sound-Inspiration.md` | What Risk of Rain, Halo, Zelda, and Mario teach the palette; the milestone da-ding family; pedalboard "mangling skins" |
+| `prototypes/` | 20 audible WAV prototypes + `render_prototypes.py` (pure Python, no deps) + `manifest.json` |
 
 ## The one-paragraph version
 

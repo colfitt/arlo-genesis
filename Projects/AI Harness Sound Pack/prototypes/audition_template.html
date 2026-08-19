@@ -1,4 +1,4 @@
-<title>Fifteen Cues</title>
+<title>Arlo Cue Kit</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
   :root {
@@ -134,10 +134,11 @@
 <div class="wrap">
   <header>
     <div>
-      <h1>Fifteen Cues</h1>
-      <p class="sub">Prototype sound family for the AI harness — one struck-bell voice,
-      <b>D&nbsp;major pentatonic</b>, meaning carried by pitch direction. Click any card to listen.
-      These are synthesized drafts of the shapes the production pass will re-voice.</p>
+      <h1>Arlo Cue Kit</h1>
+      <p class="sub">Prototype sound families for the AI harness — one struck-bell voice,
+      <b>D&nbsp;major pentatonic</b>, meaning carried by pitch direction and syllable count.
+      Click any card to listen. These are synthesized drafts of the shapes the production
+      pass will re-voice.</p>
     </div>
     <button class="playall" id="playall">▶ play all</button>
   </header>
@@ -178,6 +179,12 @@ const CUES = [
 
   { id: "connect",     g: "Session",              cls: "",        notes: [[0,74],[0.11,86]],          dur: "0.55s", iv: "D5 ↗ D6",     tier: 2, desc: "Session or agent online. The octave, going up." },
   { id: "disconnect",  g: "Session",              cls: "resolve", notes: [[0,86],[0.10,74]],          dur: "0.52s", iv: "D6 ↘ D5",     tier: 2, desc: "Session ended. The same octave, coming down." },
+
+  { id: "published",      g: "Milestones & hero", cls: "",        notes: [[0,86]],                                dur: "0.40s", iv: "D6",            tier: 3, desc: "Published. One short bright ding — the family's smallest milestone." },
+  { id: "signed-off",     g: "Milestones & hero", cls: "",        notes: [[0,81],[0.10,86]],                      dur: "0.60s", iv: "da-DING",       tier: 3, desc: "Signed off. A happy pickup into the ding — one syllable bigger." },
+  { id: "phase-advance",  g: "Milestones & hero", cls: "",        notes: [[0,81],[0.09,86],[0.23,88],[0.32,90]],  dur: "0.85s", iv: "da-DING-a-LING", tier: 3, desc: "Phase advancing. The joyful four-syllable run — the biggest ding in the family." },
+  { id: "space-complete", g: "Milestones & hero", cls: "resolve", notes: [[0,74],[0.30,71]],                      dur: "0.66s", iv: "D5 ⤵ B4",       tier: 2, desc: "Space complete. One ding that droops a minor third as it fades — wistful closure." },
+  { id: "fireworks",      g: "Milestones & hero", cls: "",        notes: [[0,62],[0.24,74],[0.30,86],[0.42,90],[0.55,93]], dur: "1.15s", iv: "launch + burst", tier: 3, desc: "Hero cue for the rare big win. Launch, burst, crackle, pentatonic embers." },
 
   { id: "error",       g: "Trouble",              cls: "trouble", notes: [[0,62],[0.012,63]],         dur: "0.50s", iv: "D4 + E♭4",    tier: 2, desc: "Something failed. A low damped minor-second rub — the palette's only dissonance." },
   { id: "warning",     g: "Trouble",              cls: "trouble", notes: [[0,65]],                    dur: "0.46s", iv: "F4 (vib.)",   tier: 2, desc: "Caution, non-fatal. One muted note with a slow vibrato." },
