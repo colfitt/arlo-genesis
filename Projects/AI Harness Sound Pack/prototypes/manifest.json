@@ -1,0 +1,112 @@
+{
+  "sample_rate": 48000,
+  "bit_depth": 16,
+  "channels": 1,
+  "cues": [
+    {
+      "id": "ping",
+      "file": "ping.wav",
+      "duration_s": 0.42,
+      "peak_dbfs": -3.0,
+      "description": "Generic notification. Single bright A5; neutral, glanceable."
+    },
+    {
+      "id": "mention",
+      "file": "mention.wav",
+      "duration_s": 0.55,
+      "peak_dbfs": -3.0,
+      "description": "You were named directly. Rising fifth D5>A5 - more insistent than ping."
+    },
+    {
+      "id": "message-in",
+      "file": "message-in.wav",
+      "duration_s": 0.45,
+      "peak_dbfs": -6.0,
+      "description": "Incoming message, ambient. Gentle E5>F#5 step up."
+    },
+    {
+      "id": "message-out",
+      "file": "message-out.wav",
+      "duration_s": 0.4,
+      "peak_dbfs": -9.0,
+      "description": "Message sent. Quick falling step - outgoing, no attention needed."
+    },
+    {
+      "id": "question",
+      "file": "question.wav",
+      "duration_s": 0.7,
+      "peak_dbfs": -3.0,
+      "description": "The agent needs your input. Three rising notes ending unresolved on B5."
+    },
+    {
+      "id": "done",
+      "file": "done.wav",
+      "duration_s": 0.7,
+      "peak_dbfs": -4.0,
+      "description": "Task complete. A5 resolving down to home D5 - closure."
+    },
+    {
+      "id": "done-big",
+      "file": "done-big.wav",
+      "duration_s": 0.9,
+      "peak_dbfs": -3.0,
+      "description": "Long-running job finished. D-A-D octave flourish with a warm low floor."
+    },
+    {
+      "id": "error",
+      "file": "error.wav",
+      "duration_s": 0.5,
+      "peak_dbfs": -6.0,
+      "description": "Something failed. Low damped D4 with a minor-second rub. Dark, never loud."
+    },
+    {
+      "id": "warning",
+      "file": "warning.wav",
+      "duration_s": 0.46,
+      "peak_dbfs": -7.0,
+      "description": "Caution, non-fatal. Single muted F4 with slow vibrato."
+    },
+    {
+      "id": "start",
+      "file": "start.wav",
+      "duration_s": 0.46,
+      "peak_dbfs": -6.0,
+      "description": "Task/agent kicked off. Upward glide into D5 with an octave lift."
+    },
+    {
+      "id": "progress",
+      "file": "progress.wav",
+      "duration_s": 0.13,
+      "peak_dbfs": -12.0,
+      "description": "Milestone tick. Tiny wooden D6 blip - felt more than heard."
+    },
+    {
+      "id": "connect",
+      "file": "connect.wav",
+      "duration_s": 0.55,
+      "peak_dbfs": -6.0,
+      "description": "Session/agent connected. Octave up, D5>D6."
+    },
+    {
+      "id": "disconnect",
+      "file": "disconnect.wav",
+      "duration_s": 0.52,
+      "peak_dbfs": -8.0,
+      "description": "Session ended. The same octave, coming down."
+    },
+    {
+      "id": "approve",
+      "file": "approve.wav",
+      "duration_s": 0.42,
+      "peak_dbfs": -4.0,
+      "description": "Permission granted / confirmed. Quick bright F#5>A5."
+    },
+    {
+      "id": "deny",
+      "file": "deny.wav",
+      "duration_s": 0.48,
+      "peak_dbfs": -7.0,
+      "description": "Permission declined / cancelled. Soft low falling third - a no, not a slap."
+    }
+  ]
+}

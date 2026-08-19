@@ -1,0 +1,252 @@
+<title>Fifteen Cues</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root {
+    /* dark-first: a warm studio charcoal, VU-meter amber */
+    --ink: #191612;
+    --panel: #221e18;
+    --panel-hi: #2b251c;
+    --line: #3a3328;
+    --text: #ede5d2;
+    --muted: #a2977f;
+    --amber: #e5a83e;
+    --rust: #c9755b;
+    --sage: #9db97f;
+    --shadow: rgba(0,0,0,.35);
+  }
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) {
+      --ink: #f2ecdd;
+      --panel: #fbf8ef;
+      --panel-hi: #ffffff;
+      --line: #d9cfb8;
+      --text: #262117;
+      --muted: #776c56;
+      --amber: #a5701a;
+      --rust: #a6512f;
+      --sage: #5c7a3f;
+      --shadow: rgba(80,65,35,.18);
+    }
+  }
+  :root[data-theme="light"] {
+    --ink: #f2ecdd;
+    --panel: #fbf8ef;
+    --panel-hi: #ffffff;
+    --line: #d9cfb8;
+    --text: #262117;
+    --muted: #776c56;
+    --amber: #a5701a;
+    --rust: #a6512f;
+    --sage: #5c7a3f;
+    --shadow: rgba(80,65,35,.18);
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--ink);
+    color: var(--text);
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1060px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  header { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 20px 32px; margin-bottom: 14px; }
+  h1 {
+    font-family: "Bricolage Grotesque", "IBM Plex Sans", sans-serif;
+    font-weight: 700; font-size: clamp(34px, 6vw, 52px);
+    line-height: 1.02; margin: 0; letter-spacing: -0.01em; text-wrap: balance;
+  }
+  .sub { color: var(--muted); max-width: 58ch; margin: 10px 0 0; }
+  .sub b { color: var(--text); font-weight: 500; }
+
+  .playall {
+    margin-left: auto; flex: none;
+    font-family: "IBM Plex Mono", monospace; font-size: 13px; font-weight: 500;
+    color: var(--ink); background: var(--amber);
+    border: none; border-radius: 999px; padding: 10px 20px; cursor: pointer;
+  }
+  .playall:hover { filter: brightness(1.08); }
+  .playall:focus-visible, .cue:focus-visible { outline: 2px solid var(--amber); outline-offset: 3px; }
+
+  .legend {
+    font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--muted);
+    border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+    padding: 10px 2px; margin: 26px 0 8px;
+    display: flex; flex-wrap: wrap; gap: 6px 28px;
+  }
+  .legend span::before { content: "▴ "; color: var(--amber); }
+  .legend span.dn::before { content: "▾ "; }
+  .legend span.rb::before { content: "≠ "; color: var(--rust); }
+
+  section { margin-top: 34px; }
+  .grouplabel {
+    font-family: "IBM Plex Mono", monospace; font-size: 12px; font-weight: 500;
+    text-transform: uppercase; letter-spacing: .14em; color: var(--muted);
+    margin: 0 0 14px;
+  }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(228px, 1fr)); gap: 14px; }
+
+  .cue {
+    text-align: left; font: inherit; color: inherit;
+    background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
+    padding: 16px 16px 14px; cursor: pointer; display: flex; flex-direction: column; gap: 10px;
+    transition: background .15s, transform .15s;
+  }
+  .cue:hover { background: var(--panel-hi); transform: translateY(-1px); box-shadow: 0 4px 14px var(--shadow); }
+  .cue.playing { border-color: var(--amber); }
+  .cue.playing.trouble { border-color: var(--rust); }
+
+  .cuehead { display: flex; align-items: baseline; gap: 10px; }
+  .cuename { font-family: "IBM Plex Mono", monospace; font-size: 14px; font-weight: 500; }
+  .cuedur { margin-left: auto; font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--muted); font-variant-numeric: tabular-nums; }
+
+  .contour { display: block; width: 100%; height: 44px; }
+  .contour .base { stroke: var(--line); }
+  .contour .path { stroke: var(--amber); fill: none; }
+  .contour .dot  { fill: var(--amber); }
+  .cue.trouble .contour .path { stroke: var(--rust); }
+  .cue.trouble .contour .dot  { fill: var(--rust); }
+  .cue.resolve .contour .path { stroke: var(--sage); }
+  .cue.resolve .contour .dot  { fill: var(--sage); }
+  .cue.playing .contour .dot:last-of-type { animation: pip .5s ease-out; }
+  @keyframes pip { from { r: 7; opacity: .4; } to { r: 3.2; opacity: 1; } }
+  @media (prefers-reduced-motion: reduce) {
+    .cue, .cue:hover { transition: none; transform: none; }
+    .cue.playing .contour .dot:last-of-type { animation: none; }
+  }
+
+  .cuedesc { font-size: 13px; color: var(--muted); margin: 0; min-height: 2.9em; }
+  .cuemeta {
+    display: flex; align-items: center; gap: 8px;
+    font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--muted);
+    border-top: 1px solid var(--line); padding-top: 10px;
+  }
+  .tier { margin-left: auto; letter-spacing: 2px; }
+  .tier b { color: var(--amber); font-weight: 400; }
+
+  footer { margin-top: 56px; color: var(--muted); font-size: 13px; border-top: 1px solid var(--line); padding-top: 18px; max-width: 68ch; }
+  footer code { font-family: "IBM Plex Mono", monospace; font-size: 12px; }
+</style>
+
+<div class="wrap">
+  <header>
+    <div>
+      <h1>Fifteen Cues</h1>
+      <p class="sub">Prototype sound family for the AI harness — one struck-bell voice,
+      <b>D&nbsp;major pentatonic</b>, meaning carried by pitch direction. Click any card to listen.
+      These are synthesized drafts of the shapes the production pass will re-voice.</p>
+    </div>
+    <button class="playall" id="playall">▶ play all</button>
+  </header>
+
+  <div class="legend">
+    <span>rising = incoming / attention</span>
+    <span class="dn">falling, resolving = done / outgoing</span>
+    <span class="rb">low + damped = trouble (never loud)</span>
+  </div>
+
+  <div id="groups"></div>
+
+  <footer>
+    Loudness is tiered by intent — <code>●●●</code> interrupt, <code>●●</code> inform,
+    <code>●</code> ambient — so <code>error</code> is deliberately quieter than
+    <code>ping</code>. Sources: <code>prototypes/render_prototypes.py</code> in the
+    AI&nbsp;Harness Sound Pack; spec and production plan alongside it.
+  </footer>
+</div>
+
+<script>
+/*__SOUNDS__*/
+
+const CUES = [
+  { id: "ping",        g: "Messages & attention", cls: "",        notes: [[0,81]],                    dur: "0.42s", iv: "A5",          tier: 3, desc: "Generic notification. A single bright A5 — neutral, glanceable." },
+  { id: "mention",     g: "Messages & attention", cls: "",        notes: [[0,74],[0.11,81]],          dur: "0.55s", iv: "D5 ↗ A5",     tier: 3, desc: "You were named directly. A rising fifth, more insistent than ping." },
+  { id: "message-in",  g: "Messages & attention", cls: "",        notes: [[0,76],[0.09,78]],          dur: "0.45s", iv: "E5 ↗ F♯5",    tier: 2, desc: "A message arrived. A gentle step up in the soft voice." },
+  { id: "message-out", g: "Messages & attention", cls: "resolve", notes: [[0,78],[0.08,74]],          dur: "0.40s", iv: "F♯5 ↘ D5",    tier: 1, desc: "Message sent. A quick falling step — outgoing, needs nothing from you." },
+
+  { id: "start",       g: "Task lifecycle",       cls: "",        notes: [[0,69],[0.08,74]],          dur: "0.46s", iv: "A4 ⤴ D5",     tier: 2, desc: "A task or agent kicked off. An upward glide into D5 with an octave lift." },
+  { id: "progress",    g: "Task lifecycle",       cls: "",        notes: [[0,86]],                    dur: "0.13s", iv: "D6",          tier: 1, desc: "Milestone tick. A tiny wooden blip — felt more than heard." },
+  { id: "done",        g: "Task lifecycle",       cls: "resolve", notes: [[0,81],[0.12,74]],          dur: "0.70s", iv: "A5 ↘ D5",     tier: 3, desc: "Task complete. Settles home to D with a warm tail — closure." },
+  { id: "done-big",    g: "Task lifecycle",       cls: "resolve", notes: [[0,74],[0.11,81],[0.22,86]],dur: "0.90s", iv: "D5 A5 D6",    tier: 3, desc: "A long-running job finished. The octave flourish, with a warm low floor." },
+
+  { id: "question",    g: "Dialogue & permissions", cls: "",        notes: [[0,74],[0.12,78],[0.24,83]],dur: "0.70s", iv: "D5 F♯5 B5",   tier: 3, desc: "The agent needs your input. Three rising notes ending unresolved — a musical question mark." },
+  { id: "approve",     g: "Dialogue & permissions", cls: "",        notes: [[0,78],[0.07,81]],          dur: "0.42s", iv: "F♯5 ↗ A5",    tier: 3, desc: "Permission granted. A quick bright mm-hm." },
+  { id: "deny",        g: "Dialogue & permissions", cls: "trouble", notes: [[0,69],[0.10,65]],          dur: "0.48s", iv: "A4 ↘ F4",     tier: 2, desc: "Permission declined. A soft low falling third — a no, not a slap." },
+
+  { id: "connect",     g: "Session",              cls: "",        notes: [[0,74],[0.11,86]],          dur: "0.55s", iv: "D5 ↗ D6",     tier: 2, desc: "Session or agent online. The octave, going up." },
+  { id: "disconnect",  g: "Session",              cls: "resolve", notes: [[0,86],[0.10,74]],          dur: "0.52s", iv: "D6 ↘ D5",     tier: 2, desc: "Session ended. The same octave, coming down." },
+
+  { id: "error",       g: "Trouble",              cls: "trouble", notes: [[0,62],[0.012,63]],         dur: "0.50s", iv: "D4 + E♭4",    tier: 2, desc: "Something failed. A low damped minor-second rub — the palette's only dissonance." },
+  { id: "warning",     g: "Trouble",              cls: "trouble", notes: [[0,65]],                    dur: "0.46s", iv: "F4 (vib.)",   tier: 2, desc: "Caution, non-fatal. One muted note with a slow vibrato." },
+];
+
+function contourSVG(notes) {
+  const lo = 60, hi = 92;
+  const maxT = Math.max(0.28, notes[notes.length - 1][0] + 0.06);
+  const pt = ([t, m]) => [8 + (t / maxT) * 104, 38 - ((m - lo) / (hi - lo)) * 32];
+  const pts = notes.map(pt);
+  let svg = '<svg class="contour" viewBox="0 0 120 44" preserveAspectRatio="none" aria-hidden="true">';
+  svg += '<line class="base" x1="4" y1="40" x2="116" y2="40" stroke-width="1"/>';
+  if (pts.length > 1) {
+    svg += '<polyline class="path" stroke-width="1.6" points="' + pts.map(p => p.join(",")).join(" ") + '"/>';
+  }
+  for (const [x, y] of pts) {
+    svg += `<line class="path" x1="${x}" y1="${y}" x2="${x}" y2="40" stroke-width="1" opacity="0.35"/>`;
+    svg += `<circle class="dot" cx="${x}" cy="${y}" r="3.2"/>`;
+  }
+  return svg + "</svg>";
+}
+
+const groupsEl = document.getElementById("groups");
+const order = [];
+const byGroup = {};
+for (const c of CUES) {
+  if (!byGroup[c.g]) { byGroup[c.g] = []; order.push(c.g); }
+  byGroup[c.g].push(c);
+}
+for (const g of order) {
+  const sec = document.createElement("section");
+  sec.innerHTML = `<h2 class="grouplabel">${g}</h2>`;
+  const grid = document.createElement("div");
+  grid.className = "grid";
+  for (const c of byGroup[g]) {
+    const b = document.createElement("button");
+    b.className = "cue " + c.cls;
+    b.dataset.id = c.id;
+    b.setAttribute("aria-label", "Play " + c.id);
+    b.innerHTML =
+      `<div class="cuehead"><span class="cuename">${c.id}</span><span class="cuedur">${c.dur}</span></div>` +
+      contourSVG(c.notes) +
+      `<p class="cuedesc">${c.desc}</p>` +
+      `<div class="cuemeta"><span>${c.iv}</span><span class="tier">${"<b>●</b>".repeat(c.tier)}${"●".repeat(3 - c.tier)}</span></div>`;
+    b.addEventListener("click", () => play(c.id));
+    grid.appendChild(b);
+  }
+  sec.appendChild(grid);
+  groupsEl.appendChild(sec);
+}
+
+function play(id) {
+  const a = new Audio(SOUNDS[id]);
+  a.play();
+  const el = document.querySelector(`.cue[data-id="${id}"]`);
+  if (el) {
+    el.classList.add("playing");
+    setTimeout(() => el.classList.remove("playing"), 650);
+  }
+}
+
+document.getElementById("playall").addEventListener("click", () => {
+  let i = 0;
+  const step = () => {
+    if (i >= CUES.length) return;
+    play(CUES[i].id);
+    i += 1;
+    setTimeout(step, 950);
+  };
+  step();
+});
+</script>
