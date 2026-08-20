@@ -30,6 +30,7 @@ OUT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # D major pentatonic + the few outsiders the grammar needs
 N = {
+    "D3": 146.83, "E3": 164.81, "F3": 174.61, "A3": 220.00,
     "D4": 293.66, "Eb4": 311.13, "E4": 329.63, "F4": 349.23, "F#4": 369.99,
     "A4": 440.00, "B4": 493.88,
     "D5": 587.33, "E5": 659.25, "F#5": 739.99, "A5": 880.00, "B5": 987.77,
@@ -281,6 +282,57 @@ def s_fireworks():
     ], 1.15)
 
 
+# --- The Declan (in-house family, never ships) ------------------------------
+# Caricatures by design: party-popper salvo, two ominous low notes, a passing
+# two-tone siren with doppler drop, and a flush. All synthesized from scratch.
+
+def s_declan_approve():
+    ev = []
+    for i, t in enumerate([0.00, 0.09, 0.16, 0.26, 0.33, 0.45, 0.55]):
+        ev.append((t, pop(0.10 + 0.02 * (i % 3), 0.55 + 0.05 * (i % 4),
+                          0.9 - 0.07 * i, seed=23 + i)))
+    ev.append((0.30, tone(N["D6"], 0.30, "bell", tau=0.10, gain=0.25)))  # confetti glint
+    return mix(ev, 0.85)
+
+def s_declan_mention():
+    return mix([
+        (0.00, tone(N["E3"], 0.45, "dark", tau=0.20)),
+        (0.42, tone(N["F3"], 0.60, "dark", tau=0.22)),
+    ], 1.05)
+
+def s_declan_error():
+    ev, t = [], 0.0
+    for i in range(4):
+        shift = 1.0 - 0.05 * i                      # the truck drives past
+        g = [0.5, 0.9, 0.7, 0.45][i]
+        ev.append((t,        tone(940.0 * shift, 0.16, "soft", tau=0.30, attack=0.02, gain=g)))
+        ev.append((t + 0.16, tone(700.0 * shift, 0.16, "soft", tau=0.30, attack=0.02, gain=g)))
+        t += 0.32
+    return mix(ev, 1.45)
+
+def s_declan_merge():
+    return mix([
+        (0.00, pop(0.55, 0.10, 0.70, seed=31)),                       # whoosh bed
+        (0.05, tone(N["D4"], 0.16, "soft", tau=0.06, gain=0.60,
+                    glide_from=N["A4"], glide_time=0.12)),
+        (0.22, tone(N["A3"], 0.16, "soft", tau=0.06, gain=0.55,
+                    glide_from=N["D4"], glide_time=0.12)),
+        (0.40, tone(N["D3"], 0.30, "soft", tau=0.10, gain=0.50,
+                    glide_from=N["A3"], glide_time=0.20)),
+        (0.55, pop(0.45, 0.05, 0.40, seed=37)),                       # drain tail
+    ], 1.10)
+
+
+def family_of(name):
+    if name.startswith("declan-"):
+        return "declan"
+    if name in ("published", "signed-off", "phase-advance", "space-complete"):
+        return "milestone"
+    if name == "fireworks":
+        return "hero"
+    return "core"
+
+
 CUES = [
     ("ping",        -3.0, s_ping,        "Generic notification. Single bright A5; neutral, glanceable."),
     ("mention",     -3.0, s_mention,     "You were named directly. Rising fifth D5>A5 - more insistent than ping."),
@@ -302,6 +354,10 @@ CUES = [
     ("phase-advance", -3.0, s_phase_advance,  "Milestone: phase advancing. Joyful da-DING-a-LING, rising."),
     ("space-complete",-5.0, s_space_complete, "Milestone: space complete. A single ding that droops a minor third - wistful closure."),
     ("fireworks",     -3.0, s_fireworks,      "Hero cue for the rare big win. Launch, burst, crackle, pentatonic embers."),
+    ("declan-approve", -3.0, s_declan_approve, "Declan: approve. Celebratory party-popper salvo with a confetti glint."),
+    ("declan-mention", -5.0, s_declan_mention, "Declan: mention. Two ominous low semitone notes. Something approaches."),
+    ("declan-error",   -5.0, s_declan_error,   "Declan: error. Two-tone siren doppler-dropping as the truck drives past."),
+    ("declan-merge",   -4.0, s_declan_merge,   "Declan: merge. The flush - whoosh, three descending glugs, drain tail."),
 ]
 
 
@@ -312,6 +368,7 @@ def main():
         path = write_wav(name, buf)
         manifest.append({
             "id": name,
+            "family": family_of(name),
             "file": name + ".wav",
             "duration_s": round(len(buf) / SR, 3),
             "peak_dbfs": peak_db,

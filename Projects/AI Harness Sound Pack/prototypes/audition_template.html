@@ -186,12 +186,17 @@ const CUES = [
   { id: "space-complete", g: "Milestones & hero", cls: "resolve", notes: [[0,74],[0.30,71]],                      dur: "0.66s", iv: "D5 ⤵ B4",       tier: 2, desc: "Space complete. One ding that droops a minor third as it fades — wistful closure." },
   { id: "fireworks",      g: "Milestones & hero", cls: "",        notes: [[0,62],[0.24,74],[0.30,86],[0.42,90],[0.55,93]], dur: "1.15s", iv: "launch + burst", tier: 3, desc: "Hero cue for the rare big win. Launch, burst, crackle, pentatonic embers." },
 
+  { id: "declan-approve", g: "The Declan — in-house only", cls: "",        notes: [[0,74],[0.09,74],[0.16,74],[0.26,74],[0.33,74],[0.45,74],[0.55,74]], dur: "0.85s", iv: "pop pop pop",   tier: 3, desc: "Approve. Celebratory party-popper salvo with a confetti glint on top." },
+  { id: "declan-mention", g: "The Declan — in-house only", cls: "trouble", notes: [[0,52],[0.42,53]],                       dur: "1.05s", iv: "duunn… dun",   tier: 2, desc: "Mention. Two ominous low semitone notes. Something approaches." },
+  { id: "declan-error",   g: "The Declan — in-house only", cls: "trouble", notes: [[0,82],[0.16,77],[0.32,81],[0.48,76],[0.64,80],[0.80,75],[0.96,79],[1.12,74]], dur: "1.45s", iv: "nee-naw ↓",     tier: 2, desc: "Error. A two-tone siren doppler-dropping as the truck drives past your build." },
+  { id: "declan-merge",   g: "The Declan — in-house only", cls: "resolve", notes: [[0,69],[0.05,62],[0.22,57],[0.40,50]],   dur: "1.10s", iv: "the flush",    tier: 3, desc: "Merge. Whoosh, three descending glugs, drain tail. The PR is gone now." },
+
   { id: "error",       g: "Trouble",              cls: "trouble", notes: [[0,62],[0.012,63]],         dur: "0.50s", iv: "D4 + E♭4",    tier: 2, desc: "Something failed. A low damped minor-second rub — the palette's only dissonance." },
   { id: "warning",     g: "Trouble",              cls: "trouble", notes: [[0,65]],                    dur: "0.46s", iv: "F4 (vib.)",   tier: 2, desc: "Caution, non-fatal. One muted note with a slow vibrato." },
 ];
 
 function contourSVG(notes) {
-  const lo = 60, hi = 92;
+  const lo = 50, hi = 94;
   const maxT = Math.max(0.28, notes[notes.length - 1][0] + 0.06);
   const pt = ([t, m]) => [8 + (t / maxT) * 104, 38 - ((m - lo) / (hi - lo)) * 32];
   const pts = notes.map(pt);

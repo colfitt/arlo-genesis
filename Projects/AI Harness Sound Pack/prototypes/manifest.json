@@ -5,6 +5,7 @@
   "cues": [
     {
       "id": "ping",
+      "family": "core",
       "file": "ping.wav",
       "duration_s": 0.42,
       "peak_dbfs": -3.0,
@@ -12,6 +13,7 @@
     },
     {
       "id": "mention",
+      "family": "core",
       "file": "mention.wav",
       "duration_s": 0.55,
       "peak_dbfs": -3.0,
@@ -19,6 +21,7 @@
     },
     {
       "id": "message-in",
+      "family": "core",
       "file": "message-in.wav",
       "duration_s": 0.45,
       "peak_dbfs": -6.0,
@@ -26,6 +29,7 @@
     },
     {
       "id": "message-out",
+      "family": "core",
       "file": "message-out.wav",
       "duration_s": 0.4,
       "peak_dbfs": -9.0,
@@ -33,6 +37,7 @@
     },
     {
       "id": "question",
+      "family": "core",
       "file": "question.wav",
       "duration_s": 0.7,
       "peak_dbfs": -3.0,
@@ -40,6 +45,7 @@
     },
     {
       "id": "done",
+      "family": "core",
       "file": "done.wav",
       "duration_s": 0.7,
       "peak_dbfs": -4.0,
@@ -47,6 +53,7 @@
     },
     {
       "id": "done-big",
+      "family": "core",
       "file": "done-big.wav",
       "duration_s": 0.9,
       "peak_dbfs": -3.0,
@@ -54,6 +61,7 @@
     },
     {
       "id": "error",
+      "family": "core",
       "file": "error.wav",
       "duration_s": 0.5,
       "peak_dbfs": -6.0,
@@ -61,6 +69,7 @@
     },
     {
       "id": "warning",
+      "family": "core",
       "file": "warning.wav",
       "duration_s": 0.46,
       "peak_dbfs": -7.0,
@@ -68,6 +77,7 @@
     },
     {
       "id": "start",
+      "family": "core",
       "file": "start.wav",
       "duration_s": 0.46,
       "peak_dbfs": -6.0,
@@ -75,6 +85,7 @@
     },
     {
       "id": "progress",
+      "family": "core",
       "file": "progress.wav",
       "duration_s": 0.13,
       "peak_dbfs": -12.0,
@@ -82,6 +93,7 @@
     },
     {
       "id": "connect",
+      "family": "core",
       "file": "connect.wav",
       "duration_s": 0.55,
       "peak_dbfs": -6.0,
@@ -89,6 +101,7 @@
     },
     {
       "id": "disconnect",
+      "family": "core",
       "file": "disconnect.wav",
       "duration_s": 0.52,
       "peak_dbfs": -8.0,
@@ -96,6 +109,7 @@
     },
     {
       "id": "approve",
+      "family": "core",
       "file": "approve.wav",
       "duration_s": 0.42,
       "peak_dbfs": -4.0,
@@ -103,6 +117,7 @@
     },
     {
       "id": "deny",
+      "family": "core",
       "file": "deny.wav",
       "duration_s": 0.48,
       "peak_dbfs": -7.0,
@@ -110,6 +125,7 @@
     },
     {
       "id": "published",
+      "family": "milestone",
       "file": "published.wav",
       "duration_s": 0.4,
       "peak_dbfs": -4.0,
@@ -117,6 +133,7 @@
     },
     {
       "id": "signed-off",
+      "family": "milestone",
       "file": "signed-off.wav",
       "duration_s": 0.6,
       "peak_dbfs": -3.0,
@@ -124,6 +141,7 @@
     },
     {
       "id": "phase-advance",
+      "family": "milestone",
       "file": "phase-advance.wav",
       "duration_s": 0.85,
       "peak_dbfs": -3.0,
@@ -131,6 +149,7 @@
     },
     {
       "id": "space-complete",
+      "family": "milestone",
       "file": "space-complete.wav",
       "duration_s": 0.66,
       "peak_dbfs": -5.0,
@@ -138,10 +157,43 @@
     },
     {
       "id": "fireworks",
+      "family": "hero",
       "file": "fireworks.wav",
       "duration_s": 1.15,
       "peak_dbfs": -3.0,
       "description": "Hero cue for the rare big win. Launch, burst, crackle, pentatonic embers."
+    },
+    {
+      "id": "declan-approve",
+      "family": "declan",
+      "file": "declan-approve.wav",
+      "duration_s": 0.85,
+      "peak_dbfs": -3.0,
+      "description": "Declan: approve. Celebratory party-popper salvo with a confetti glint."
+    },
+    {
+      "id": "declan-mention",
+      "family": "declan",
+      "file": "declan-mention.wav",
+      "duration_s": 1.05,
+      "peak_dbfs": -5.0,
+      "description": "Declan: mention. Two ominous low semitone notes. Something approaches."
+    },
+    {
+      "id": "declan-error",
+      "family": "declan",
+      "file": "declan-error.wav",
+      "duration_s": 1.45,
+      "peak_dbfs": -5.0,
+      "description": "Declan: error. Two-tone siren doppler-dropping as the truck drives past."
+    },
+    {
+      "id": "declan-merge",
+      "family": "declan",
+      "file": "declan-merge.wav",
+      "duration_s": 1.1,
+      "peak_dbfs": -4.0,
+      "description": "Declan: merge. The flush - whoosh, three descending glugs, drain tail."
     }
   ]
 }
