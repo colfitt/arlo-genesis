@@ -1,0 +1,373 @@
+<title>Tiobi Sound Plan</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root {
+    /* dark-first: the same studio charcoal + VU amber as the audition page */
+    --ink: #191612;
+    --panel: #221e18;
+    --panel-hi: #2b251c;
+    --line: #3a3328;
+    --text: #ede5d2;
+    --muted: #a2977f;
+    --amber: #e5a83e;
+    --rust: #c9755b;
+    --sage: #9db97f;
+  }
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) {
+      --ink: #f2ecdd; --panel: #fbf8ef; --panel-hi: #ffffff; --line: #d9cfb8;
+      --text: #262117; --muted: #776c56; --amber: #a5701a; --rust: #a6512f; --sage: #5c7a3f;
+    }
+  }
+  :root[data-theme="light"] {
+    --ink: #f2ecdd; --panel: #fbf8ef; --panel-hi: #ffffff; --line: #d9cfb8;
+    --text: #262117; --muted: #776c56; --amber: #a5701a; --rust: #a6512f; --sage: #5c7a3f;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--ink); color: var(--text);
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    font-size: 15.5px; line-height: 1.6; -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 52px 24px 90px; }
+
+  .eyebrow {
+    font-family: "IBM Plex Mono", monospace; font-size: 12px; font-weight: 500;
+    text-transform: uppercase; letter-spacing: .16em; color: var(--amber); margin: 0 0 10px;
+  }
+  h1 {
+    font-family: "Bricolage Grotesque", sans-serif; font-weight: 700;
+    font-size: clamp(36px, 6.5vw, 58px); line-height: 1.0; margin: 0 0 16px;
+    letter-spacing: -0.015em; text-wrap: balance;
+  }
+  .lede { font-size: 17px; color: var(--muted); max-width: 62ch; margin: 0 0 22px; }
+  .lede b { color: var(--text); font-weight: 500; }
+
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
+  .chip {
+    font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--muted);
+    border: 1px solid var(--line); border-radius: 999px; padding: 5px 13px;
+  }
+  .chip b { color: var(--amber); font-weight: 500; }
+
+  h2 {
+    font-family: "Bricolage Grotesque", sans-serif; font-weight: 700; font-size: 26px;
+    margin: 56px 0 6px; letter-spacing: -0.01em; text-wrap: balance;
+  }
+  h2 .no {
+    font-family: "IBM Plex Mono", monospace; font-size: 13px; font-weight: 400;
+    color: var(--amber); vertical-align: 6px; margin-right: 8px; letter-spacing: .08em;
+  }
+  h3 { font-size: 16.5px; font-weight: 600; margin: 26px 0 6px; }
+  p { max-width: 66ch; margin: 10px 0; }
+  .sub { color: var(--muted); }
+  a { color: var(--amber); text-underline-offset: 3px; }
+
+  .tablewrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; margin: 16px 0; }
+  table { border-collapse: collapse; width: 100%; font-size: 14px; }
+  th {
+    font-family: "IBM Plex Mono", monospace; font-size: 11.5px; font-weight: 500;
+    text-transform: uppercase; letter-spacing: .1em; color: var(--muted);
+    text-align: left; padding: 10px 14px; background: var(--panel);
+    border-bottom: 1px solid var(--line); white-space: nowrap;
+  }
+  td { padding: 9px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  td:first-child { font-family: "IBM Plex Mono", monospace; font-size: 13px; white-space: nowrap; }
+  .num { font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin: 18px 0; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 16px 18px; }
+  .card h3 { margin: 0 0 4px; font-family: "Bricolage Grotesque", sans-serif; font-size: 18px; }
+  .card p { font-size: 13.5px; color: var(--muted); margin: 6px 0 0; }
+  .status {
+    font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: .08em;
+    text-transform: uppercase; color: var(--sage);
+  }
+  .status.planned { color: var(--muted); }
+  .status.internal { color: var(--rust); }
+
+  .rule-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px; margin: 18px 0; }
+  .rule { border-left: 3px solid var(--amber); background: var(--panel); border-radius: 0 10px 10px 0; padding: 12px 16px; font-size: 14px; }
+  .rule b { display: block; margin-bottom: 3px; }
+  .rule.down { border-left-color: var(--sage); }
+  .rule.bad { border-left-color: var(--rust); }
+
+  .session { display: flex; gap: 18px; margin: 20px 0; }
+  .snum {
+    flex: none; width: 44px; height: 44px; border-radius: 50%;
+    border: 1px solid var(--amber); color: var(--amber);
+    font-family: "IBM Plex Mono", monospace; font-size: 16px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .session h3 { margin-top: 8px; }
+  .session p, .session ul { font-size: 14.5px; }
+  ul { padding-left: 20px; max-width: 66ch; }
+  li { margin: 5px 0; }
+  li::marker { color: var(--amber); }
+
+  details { border: 1px solid var(--line); border-radius: 10px; margin: 10px 0; background: var(--panel); }
+  summary {
+    cursor: pointer; padding: 12px 16px; font-weight: 600; font-size: 14.5px;
+    list-style: none; display: flex; align-items: baseline; gap: 10px;
+  }
+  summary::before { content: "▸"; color: var(--amber); transition: transform .15s; }
+  details[open] summary::before { transform: rotate(90deg); }
+  summary .tag { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--muted); font-weight: 400; margin-left: auto; }
+  details .tablewrap { margin: 0 12px 12px; border: none; border-top: 1px solid var(--line); border-radius: 0; }
+  @media (prefers-reduced-motion: reduce) { summary::before { transition: none; } }
+
+  .callout {
+    background: var(--panel); border: 1px solid var(--line); border-left: 3px solid var(--rust);
+    border-radius: 0 10px 10px 0; padding: 14px 18px; margin: 18px 0; max-width: 70ch; font-size: 14.5px;
+  }
+  .callout b { color: var(--rust); }
+  .callout.ok { border-left-color: var(--sage); }
+  .callout.ok b { color: var(--sage); }
+
+  footer { margin-top: 64px; border-top: 1px solid var(--line); padding-top: 20px; font-size: 13.5px; color: var(--muted); max-width: 70ch; }
+  code { font-family: "IBM Plex Mono", monospace; font-size: .92em; background: var(--panel-hi); border: 1px solid var(--line); border-radius: 4px; padding: 1px 5px; }
+</style>
+
+<div class="wrap">
+
+  <p class="eyebrow">AI Harness Sound Pack · Project Plan</p>
+  <h1>Tiobi Sound Plan</h1>
+  <p class="lede">One bell voice, <b>D major pentatonic</b>, meaning carried by pitch shape
+  and syllable count — designed from the research on how Slack, Apple, Google, and
+  Microsoft do it, prototyped in code, and produced on the studio we already own.
+  <a href="https://claude.ai/code/artifact/d7012b6a-5c1f-430d-a191-0834580dc6de">Listen to every prototype →</a></p>
+  <div class="chips">
+    <span class="chip"><b>24</b> cues prototyped</span>
+    <span class="chip"><b>5</b> families</span>
+    <span class="chip"><b>3</b> half-day sessions to master</span>
+    <span class="chip"><b>$0</b> new gear</span>
+  </div>
+
+  <h2><span class="no">01</span>The grammar</h2>
+  <p>Every family says the same things in its own vocabulary. A listener who learns one
+  family has learned them all:</p>
+  <div class="rule-grid">
+    <div class="rule"><b>Rising interval</b> Incoming / needs your attention — ping, mention, question, connect, approve</div>
+    <div class="rule down"><b>Falling, resolving</b> Completion / outgoing / closing — done, message-out, disconnect, deny</div>
+    <div class="rule bad"><b>Low + damped</b> Trouble. Never harsh, never loud — <code>error</code> is deliberately quieter than <code>ping</code></div>
+    <div class="rule"><b>More syllables, bigger milestone</b> ding → da-DING → da-DING-a-LING; the sad ding droops</div>
+  </div>
+  <p class="sub">Three hard rules from the research: attention is earned by pitch shape, not
+  loudness; everything under one second except the hero cue; every sound must survive
+  being heard 100 times in a row.</p>
+
+  <h2><span class="no">02</span>The families</h2>
+  <div class="cards">
+    <div class="card"><span class="status">prototyped · ships</span><h3>Tiobi</h3><p>The default voice: 20 warm struck-bell cues — core 15, four milestone dings, one fireworks hero.</p></div>
+    <div class="card"><span class="status internal">prototyped · in-house only</span><h3>The Declan</h3><p>Everyday absurd foley. Doppler fire-truck errors, toilet-flush merges. Never ships — by flag, not by promise.</p></div>
+    <div class="card"><span class="status planned">planned · skin</span><h3>Video Game</h3><p>Chiptune: square waves, arps, bitcrush. Cheapest to build — pure synthesis, or Tiobi mangled through Lossy / Generation Loss.</p></div>
+    <div class="card"><span class="status planned">planned · skin</span><h3>Movie</h3><p>Trailer language: micro-booms, risers, projector foley, Big Sky bloom tails.</p></div>
+    <div class="card"><span class="status planned">planned · in-house</span><h3>Fun Cut</h3><p>Human and toy sounds — whistles, snaps, toy piano, bicycle bell — recorded on the SM57.</p></div>
+  </div>
+  <p class="sub">Swap mechanism: every family implements the same cue IDs; <code>manifest.json</code>
+  tags each cue with its family; missing cues fall back to Tiobi; <code>internal: true</code>
+  families are excluded from release builds automatically. A theme changes the costume,
+  never the manners — loudness tiers, cooldowns, and rate limits apply identically.</p>
+
+  <h2><span class="no">03</span>Cue inventory</h2>
+
+  <h3>Tiobi — the shipping twenty</h3>
+  <div class="tablewrap"><table>
+    <tr><th>Cue</th><th>Meaning</th><th>Shape</th><th class="num">Length</th><th class="num">Peak</th></tr>
+    <tr><td>ping</td><td>Generic notification</td><td>single bright A5</td><td class="num">0.42 s</td><td class="num">−3 dB</td></tr>
+    <tr><td>mention</td><td>You were named</td><td>D5 → A5 rising fifth</td><td class="num">0.55 s</td><td class="num">−3 dB</td></tr>
+    <tr><td>message-in</td><td>Message arrived</td><td>E5 → F♯5 soft step up</td><td class="num">0.45 s</td><td class="num">−6 dB</td></tr>
+    <tr><td>message-out</td><td>Message sent</td><td>F♯5 → D5 step down</td><td class="num">0.40 s</td><td class="num">−9 dB</td></tr>
+    <tr><td>question</td><td>Agent needs input</td><td>D5 F♯5 B5 — ends unresolved</td><td class="num">0.70 s</td><td class="num">−3 dB</td></tr>
+    <tr><td>done</td><td>Task complete</td><td>A5 → D5, settles home</td><td class="num">0.70 s</td><td class="num">−4 dB</td></tr>
+    <tr><td>done-big</td><td>Long job finished</td><td>D5 A5 D6 flourish + floor</td><td class="num">0.90 s</td><td class="num">−3 dB</td></tr>
+    <tr><td>error</td><td>Failure</td><td>D4 + E♭4 damped rub</td><td class="num">0.50 s</td><td class="num">−6 dB</td></tr>
+    <tr><td>warning</td><td>Caution</td><td>muted F4, slow vibrato</td><td class="num">0.46 s</td><td class="num">−7 dB</td></tr>
+    <tr><td>start</td><td>Task kicked off</td><td>A4 ⤴ D5 glide + lift</td><td class="num">0.46 s</td><td class="num">−6 dB</td></tr>
+    <tr><td>progress</td><td>Milestone tick</td><td>tiny wooden D6 blip</td><td class="num">0.13 s</td><td class="num">−12 dB</td></tr>
+    <tr><td>connect</td><td>Session online</td><td>D5 → D6 octave up</td><td class="num">0.55 s</td><td class="num">−6 dB</td></tr>
+    <tr><td>disconnect</td><td>Session ended</td><td>D6 → D5 octave down</td><td class="num">0.52 s</td><td class="num">−8 dB</td></tr>
+    <tr><td>approve</td><td>Permission granted</td><td>F♯5 → A5 bright mm-hm</td><td class="num">0.42 s</td><td class="num">−4 dB</td></tr>
+    <tr><td>deny</td><td>Permission declined</td><td>A4 → F4 soft falling third</td><td class="num">0.48 s</td><td class="num">−7 dB</td></tr>
+    <tr><td>published</td><td>Published</td><td><i>ding</i> — D6</td><td class="num">0.40 s</td><td class="num">−4 dB</td></tr>
+    <tr><td>signed-off</td><td>Signed off</td><td><i>da-DING</i> — A5 → D6</td><td class="num">0.60 s</td><td class="num">−3 dB</td></tr>
+    <tr><td>phase-advance</td><td>Phase advancing</td><td><i>da-DING-a-LING</i> — A5 D6 E6 F♯6</td><td class="num">0.85 s</td><td class="num">−3 dB</td></tr>
+    <tr><td>space-complete</td><td>Space complete</td><td>sad ding — D5 ⤵ B4</td><td class="num">0.66 s</td><td class="num">−5 dB</td></tr>
+    <tr><td>fireworks</td><td>Hero: the rare big win</td><td>launch, burst, crackle, embers</td><td class="num">1.15 s</td><td class="num">−3 dB</td></tr>
+  </table></div>
+
+  <h3>Concept rosters</h3>
+  <details>
+    <summary>The Declan <span class="tag">4 prototyped · 17 concepted · in-house</span></summary>
+    <div class="tablewrap"><table>
+      <tr><th>Cue</th><th>Concept</th></tr>
+      <tr><td>ping</td><td>knuckle knock on wood</td></tr>
+      <tr><td>mention</td><td><i>duunn… dun</i> — two ominous low notes ✅</td></tr>
+      <tr><td>message-in</td><td>creaky screen door opening</td></tr>
+      <tr><td>message-out</td><td>letter into a mail slot — <i>shunk</i></td></tr>
+      <tr><td>question</td><td>confused dog whine — <i>hrrn?</i></td></tr>
+      <tr><td>done</td><td>microwave <i>DING</i> — dinner's ready</td></tr>
+      <tr><td>done-big</td><td>bowling strike, full pin explosion</td></tr>
+      <tr><td>error</td><td>doppler fire truck driving past your build ✅</td></tr>
+      <tr><td>warning</td><td>kettle just starting to whistle</td></tr>
+      <tr><td>start</td><td>lawnmower pull-cord, catches first pull</td></tr>
+      <tr><td>progress</td><td>one popcorn pop</td></tr>
+      <tr><td>connect</td><td>dial-up modem handshake, half-second cut</td></tr>
+      <tr><td>disconnect</td><td>CRT television powering off — <i>bwoop</i></td></tr>
+      <tr><td>approve</td><td>celebratory gunfire — party-popper salvo ✅</td></tr>
+      <tr><td>deny</td><td>sad trombone — <i>womp womp</i></td></tr>
+      <tr><td>merge</td><td>toilet flush — the PR is gone now ✅</td></tr>
+      <tr><td>published</td><td>newspaper hitting the porch — <i>thwap</i></td></tr>
+      <tr><td>signed-off</td><td>rubber stamp — <i>THUNK</i></td></tr>
+      <tr><td>phase-advance</td><td>elevator ding + doors sliding open</td></tr>
+      <tr><td>space-complete</td><td>balloon slowly deflating</td></tr>
+      <tr><td>fireworks</td><td>champagne cork + fizz + small crowd <i>heyyy</i></td></tr>
+    </table></div>
+  </details>
+  <details>
+    <summary>Video Game <span class="tag">chiptune · planned skin</span></summary>
+    <div class="tablewrap"><table>
+      <tr><th>Cue</th><th>Concept</th></tr>
+      <tr><td>ping</td><td>one square-wave blip</td></tr>
+      <tr><td>mention</td><td>two-note rising square call</td></tr>
+      <tr><td>message-in</td><td>item-get sparkle: fast three-note arp up</td></tr>
+      <tr><td>message-out</td><td>laser <i>pew</i> downward</td></tr>
+      <tr><td>question</td><td>NPC text-scroll blips ending high — <i>blip-blip-blip?</i></td></tr>
+      <tr><td>done</td><td>quest-complete arpeggio, rising then resolving</td></tr>
+      <tr><td>done-big</td><td>level-clear fanfare: fast run + chord</td></tr>
+      <tr><td>error</td><td>short damage buzz with a pitch drop, soft</td></tr>
+      <tr><td>warning</td><td>ONE low-health beep — it does not loop (the Zelda lesson)</td></tr>
+      <tr><td>start</td><td>ready-go countdown blip pair</td></tr>
+      <tr><td>progress</td><td>XP tick</td></tr>
+      <tr><td>connect</td><td>power-up rising sweep</td></tr>
+      <tr><td>disconnect</td><td>power-down falling sweep</td></tr>
+      <tr><td>approve</td><td>coin ding</td></tr>
+      <tr><td>deny</td><td>soft buzzer <i>bzzt</i></td></tr>
+      <tr><td>published</td><td>checkpoint chime</td></tr>
+      <tr><td>signed-off</td><td>save-game jingle: two notes + sparkle</td></tr>
+      <tr><td>phase-advance</td><td>level-up run — the da-ding-a-ling in chiptune</td></tr>
+      <tr><td>space-complete</td><td>slow descending arp, wistful</td></tr>
+      <tr><td>fireworks</td><td>boss-defeated fanfare with bitcrushed firework pops</td></tr>
+    </table></div>
+  </details>
+  <details>
+    <summary>Movie <span class="tag">trailer language · planned skin</span></summary>
+    <div class="tablewrap"><table>
+      <tr><th>Cue</th><th>Concept</th></tr>
+      <tr><td>ping</td><td>miniature whoosh-hit — a trailer boom at 1% scale</td></tr>
+      <tr><td>mention</td><td>two-note French horn call — you are summoned</td></tr>
+      <tr><td>message-in</td><td>projector flicker + whoosh arriving</td></tr>
+      <tr><td>message-out</td><td>whoosh departing with doppler tail</td></tr>
+      <tr><td>question</td><td>string tremolo swell, unresolved high harmonic</td></tr>
+      <tr><td>done</td><td>timpani roll into one warm resolving hit</td></tr>
+      <tr><td>done-big</td><td>title-card moment: short braam + choir swell</td></tr>
+      <tr><td>error</td><td>low detuned piano cluster, dark tail, quiet</td></tr>
+      <tr><td>warning</td><td>single tense cello stab</td></tr>
+      <tr><td>start</td><td>white-noise riser into a soft downbeat</td></tr>
+      <tr><td>progress</td><td>one film-reel sprocket click</td></tr>
+      <tr><td>connect</td><td>projector motor spin-up, first frame of light</td></tr>
+      <tr><td>disconnect</td><td>projector spin-down, film end flapping</td></tr>
+      <tr><td>approve</td><td>quick major-chord swell — the plan works</td></tr>
+      <tr><td>deny</td><td>soft minor micro-braam</td></tr>
+      <tr><td>published</td><td>clapperboard — <i>action!</i></td></tr>
+      <tr><td>signed-off</td><td>the double clap — that's a wrap</td></tr>
+      <tr><td>phase-advance</td><td>act-break sting: three ascending hits</td></tr>
+      <tr><td>space-complete</td><td>one end-credits piano note, long tail</td></tr>
+      <tr><td>fireworks</td><td>an original studio-logo fanfare, 1.5 s</td></tr>
+    </table></div>
+  </details>
+  <details>
+    <summary>Fun Cut <span class="tag">human &amp; toy sounds · in-house</span></summary>
+    <div class="tablewrap"><table>
+      <tr><th>Cue</th><th>Concept</th></tr>
+      <tr><td>ping</td><td>finger snap</td></tr>
+      <tr><td>mention</td><td>two-tone "hey, over here" whistle</td></tr>
+      <tr><td>message-in</td><td>cheek pop</td></tr>
+      <tr><td>message-out</td><td>short <i>pff</i> blow</td></tr>
+      <tr><td>question</td><td>rising <i>hm?</i> whistle</td></tr>
+      <tr><td>done</td><td>toy piano, two notes resolving</td></tr>
+      <tr><td>done-big</td><td>tiny kazoo fanfare — one second, tasteful, somehow</td></tr>
+      <tr><td>error</td><td>tongue <i>tsk</i> + low toy-piano thunk</td></tr>
+      <tr><td>warning</td><td>mechanic's inhale through teeth — <i>ssss</i></td></tr>
+      <tr><td>start</td><td>short slide whistle up</td></tr>
+      <tr><td>progress</td><td>single tongue click</td></tr>
+      <tr><td>connect</td><td>two glasses clinking</td></tr>
+      <tr><td>disconnect</td><td>reverse cork pop</td></tr>
+      <tr><td>approve</td><td>bicycle bell <i>ding!</i></td></tr>
+      <tr><td>deny</td><td>playful two-note <i>uh-uh</i> hum</td></tr>
+      <tr><td>published</td><td>typewriter carriage return + ding</td></tr>
+      <tr><td>signed-off</td><td>pen scribble + decisive tap</td></tr>
+      <tr><td>phase-advance</td><td>three ascending whistle notes</td></tr>
+      <tr><td>space-complete</td><td>contented sigh, pitched down a touch</td></tr>
+      <tr><td>fireworks</td><td>party horn + confetti shaker</td></tr>
+    </table></div>
+  </details>
+
+  <h2><span class="no">04</span>Production — three sessions on the existing rig</h2>
+  <p class="sub">Google records Pixel sounds in the sound lead's home studio; Windows 11 is
+  all synthesis. The studio this repo documents — Apollo x8, Logic, Komplete, Arturia,
+  the pedalboard, iZotope — is already overqualified. Nothing needs to be bought.</p>
+
+  <div class="session"><div class="snum">1</div><div>
+    <h3>Voice the family <span class="sub">(half a day)</span></h3>
+    <p>Audition three candidates for Tiobi's voice against the prototype MIDI:
+    Kontakt kalimba (warmest match), Arturia DX7 V FM bell (the Windows 11 route),
+    or OP-1 Field through the Deco (the most "us"). Pick one; bounce all 20 voice
+    layers at 96 kHz/24-bit. Play the two-note cues by hand — micro-timing is a
+    feature, not a flaw.</p>
+  </div></div>
+
+  <div class="session"><div class="snum">2</div><div>
+    <h3>Strike layers + assembly <span class="sub">(half a day)</span></h3>
+    <p>Record tiny transients (SM57 or OP-1 mic, quiet closet, peaks ≈ −12 dBFS).
+    Assemble each cue as <b>voice + sine sub one octave down + strike</b> — the
+    industry-standard hybrid stack. Reamp <code>done-big</code>, <code>connect</code>,
+    <code>error</code> through Deco/Chroma Console via the X-Amp for tape rounding.
+    Render 5 randomized variants each for <code>ping</code>, <code>message-in</code>,
+    <code>progress</code> — the anti-fatigue trick.</p>
+  </div></div>
+
+  <div class="session"><div class="snum">3</div><div>
+    <h3>Mix, master, test, deliver <span class="sub">(half a day)</span></h3>
+    <ul>
+      <li>Per cue: high-pass 150 Hz → gentle EQ (presence lift only on Tier 1) → transient shaping → Ozone true-peak limit at <b>−1.5 dBTP</b></li>
+      <li>Loudness: <b>−19 LUFS mono</b> (Google's earcon spec) for Tier 2; Tier 1 up to ≈ −14; Tier 3 down to ≈ −24; final trims by ear, back to back</li>
+      <li>The gauntlet: 100× loop test · over a podcast and music · MacBook speaker, iPhone speaker, AirPods, monitors · mirrored pairs check</li>
+      <li>Deliver: mono WAV 48k/24 masters + lowercase <code>.ogg</code> + <code>.m4a</code>, same <code>manifest.json</code> schema as the prototypes</li>
+    </ul>
+  </div></div>
+
+  <h2><span class="no">05</span>Harness rules</h2>
+  <ul>
+    <li>Sound is never the only channel — every cue mirrors a visual state</li>
+    <li>Rate-limit like Android: max one notification sound per second; collapse bursts into one <code>mention</code>-weight cue</li>
+    <li><code>progress</code> debounced to once per 2 s; <code>fireworks</code> on a cooldown (once a day is plenty)</li>
+    <li>Per-tier volume + a "minimal" preset keeping only <code>mention</code>, <code>question</code>, <code>error</code></li>
+    <li>Honor OS mute and Do Not Disturb, always</li>
+  </ul>
+
+  <h2><span class="no">06</span>Legal lines</h2>
+  <div class="callout"><b>The method doesn't matter; recognizability does.</b>
+  Independent synthesis kills a sampling claim (17 U.S.C. §114(b) protects soundalikes
+  of recordings) — but composition copyright and trademark don't care how a sound was
+  made. A cue that makes people say "that's the Metal Gear sound" is litigable however
+  it was created; a cue with "Metal Gear energy" is free.</div>
+  <div class="callout ok"><b>What ships is 100% ours.</b> Every shipping sound is
+  synthesized or recorded in-house — full chain of title. Game and film inspiration is
+  taken at the level of gesture and physics (contour, rhythm, structure), never
+  recordings or recognizable melodies. Joke families carry <code>internal: true</code>
+  and are excluded from release builds mechanically, not by promise. Third-party
+  material, if ever used, is CC0 only.</div>
+
+  <footer>
+    Sources &amp; deep detail live in the repo alongside this page:
+    <code>01-Research-Notification-Sound-Design.md</code> (Slack, Apple, Google,
+    Microsoft case studies + craft numbers) · <code>02-Sound-Spec.md</code> ·
+    <code>03-Production-Plan.md</code> · <code>04-Game-Sound-Inspiration.md</code> ·
+    <code>05-Families-Roadmap.md</code> · prototypes render deterministically via
+    <code>prototypes/render_prototypes.py</code>, pure Python, no dependencies.
+  </footer>
+
+</div>
