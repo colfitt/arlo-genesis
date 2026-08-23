@@ -194,6 +194,54 @@
       "duration_s": 1.1,
       "peak_dbfs": -4.0,
       "description": "Declan: merge. The flush - whoosh, three descending glugs, drain tail."
+    },
+    {
+      "id": "terminal-ping",
+      "family": "terminal",
+      "file": "terminal-ping.wav",
+      "duration_s": 0.16,
+      "peak_dbfs": -4.0,
+      "description": "Terminal: ping. A single DTMF chirp - literally two sine waves."
+    },
+    {
+      "id": "terminal-mention",
+      "family": "terminal",
+      "file": "terminal-mention.wav",
+      "duration_s": 0.58,
+      "peak_dbfs": -4.0,
+      "description": "Terminal: mention. Codec-style double beep-beep."
+    },
+    {
+      "id": "terminal-done",
+      "family": "terminal",
+      "file": "terminal-done.wav",
+      "duration_s": 0.44,
+      "peak_dbfs": -4.0,
+      "description": "Terminal: done. Clean POST beep resolving down to D."
+    },
+    {
+      "id": "terminal-error",
+      "family": "terminal",
+      "file": "terminal-error.wav",
+      "duration_s": 0.3,
+      "peak_dbfs": -6.0,
+      "description": "Terminal: error. Squelch burst over a low buzz."
+    },
+    {
+      "id": "terminal-progress",
+      "family": "terminal",
+      "file": "terminal-progress.wav",
+      "duration_s": 0.09,
+      "peak_dbfs": -9.0,
+      "description": "Terminal: progress. One Morse dit."
+    },
+    {
+      "id": "terminal-connect",
+      "family": "terminal",
+      "file": "terminal-connect.wav",
+      "duration_s": 0.95,
+      "peak_dbfs": -4.0,
+      "description": "Terminal: connect. Dial tone, DTMF, carrier chirp, data burst, lock on a D octave."
     }
   ]
 }

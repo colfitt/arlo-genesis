@@ -323,9 +323,62 @@ def s_declan_merge():
     ], 1.10)
 
 
+# --- The Terminal (teaser) ---------------------------------------------------
+# Telecom sounds built from first principles - DTMF is literally two sines -
+# so the whole family can ship as original synthesis. See 06-Hacker-Sample-Crate.md.
+
+def steady(freqs, dur, gain=1.0, attack=0.004):
+    """Constant-amplitude sine stack: DTMF pairs, dial/busy tones, POST beeps."""
+    n = int(dur * SR)
+    out = [0.0] * n
+    for f in freqs:
+        ph = 0.0
+        for i in range(n):
+            ph += 2 * math.pi * f / SR
+            out[i] += min(1.0, (i / SR) / attack) * math.sin(ph)
+    edge = int(0.004 * SR)                      # declick the cut-off
+    for i in range(edge):
+        out[-1 - i] *= i / edge
+    return [x * gain / max(1, len(freqs)) for x in out]
+
+def s_terminal_ping():
+    return mix([(0.0, steady([697.0, 1209.0], 0.12))], 0.16)     # DTMF "1"
+
+def s_terminal_mention():
+    beep = lambda t: (t, steady([1245.0, 1560.0], 0.06, gain=0.9))
+    return mix([beep(0.00), beep(0.12), beep(0.34), beep(0.46)], 0.58)
+
+def s_terminal_done():
+    return mix([
+        (0.00, steady([880.0], 0.14, gain=0.8)),                 # POST beep
+        (0.18, steady([587.33], 0.22, gain=0.9)),                # resolves to D
+    ], 0.44)
+
+def s_terminal_error():
+    return mix([
+        (0.00, pop(0.14, 0.85, 0.9, seed=41)),                   # squelch
+        (0.02, steady([123.47], 0.20, gain=0.4)),                # low buzz (B2)
+    ], 0.30)
+
+def s_terminal_progress():
+    return mix([(0.0, steady([700.0], 0.06, gain=0.8))], 0.09)   # one Morse dit
+
+def s_terminal_connect():
+    return mix([
+        (0.00, steady([350.0, 440.0], 0.16, gain=0.6)),          # dial tone
+        (0.20, steady([770.0, 1336.0], 0.08, gain=0.8)),         # DTMF digit
+        (0.32, tone(1800.0, 0.16, "soft", tau=0.30, attack=0.01,
+                    gain=0.5, glide_from=600.0, glide_time=0.12)),  # carrier chirp
+        (0.50, pop(0.10, 0.75, 0.35, seed=43)),                  # data burst
+        (0.62, steady([587.33, 1174.66], 0.24, gain=0.9)),       # lock: D octave
+    ], 0.95)
+
+
 def family_of(name):
     if name.startswith("declan-"):
         return "declan"
+    if name.startswith("terminal-"):
+        return "terminal"
     if name in ("published", "signed-off", "phase-advance", "space-complete"):
         return "milestone"
     if name == "fireworks":
@@ -358,6 +411,12 @@ CUES = [
     ("declan-mention", -5.0, s_declan_mention, "Declan: mention. Two ominous low semitone notes. Something approaches."),
     ("declan-error",   -5.0, s_declan_error,   "Declan: error. Two-tone siren doppler-dropping as the truck drives past."),
     ("declan-merge",   -4.0, s_declan_merge,   "Declan: merge. The flush - whoosh, three descending glugs, drain tail."),
+    ("terminal-ping",     -4.0, s_terminal_ping,     "Terminal: ping. A single DTMF chirp - literally two sine waves."),
+    ("terminal-mention",  -4.0, s_terminal_mention,  "Terminal: mention. Codec-style double beep-beep."),
+    ("terminal-done",     -4.0, s_terminal_done,     "Terminal: done. Clean POST beep resolving down to D."),
+    ("terminal-error",    -6.0, s_terminal_error,    "Terminal: error. Squelch burst over a low buzz."),
+    ("terminal-progress", -9.0, s_terminal_progress, "Terminal: progress. One Morse dit."),
+    ("terminal-connect",  -4.0, s_terminal_connect,  "Terminal: connect. Dial tone, DTMF, carrier chirp, data burst, lock on a D octave."),
 ]
 
 

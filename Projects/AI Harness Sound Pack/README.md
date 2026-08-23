@@ -13,7 +13,8 @@ the rig this repo already documents.
 | `02-Sound-Spec.md` | The 20 cues: semantic grammar, pitch, timing, loudness tiers, delivery targets |
 | `03-Production-Plan.md` | The personalized plan to produce release-quality versions on the existing rig (Logic + Apollo x8 + Komplete/Arturia + iZotope) |
 | `04-Game-Sound-Inspiration.md` | What Risk of Rain, Halo, Zelda, and Mario teach the palette; the milestone da-ding family; pedalboard "mangling skins" |
-| `05-Families-Roadmap.md` | The swappable-family system: Tiobi (ships), fun cut, video game and movie skins, and The Declan (in-house only) |
+| `05-Families-Roadmap.md` | The swappable-family system: Tiobi (ships), fun cut, video game and movie skins, The Terminal, and The Declan (in-house only) |
+| `06-Hacker-Sample-Crate.md` | The 40-source hacker/telecom sample crate with license triage, and The Terminal family concept |
 | `prototypes/` | 24 audible WAV prototypes + `render_prototypes.py` (pure Python, no deps) + `manifest.json` (family-tagged) |
 
 ## The one-paragraph version

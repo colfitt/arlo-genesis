@@ -14,6 +14,7 @@ ships themed sound packs and Halo ships the Grunt Birthday Party skull.
 | **Video game** | planned | in-house → possibly shipped as an alt theme | The arcade/lo-fi skin: Tiobi masters mangled through Lossy / Generation Loss (recipes in `04-Game-Sound-Inspiration.md`) |
 | **Movie** | planned | in-house → possibly shipped as an alt theme | The cinematic skin: risers, sub-weight, Big Sky bloom tails — trailer-grade `done-big` and `fireworks` |
 | **The Declan** | prototyped | **in-house only, never ships** | See below |
+| **The Terminal** | 6-cue teaser prototyped | shippable candidate | Telecom/hacker aesthetic built from first-principles synthesis (DTMF, POST beeps, Morse, squelch, modem handshake) — the crate rips stay in-house as references; the family ships original. Full roster in `06-Hacker-Sample-Crate.md` |
 
 *(Assumption: "Tiobi" is the product/family name — rename here and in the manifest if
 that's off.)*

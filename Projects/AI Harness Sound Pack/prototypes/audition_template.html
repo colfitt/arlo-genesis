@@ -191,6 +191,13 @@ const CUES = [
   { id: "declan-error",   g: "The Declan — in-house only", cls: "trouble", notes: [[0,82],[0.16,77],[0.32,81],[0.48,76],[0.64,80],[0.80,75],[0.96,79],[1.12,74]], dur: "1.45s", iv: "nee-naw ↓",     tier: 2, desc: "Error. A two-tone siren doppler-dropping as the truck drives past your build." },
   { id: "declan-merge",   g: "The Declan — in-house only", cls: "resolve", notes: [[0,69],[0.05,62],[0.22,57],[0.40,50]],   dur: "1.10s", iv: "the flush",    tier: 3, desc: "Merge. Whoosh, three descending glugs, drain tail. The PR is gone now." },
 
+  { id: "terminal-ping",     g: "The Terminal — teaser", cls: "",        notes: [[0,77],[0,86]],                       dur: "0.16s", iv: "DTMF 697+1209", tier: 2, desc: "Ping. A single DTMF chirp — literally two sine waves. Fully shippable synthesis." },
+  { id: "terminal-mention",  g: "The Terminal — teaser", cls: "",        notes: [[0,86],[0.12,86],[0.34,86],[0.46,86]], dur: "0.58s", iv: "beep-beep ×2",  tier: 3, desc: "Mention. Codec-style double beep-beep — the gesture, not the recording." },
+  { id: "terminal-done",     g: "The Terminal — teaser", cls: "resolve", notes: [[0,81],[0.18,74]],                    dur: "0.44s", iv: "POST ↘ D5",     tier: 3, desc: "Done. A clean POST beep resolving home to D." },
+  { id: "terminal-error",    g: "The Terminal — teaser", cls: "trouble", notes: [[0,59]],                              dur: "0.30s", iv: "squelch + buzz", tier: 2, desc: "Error. Radio squelch burst over a low buzz. Quiet, like everything in Trouble." },
+  { id: "terminal-progress", g: "The Terminal — teaser", cls: "",        notes: [[0,77]],                              dur: "0.09s", iv: "morse dit",     tier: 1, desc: "Progress. One Morse dit." },
+  { id: "terminal-connect",  g: "The Terminal — teaser", cls: "",        notes: [[0,64],[0.20,79],[0.32,85],[0.62,74],[0.62,86]], dur: "0.95s", iv: "handshake → lock", tier: 3, desc: "Connect. Dial tone, DTMF, carrier chirp, data burst — then lock on a D octave." },
+
   { id: "error",       g: "Trouble",              cls: "trouble", notes: [[0,62],[0.012,63]],         dur: "0.50s", iv: "D4 + E♭4",    tier: 2, desc: "Something failed. A low damped minor-second rub — the palette's only dissonance." },
   { id: "warning",     g: "Trouble",              cls: "trouble", notes: [[0,65]],                    dur: "0.46s", iv: "F4 (vib.)",   tier: 2, desc: "Caution, non-fatal. One muted note with a slow vibrato." },
 ];
