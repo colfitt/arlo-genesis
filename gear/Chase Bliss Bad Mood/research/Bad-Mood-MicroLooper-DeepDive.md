@@ -96,9 +96,13 @@ Three states, one footswitch 🟢 (pp.12, 30–32):
 - **SMOOTH dip** de-steps CLOCK for continuous glides — with a loop playing this is a tape-speed
   varispeed lever (pitch and length slide together).
 - ⚠️ **Absolute loop lengths in seconds are unpublished** — for any CLOCK position, with or
-  without HALF. The 2:1-per-octave-step relationship and the MkII-comparative window are the
-  only published anchors. When the pedal arrives: measure per CLOCK step with the LED blink and
-  log it here.
+  without HALF; no owner has posted a measurement either (confirmed across every reachable
+  source, 2026-08-28). What *can* be derived 🟣 from 🟢 facts: the loop is a **fixed sample
+  count replayed at the CLOCK sample rate** (Johnston's circular-buffer description + the
+  manual's 64k→32k halving rule), so across the 11-step 2k→64k ladder the loop window spans a
+  **32:1 length range** — the 2k floor holds a loop 32× longer (and 5 octaves lower on
+  playback) than the 64k ceiling. When the pedal arrives: measure per CLOCK step with the LED
+  blink and log it here.
 
 **CLOCK as a musical control over an existing loop** (all first-party behaviors):
 
@@ -113,9 +117,15 @@ Three states, one footswitch 🟢 (pp.12, 30–32):
 - 🟡 **Owner headroom trick** (Elektronauts, first week): record loops **1–2 CLOCK steps high**
   so you have room to slow down later "and get more granular at a reasonable pitch" — recording
   at the top of the ladder makes the whole ladder available downward.
-- 🟡 Owner observation, unconfirmed scope: lowering CLOCK lowers loop pitch, but some Wet
-  Channel processing may render at its own pitch regardless — flagged, needs hardware
-  verification (§12).
+- 🟡 Owner observations on CLOCK's limits (dizzy, Elektronauts #3149, day two of ownership):
+  "Lowering Clock also lowers the pitch, so not sure you could slice a loop into grains and just
+  shorten the loop to a few grains with pitch preserved" — **there is no independent
+  grain/length control in the looper itself** (pitch-preserved manipulation lives in the Ambient
+  station instead). And the wet channel doesn't simply inherit the loop's pitch: "the modes on
+  the other channel will play the loop pitched up depending on where it's dialed in to, so even
+  if you lower Clock the other channel might play it back at the original pitch or higher" —
+  Radio stations "interact with the wet channel side a bit differently depending on which one +
+  Clock + Length." Needs systematic hardware mapping (§12 #8).
 
 **Synced length (the SYNC hidden option, both directions)** 🟢 (p.17):
 
@@ -469,7 +479,12 @@ Facts from the demo mining that don't fit the looper sections but matter to loop
   more musical." Harp Lady — Flip is "like Slip, but better… almost like a Rainbow Machine,"
   and "a lot of it was designed from the ground up and then placed into Mood's existing
   interface." Knobs — Radio is "probably the best mode in Bad Mood… To me, this is kind of peak
-  Bad Mood. It's everything."
+  Bad Mood. It's everything." Elektronauts pre-arrival read (Azzarole): "Burst in particular
+  seems to be great… I'd happily take the right side and put it in my standard Mood; these algos
+  seem a lot more useful than the microlooper on standard Mood" — though he judges the pedal
+  overall guitar-leaning rather than synth/drum-machine-first. Owner dizzy's honest framing of
+  the whole box: "you could get pretty close to a Bad Mood sound with bitcrushing/sample-rate
+  reduction, overdrive, reverbs etc, it just wouldn't be as immediate."
 - **Secondaries confirmations** (Johnston): all hidden options are *labeled on this pedal*
   (unlike MOOD MkII); MIX-alt is the loop-vs-wet **BALANCE** ("crank reverb mix without drowning
   the loop, or vice versa"); hidden-options reset = preset-toggle ×3 with a marquee-LED confirm;
@@ -523,8 +538,23 @@ Facts from the demo mining that don't fit the looper sections but matter to loop
   (eoXawwPy4E4): music-only, no extractable narration. The rumored Zack/Courtney
   "every-instrument" video could not be located on the official channel as of 2026-08-28.
 - **"Introducing – BAD MOOD"** — youtube.com/watch?v=DRNCfhESRA4 (positioning only).
-- **Elektronauts CB megathread pp.151–155** — elektronauts.com/t/chase-bliss-effects-pedals/31096: the entire first-week owner pool (Ambient freeze trick, headroom trick, forward-only stretch, finer speed / no grain size, Tape-only reverse, hot Glue default).
-- **Press** — gearnews, Synth Anatomy, Delicious Audio, No Treble, GuitarPedalX (launch coverage; no looper detail beyond the manual).
+- **Elektronauts CB megathread pp.150–155** — elektronauts.com/t/chase-bliss-effects-pedals/31096:
+  **the entire public owner pool as of 2026-08-28** (thread confirmed to end at post #3154 via
+  the Discourse API — first deliveries Aug 26–28 in AU/US, EU still in transit). Contents:
+  Ambient freeze trick with audio clip, headroom trick, forward-only stretch / whole-knob speed /
+  no grain size, direct-reverse-only-in-Tape, hot Glue default, Soup phaser tell, the
+  wet-repitch and no-grain-slicing limits (#3149), the dub-techno/ambient same-loop demo clips
+  (#3149/#3151).
+- **Press** — gearnews, Synth Anatomy, Delicious Audio, No Treble, GuitarPedalX (launch coverage;
+  all reprint the manual's mode copy, no hands-on measurements; GuitarBomb's Cross-access
+  description is garbled — disregard it). Chase Bliss's generic **Dip Switches 101** PDF adds
+  nothing Bad Mood-specific (its loop-synced-ramp feature is Blooper-only).
+- **Known-but-unreachable (future mines):** TheGearPage thread "**2026 Small batch bliss — Bad
+  Mood, L&F**" (started ~Jul 26 — bot-walled); all of Reddit; the CB Discord; YouTube
+  comments/chapters. Additional demo roster with no extractable narration: Mike Hermans
+  (9iKqfEVR6vo), the Jorb demo, a Duskmos video announced as incoming. lines (llllllll.co) has
+  essentially no Bad Mood discussion yet. No support site or FAQ exists (help@chasebliss.com
+  only); the printed Field Guide isn't online.
 - **Repo cross-refs** — `Patches/Chase Bliss Bad Mood/Bad-Mood-Patch-Library.md` (control reference + the 40 patches indexed in §10); `gear/Chase Bliss MOOD MkII/research/` (MkII looper comparison); Blooper corpus (labor division §11).
 
 <!-- DEMO-FINDINGS -->
