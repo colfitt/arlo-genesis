@@ -200,7 +200,7 @@ loops. 🟢 (p.36)
 
 | Station | LENGTH does | Character (manual verbatim) |
 |---|---|---|
-| **TAPE** (CC19 ≈ 0) | Speed / direction | Full playback, "no funny business" — but speed and/or direction change. 🟡 The only place in the pedal with **reverse** (early-owner + reviewer consensus) |
+| **TAPE** (CC19 ≈ 0) | Speed / direction | Full playback, "no funny business" — but speed and/or direction change. 🟡 The only *direct* reverse control in the pedal (early-owner + reviewer consensus; the one exception: Orchestral with SPREAD plays reversed on one side — Mark Johnston, demoed) |
 | **AMBIENT** (≈ 32) | Playback speed | Keeps pitch, slows dramatically — "a cinematic blur." 🟡 Forward-only (unlike MkII Stretch); speed spans the whole knob = finer control; no grain-size control |
 | **ORCHESTRAL** (≈ 63) | # of voices | "A symphony of different voices that come in and out" — a unique arrangement of your loop |
 | **SHOEGAZE** (≈ 97) | Moment selector | Loop becomes "a collection of frozen moments that last forever"; navigate stacked layers |
@@ -822,7 +822,7 @@ yet — dial by ear, then save to a slot or via CC111).
 - **Toggles:** Looper **Radio** · Wet **Soup** · ROUTING down.
 - **Hidden options:** defaults; BLEND up a bit to ghost the forward loop under the reversed one.
 - **MIDI snapshot:** `CC23=2 · CC19=0 · CC16=explore · CC21=0 · CC22=127 · CC103=1 · CC102=1`
-- **Use case:** the memory-play move MkII owners reach for: a phrase played once, returned backwards at half speed under gauze — and per early owners this is **the only place BAD MOOD plays anything in reverse**, so this patch is the reverse patch.
+- **Use case:** the memory-play move MkII owners reach for: a phrase played once, returned backwards at half speed under gauze — and this is **the only direct reverse control in BAD MOOD** (the sole exception: Orchestral station + SPREAD reverses one stereo side), so this patch is the reverse patch.
 - **How to play it:**
   1. Capture a lyrical phrase (legato > staccato for reverse beauty).
   2. On the Tape clean spot, sweep LENGTH until playback flips direction; fine-tune speed.
@@ -1331,8 +1331,8 @@ MIDI clock direction.
 - Elektronauts Chase Bliss megathread pp.151–155 — elektronauts.com/t/chase-bliss-effects-pedals/31096 (Ambient freeze trick, headroom trick, hot Glue default, Soup phaser tell, forward-only stretch / finer speed / no grain-size vs MkII, dub-techno accident, CV 0–5V-only warning, first arrivals Aug 26–28)
 - Unreachable to automated fetch (browse manually): Reddit r/guitarpedals + r/chaseblissaudiophiles, TheGearPage, ModWiggler, CB Discord, the FB settings group — flagged as future recipe mines once owners accumulate
 
-**Third-party demos (leads, not yet transcribed)**
-- Harp Lady / Emily Hopkins "craziest shoegaze pedal" — youtube.com/watch?v=uIXLHh-HYzU · David Hilowitz "chasing the distorted side of ambient" — youtube.com/watch?v=Z1B3pCYEKVo · Jason Mays — youtube.com/watch?v=9JAAUfurXmw · Mark Johnston "Secret Weapons" — youtube.com/watch?v=KBY0gqpfpHw · ambienttrash stereo demo — youtube.com/watch?v=qrHkNQnEAF8 · Daniel Saint "a bad jam" — youtube.com/watch?v=eoXawwPy4E4
+**Third-party demos (transcribed 2026-08-28 — mined in depth in `gear/Chase Bliss Bad Mood/research/Bad-Mood-MicroLooper-DeepDive.md`)**
+- Mark Johnston "Secret Weapons" (1h20m, the deepest parameter source) — youtube.com/watch?v=KBY0gqpfpHw · David Hilowitz "chasing the distorted side of ambient" — youtube.com/watch?v=Z1B3pCYEKVo · Harp Lady / Emily Hopkins "craziest shoegaze pedal" — youtube.com/watch?v=uIXLHh-HYzU · Jason Mays — youtube.com/watch?v=9JAAUfurXmw · ambienttrash stereo demo (music-only) — youtube.com/watch?v=qrHkNQnEAF8 · Daniel Saint "a bad jam" (no captions) — youtube.com/watch?v=eoXawwPy4E4
 
 **Repo cross-references**
 - `gear/Chase Bliss MOOD MkII/research/` — the MkII corpus this library's §8 comparison and carried-over techniques draw on
