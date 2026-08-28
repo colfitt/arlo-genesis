@@ -6,7 +6,8 @@ its three modes — **Burst** (loop → 8-step sequencer), **Radio** (one loop �
 what the loop becomes: the CLOCK sample-rate master, the overdub/replace/capture rules, the
 FADE / SYNC / BLEND / BALANCE hidden options, and the MIDI surface. This is the companion
 deep-dive to `Patches/Chase Bliss Bad Mood/Bad-Mood-Patch-Library.md` (control reference +
-40 patches); where a patch already demonstrates a behavior, it's cross-referenced as A1…E6.
+40 patches; behaviors cross-referenced as A1…E6) and to `Bad-Mood-WetChannel-DeepDive.md`
+(the left channel: Soup / Relay / Flip).
 
 Flags as in the library: 🟢 manual / MIDI manual / product page (first-party, verbatim behavior) ·
 🟡 official videos, press, or the days-old owner pool · 🟣 designed/inferred on top of verified
