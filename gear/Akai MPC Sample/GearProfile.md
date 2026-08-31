@@ -28,3 +28,7 @@ related: []
 
 ## Notes
 *(quirks, firmware, mods, MIDI channel, etc.)*
+
+## stemripr
+
+Loading guide: `/Users/cfitt/Dev/stemripr/docs/devices/mpc.md` — what `--to mpc` produces and the on-device steps (stemripr loading guide).

@@ -28,3 +28,7 @@ related: []
 
 ## Notes
 *(quirks, firmware, mods, MIDI channel, etc.)*
+
+## stemripr
+
+Loading guide: `/Users/cfitt/Dev/stemripr/docs/devices/op1.md` — what `--to op1` produces and the on-device steps (stemripr loading guide).
