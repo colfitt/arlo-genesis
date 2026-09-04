@@ -1,0 +1,26 @@
+{
+  "mcpServers": {
+    "AbletonMCP": {
+      "command": "/Users/cfitt/.local/bin/uv",
+      "args": [
+        "run",
+        "--frozen",
+        "--project",
+        "/Users/cfitt/Dev/arlo-genesis/v2/ableton/mcp-server",
+        "ableton-mcp-arlo"
+      ],
+      "env": { "ABLETON_MCP_DISABLE_TELEMETRY": "true" }
+    },
+    "PedalMCP": {
+      "command": "/Users/cfitt/.local/bin/uv",
+      "args": [
+        "run",
+        "--frozen",
+        "--project",
+        "/Users/cfitt/Dev/arlo-genesis/v2/pedal-mcp",
+        "pedal-mcp"
+      ],
+      "env": {}
+    }
+  }
+}

@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arlo Genesis — Project Workflow</title>
+<style>
+  :root{
+    --bg:#0b0d12;
+    --panel:#11141b;
+    --panel2:#151922;
+    --border:#232733;
+    --border-soft:#1a1d24;
+    --text:#e7e9ef;
+    --text-dim:#8a93a6;
+    --text-dimmer:#5c6478;
+    --amber:#f5c451;
+    --c-data:#5b8cff;
+    --c-rig:#b57bff;
+    --c-vst:#2dd4bf;
+    --c-ot:#f5a623;
+    --c-ia:#f472b6;
+    --c-bloop:#4ade80;
+    --c-meta:#94a3b8;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;}
+  body{padding:36px 24px 80px;}
+  .wrap{max-width:1180px;margin:0 auto;}
+  a{color:var(--amber);}
+
+  /* ---------- header ---------- */
+  header{margin-bottom:44px;}
+  .eyebrow{font-size:11.5px;letter-spacing:.14em;color:var(--text-dimmer);font-weight:700;margin-bottom:10px;}
+  h1{font-size:30px;line-height:1.25;margin:0 0 12px;font-weight:700;letter-spacing:-.01em;}
+  h1 span{color:var(--amber);}
+  .sub{font-size:14.5px;color:var(--text-dim);max-width:760px;line-height:1.6;margin:0 0 22px;}
+  .legend{display:flex;flex-wrap:wrap;gap:22px;padding:14px 18px;background:var(--panel);
+    border:1px solid var(--border);border-radius:10px;}
+  .legend .grp{display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+  .legend .lbl{font-size:10.5px;letter-spacing:.08em;color:var(--text-dimmer);font-weight:700;margin-right:2px;}
+  .legend .item{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text-dim);white-space:nowrap;}
+  .legend .dot{width:9px;height:9px;border-radius:50%;flex:none;}
+  .legend .ic{font-weight:700;width:14px;text-align:center;flex:none;}
+
+  section{margin-bottom:56px;}
+  .section-head{display:flex;align-items:baseline;gap:10px;margin-bottom:18px;}
+  .section-head h2{font-size:19px;margin:0;font-weight:700;}
+  .section-head .n{font-size:12.5px;color:var(--text-dimmer);}
+
+  /* ---------- big picture flow ---------- */
+  .flow{width:900px;max-width:100%;margin:0 auto;}
+  .flow-row{display:flex;justify-content:center;gap:30px;}
+  .flow-row.single .flow-box{width:320px;}
+  .flow-row.triple .flow-box{width:260px;}
+  .flow-box{background:var(--panel2);border:1px solid var(--border);border-left:5px solid var(--c);
+    border-radius:10px;padding:16px 18px;position:relative;}
+  .flow-box h3{font-size:14.5px;margin:0 0 5px;font-weight:700;}
+  .flow-box p{font-size:12px;color:var(--text-dim);margin:0;line-height:1.5;}
+  .flow-box .tag{position:absolute;top:14px;right:14px;font-size:14px;}
+  .flow-box .now{margin-top:8px;font-size:11px;color:var(--amber);font-weight:700;}
+
+  .connector{position:relative;height:34px;width:900px;max-width:100%;margin:0 auto;}
+  .connector .ln{position:absolute;background:#3d4457;}
+  .connector .stem-top{left:449px;top:0;width:2px;height:14px;}
+  .connector .stem-bot{left:449px;top:14px;width:2px;height:20px;}
+  .connector .bar{left:160px;top:14px;width:580px;height:2px;}
+  .connector .leg{top:14px;width:2px;height:20px;}
+  .connector .leg.l{left:159px;}
+  .connector .leg.m{left:449px;}
+  .connector .leg.r{left:739px;}
+  .connector .arrow{position:absolute;top:29px;font-size:13px;font-weight:700;color:#5b6478;transform:translateX(-50%);}
+  .connector .arrow.l{left:160px;}
+  .connector .arrow.m{left:450px;}
+  .connector .arrow.r{left:740px;}
+  .connector.simple .arrow{left:450px;top:14px;}
+
+  /* ---------- timeline ---------- */
+  .timeline-hint{font-size:12px;color:var(--text-dimmer);margin:-10px 0 14px;}
+  .timeline-scroll{overflow-x:auto;overflow-y:hidden;border:1px solid var(--border);
+    border-radius:10px;background:var(--panel);}
+  .timeline-inner{position:relative;}
+  .axis-row{display:flex;height:32px;border-bottom:1px solid var(--border);position:sticky;top:0;
+    background:var(--panel);z-index:5;}
+  .corner{position:sticky;left:0;width:190px;background:var(--panel);z-index:6;
+    border-right:1px solid var(--border);flex:none;}
+  .ticks{position:relative;flex:none;}
+  .tick{position:absolute;top:0;bottom:0;border-left:1px dashed var(--border-soft);
+    padding-left:7px;display:flex;align-items:center;font-size:10.5px;color:var(--text-dimmer);
+    white-space:nowrap;}
+  .lane{display:flex;border-bottom:1px solid var(--border-soft);}
+  .lane:last-child{border-bottom:none;}
+  .lane-label{position:sticky;left:0;width:190px;background:var(--panel);z-index:4;
+    border-right:1px solid var(--border);flex:none;display:flex;align-items:center;gap:9px;
+    padding:0 14px;font-size:12.5px;font-weight:600;}
+  .lane-label .dot{width:9px;height:9px;border-radius:50%;background:var(--c);flex:none;
+    box-shadow:0 0 0 3px color-mix(in srgb, var(--c) 22%, transparent);}
+  .lane-track{position:relative;flex:none;}
+  .node{position:absolute;width:160px;padding:5px 9px;border-radius:7px;font-size:11.3px;
+    line-height:1.3;background:var(--panel2);border:1px solid var(--border);border-left:4px solid var(--c);
+    color:var(--text);cursor:pointer;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;
+    transition:transform .12s ease, box-shadow .12s ease, border-color .12s ease;}
+  .node:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,.45);}
+  .node .ic{margin-right:5px;font-weight:700;}
+  .node.status-shipped .ic{color:var(--c);}
+  .node.status-open{border-style:dashed;border-left-style:solid;}
+  .node.status-open .ic{color:var(--amber);}
+  .node.status-next{border-style:dashed;border-left-style:solid;opacity:.92;}
+  .node.status-next .ic{color:var(--amber);}
+  .node.status-deferred{opacity:.5;border-style:dotted;border-left-style:solid;}
+  .node.status-deferred .ic{color:var(--text-dimmer);}
+  .node.selected{border-color:var(--c);box-shadow:0 0 0 2px color-mix(in srgb, var(--c) 45%, transparent);}
+  .today-line{position:absolute;top:0;bottom:0;border-left:2px dashed var(--amber);z-index:3;}
+  .today-line .tag{position:absolute;top:-1px;left:6px;background:var(--amber);color:#1a1305;
+    font-size:9.5px;font-weight:800;letter-spacing:.04em;padding:2px 6px;border-radius:4px;
+    white-space:nowrap;}
+
+  /* ---------- detail panel ---------- */
+  .detail{background:var(--panel);border:1px solid var(--border);border-radius:10px;
+    padding:20px 22px;margin-top:16px;min-height:150px;}
+  .detail .dhead{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:8px;}
+  .detail .dot{width:10px;height:10px;border-radius:50%;background:var(--c,#666);}
+  .detail h3{font-size:16.5px;margin:0;font-weight:700;}
+  .detail .meta{font-size:11.5px;color:var(--text-dimmer);display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px;}
+  .detail .badge{display:inline-flex;align-items:center;gap:5px;padding:2px 8px;border-radius:20px;
+    background:var(--panel2);border:1px solid var(--border);font-weight:700;}
+  .detail p.summary{font-size:13.5px;color:var(--text);line-height:1.6;margin:0 0 12px;}
+  .detail ul{margin:0 0 12px;padding-left:18px;}
+  .detail li{font-size:13px;color:var(--text-dim);line-height:1.65;margin-bottom:4px;}
+  .detail .links{display:flex;gap:10px;flex-wrap:wrap;}
+  .detail .links a{font-size:12px;background:var(--panel2);border:1px solid var(--border);
+    padding:5px 10px;border-radius:6px;text-decoration:none;}
+  .detail .placeholder{color:var(--text-dimmer);font-size:13px;}
+
+  /* ---------- what's left ---------- */
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;}
+  .card{background:var(--panel);border:1px solid var(--border);border-left:4px solid var(--amber);
+    border-radius:10px;padding:16px 18px;}
+  .card .top{display:flex;align-items:center;gap:8px;margin-bottom:8px;}
+  .card .top .ic{font-size:16px;}
+  .card h4{font-size:13.5px;margin:0;font-weight:700;}
+  .card p{font-size:12.5px;color:var(--text-dim);line-height:1.6;margin:0 0 10px;}
+  .card a.link{font-size:11.5px;font-weight:700;text-decoration:none;}
+
+  footer{text-align:center;font-size:11.5px;color:var(--text-dimmer);margin-top:60px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">ARLO GENESIS · PROJECT WORKFLOW</div>
+    <h1>From data monorepo to the <span>./arlo</span> front door</h1>
+    <p class="sub">Six workstreams, 2026‑06‑08 → 2026‑07‑02 (today), reconstructed from PR history and
+      project memory. Scroll the timeline to see when things shipped; click any card for the story
+      behind it; the "what's left" panel at the bottom is the honest current state.</p>
+    <div class="legend">
+      <div class="grp">
+        <span class="lbl">TRACK</span>
+        <span class="item"><span class="dot" style="background:var(--c-data)"></span>Data Monorepo</span>
+        <span class="item"><span class="dot" style="background:var(--c-rig)"></span>Rig View</span>
+        <span class="item"><span class="dot" style="background:var(--c-vst)"></span>VST Control Engine</span>
+        <span class="item"><span class="dot" style="background:var(--c-ot)"></span>Onboarding → Track</span>
+        <span class="item"><span class="dot" style="background:var(--c-ia)"></span>IA Refactor</span>
+        <span class="item"><span class="dot" style="background:var(--c-bloop)"></span>Blooping Research</span>
+        <span class="item"><span class="dot" style="background:var(--c-meta)"></span>Tooling</span>
+      </div>
+      <div class="grp">
+        <span class="lbl">STATUS</span>
+        <span class="item"><span class="ic" style="color:var(--c-data)">✓</span>shipped / merged</span>
+        <span class="item"><span class="ic" style="color:var(--amber)">●</span>needs you now</span>
+        <span class="item"><span class="ic" style="color:var(--amber)">→</span>queued next</span>
+        <span class="item"><span class="ic" style="color:var(--text-dimmer)">◌</span>deferred</span>
+      </div>
+    </div>
+  </header>
+
+  <section id="bigpicture">
+    <div class="section-head"><h2>The big picture</h2><span class="n">how the six workstreams depend on each other</span></div>
+    <div class="flow">
+      <div class="flow-row single">
+        <div class="flow-box" style="--c:var(--c-data)">
+          <span class="tag">🗂️</span>
+          <h3>Data Monorepo &amp; Corpus</h3>
+          <p><code>arlo/</code> knowledge corpus · <code>gear/</code> + <code>software/</code> profiles ·
+            821 Patches · 42 Chains · the suggestion index</p>
+        </div>
+      </div>
+    </div>
+    <div class="connector">
+      <div class="ln stem-top"></div><div class="ln bar"></div>
+      <div class="ln leg l"></div><div class="ln leg m"></div><div class="ln leg r"></div>
+      <div class="arrow l">↓</div><div class="arrow m">↓</div><div class="arrow r">↓</div>
+    </div>
+    <div class="flow">
+      <div class="flow-row triple">
+        <div class="flow-box" style="--c:var(--c-rig)">
+          <span class="tag">🎛️</span>
+          <h3>Rig View</h3>
+          <p>The living pedalboard — drag-in boards, faceplates, cabling.</p>
+        </div>
+        <div class="flow-box" style="--c:var(--c-vst)">
+          <span class="tag">🎹</span>
+          <h3>VST Control Engine</h3>
+          <p>State-chunk patch recall + deterministic scene firing (T1–T5).</p>
+        </div>
+        <div class="flow-box" style="--c:var(--c-bloop)">
+          <span class="tag">🔬</span>
+          <h3>Blooping Research</h3>
+          <p>The <code>/bloop</code> loop — keeps enriching the gear corpus.</p>
+        </div>
+      </div>
+    </div>
+    <div class="connector">
+      <div class="ln stem-bot"></div><div class="ln bar"></div>
+      <div class="ln leg l"></div><div class="ln leg m"></div><div class="ln leg r"></div>
+      <div class="arrow l">↓</div><div class="arrow m">↓</div><div class="arrow r">↓</div>
+    </div>
+    <div class="flow">
+      <div class="flow-row single">
+        <div class="flow-box" style="--c:var(--c-ot)">
+          <span class="tag">🚶</span>
+          <h3>Onboarding → Track App</h3>
+          <p>OT‑0 … OT‑4 — the ask→suggest→push→keep loop, rig import, MIDI‑map churn,
+            record‑my‑rig / Ableton bridge.</p>
+        </div>
+      </div>
+    </div>
+    <div class="connector simple">
+      <div class="ln stem-top" style="height:34px"></div>
+      <div class="arrow">↓</div>
+    </div>
+    <div class="flow">
+      <div class="flow-row single">
+        <div class="flow-box" style="--c:var(--c-ia)">
+          <span class="tag">🖥️</span>
+          <h3>IA Refactor — <code>./arlo</code></h3>
+          <p>Terminal launcher replaces in‑app chat · Gear viewer tabs · universal search.</p>
+          <div class="now">← current front door, fully on main</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="timeline">
+    <div class="section-head"><h2>Timeline</h2><span class="n">28 milestones across six workstreams — click a card for details</span></div>
+    <div class="timeline-hint">↔ scroll horizontally · dashed amber line = today (2026‑07‑02)</div>
+    <div class="timeline-scroll">
+      <div class="timeline-inner" id="timelineInner">
+        <div class="axis-row" id="axisRow"><div class="corner"></div><div class="ticks" id="ticks"></div></div>
+        <div id="lanes"></div>
+      </div>
+    </div>
+    <div class="detail" id="detail">
+      <p class="placeholder">Click any milestone above to see the story behind it.</p>
+    </div>
+  </section>
+
+  <section id="whatsleft">
+    <div class="section-head"><h2>What's left, right now</h2><span class="n">the honest state as of 2026‑07‑02</span></div>
+    <div class="cards">
+      <div class="card">
+        <div class="top"><span class="ic">●</span><h4>T5 JUCE host — human handback</h4></div>
+        <p>PR #6 is machine-verified and open. Left: a ~10‑minute ears-and-hands pass — hear the
+          audition note live, play keys through the SL MkIII, test panic on a stuck note, and
+          re-save the <code>ambient-wash</code> scene (its saved chunk is currently a genuinely
+          silent patch).</p>
+        <a class="link" href="https://github.com/colfitt/arlo-v2/pull/6" target="_blank">arlo-v2 PR #6 →</a>
+      </div>
+      <div class="card">
+        <div class="top"><span class="ic">→</span><h4>/bloop next: Roland VG-800</h4></div>
+        <p>Rank 2 in the research queue. The official Parameter Guide PDF is already on disk —
+          this is extraction, not hunting: pull the CC/NRPN map for 150+ params plus the
+          GUITAR-TO-MIDI channel/bend settings.</p>
+        <a class="link" href="#" onclick="return false;">research/queue.md</a>
+      </div>
+      <div class="card">
+        <div class="top"><span class="ic">◌</span><h4>OT-3b / OT-3c</h4></div>
+        <p>Rich onboarding flow + Spotify connect. Deliberately deferred to last — the user
+          already has a real 31k-stream taste profile, so capture is low-value right now.
+          Not started; no plan doc exists yet.</p>
+      </div>
+      <div class="card">
+        <div class="top"><span class="ic">●</span><h4>./arlo 30-second smoke check</h4></div>
+        <p>Quick human check left over from the IA refactor landing: launch <code>./arlo</code>,
+          save a MOOD smoke-test patch, confirm it shows up in the Patches tab.</p>
+      </div>
+      <div class="card">
+        <div class="top"><span class="ic">●</span><h4>/loop skill — design in progress</h4></div>
+        <p>An uncommitted design thread for a goal-bounded dev-loop skill
+          (<code>research/loop-engineering/</code>). Worth a rename before it ships — it would
+          collide with the existing interval-based <code>/loop</code> skill.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>Generated 2026‑07‑02 from <code>gh pr list</code> across arlo-genesis + arlo-v2 and project memory. Static file — safe to reopen anytime, nothing here calls out to a server.</footer>
+</div>
+
+<script>
+const TRACKS = [
+  {id:'data',  name:'Data Monorepo & Corpus',      color:'var(--c-data)'},
+  {id:'rig',   name:'Rig View',                     color:'var(--c-rig)'},
+  {id:'vst',   name:'VST Control Engine',           color:'var(--c-vst)'},
+  {id:'ot',    name:'Onboarding → Track',           color:'var(--c-ot)'},
+  {id:'ia',    name:'IA Refactor (./arlo)',         color:'var(--c-ia)'},
+  {id:'bloop', name:'Blooping Research',            color:'var(--c-bloop)'},
+  {id:'meta',  name:'Tooling',                      color:'var(--c-meta)'},
+];
+
+const MILESTONES = [
+  // ---- data ----
+  {track:'data', date:'2026-06-08', status:'shipped', title:'Build plan drafted',
+    summary:'The arlo-v2 build plan is authored — the 0–7 method (Frame→Align→Size→Plan→Build→Verify→Gate→Done) that every subsequent slice follows.',
+    bullets:['Lives at v2/docs/2026-06-08-arlo-v2-build-plan.md','Sets the pattern used for every OT phase and the VST engine T1–T5 work']},
+  {track:'data', date:'2026-06-14', status:'shipped', title:'Pedalxly data migrated',
+    summary:'Pedalxly patch/chain data lands as first-class top-level folders in the genesis monorepo.',
+    bullets:['821 patch files across 36 devices, YAML frontmatter, type: patch','42 effects chains, type: chain','gear/ and software/ profile folders established here too']},
+  {track:'data', date:'2026-06-14', status:'shipped', title:'Suggestion index rebuilt',
+    summary:'export_chunks.py extended to walk Patches/ and Chains/ as atomic chunks, not just corpus prose.',
+    bullets:['4385 total chunks (3522 corpus + 863 artifacts)','Artifact chunks tagged provenance.content_type: patch|chain so retrieval can tell a real patch from a technique writeup']},
+
+  // ---- rig ----
+  {track:'rig', date:'2026-06-12', status:'shipped', title:'Rig view shipped',
+    summary:'The living pedalboard — drag-in boards, live MIDI sidebar, importer, calibrator, close-up view.',
+    bullets:['21 commits, 30/30 tests, all 4 spec acceptance criteria demonstrated live to the MIDI-port boundary','HTML-in-Canvas was investigated and explicitly retired in favor of DOM','Faceplate folders use gear folder names verbatim as the identity key'],
+    links:[{label:'arlo-v2 PR #1', url:'https://github.com/colfitt/arlo-v2/pull/1'}]},
+
+  // ---- vst ----
+  {track:'vst', date:'2026-06-28', status:'shipped', title:'T1 — state-chunk recall spike',
+    summary:'Proves the core architectural bet: capture/restore a plugin\'s opaque state chunk, not MIDI Program Change, is the right recall mechanism.',
+    bullets:['12/12 cells byte-identical, reproducible across runs, no editor or warm-up needed','Prophet-5 V (AU) gives sample-exact audible recall','VST3 chunk ≠ AU chunk — must fingerprint separately']},
+  {track:'vst', date:'2026-06-29', status:'shipped', title:'T2 — host sidecar built',
+    summary:'A Python worker (pedalboard) serves plugin load/state-save/state-load on :4319, proxied through the Node app.',
+    bullets:['17-agent adversarial audit found a real isolation bug: killing the uv parent orphaned 5 live plugin workers','Fixed with start_new_session + killpg — whole process tree reaped, 0 orphans','14/14 HTTP + 3/3 isolation tests green']},
+  {track:'vst', date:'2026-06-30', status:'shipped', title:'T3 — scene engine + audit',
+    summary:'Deterministic scene-engine.js fires host state-load → pedal CC/PC → controller Session PC in one guaranteed order.',
+    bullets:['31-agent adversarial audit found 18 real gaps a green 73/73 suite hid','CRITICAL: the ch16 reserved-channel guard was exact-equality only — any channel >16 could flip the SL Session and destroy an unsaved loop','All 18 findings hardened before gating to T4']},
+  {track:'vst', date:'2026-07-01', status:'shipped', title:'T4 — real-rig wiring, PR #2 merged',
+    summary:'Scenes fire through real CoreMIDI ports on the physical rig, not just virtual test ports.',
+    bullets:['Byte-exact MIDI proven at a spy CoreMIDI destination — exactly one ch16 message per fire','Arturia "onboarding hang" doctrine falsified — was a transient license-store window, not a standing requirement','Merged to arlo-v2 main, also published 8 previously-unpushed OT commits'],
+    links:[{label:'arlo-v2 PR #2', url:'https://github.com/colfitt/arlo-v2/pull/2'}]},
+  {track:'vst', date:'2026-07-02', status:'shipped', title:'T4 mute anomaly root-caused',
+    summary:'The "Arturia offline mute" mystery is solved: it was never intermittent plugin behavior.',
+    bullets:['The ambient-wash scene\'s saved chunk genuinely has master volume + both VCO levels at 0','Every "silent" load was faithfully replaying a silent patch','Fix = re-save the patch through the live editor (T5 handback step)']},
+  {track:'vst', date:'2026-07-02', status:'open', title:'T5 — JUCE live host',
+    summary:'Production JUCE 8.0.14 worker swaps in for the Python sidecar — live CoreAudio out, CoreMIDI in, native plugin editors, panic.',
+    bullets:['Full battery ALL PASS: byte-identical state swap, 601/601 param-name parity, supervisor contract, 26/26 machine loop','5-lens adversarial review, 27 confirmed findings all fixed pre-swap','Swap is one revertable commit; ARLO_HOST_ENGINE=pedalboard is the escape hatch','Waiting on a ~10-minute human ears/keys/panic/re-save pass before merge'],
+    links:[{label:'arlo-v2 PR #6 (open)', url:'https://github.com/colfitt/arlo-v2/pull/6'}]},
+
+  // ---- ot ----
+  {track:'ot', date:'2026-06-13', status:'shipped', title:'OT-pre + OT-0 — UX spine',
+    summary:'Unified app shell: a Chat ⇄ Rig switch over one shared session, with an ask-strip in the Rig so the core loop never forces a view flip.',
+    bullets:['Hardened claude -p JSON parsing (parse + retry + kill-on-disconnect)','Active-patch badge + board→suggest biasing']},
+  {track:'ot', date:'2026-06-13', status:'shipped', title:'OT-1 — import & faces',
+    summary:'Drop a board file in, get a conversational unknown-pedal review, and one-click faceplate photo fetching.',
+    bullets:['gear-stub.js creates GearProfile.md for unknown pedals, idempotent','SSRF-safe faceplate fetch, never overwrites an existing spec','42/42 tests green, full happy path browser-verified']},
+  {track:'ot', date:'2026-06-14', status:'shipped', title:'OT-2 — MIDI-map churn engine',
+    summary:'A worker that triages every unmapped device via claude -p and drafts a CC chart or marks it no-MIDI.',
+    bullets:['validateMap schema guard drops malformed drafts before they\'re written','Resumable via job-state, 120s/device timeout','67/67 tests; live-verified against real hardware devices']},
+  {track:'ot', date:'2026-06-14', status:'shipped', title:'OT-3a — active pedal visual',
+    summary:'The board spotlights the currently-active pedal and offers a bypass guide.',
+    bullets:['Active/bypass are dynamic runtime state, never baked into the cached board model','A cross-task bug (off-board patch dimming the whole board) caught by final whole-branch review, not per-task testing']},
+  {track:'ot', date:'2026-06-15', status:'shipped', title:'Churn ran — 22 maps',
+    summary:'The churn worker runs over 34 unmapped devices for real.',
+    bullets:['15 mapped (8 chart-grade, 7 inferred), 16 no_midi, 3 draft_failed','A 16-agent adversarial audit demoted 3 dishonest "chart" labels back to "inferred"']},
+  {track:'ot', date:'2026-06-15', status:'shipped', title:'Rig push-safety',
+    summary:'Confidence-tiered MIDI maps — the rig won\'t let you push CCs from an unverified/inferred map without acknowledging it.',
+    bullets:['Arm-to-push gate on inferred maps only, both in-browser push paths covered','"Mark verified" button + /api/midimap/verify']},
+  {track:'ot', date:'2026-06-15', status:'shipped', title:'OT-0b — unified shell',
+    summary:'Chat and Rig become two same-origin iframes under one top bar — no reload on toggle.',
+    bullets:['Chosen over a single-context co-mount after a 5-agent feasibility audit — zero surgery on the 500-line legacy chat script','session.js hoists its bus to window.top so both frames share one state']},
+  {track:'ot', date:'2026-06-16', status:'shipped', title:'OT-3d — taste consume',
+    summary:'The taste profile actually influences suggestions now, plus a durable 👍/👎 grade signal.',
+    bullets:['Top-12 artists + recency-capped grade bias injected into suggest & variations prompts','Two grade signals kept deliberately separate to avoid double-counting']},
+  {track:'ot', date:'2026-06-16', status:'shipped', title:'Chase Bliss charts complete',
+    summary:'All 6 Chase Bliss pedals now have chart-grade CC maps transcribed from the official MIDI manuals.',
+    bullets:['Clean, Onward, Big Time, Blooper, Brothers AM, Gen Loss MkII','Every CC adversarially re-checked against the official PDF']},
+  {track:'ot', date:'2026-06-19', status:'shipped', title:'OT-4a — Ableton bridge gate resolved',
+    summary:'Spike answers: can the bridge arm an audio track? No — and the reason is structural.',
+    bullets:['The bridge is TWO layers kept in lockstep — only one (the Remote Script) is vendored in-repo','The external ableton-mcp 1.2.0 MCP server layer must also be forked','This sizes OT-4b\'s real scope']},
+  {track:'ot', date:'2026-06-19', status:'shipped', title:'OT-4b — JS half shipped',
+    summary:'The record-my-rig template, track planner, and taste-based coaching selector ship — everything that doesn\'t need Ableton.',
+    bullets:['track-plan.js, session-artifact.js, coaching.js — 3 pure modules','103 tests green; browser-verified end to end (artifact-only degrade with no Live)']},
+  {track:'ot', date:'2026-07-02', status:'shipped', title:'OT-4b Plan A — bridge fork merged',
+    summary:'Both bridge layers get forked and extended with create_audio_track / set_track_arm / set_track_monitoring.',
+    bullets:['140/140 + 53/53 tests, 4-reviewer adversarial pass','Vendored fork of the external MCP server + extended Remote Script','Human handback completed — bridge is live'],
+    links:[{label:'arlo-v2 PR #5', url:'https://github.com/colfitt/arlo-v2/pull/5'}]},
+  {track:'ot', date:'2026-07-08', status:'deferred', title:'OT-3b / OT-3c',
+    summary:'Rich onboarding flow (OT-3b) and Spotify connect (OT-3c) — taste capture.',
+    bullets:['Deliberately deferred: the user already has a real 31k-stream taste profile, so capture is low-value right now','Not started, no plan/spec doc yet']},
+
+  // ---- ia ----
+  {track:'ia', date:'2026-07-01', status:'shipped', title:'IA refactor built',
+    summary:'The ./arlo terminal launcher replaces in-app chat; the Gear page gets Profile/Research/Patches tabs and universal search.',
+    bullets:['An in-app terminal (node-pty+ws+xterm) was built end-to-end, then deliberately reverted — kept the spike zero-dep','Songs feature removed from the app (files on disk untouched)'],
+    links:[{label:'arlo-v2 PR #3', url:'https://github.com/colfitt/arlo-v2/pull/3'}]},
+  {track:'ia', date:'2026-07-02', status:'shipped', title:'Fully landed on main',
+    summary:'A stranded merge (PR #3 had landed on scene-engine instead of main) gets fixed with a completion PR.',
+    bullets:['133/133 + 53/53 tests green on main','All merged branches cleaned up, local checkout = main'],
+    links:[{label:'arlo-v2 PR #4', url:'https://github.com/colfitt/arlo-v2/pull/4'}]},
+  {track:'ia', date:'2026-07-02', status:'open', title:'30-sec human smoke check',
+    summary:'The one thing left on the IA refactor: prove ./arlo live end to end.',
+    bullets:['Launch ./arlo, save a MOOD smoke-test patch, confirm it shows in the Patches tab']},
+
+  // ---- bloop ----
+  {track:'bloop', date:'2026-06-19', status:'shipped', title:'Blooping engine built + merged',
+    summary:'A repeatable, context-rot-safe research loop for the gear/software corpus.',
+    bullets:['recon → ~5 parallel research-lens sub-agents → adversarial verify → staged digest','All state on disk (queue.md, log.md, bloops/) so a fresh session resumes cold'],
+    links:[{label:'arlo-genesis PR #3', url:'https://github.com/colfitt/arlo-genesis/pull/3'}]},
+  {track:'bloop', date:'2026-06-20', status:'shipped', title:'MOOD MkII CC chart captured',
+    summary:'First production bloop — the full official MIDI CC chart (~50 CCs) pulled from the dedicated MIDI manual.',
+    bullets:['Closed queue rank 1','Also surfaced a real engine bug: a mis-worded focus made agents write straight to the corpus, bypassing staging'],
+    links:[{label:'arlo-genesis PR #4', url:'https://github.com/colfitt/arlo-genesis/pull/4'}]},
+  {track:'bloop', date:'2026-06-21', status:'shipped', title:'Staging-boundary bug fixed',
+    summary:'Hardens bloop-dive so a focus can never again cause a write outside the staging worktree.',
+    bullets:['WHAT-not-WHERE focus discipline added to /bloop','Caught by worktree isolation before it touched main'],
+    links:[{label:'arlo-genesis PR #5', url:'https://github.com/colfitt/arlo-genesis/pull/5'}]},
+  {track:'bloop', date:'2026-07-03', status:'next', title:'VG-800 (queue rank 2)',
+    summary:'Next bloop target — the Roland VG-800 CC/NRPN map.',
+    bullets:['Official Parameter Guide PDF is already on disk — extraction, not hunting','150+ params: effects, INST, amp, MEMORY MIDI, GUITAR-TO-MIDI channel/bend settings']},
+
+  // ---- meta ----
+  {track:'meta', date:'2026-07-02', status:'open', title:'/loop skill — design drafted',
+    summary:'A goal-bounded dev-loop skill spec is captured but uncommitted.',
+    bullets:['research/loop-engineering/: DESIGN.md, CAPTURE.md, PROMPT.md, a portable build-prompt','Would collide in name with the existing interval-based /loop skill — needs a rename before it ships']},
+];
+
+const START = new Date('2026-06-08T00:00:00');
+const END   = new Date('2026-07-10T00:00:00');
+const DAY_PX = 60;
+const LEFT_PAD = 30;
+const LABEL_W = 190;
+const NODE_W = 160;
+const GAP = 8;
+const BASE_TOP = 14;
+const SLOT_H = 32;
+
+function dayOffset(dateStr){
+  const d = new Date(dateStr + 'T00:00:00');
+  return Math.round((d - START) / 86400000);
+}
+function xFor(dateStr){ return LEFT_PAD + dayOffset(dateStr) * DAY_PX; }
+
+const totalDays = dayOffset(END.toISOString().slice(0,10));
+const TIMELINE_W = LEFT_PAD * 2 + totalDays * DAY_PX;
+
+function fmtDate(dateStr){
+  const d = new Date(dateStr + 'T00:00:00');
+  return d.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+}
+
+const STATUS_ICON = {shipped:'✓', open:'●', next:'→', deferred:'◌'};
+const STATUS_LABEL = {shipped:'Shipped / merged', open:'Needs you now', next:'Queued next', deferred:'Deferred'};
+
+// ---- axis ----
+document.getElementById('timelineInner').style.width = (LABEL_W + TIMELINE_W) + 'px';
+const ticksEl = document.getElementById('ticks');
+ticksEl.style.width = TIMELINE_W + 'px';
+for (let d = 0; d <= totalDays; d += 7){
+  const dateObj = new Date(START.getTime() + d * 86400000);
+  const label = dateObj.toLocaleDateString('en-US', {month:'short', day:'numeric'});
+  const tick = document.createElement('div');
+  tick.className = 'tick';
+  tick.style.left = (LEFT_PAD + d * DAY_PX) + 'px';
+  tick.textContent = label;
+  ticksEl.appendChild(tick);
+}
+
+// ---- lanes ----
+const lanesEl = document.getElementById('lanes');
+let grandMaxBottom = 0;
+
+TRACKS.forEach(track => {
+  const items = MILESTONES.filter(m => m.track === track.id).sort((a,b) => a.date.localeCompare(b.date));
+  const lastRight = [];
+  items.forEach(m => {
+    const x = xFor(m.date);
+    let slot = 0;
+    while (lastRight[slot] !== undefined && x < lastRight[slot] + GAP) slot++;
+    lastRight[slot] = x + NODE_W;
+    m._slot = slot;
+    m._x = x;
+  });
+  const maxSlot = items.reduce((mx, m) => Math.max(mx, m._slot), 0);
+  const laneHeight = BASE_TOP + (maxSlot + 1) * SLOT_H + 10;
+
+  const lane = document.createElement('div');
+  lane.className = 'lane';
+  lane.style.height = laneHeight + 'px';
+
+  const label = document.createElement('div');
+  label.className = 'lane-label';
+  label.style.setProperty('--c', track.color);
+  label.innerHTML = '<span class="dot"></span>' + track.name;
+  lane.appendChild(label);
+
+  const laneTrack = document.createElement('div');
+  laneTrack.className = 'lane-track';
+  laneTrack.style.width = TIMELINE_W + 'px';
+  laneTrack.style.height = laneHeight + 'px';
+
+  items.forEach(m => {
+    const node = document.createElement('div');
+    node.className = 'node status-' + m.status;
+    node.style.setProperty('--c', track.color);
+    node.style.left = m._x + 'px';
+    node.style.top = (BASE_TOP + m._slot * SLOT_H) + 'px';
+    node.innerHTML = '<span class="ic">' + STATUS_ICON[m.status] + '</span>' + m.title;
+    node.title = m.title + ' — ' + fmtDate(m.date);
+    node.addEventListener('click', () => selectMilestone(m, node, track));
+    laneTrack.appendChild(node);
+  });
+
+  lane.appendChild(laneTrack);
+  lanesEl.appendChild(lane);
+  grandMaxBottom += laneHeight;
+});
+
+// ---- today line ----
+const todayLine = document.createElement('div');
+todayLine.className = 'today-line';
+todayLine.style.left = (LABEL_W + xFor('2026-07-02')) + 'px';
+todayLine.innerHTML = '<span class="tag">TODAY</span>';
+document.getElementById('timelineInner').appendChild(todayLine);
+
+// ---- selection / detail panel ----
+function selectMilestone(m, node, track){
+  document.querySelectorAll('.node.selected').forEach(n => n.classList.remove('selected'));
+  node.classList.add('selected');
+
+  const detail = document.getElementById('detail');
+  const linksHtml = (m.links || []).map(l =>
+    '<a href="' + l.url + '" target="_blank" rel="noopener">' + l.label + ' ↗</a>').join('');
+  const bulletsHtml = (m.bullets || []).map(b => '<li>' + b + '</li>').join('');
+
+  detail.innerHTML =
+    '<div class="dhead">' +
+      '<span class="dot" style="background:' + track.color + '"></span>' +
+      '<h3>' + m.title + '</h3>' +
+    '</div>' +
+    '<div class="meta">' +
+      '<span>' + track.name + '</span>' +
+      '<span>·</span>' +
+      '<span>' + fmtDate(m.date) + '</span>' +
+      '<span>·</span>' +
+      '<span class="badge"><span style="color:' + (m.status==='shipped'?track.color:'var(--amber)') + '">' + STATUS_ICON[m.status] + '</span>' + STATUS_LABEL[m.status] + '</span>' +
+    '</div>' +
+    '<p class="summary">' + m.summary + '</p>' +
+    (bulletsHtml ? '<ul>' + bulletsHtml + '</ul>' : '') +
+    (linksHtml ? '<div class="links">' + linksHtml + '</div>' : '');
+
+  detail.style.setProperty('--c', track.color);
+  detail.scrollIntoView({behavior:'smooth', block:'nearest'});
+}
+
+// select the most current/actionable node by default (T5)
+window.addEventListener('DOMContentLoaded', () => {
+  const t5 = MILESTONES.find(m => m.title.startsWith('T5'));
+  const t5Node = Array.from(document.querySelectorAll('.node')).find(n => n.textContent.includes('T5'));
+  if (t5 && t5Node) selectMilestone(t5, t5Node, TRACKS.find(t => t.id === 'vst'));
+});
+</script>
+</body>
+</html>

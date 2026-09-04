@@ -1,0 +1,483 @@
+============================================================================
+COMMISSION: design & build the /loop skill ("Loop Engineering")
+============================================================================
+
+HOW TO USE THIS FILE
+  Paste everything below the line into a fresh Claude Code session on any
+  machine or project. It is fully self-contained — it carries all the
+  research and intent it needs and depends on no local files, paths, or
+  prior memory. The session should reflect the design back, let me steer,
+  then build a real, installable skill.
+
+----------------------------------------------------------------------------
+
+YOUR TASK
+
+  Design, then build, a Claude Code skill called /loop ("Loop Engineering").
+  Work conversationally: propose the structure, let me read and steer, gate
+  at the key points, then write it. The end product is a real, installable
+  skill (a SKILL.md with frontmatter + body, plus any small helper script
+  you justify).
+
+  META-RULE FOR THIS TASK: do not over-engineer the act of building this. Do
+  NOT spin up a large multi-agent workflow to write a skill file. Design it
+  like a craftsperson talking through a problem. The irony of burning a
+  fortune in orchestration to produce a skill whose whole point is restraint
+  would not be lost on me.
+
+
+WHO I AM / HOW I WORK  (honor this — it's the whole point)
+
+  - I build with AI conversationally and goal-bounded. I moved away from
+    heavy workflow ceremony (rigid plan-mode, "a skill for everything,"
+    parallel-worktree juggling, multi-phase agent fleets for trivial work).
+    The models are good enough now that scaffolding mostly gets in the way.
+  - I state a goal as an outcome, then steer by reading what the model says
+    and correcting — not by front-loading every detail. I trust the model to
+    find the right files; me naming them is more likely to send it down the
+    wrong hole.
+  - One concern per thread. Fresh thread for a new concern — stale context
+    biases the model.
+  - My CLAUDE.md / AGENTS.md is a letter of intent (how I think, what I'm
+    building, why), not a rulebook of file paths.
+  - I care about budget. I want power, but not a $100-per-10-minutes money
+    fire when a single sub-agent would do.
+  - I already run small custom skills (e.g. a research-loop skill that spawns
+    isolated "dive" sub-agents and gates results with me). I like that shape.
+    /loop is the *development* counterpart to it.
+  - Verification is my stopping point. "Done" means proven, not asserted.
+
+  When in doubt, bias toward simple, conversational, and verifiable over
+  clever and elaborate.
+
+
+THE BIG IDEA: Loop Engineering
+
+  Engineer the loop, not the workflow. Drive a goal through
+  align -> build -> verify until the acceptance criteria are PROVEN true.
+  Spawn fresh context (sub-agents / threads / worktrees) only when the work
+  demands it. Steer by reading outputs at gates. Use code-mode workflows ONLY
+  when fan-out genuinely earns it — never as the default.
+
+  The skill ships two modes on one spine, chosen per task. Ceremony is
+  opt-in, never forced.
+
+
+VERIFY CURRENT CONVENTIONS FIRST  (do this before writing the skill)
+
+  Claude Code ships changes monthly and your training cutoff may predate the
+  running version. Before you write the SKILL.md, verify the current
+  conventions against the docs — do not assume the details below are still
+  exact. Specifically confirm:
+    - SKILL.md frontmatter fields and their current names.
+    - Current slash-command names (the side-question and rewind commands in
+      particular drift).
+    - Whether claude:// deep links exist in this version (treat as unverified
+      until you confirm).
+  Everything in the "FEATURES" section below was accurate at authoring time;
+  re-check anything load-bearing before you depend on it.
+
+
+INSPIRATION & RESEARCH  (distilled — treat as inspiration, not law)
+
+  Drawn from talks on how senior builders actually use agentic coding now.
+
+  On working style:
+    - Prompts are usually short — two sentences stating the *what* and the
+      *goal*, not the *how*.
+    - Read the model's prose, not just its code. Steer its tone/format so
+      you'll actually read it.
+    - Give examples instead of over-explaining; the smallest example that
+      contains the problem wins.
+    - When the agent pushes back with a good reason, listen.
+    - Let the agent verify its own work (tests, CLI, run the app,
+      deploy-and-check) so that by the time it pings you, it's right.
+    - Run agents in a loop until external feedback (e.g. a code-review CLI)
+      comes back clean, instead of hand-shuttling errors.
+
+  On orchestration ("code mode"):
+    - The most powerful pattern is letting the agent write throwaway code
+      that orchestrates sub-agents — staged phases (find -> rule -> verify),
+      structured schemas for returns, per-item prompt-generator functions,
+      adversarial verifiers that try to REFUTE a finding. "You can never be
+      more dynamic than code." Code is a step between model runs, not just
+      output.
+    - But it burns tokens hard. Use it only when the work is genuinely many
+      independent units. Orchestrate with cheaper models under a smart
+      conductor. OUTPUT THE ORCHESTRATION CODE BEFORE RUNNING IT.
+
+  On context boundaries:
+    - The right boundary for context + tools is the task, not "global vs
+      project." Different concerns deserve different context and isolation.
+      Thread-per-task keeps unrelated work (and scheduled jobs) from
+      polluting each other.
+
+
+CLAUDE CODE FEATURES I USE — AND HOW  (design around these; degrade gracefully)
+
+  Build the skill to exploit these where the harness supports them, and
+  degrade gracefully where it doesn't. Some are Claude-Code-specific; the
+  skill should still work on a plainer harness.
+
+  1. Skills that bundle scripts.
+     A skill can bundle a script the model runs as its first action, so it
+     knows relevant state (branch, git status, the goal, existing phases)
+     up front instead of discover-then-act. NOTE: this is the model running
+     a bundled script — NOT auto-execution at load. The native isolation
+     mechanism is frontmatter "context: fork" (below). Use a preload script
+     to gather cheap state; fall back to running the same checks as step 1
+     on harnesses without it.
+
+  2. "context: fork" frontmatter.
+     A skill can declare "context: fork" so its body runs in an isolated
+     sub-agent — the skill content becomes the sub-agent's prompt. This is
+     the NATIVE "threads make threads." Use it for the isolated-dive and
+     block-execution paths instead of hand-rolling sub-agent plumbing.
+
+  3. CLAUDE.md @import / letter-of-intent.
+     Compose context by importing files (@AGENTS.md, acceptance-criteria
+     docs). The skill assembles goal + criteria + intent at frame.
+
+  4. Code-mode workflows.
+     Dynamic, staged sub-agent orchestration written as throwaway code. Use
+     ONLY behind the workflow gate (below), and only with the code shown
+     first.
+
+  5. /btw (by-the-way) side questions.
+     Ask a clarifier mid-run WITHOUT polluting the main task's context — the
+     answer doesn't enter the conversation history. (This is /btw. Do not
+     confuse it with /bg, which detaches a session to run in the background —
+     a different command.) The skill should expect to be interrupted and
+     resume cleanly.
+
+  6. "Threads make threads" at three altitudes.
+     In-thread sub-agents (scout / verify); cross-thread baton hand-off (an
+     artifact a fresh thread picks up); code-mode fleets. Rule: different
+     concern -> new thread; isolated lookup -> sub-agent; many of the same ->
+     fan-out.
+
+  7. Ephemeral worktrees.
+     Spin-up -> do -> PR -> drop. Offer a worktree for big/risky branches;
+     stay on the current branch for small ones.
+
+  8. rewind / branch.
+     Course-correction without losing work. Steer-gates assume I may rewind a
+     step and re-rule.
+
+  9. claude:// deep links  (CAPABILITY-GATED — verify it exists first).
+     An HTML artifact can render buttons that launch a new session. If
+     present, plan/digest artifacts can emit "start the next phase" links.
+     Optional; cut it if unverified.
+
+  10. Self-verification tools (CLI, tests, run-the-app, computer-use).
+      The verify step is mandatory and uses whatever proof the project
+      affords.
+
+  11. HTML plan / digest artifacts.
+      Readable, gateable, and a clean hand-off baton. phased mode can emit a
+      PLAN.html to read and approve.
+
+
+WHAT THE SKILL MUST DO
+
+  SHARED SPINE (both modes)
+    preload -> align -> research -> size -> build -> verify-loop -> gate -> done
+
+    preload:
+      - Capture branch, git status, the goal, any named spec/criteria.
+      - If the working tree is DIRTY, surface it and ask (stash / proceed /
+        abort) — never silently build on top of uncommitted changes.
+      - DISCOVER THE VERIFY METHOD: detect the project's test/build/run
+        command. If there is no verification path, say so and downgrade the
+        verify step to a manual gate.
+    align: restate the goal + acceptance criteria back to me; confirm if
+      ambiguous. If no criteria are given, derive them and show them before
+      building.
+    research: consult the knowledge base to ground the work (see KNOWLEDGE
+      BASE & RESEARCH below). Pull relevant prior decisions, constraints, and
+      domain context; VERIFY any KB claim against current code before relying
+      on it. RELAY a short findings digest to me (what's relevant, gaps,
+      anything that changes the plan). Keep it cheap: a quick grounding pass
+      by default; deepen only when the goal touches unfamiliar territory;
+      skip silently when the KB has nothing relevant. Do NOT fan out a
+      research workflow unless the KB is large AND the gate clears.
+    size: small/clear -> stay on the current branch; big/risky -> offer a
+      worktree.
+    verify-loop: build -> prove it -> iterate until criteria hold (round cap
+      ~3). On round-cap EXHAUSTION: stop, surface what failed, PRESERVE the
+      partial work — do not discard it, do not keep spinning.
+    gate: I read the diff/artifact and steer.
+    done = criteria verified true. Commit. Then SYNC THE KNOWLEDGE BASE (see
+      below): update the internal KB to stay reflective of the now-changed
+      project (verified-true only), and PROPOSE any external-KB enrichment
+      for my approval — never auto-push. Offer the next concern as a fresh
+      run.
+
+  MODE A — auto  (autonomous development)
+    For well-specified, lower-risk work. Run end-to-end; surface only when
+    you must.
+      1. Align once (skip if unambiguous). Derive work UNITS from the goal.
+      2. LOOP per unit: build -> self-verify (verifier sub-agent) ->
+         pass: commit + next   |   fail: iterate (cap ~3 rounds).
+      3. STOP on: all criteria proven | budget ceiling | a GENUINE BLOCKER.
+      4. On a blocker: SURFACE it — do not guess. On done: final gate
+         (default ON for risky work, OFF for green). Optional knob:
+         checkpoint = every N units.
+    Sub-agents: scout (lookups), adversarial verifier (per unit). No fan-out
+    unless units are truly parallel.
+
+  MODE B — phased  (human-in-the-loop)
+    For ambiguous / higher-stakes work. Structured, gated at every boundary.
+      1. ASK every time: scope, acceptance criteria, constraints, risk,
+         what's out of scope.
+      2. Write phases/<slug>/PLAN.md (+ PLAN.html if useful). List the phases.
+      3. Per phase write phases/<slug>/phase-N.md: goal, blocks, acceptance
+         test, STATUS.
+      4. Execute one phase, then STOP at the phase gate for review + commit.
+         Next phase only on approval.
+
+    RESUMABILITY: the phases/ folder is a resume artifact. On a fresh
+    invocation, if a phases/<slug>/ folder exists, READ it, report current
+    status, and continue from the first unfinished phase — do not restart.
+
+    OPTION — sub-agent-driven development with BLOCKS:
+      Decompose a phase into blocks = smallest independently-verifiable units
+      (own goal, own acceptance test, no shared mutable state).
+        - 1 linear block        -> solo.
+        - 2 independent blocks   -> one sub-agent each (sequential/parallel).
+        - >=3 independent blocks worth parallelizing -> code-mode workflow
+                                    (behind the gate below).
+      Each block sub-agent: build (TDD if it fits) -> self-verify -> return
+      diff. Main thread integrates -> runs phase-level verify -> phase gate.
+
+  SUB-AGENT DISCIPLINE  (the default reach when executing tasks)
+    - Scout (read-only): find a fact / map code; return the conclusion only.
+    - Verifier (adversarial): "try to refute this"; return a verdict.
+    - Block builder: build + self-verify one block; return diff.
+    - Dive: research a thin or external area.
+    - Researcher (read-only): query the knowledge base (internal first, then
+      external), verify claims against current code, return a grounded
+      findings digest — not raw dumps.
+
+  WORKFLOW GATE  (do NOT go overboard)
+    Use a code-mode workflow ONLY when >=3 genuinely independent units
+    benefit from parallelism AND warrant verification (audits, sweeps,
+    migrations, multi-block phases).
+      - NEVER wrap a single linear feature in a workflow — that's the trap.
+      - OUTPUT THE ORCHESTRATION CODE BEFORE RUNNING IT.
+      - Cheaper models per sub-agent under a smart conductor. Confirm budget
+        first.
+      - Default execution path is solo or sub-agents; workflow is the opt-in
+        exception.
+
+  SAFETY GUARDRAILS  (these are not optional)
+    - A PERMISSION DENIAL OR BLOCKER TERMINATES THE BRANCH. It must NEVER
+      trigger more sub-agent spawns. A denied action is one of the few
+      signals that should stop a branch cold. (This defends against a known
+      runaway failure mode: denials acting as spawn triggers, causing
+      infinite recursion and runaway token burn.)
+    - HARD RECURSION-DEPTH CAP on sub-agents: a sub-agent may not fan out
+      further without returning to the conductor.
+    - PRESERVE PARTIAL WORK on any interruption or stop — never discard
+      accumulated results.
+    - DESTRUCTIVE-ACTION GATE: never force-push, delete data, run a
+      migration, rotate/print secrets, install packages, or hit external
+      write APIs without an explicit gate — even in auto mode.
+    - DEFINE "RISKY": touches auth/secrets, data migrations, deletes, money,
+      external write calls, or hosting/deploy. Risky => final gate ON, and
+      these actions need confirmation regardless of mode.
+    - COMMIT/PR POLICY: never commit straight to a protected/main branch.
+      Open a PR for risky or large changes; commit to the working branch for
+      small ones.
+
+  BUDGET GUARDRAILS  (DOUG's department)
+    - Hard token ceiling per run; check remaining before any fan-out.
+    - Cap verify-iterate at ~3 rounds so a stuck unit can't spin forever.
+    - Sub-agents default to cheaper models.
+    - CACHE-COLD SUB-AGENTS: sub-agents start with a cold prompt cache and
+      use the short (5-minute) cache TTL even on a subscription — the
+      automatic long TTL covers the main conversation only. So fan-out pays a
+      cold-cache write and can't ride the parent's warm cache. This is
+      ANOTHER reason fan-out must clear the workflow gate, not just token
+      count. Keep the main loop's prefix STABLE (preload once; don't churn
+      early context / reorder tools / rewrite CLAUDE.md mid-run) so its cache
+      stays warm. Report what a run spent in the done-report.
+
+  STEERING  (mid-run)
+    - Natural steer-gates after align, after plan, after verify.
+    - Expect /btw side questions without derailing; assume rewind/branch is
+      available.
+
+  KNOWLEDGE BASE & RESEARCH  (research reads here; done writes here)
+
+    The research phase grounds the work in a knowledge base. There are two
+    tiers; the user sets both and the skill REMEMBERS them across runs.
+
+    CONFIG (persisted, per-skill):
+      - The user points the skill at an INTERNAL KB and/or an EXTERNAL KB.
+      - Persist the pointers where the skill reads them every run (e.g. a
+        .loop/kb.json in the project, or a user-level config for cross-project
+        defaults). Ship a sensible HARD-CODED default so it works out of the
+        box; let the user override (e.g. `/loop kb set internal=<path>
+        external=<pointer>`).
+      - If no KB is configured, DEGRADE GRACEFULLY: research falls back to
+        in-repo search (docs, code, READMEs) and skips the external tier. The
+        skill still works.
+
+    INTERNAL KB  (project-local; source of truth for CURRENT state):
+      - REFLECTIVE OF WHAT'S ALREADY THERE. It mirrors the project; it must
+        not drift from the code.
+      - Research READS it first for current, authoritative context.
+      - On `done`, UPDATE it to stay reflective of the now-changed project —
+        record only what is VERIFIED TRUE in the code. If the internal KB and
+        the code disagree, the code wins and the KB gets corrected. Never
+        fabricate; never let it diverge from reality. Internal writes are
+        in-repo and low-risk, but still verification-backed.
+
+    EXTERNAL KB  (related but external; may hold MORE than the project):
+      - The broader/richer store — prior art, decisions, and domain knowledge
+        the project itself doesn't capture.
+      - Research READS it for broader context after the internal tier.
+      - CONTRIBUTE UP: when the loop produces findings the external KB lacks,
+        PROPOSE an enrichment update so external stays the superset. Writing
+        to an external store is OUTWARD-FACING — GATE it (confirm before
+        pushing; it may be cached or indexed even if later removed). Never
+        auto-push.
+
+    STALENESS RULE: a KB claim is point-in-time. Verify it against current
+    code/state before relying on it. Recalled context reflects what was true
+    when written, not necessarily now.
+
+    RELAY: the research phase emits a short findings digest to me; the `done`
+    step relays the KB sync (internal applied, external proposed-and-gated).
+
+
+SKILL PACKAGING  (how to actually ship it)
+
+  - DISCOVERY: a skill is auto-discovered only as a DIRECTORY containing
+    SKILL.md — i.e. <name>/SKILL.md. A flat <name>.md is NOT discovered.
+  - INSTALL PATH: project-level .claude/skills/loop/SKILL.md (repo-scoped) or
+    ~/.claude/skills/loop/SKILL.md (global). Recommend project-level first;
+    say why.
+  - FRONTMATTER (verify current fields first): name (lowercase/hyphens),
+    description (third person; state both WHAT it does and WHEN to use it —
+    this is what makes it trigger), plus as needed: allowed-tools, model,
+    argument-hint, disable-model-invocation, and context: fork for the
+    isolated paths.
+  - PROGRESSIVE DISCLOSURE: keep SKILL.md BODY tight (target < ~500 lines).
+    Push detail into bundled reference files the model loads on demand. This
+    directly serves "scannable, not a wall."
+  - BODY STYLE: imperative ("do X"), not descriptive. Scannable.
+  - SKILL vs SLASH COMMAND: /loop <mode> <goal> reads like a slash command
+    (user-typed, takes args), but I keep calling it a "skill" (model-invoked,
+    supports context: fork). These are different files in different dirs.
+    RESOLVE THIS with me — pick one, or build a thin slash command that
+    delegates to the skill — and make the SKILL.md say which.
+  - NAMING: gerund form ("looping") is the convention; "loop" is fine — your
+    call, note it.
+  - GRACEFUL DEGRADATION: list which features are Claude-Code-specific and
+    how the skill behaves on a plainer harness.
+
+
+SCENARIOS IT MUST HANDLE GRACEFULLY  (validate the design against these)
+
+  1. Two-sentence feature — one solo thread, no fan-out, verify by running
+     the app. (~80% of work.)
+  2. Mid-build lookup — spawn a scout sub-agent, get the conclusion, keep
+     main context clean.
+  3. Audit across many items (e.g. "audit all open PRs / all config maps /
+     all data fixtures": which are stale, redundant, ready) — the canonical
+     code-mode fan-out, behind the gate.
+  4. Steer mid-run — a workflow is running, I /btw a clarifier, then rewind a
+     step at the gate; nothing breaks.
+  5. Ambiguous, higher-stakes feature — phased mode: questions -> phases
+     folder -> block execution -> gate per phase.
+  6. Resume — a fresh session lands on an existing phases/<slug>/ folder and
+     continues from the first unfinished phase.
+  7. Scheduled / thread-per-task — a recurring job that produces an HTML
+     digest in its own isolated context. (Design should not preclude this.)
+  8. KB-grounded change — the goal touches a subsystem the knowledge base
+     documents. Research surfaces the prior decision/constraint, the build
+     respects it, on done the internal KB is updated to match the change, and
+     an external-KB enrichment is proposed for approval.
+
+  Insight to preserve: scenarios 1-8 are the SAME loop. Only how many threads
+  it spawns and whether it fans out changes.
+
+
+DELIVERABLES
+
+  1. SKILL.md — frontmatter + a tight, operational, scannable body.
+  2. Recommended install path (project vs user) and why.
+  3. Optional helper script for preload context — only if you justify it;
+     keep the skill working without it.
+  4. A short test/acceptance plan mapped to the seven scenarios.
+  5. Graceful-degradation notes (which features are CC-specific).
+  6. A KB config mechanism (persisted pointers + a hard-coded default) and the
+     research-phase wiring, with graceful degradation when no KB is set.
+
+
+HOW TO WORK WITH ME
+
+  - Design conversationally: propose the structure, let me read and steer,
+    then write.
+  - Ask me ONLY the decisions that are genuinely mine (see forks below).
+    Don't fork-quiz me on things with an obvious default; pick the default,
+    tell me, move on.
+  - Keep prompts and the skill body simple. If something gets complex, fix
+    the root cause.
+  - Verification is the stopping point even here: before you call the skill
+    "done," dry-run it (in your head or for real) against at least scenarios
+    1, 3, and 5 and show me it holds.
+  - Do NOT fire a multi-agent workflow to produce the skill.
+
+
+ACCEPTANCE CRITERIA FOR THE SKILL  (we're done when...)
+
+  [ ] /loop [auto|phased] <goal> works; bare invoke asks mode once.
+  [ ] Both modes share one spine; the difference is autonomy + structure,
+      not a different engine.
+  [ ] auto stops correctly on proven / budget / blocker, and SURFACES
+      blockers instead of guessing.
+  [ ] A blocker or permission denial TERMINATES the branch and never spawns
+      more sub-agents; partial work is preserved.
+  [ ] phased asks every time, writes a phases/<slug>/ folder, gates at every
+      phase, and RESUMES from that folder on a fresh run.
+  [ ] The blocks option exists and routes solo / sub-agent / workflow by the
+      gate rules.
+  [ ] Sub-agents are the default execution reach; workflow only past the
+      >=3-independent-units gate.
+  [ ] Safety guardrails are explicit: recursion cap, denial-terminates,
+      preserve-work, destructive-action gate, a definition of "risky."
+  [ ] Budget guardrails are explicit (ceiling, round cap, cheaper sub-agent
+      models, cache-cold fan-out rationale).
+  [ ] A research phase grounds the build in the knowledge base, verifies KB
+      claims against current code, and relays a findings digest.
+  [ ] KB pointers are user-settable and REMEMBERED across runs (hard-coded
+      default; graceful degradation to in-repo search when unset).
+  [ ] On done, the internal KB stays reflective of the project (verified-true
+      only); external-KB enrichment is PROPOSED and GATED, never auto-pushed.
+  [ ] Packaged as <name>/SKILL.md with progressive disclosure; body is
+      operational and scannable; degrades gracefully off Claude Code.
+
+
+OPEN FORKS  (decide these with me; my leanings noted)
+
+  1. One skill /loop <mode> vs two skills (/loop-auto, /loop-phased).
+     -> lean: one skill.
+  2. Skill vs slash command for the /loop entry point (or a command that
+     delegates to a skill).  -> lean: skill with documented /loop invocation;
+     decide with me.
+  3. auto-mode final gate: default ON for risky, OFF for green?  -> lean: yes.
+  4. phases/ location: top-level phases/, .loop/, or a scratch dir; gitignored
+     if scratch?  -> lean: top-level phases/.
+  5. Bare-invoke default: ask mode once and remember, or default to phased?
+     -> lean: ask once.
+  6. Knowledge base pointers — what is the INTERNAL KB (project path) and the
+     EXTERNAL KB (endpoint/store)? User-set and remembered; a default is
+     hard-coded. Tell me your defaults and I'll set the real pointers.
+  7. Research-phase placement — after align, before size (my lean), or
+     elsewhere?  -> lean: after align.
+
+  Start by reflecting the design back to me in your own words and naming
+  anything you'd change. Then let's build it.

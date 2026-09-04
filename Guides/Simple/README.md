@@ -1,20 +1,29 @@
 # Simple Sheets — the ADHD-friendly looping guides
 
-Four HTML sheets in plain English. Short steps. No theory.
+HTML sheets in plain English. Short steps. No theory.
 Open the `.html` files in a browser, or use the published artifact links below.
 
 **For a new Claude session:** this folder + this README is the context. The full
 detailed versions live in `Guides/Ableton Live 12 Lite/`, `Guides/Rig Map/`,
 and `Guides/Wall of Sound/`. Current pedalboard truth = the owner's
 "Board, Shelf & Cables" artifact (12 pedals + MC6 Pro, Deco splits to stereo
-at position 04). Bass board: 108 Fuzz (maybe) → Oxford → Longsword → BF-3
-(bass input) → CE-2W → TimeLine → Big Sky → PORTA424 → Colour Box DI →
-Iridium (maybe) → Apollo in 2.
+at position 04). Bass board (settled 2026-08-09, see boards.html): Polytune 3 →
+108 Fuzz (buffer switch ON) → Oxford → Longsword → BF-3 (bass input) → CE-2W →
+TimeLine → Big Sky → PORTA424 → Colour Box → Iridium (maybe) → Apollo in 2.
+All mono TS, all 9V centre-negative. Big Sky won over Dark Star because Dark
+Star is wired into guitar board slot 11 + MC6 OMNI 1 — don't move it.
 
 ## Start Here (table of contents)
 
 **start-here.html** — hub page linking every sheet.
 Artifact: https://claude.ai/code/artifact/ebd5c4d8-ee10-459d-ab7d-afc3de10ef55
+
+## Boards (gear reference)
+
+**boards.html** — every sound source on one page: guitar board, bass board
+(pedal-by-pedal build), Yamaha S08 + 61SL keys, VST options (Parallax X =
+bass amp in the box), instruments, beat/loop boxes, and the bench.
+Artifact: https://claude.ai/code/artifact/453a01d6-9a09-48ca-bb49-c79b67f2dfb3
 
 ## The four sheets
 
