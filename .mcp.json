@@ -21,6 +21,11 @@
         "pedal-mcp"
       ],
       "env": {}
+    },
+    "LibraryMCP": {
+      "command": "node",
+      "args": ["/Users/cfitt/Dev/arlo-genesis/v2/spike/library-mcp/server.js"],
+      "env": {}
     }
   }
 }
