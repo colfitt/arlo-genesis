@@ -13,3 +13,5 @@ Every stemripr rip lands here. One note per track: source, stems, delivery.
 - [[noisestorm-crab-rave-monstercat-release]] — Noisestorm - Crab Rave [Monstercat Release], ripped 2026-08-30
 - [[video-by-shanebeckermusic]] — Video by shanebeckermusic, ripped 2026-08-31
 - [[ocean-man]] — Ocean Man, ripped 2026-09-04
+- [[zoo-restart]] — zoo-restart, ripped 2026-09-04
+- [[zoo]] — zoo, ripped 2026-09-04

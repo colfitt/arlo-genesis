@@ -1,23 +1,24 @@
 ---
 type: rip
 title: "noisestorm-crab-rave-monstercat-release"
-date: 2026-09-03
+date: 2026-09-04
 source: /Users/cfitt/Dev/stemripr/downloads/noisestorm-crab-rave-monstercat-release.wav
-model: vocals_mel_band_roformer.ckpt → htdemucs_ft.yaml (shifts 6, overlap 0.5) + BS-Roformer-SW.ckpt mean on drums, bass (w 0.6)
+model: htdemucs_ft.yaml
+profile: default
 ---
 
 # noisestorm-crab-rave-monstercat-release — Rip
 
 ## Source
 
-/Users/cfitt/Dev/stemripr/downloads/noisestorm-crab-rave-monstercat-release.wav — ripped 2026-09-03 with `vocals_mel_band_roformer.ckpt → htdemucs_ft.yaml (shifts 6, overlap 0.5) + BS-Roformer-SW.ckpt mean on drums, bass (w 0.6)`.
+/Users/cfitt/Dev/stemripr/downloads/noisestorm-crab-rave-monstercat-release.wav — ripped 2026-09-04 with `htdemucs_ft.yaml`.
 
 ## Stems
 
-- **hq/bass**: `/Users/cfitt/Dev/stemripr/stems/noisestorm-crab-rave-monstercat-release/hq/bass.wav`
-- **hq/drums**: `/Users/cfitt/Dev/stemripr/stems/noisestorm-crab-rave-monstercat-release/hq/drums.wav`
-- **hq/other**: `/Users/cfitt/Dev/stemripr/stems/noisestorm-crab-rave-monstercat-release/hq/other.wav`
-- **hq/vocals**: `/Users/cfitt/Dev/stemripr/stems/noisestorm-crab-rave-monstercat-release/hq/vocals.wav`
+- **bass**: `/Users/cfitt/Dev/stemripr/stems/noisestorm-crab-rave-monstercat-release/bass.wav`
+- **drums**: `/Users/cfitt/Dev/stemripr/stems/noisestorm-crab-rave-monstercat-release/drums.wav`
+- **other**: `/Users/cfitt/Dev/stemripr/stems/noisestorm-crab-rave-monstercat-release/other.wav`
+- **vocals**: `/Users/cfitt/Dev/stemripr/stems/noisestorm-crab-rave-monstercat-release/vocals.wav`
 
 ## Chords
 
